@@ -18,9 +18,53 @@
       <section>
         <div class="container">
           <div class="row">
-          <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-sm-6">
+              <h3>About Caddo Lake Bayou Tours</h3>
+              <p>We can take you out on a variety of tours on Caddo Lake so that you can relax and enjoy your time knowing you are in the hands of a well trained guide while on the lake.</p>
+              <p>No matter what you are looking for, so long as you are wanting to have a good time, there are plenty of things to do on Caddo Lake.</p>
+              <ul class="list-unstyled">
+                <li>
+                  <h4><strong>Fishing Trips</strong></h4>
+                  <p>There are plenty of great fishing spots across the lake. Come take a guided fishing trip for all your fishing needs.</p>
+                </li>
+                <li>
+                  <h4><strong>Sightseeing</strong></h4>
+                  <p>Enjoy the beautiful lake, lots of wildlife and the overall mystique of Caddo Lake.</p>
+                  <p>Visit historic Jefferson, Texas and enjoy all that it has to offer.</p>
+                </li>
+                <li>
+                  <h4><strong>Sunrise and sunset tours</strong></h4>
+                  <p>Caddo Lake is always a beautiful sight to behold, but the sunrises and sunsets out on the lake are among some of the most gorgeous ones in the South.</p>
+                </li>
+                <li>
+                  <h4><strong>and much more</strong></h4>
+                  <p>Contact us today to find out about the availability of tours and to check on seasonal prices.</p>
+                  <p>
+                    <a class="btn btn-info" href="/contact">Contact us today</a>
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <div class="img-container">
+                <img src="images/sunset-10-md.jpg" class="img-responsive" alt="Sunset Caddo Lake" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <div class="img-container">
+                <img class="img-responsive" src="images/lake-30-md.jpg" alt="Caddo Lake" />
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
             <h1>About Caddo Lake</h1>
             <p>Caddo Lake is steeped in history dating back to the early 1800's. The history which includes the Caddo Indian tribes that inhabited the area and the steamboat navigational trade from New Orleans, Louisiana to Jefferson, Texas are just some of the lake's rich history.</p>
+            <p>Check out some of our photos from around various spots of Caddo Lake.</p>
             <p>
               <a class="btn btn-info" href="photo-gallery">View Photos</a>
             </p>
@@ -38,49 +82,8 @@
                 <p>The American paddlefish is a species of basal ray-finned fish closely related to sturgeons in the order Acipenseriformes.</p>
                 <p><a href="https://www.fws.gov/refuge/caddo_lake/wildlife/paddlefish.html" target="_blank" rel="noopener">More info here.</a></p>
               </li>
-              <li>
-                <h5><strong>And many more..</strong></h5>
-                <p><a href="https://www.fws.gov/refuge/Caddo_Lake/wildlife_and_habitat/index.html" target="_blank" rel="noopener">More info here.</a></p>
-              </li>
             </ul>
           </div>
-          <div class="col-xs-12 col-md-6">
-            <div class="img-container">
-              <img src="images/sunset-10-md.jpg" class="img-responsive" alt="Sunset Caddo Lake" />
-            </div>
-          </div>
-        </div>
-        </div>
-      </section>
-      <section>
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6">
-              <div class="img-container">
-                <img class="img-responsive" src="images/lake-30-md.jpg" alt="Caddo Lake" />
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6">
-              <h3>Things to do</h3>
-              <p>There are plenty of things to do while in the area. Here are a few:</p>
-              <ul class="list-unstyled">
-                <li>
-                  <h4><strong>Fishing</strong></h4>
-                  <p>Tons of fishing in the area</p>
-                  <p><a href="https://www.fws.gov/refuge/Caddo_Lake/wildlife/alligator.html" target="_blank" rel="noopener">More info here.</a></p>
-                </li>
-                <li>
-                  <h4><strong>Sightseeing</strong></h4>
-                  <p>Enjoy the beautiful lake, lots of wildlife and the overall mystique of Caddo Lake.</p>
-                  <p>Visit historic Jefferson, Texas and enjoy all that it has to offer.</p>
-                  <p><a href="https://www.fws.gov/refuge/caddo_lake/wildlife/paddlefish.html" target="_blank" rel="noopener">More info here.</a></p>
-                </li>
-                <li>
-                  <h4><strong>Did I mention fishing?</strong></h4>
-                  <p><a href="https://www.fws.gov/refuge/Caddo_Lake/wildlife_and_habitat/index.html" target="_blank" rel="noopener">More info here.</a></p>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
       </section>

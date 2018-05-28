@@ -20,11 +20,11 @@
            <div class="row">
             <div class="col-xs-12 col-sm-6">
               <h1>Directions</h1>
-              <p>Knowing how to get somewhere is half the battle. Let me help you out because Caddo Lake is a gem that can be hard to find.</p>
-              <p>Rest assured, once you make it to Caddo Lake you will find that it was well worth it.</p>
+              <p>Knowing how to get somewhere is half the battle. Let me help you out because Caddo Lake is a gem that can be hard to find. Rest assured, once you make it to Caddo Lake you will find that it was well worth it.</p>
+              <p>All trips take off from Shady Glade Resort at their marina.</p>
               <h2>Specific Directions</h2>
               <p>Caddo Lake is located between Marshall, Texas and Shreveport, Louisiana in Uncertain, Texas.</p>
-              <p>Bayou Tours is located at Shady Glade Resort, five miles from Caddo Lake State Park. <strong>Tours are available daily</strong>.</p>
+              <p>Bayou Tours is located at Shady Glade Resort, five miles from Caddo Lake State Park. <strong>Guide Boat tours are available daily</strong>.</p>
             </div>
             <div class="col-xs-12 col-sm-6">
               <div class="map-container">
@@ -49,7 +49,10 @@
            <div class="col-xs-12 col-sm-6">
              <h3>Take in the beauty</h3>
              <p>Still not convinced that Caddo Lake is worth the visit? Check out our photo gallery to get a glimpse of what awaits you.</p>
-             <p><a class="btn btn-info" href="contact.php">Book a Tour</a></p>
+             <p><a class="btn btn-info" href="/photo-gallery">Photo Gallery</a></p>
+             <p>Let us make your next trip out to the lake a the most memorable one! We can take you on the best guided fishing trips, to the hidden spots for sunrises and sunsets or even
+             just on a relaxing boat ride around the lake soaking in it's rich history.</p>
+             <p><a class="btn btn-info" href="/contact">Book a Tour</a></p>
            </div>
          </div>
          </div>

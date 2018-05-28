@@ -14,7 +14,8 @@
       <section>
         <div class="container">
           <h1>Contact</h1>
-          <p>If you have any questions please give us a call or you can contact us via email.</p>
+          <p>If you have any questions please give us a call or you can contact us via email and we will get back to you as soon as possible. We will answer any questions you may have about
+          what kind of guided boat tours we have available, what you can expect to encounter while on the tour and of course what you can and can not do on while on the tour of the lake.</p>
           <p>Come and enjoy the wonderful experience that is Caddo Lake. We can't wait to share it with you!</p>
           <div class="row">
             <div class="col-xs-12 col-sm-6">
