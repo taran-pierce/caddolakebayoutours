@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="en">
-  <?php include("templates/_head.php"); ?>
+  <?php
+    $title = "Contact - Caddo Lake Bayou Tours";
+    $canonical = "/contact";
+    include("templates/_head.php");
+  ?>
   <body>
     <div class="container body-content">
       <?php include("templates/_navigation.php"); ?>

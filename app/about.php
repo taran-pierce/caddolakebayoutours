@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="en">
-  <?php include("templates/_head.php"); ?>
+  <?php
+    $title = "About Us - Caddo Lake Bayou Tours";
+    $canonical = "/about";
+    include("templates/_head.php");
+  ?>
   <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N9HT2T6"

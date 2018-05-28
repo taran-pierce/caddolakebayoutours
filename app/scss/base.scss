@@ -74,6 +74,17 @@ header {
   }
 }
 
+.img-container {
+  position: relative;
+
+  .img {
+    min-height: 260px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
 .btn {
   box-shadow: 0 1px 2px rgba(0,0,0,.2);
   text-shadow: 0 1px 0 rgba(0,0,0,.5);
@@ -184,4 +195,19 @@ footer {
   .image-gallery-container {
     max-width: 960px;
   }
+
+  .img-container {
+    .img {
+      min-height: 400px;
+    }
+  }
 }
+
+@media(min-width: 992px) {
+  .img-container {
+    .img {
+      min-height: 480px;
+    }
+  }
+}
+
