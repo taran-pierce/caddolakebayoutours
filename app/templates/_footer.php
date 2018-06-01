@@ -20,6 +20,11 @@
                 src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ_873jk-UNoYRe7fYU9z3y3I&key=AIzaSyDOtUaGuS_0BsqEpfUPkNVxYdihgtihOhY"
                 allowfullscreen></iframe>
         </div>
+        <div class="address-block">
+          <p>Rich McFarland, Tour Guide</p>
+          <p><strong>Address:</strong> 449 Cypress Drive, Uncertain TX 75661</p>
+          <p><strong>Phone: </strong>903-570-2169</p>
+        </div>
       </div>
       <div class="col-xs-12 col-sm-4">
         <h4>Quick Links</h4>
