@@ -37,10 +37,10 @@ gulp.task('css', () => {
     .pipe(gulp.dest('dist/css'))
 });
 
-gulp.task('js', () => {
-  return gulp.src('app/js/**/*.js')
-    .pipe(gulp.dest('dist/js'))
-});
+//gulp.task('js', () => {
+//  return gulp.src('app/js/**/*.js')
+//    .pipe(gulp.dest('dist/js'))
+//});
 
 // watch app and run different tasks
 gulp.task('watch', ['browserSync', 'sass'], () => {
@@ -78,7 +78,7 @@ gulp.task('images', function() {
     .pipe(pl.cache(pl.imagemin({
       interlaced: true
     })))
-    .pipe(gulp.dest('dist/images'))
+    .pipe(gulp.dest('app/img'))
 });
 
 // optimze images
@@ -95,41 +95,36 @@ gulp.task('prod-images', function() {
 		]}
       )
     ]) ) )
-    .pipe(gulp.dest('dist/images'))
+    .pipe(gulp.dest('app/img'))
 });
 
 // copy files 
-gulp.task('copy', function() {
-  return gulp.src('app/**/*.+(png|xml|gif|ico|json|.htaccess)')
-    .pipe(gulp.dest('dist/'))
-})
+//gulp.task('copy', function() {
+//  return gulp.src('app/**/*.+(png|xml|gif|ico|json|.htaccess)')
+//    .pipe(gulp.dest('dist/'))
+//})
 
 // move fonts
-gulp.task('fonts', function() {
-  return gulp.src('app/fonts/**/*')
-    .pipe(gulp.dest('dist/fonts'))
-})
+//gulp.task('fonts', function() {
+//  return gulp.src('app/fonts/**/*')
+ //   .pipe(gulp.dest('dist/fonts'))
+//})
 
 // clean dist directory
-gulp.task('clean:dist', function() {
-  return del.sync('dist');
-});
+//gulp.task('clean:dist', function() {
+ // return del.sync('dist');
+//});
 
 // build project
 gulp.task('build', () => {
-  runSequence('clean:dist', ['sass', 'useref', 'images', 'fonts'])
+  'sass', 'useref', 'images'
 });
 
 // build project
 gulp.task('prod', () => {
-  runSequence('clean:dist', [
-    'css',
-    'js',
+    'sass',
     'useref',
-    'prod-images',
-    'fonts',
-    'copy'
-  ])
+    'prod-images'
 });
 
 // default task for easy start
