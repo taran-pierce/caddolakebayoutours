@@ -3,3 +3,4 @@ app/node_modules/*
 .idea/*
 **/.DS_Store
 app/.DS_Store
+app/images/raw/*

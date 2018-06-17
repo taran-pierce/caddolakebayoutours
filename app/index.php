@@ -37,9 +37,9 @@
         <div class="container">
           <div class="row">
             <div class="col-xs-12 col-md-6">
-              <h1>Boat Tour's of Caddo Lake!</h1>
+              <h1>Caddo Lake Boat Tours!</h1>
               <p>Come take a boat tour on one of the most scenic and beautiful lakes in the South. Caddo Lake is approximately 26,000 acres of Bald Cypress trees, Spanish moss, abundant wildlife, and scenery that you will never forget. The lake has everything from swamps, bayous and river ways that create a one of a kind experience.</p>
-              <p>Whether you are looking for a guided fishing trip, a sight&mdash;seeing tour of the wildlife or just wanting to have a relaxing day or evening on the boat on Caddo Lake then look no further. Book a tour today to see some of the beauty that awaits you.</p>
+              <p>Whether you are looking for a guided fishing trip, a sight&ndash;seeing tour of the wildlife or just wanting to have a relaxing day or evening on the boat on Caddo Lake then look no further. Book a tour today to see some of the beauty that awaits you.</p>
               <p>
                 <a class="btn btn-info" href="contact">Book a Tour</a>
               </p>
