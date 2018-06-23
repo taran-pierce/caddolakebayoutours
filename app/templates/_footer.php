@@ -29,6 +29,7 @@
           <li><a href="http://shadygladeresort.com/" target="_blank" rel="noopener">Shady Glade Resort</a></li>
           <li><a href="http://johnsonsranch.net/" target="_blank" rel="noopener">Johnson's Ranch Marina</a></li>
           <li><a href="http://www.moonglowlodge.com/" target="_blank" rel="noopener">Moonglow Lodge</a></li>
+          <li><a href="http://www.hodgepodgecottages.com/" target="_blank" rel="noopener">HodgePodge Cottages</a></li>
         </ul>
       </div>
     </div>
