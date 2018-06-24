@@ -205,6 +205,24 @@ footer {
       min-height: 400px;
     }
   }
+
+  .listing {
+    padding: 20px;
+
+    > .row {
+      margin-top: 40px;
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+
+    img {
+      border: 1px solid #cacaca;
+      padding: 10px;
+      background: #fff;
+    }
+  }
 }
 
 @media(min-width: 992px) {
