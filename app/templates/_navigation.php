@@ -21,7 +21,7 @@
           <a href="/directions">Directions</a>
         </li>
         <li>
-          <a href="/things-to-do-in-caddo-lake">Things to do</a>
+          <a href="/things-to-do-in-caddo-lake.php">Things to do</a>
         </li>
         <li>
           <a href="/photo-gallery">Photo Gallery</a>
