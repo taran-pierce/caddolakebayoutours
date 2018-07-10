@@ -76,7 +76,7 @@
 
             </div>
             <div class="col-xs-12 col-sm-6">
-              <img class="img-responsive" src="images/june/large/13.jpg" alt="Another park" />
+              <img class="img-responsive" src="images/june/medium/5-compressor.jpg" alt="Another park" />
 
             </div>
           </div>

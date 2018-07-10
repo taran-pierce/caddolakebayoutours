@@ -45,21 +45,15 @@
             <div class="col-xs-12 col-md-6">
               <style>
                 .img-container.aerial .img {
-                  background-image: url('images/june/large/3.jpg');
+                  background-image: url('images/june/medium/3-compressor.jpg');
                   background-position: -170px -230px;
                   background-size: cover;
                   display: none;
                 }
-                @media(min-width: 768px) {
-                  .img-container.aerial .img {
-                    display: block;
-                    background-position: 0 -768px;
-                    background-size: auto;
-                  }
-                }
                 @media(min-width: 992px) {
                   .img-container.aerial .img {
-                    background-position: 0 -100px;
+                    display: block;
+                    background-position: 0 -20px;
                     background-size: cover;
                   }
                 }
