@@ -12,9 +12,27 @@
     <!-- End Google Tag Manager (noscript) -->
      <div class="container body-content">
       <?php include("templates/_navigation.php"); ?>
-      <section class="hero">
-        <img class="img-responsive" src="images/aerial-1-banner.jpg" alt="Cypress trees" />
-      </section>
+      <style>
+        .hero {
+          background-image: url('images/june/large/10.jpg');
+          background-repeat: no-repeat;
+          background-position: -780px -360px;
+          height: 300px;
+        }
+
+        @media( min-width: 768px) {
+          .hero {
+            background-position: -112px -351px;
+          }
+        }
+
+        @media( min-width: 992px) {
+          .hero {
+            background-position: 0 -368px;
+          }
+        }
+      </style>
+      <section class="hero"></section>
        <section>
          <div class="container">
            <div class="row">

@@ -30,9 +30,7 @@
           }
         }
       </style>
-      <section class="hero">
-        <!--<img class="img-responsive" src="images/sunset/lake-sunset-xl.jpg" alt="Cypress trees at Caddo Lake" />-->
-      </section>
+      <section class="hero"></section>
       <section>
         <div class="container">
           <div class="row">
@@ -47,12 +45,22 @@
             <div class="col-xs-12 col-md-6">
               <style>
                 .img-container.aerial .img {
-                  background-image: url('images/aerial-1.jpg');
+                  background-image: url('images/june/large/3.jpg');
                   background-position: -170px -230px;
+                  background-size: cover;
+                  display: none;
+                }
+                @media(min-width: 768px) {
+                  .img-container.aerial .img {
+                    display: block;
+                    background-position: 0 -768px;
+                    background-size: auto;
+                  }
                 }
                 @media(min-width: 992px) {
                   .img-container.aerial .img {
-                    background-position: -10px -140px;
+                    background-position: 0 -100px;
+                    background-size: cover;
                   }
                 }
               </style>

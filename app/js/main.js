@@ -51,7 +51,7 @@ let modal = document.getElementById('gallery-lightbox');
 
 for (let link of galleryLinks) {
   let href = link.pathname;
-  let image = '<img class="img-responsive" src="' + href + '" alt="test">';
+  let image = '<img class="img-responsive" src="' + href + '" alt="Light Box Image">';
   
   // on click insert image into modal
   link.addEventListener('click', function( e ) {

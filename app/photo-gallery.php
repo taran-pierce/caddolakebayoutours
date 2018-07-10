@@ -21,7 +21,7 @@
         <div class="image-gallery-container">
           <div class="image-gallery">
             <?php
-              $count = 30;
+              $count = 47;
 
               include("templates/gallery/_slide.php");
             ?>
