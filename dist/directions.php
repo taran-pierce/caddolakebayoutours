@@ -49,6 +49,7 @@
                 <iframe width="100%"
                         height="450"
                         frameborder="0"
+                        title="Google Maps"
                         src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ_873jk-UNoYRe7fYU9z3y3I&key=AIzaSyDOtUaGuS_0BsqEpfUPkNVxYdihgtihOhY"
                         allowfullscreen></iframe>
               </div>
