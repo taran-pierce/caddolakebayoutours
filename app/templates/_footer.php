@@ -37,7 +37,7 @@
     <p class="copy-right">Copyright 2018 &copy;</p>
   </div>
 </footer>
-<!-- build:js js/bootstrap-bundle.js -->
+<!-- build:js js/bootstrap-bundle.js rel="preload" -->
 <script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="../node_modules/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
 <script type="text/javascript" src="../node_modules/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>

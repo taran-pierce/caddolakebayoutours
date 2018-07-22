@@ -37,4 +37,4 @@
     <p class="copy-right">Copyright 2018 &copy;</p>
   </div>
 </footer>
-<script src="js/bootstrap-bundle.js"></script>
+<script src="js/bootstrap-bundle.js" rel="preload"></script>

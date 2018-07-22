@@ -65,9 +65,9 @@
     "@context": "http://schema.org",
     "@type": "LocalBusiness",
     "image": [
-      "http://www.caddolakebayoutours.com/images/sunset/lake-sunset-xl.jpg"
+      "https://www.caddolakebayoutours.com/images/sunset/lake-sunset-xl.jpg"
      ],
-    "@id": "http://www.caddolakebayoutours.com/",
+    "@id": "https://www.caddolakebayoutours.com/",
     "name": "Caddo Lake Bayou Tours",
     "address": {
       "@type": "PostalAddress",
@@ -82,7 +82,7 @@
       "latitude": 32.712023,
       "longitude": -94.121835
     },
-    "url": "http://www.caddolakebayoutours.com/",
+    "url": "https://www.caddolakebayoutours.com/",
     "telephone": "903-570-2169",
     "openingHoursSpecification": [
       {
