@@ -15,19 +15,19 @@
     <div class="collapse navbar-collapse" id="main-nav">
       <ul class="nav navbar-nav">
         <li>
-          <a href="/about">About</a>
+          <a href="/about.php">About</a>
         </li>
         <li>
-          <a href="/directions">Directions</a>
+          <a href="/directions.php">Directions</a>
         </li>
         <li>
-          <a href="/things-to-do-in-caddo-lake">Things to do</a>
+          <a href="/things-to-do-in-caddo-lake.php">Things to do</a>
         </li>
         <li>
-          <a href="/photo-gallery">Photo Gallery</a>
+          <a href="/photo-gallery.php">Photo Gallery</a>
         </li>
         <li>
-          <a href="/contact">Contact</a>
+          <a href="/contact.php">Contact</a>
         </li>
       </ul>
     </div>

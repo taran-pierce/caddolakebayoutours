@@ -5,12 +5,12 @@
         <h4>Sitemap</h4>
         <ul class="list-unstyled">
           <li><a href="/">Home</a></li>
-          <li><a href="/contact">Book a Tour</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/directions">Directions</a></li>
-          <li><a href="/things-to-do-in-caddo-lake">Things to do</a></li>
-          <li><a href="/photo-gallery">Photo Gallery</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="/contact.php">Book a Tour</a></li>
+          <li><a href="/about.php">About</a></li>
+          <li><a href="/directions.php">Directions</a></li>
+          <li><a href="/things-to-do-in-caddo-lake.php">Things to do</a></li>
+          <li><a href="/photo-gallery.php">Photo Gallery</a></li>
+          <li><a href="/contact.php">Contact</a></li>
         </ul>
       </div>
       <div class="col-xs-12 col-sm-4">
