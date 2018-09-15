@@ -94,6 +94,20 @@
           </div>
         </div>
       </section>
+      <section>
+        <div class="container">
+          <h2>Trying to plan your next vacation?</h2>
+          <p>Texas has a lot to offer and not all of it is here on Caddo Lake. Let us give you some ideas and places to look over for your next family vacation or personal getaway.</p>
+          <div class="row">
+            <div class="col-xs-12">
+              <h3>The Graytripper</h3>
+              <p>A travel blog for those of us who have the beautilful natural patina of age and are still ready for the road!</p>
+              <p>Check out the variaous trips and get some ideas for your next trip!</p>
+              <p><a href="http://thegraytripper.com/blog_East_Texas.html" target="_blank" rel="noopener">Check out their blog</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
       <?php include("templates/_footer.php"); ?>
     </div>
   </body>

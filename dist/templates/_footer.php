@@ -26,11 +26,12 @@
       <div class="col-xs-12 col-sm-4">
         <h4>Quick Links</h4>
         <ul class="list-unstyled">
-          <li><a href="http://tpwd.texas.gov/state-parks/caddo-lake" target="_blank" rel="noopener">Caddo State Park</a></li>
           <li><a href="http://shadygladeresort.com/" target="_blank" rel="noopener">Shady Glade Resort</a></li>
           <li><a href="http://johnsonsranch.net/" target="_blank" rel="noopener">Johnson's Ranch Marina</a></li>
           <li><a href="http://www.moonglowlodge.com/" target="_blank" rel="noopener">Moonglow Lodge</a></li>
           <li><a href="http://www.hodgepodgecottages.com/" target="_blank" rel="noopener">HodgePodge Cottages</a></li>
+          <li><a href="http://thegraytripper.com/" target="_blank" rel="noopener">The Graytripper</a></li>
+          <li><a href="http://tpwd.texas.gov/state-parks/caddo-lake" target="_blank" rel="noopener">Caddo State Park</a></li>
         </ul>
       </div>
     </div>
