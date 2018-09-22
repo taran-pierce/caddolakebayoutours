@@ -12,6 +12,12 @@
           <li><a href="/photo-gallery.php">Photo Gallery</a></li>
           <li><a href="/contact.php">Contact</a></li>
         </ul>
+        <ul class="list-unstyled">
+          <li>Like us on FaceBook!</li>
+          <li>
+            <div class="fb-like" data-href="https://www.facebook.com/caddotours/" data-width="260px" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+          </li>
+        </ul>
       </div>
       <div class="col-xs-12 col-sm-4">
         <div class="map-container">

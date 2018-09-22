@@ -8,6 +8,15 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N9HT2T6"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <div id="fb-root"></div>
+    <script>
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
     <div class="container body-content">
       <?php include("templates/_navigation.php"); ?>
       <style>
@@ -38,6 +47,7 @@
               <h1>Caddo Lake Boat Tours!</h1>
               <p>Come take a boat tour on one of the most scenic and beautiful lakes in the South. Caddo Lake is approximately 26,000 acres of Bald Cypress trees, Spanish moss, abundant wildlife, and scenery that you will never forget. The lake has everything from swamps, bayous and river ways that create a one of a kind experience.</p>
               <p>Whether you are looking for a guided fishing trip, a sight&ndash;seeing tour of the wildlife or just wanting to have a relaxing day or evening on the boat on Caddo Lake then look no further. Book a tour today to see some of the beauty that awaits you.</p>
+              <p>Also don't forget to like us on our <a href="https://www.facebook.com/caddotours/" target="_blank">Facebook page</a> to see weekly updates and stay in touch with us!</p>
               <p>
                 <a class="btn btn-info" href="contact">Book a Tour</a>
               </p>

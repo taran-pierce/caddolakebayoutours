@@ -10,6 +10,16 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N9HT2T6"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <div id="fb-root"></div>
+    <script>
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
      <div class="container body-content">
       <?php include("templates/_navigation.php"); ?>
       <style>
@@ -46,12 +56,7 @@
             </div>
             <div class="col-xs-12 col-sm-6">
               <div class="map-container">
-                <iframe width="100%"
-                        height="450"
-                        frameborder="0"
-                        title="Google Maps"
-                        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ_873jk-UNoYRe7fYU9z3y3I&key=AIzaSyDOtUaGuS_0BsqEpfUPkNVxYdihgtihOhY"
-                        allowfullscreen></iframe>
+                <iframe title="Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13428.266285705415!2d-94.15337171079648!3d32.7108586943788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc79227c114d5c01d!2sCaddo+Lake+Bayou+Tours!5e0!3m2!1sen!2sus!4v1528217775632" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
               </div>
             </div>
           </div>

@@ -6,6 +6,20 @@
     include("templates/_head.php");
   ?>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N9HT2T6"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="fb-root"></div>
+    <script>
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
     <div class="container body-content">
       <?php include("templates/_navigation.php"); ?>
       <style>
@@ -40,6 +54,8 @@
               <h3>Rich McFarland <small>Tour Guide</small></h3>
               <p>Tours available 7 days a week, sunrise or sunset.</p>
               <p>Boat tours last approximately one hour.</p>
+              <p>Make sure to like us on <a href="https://www.facebook.com/caddotours/" target="_blank">FaceBook</a>.</p>
+              <div class="fb-like" data-href="https://www.facebook.com/caddotours/" data-width="260px" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
               <h3>Address</h3>
               <ul class="list-unstyled">
                 <li><strong>449 Cypress Drive</strong></li>
