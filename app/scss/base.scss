@@ -28,8 +28,8 @@ header {
     margin-top: 0;
   }
   .social-link {
-    padding: 10px;
-    text-align: right;
+    padding: 10px 0 20px;
+    text-align: left;
   }
 }
 .logo {
@@ -200,6 +200,12 @@ footer {
 }
 
 @media(min-width: 768px) {
+  header {
+    .social-link {
+      padding: 10px;
+      text-align: right;
+    }
+  }
   .image-gallery-container {
     max-width: 960px;
   }
