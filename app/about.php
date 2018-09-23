@@ -6,10 +6,6 @@
     include("templates/_head.php");
   ?>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N9HT2T6"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <div class="container body-content">
       <?php include("templates/_navigation.php"); ?>
       <section class="hero">

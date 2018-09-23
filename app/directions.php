@@ -6,20 +6,6 @@
     include("templates/_head.php");
   ?>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N9HT2T6"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <div id="fb-root"></div>
-    <script>
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
      <div class="container body-content">
       <?php include("templates/_navigation.php"); ?>
       <style>
@@ -50,7 +36,6 @@
               <h1>Directions</h1>
               <p>Knowing how to get somewhere is half the battle. Let me help you out because Caddo Lake is a gem that can be hard to find. Rest assured, once you make it to Caddo Lake you will find that it was well worth it.</p>
               <p>All trips take off from Shady Glade Resort at their marina.</p>
-              <h2>Specific Directions</h2>
               <p>Caddo Lake is located between Marshall, Texas and Shreveport, Louisiana in Uncertain, Texas.</p>
               <p>Bayou Tours is located at Shady Glade Resort, five miles from Caddo Lake State Park. <strong>Guide Boat tours are available daily</strong>.</p>
             </div>
