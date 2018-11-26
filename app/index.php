@@ -82,11 +82,6 @@
                     background-position: -270px -570px;
                   }
                 }
-                @media(min-width: 1200px) {
-                  .img-container.aerial-1 .img {
-                    background-position: 0 0;
-                  }
-                }
               </style>
               <div class="img-container aerial-1">
                 <div class="img"></div>
