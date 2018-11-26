@@ -68,18 +68,18 @@
             <div class="col-xs-12 col-sm-6">
               <style>
                 .img-container.aerial-1 .img {
-                  background-image: url('images/aerial-2-md.jpg');
+                  background-image: url('images/medium/IMG_0268.jpg');
                   background-position: -170px -230px;
                 }
                 @media(min-width: 768px) {
                   .img-container.aerial-1 .img {
                     min-height: 526px;
-                    background-position: -390px 0;
+                    background-position: -360px -680px;
                   }
                 }
                 @media(min-width: 992px) {
                   .img-container.aerial-1 .img {
-                    background-position: -240px 0;
+                    background-position: -270px -570px;
                   }
                 }
                 @media(min-width: 1200px) {

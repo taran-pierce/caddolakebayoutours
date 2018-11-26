@@ -43,7 +43,7 @@
             </div>
             <div class="col-xs-12 col-md-6">
               <div class="img-container">
-                <img src="images/june/medium/12-compressor.jpg" class="img-responsive" alt="Caddo Lake Cypress Trees" />
+                <img src="images/medium/IMG_0286.jpg" class="img-responsive" alt="Caddo Lake Cypress Trees" />
               </div>
             </div>
           </div>
@@ -54,7 +54,7 @@
           <div class="row">
             <div class="col-xs-12 col-sm-6">
               <div class="img-container">
-                <img class="img-responsive" src="images/june/medium/10-compressor.jpg" alt="Caddo Lake Bald Cypress Trees" />
+                <img class="img-responsive" src="images/medium/IMG_0291.jpg" alt="Caddo Lake Bald Cypress Trees" />
               </div>
             </div>
             <div class="col-xs-12 col-md-6">

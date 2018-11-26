@@ -65,9 +65,10 @@
                 <img class="img-responsive" src="/images/june/large/3.jpg" alt="Moonglow Lodge" />
               </div>
               <div class="col-xs-12 col-sm-6">
-                <h3>Moonglow Lodge</h3>
-                <p>Moonglow Lodge is a warm, whimsical retreat on mysterious Caddo Lake. Our three cottages are on Taylor Island, on the west side of the lake in Uncertain, Texas.</p>
-                <p><a href="http://www.moonglowlodge.com/" target="_blank" rel="noopener">Visit their website for more information</a></p>
+                <h3>Jefferson Texas</h3>
+                <p>Visit historic Jefferson Texas for shopping, entertainment and dining options. From train rides, horse drawn carriage rides, riverboat rides, kayak or canoe rental and even golf cart rentals in Jefferson Texas, Caddo Lake and Lake O the Pines you will find many historic things to do.</p>
+                <p>For the shopper in you we have more antique shops than any other town in the Piney Woods. Plus so many great new boutique shops have opened up in the past few years, you will be delighted with the array of items they have to offer.</p>
+                <p><a href="https://www.jefferson-texas.com/" target="_blank" rel="noopener">Visit their website for more information</a></p>
               </div>
             </div>
             <div class="row">

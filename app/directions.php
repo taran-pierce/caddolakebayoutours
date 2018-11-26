@@ -10,21 +10,21 @@
       <?php include("templates/_navigation.php"); ?>
       <style>
         .hero {
-          background-image: url('images/june/large/10.jpg');
+          background-image: url('images/medium/IMG_0302.jpg');
           background-repeat: no-repeat;
-          background-position: -780px -360px;
+          background-position: -380px -360px;
           height: 300px;
         }
 
         @media( min-width: 768px) {
           .hero {
-            background-position: -112px -351px;
+            background-position: -380px -360px;
           }
         }
 
         @media( min-width: 992px) {
           .hero {
-            background-position: 0 -368px;
+            background-position: 0 -268px;
           }
         }
       </style>
