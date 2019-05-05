@@ -1,39 +1,26 @@
 {
-  "name": "jump-start",
-  "version": "1.0.1",
+  "name": "caddolakebayoutours",
+  "version": "2.0.0",
   "description": "",
-  "main": "app/index.html",
-  "scripts": {
-    "tar": "echo \"Make tar\" && tar -cvzf website.tar.gz dist && exit"
-  },
+  "main": "pages/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/taran-pierce/jump-start.git"
+    "url": "git+https://github.com/taran-pierce/caddolakebayoutours.git"
   },
   "author": "Taran Pierce",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/taran-pierce/jump-start/issues"
+    "url": "https://github.com/taran-pierce/caddolakebayoutours/issues"
   },
-  "homepage": "https://github.com/taran-pierce/jump-start#readme",
-  "devDependencies": {
-    "browser-sync": "^2.18.12",
-    "del": "^3.0.0",
-    "graceful-fs": "^4.1.11",
-    "gulp": "^3.9.1",
-    "gulp-cache": "^0.4.6",
-    "gulp-connect-php": "^1.0.3",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-if": "^2.0.2",
-    "gulp-imagemin": "^3.4.0",
-    "gulp-load-plugins": "^1.5.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0",
-    "gulp-useref": "^3.1.2",
-    "minimatch": "^3.0.4",
-    "run-sequence": "^2.0.0"
+  "homepage": "https://github.com/taran-pierce/caddolakebayoutours#readme",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
-    "bootstrap-sass": "^3.3.7"
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }
