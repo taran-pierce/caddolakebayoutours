@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
+    "gulp": "^4.0.1",
     "jquery": "^3.2.1",
     "siema": "^1.5.1"
   }
