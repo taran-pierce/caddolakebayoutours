@@ -1,9 +1,7 @@
 import PropTypes from 'prop-types'
 
 const sideHugStyles = {
-  overflow: 'hidden',
-  // TODO should be a prop
-  height: '300px',
+  padding: '0 1rem',
 }
 
 const imageLeftStyles = {
@@ -14,24 +12,27 @@ const SideHug = ( props ) => {
   return (
     <section>
       <style jsx>{`
-        .flex {
-          display: flex;
-        }
-
-        .item {
-          grow: 1;
-          width: 50%;
-        }
-
         img {
           max-width: 100%;
         }
 
-        .image-left .item:last-child {
-          order: 0;
-        }
-        .image-left .item:first-child {
-          order: 1;
+        @media( min-width: 992px ) {
+          .flex {
+            display: flex;
+          }
+  
+          .item {
+            padding: 0 1rem;
+            grow: 1;
+            width: 50%;
+          }
+  
+          .image-left .item:last-child {
+            order: 0;
+          }
+          .image-left .item:first-child {
+            order: 1;
+          }
         }
       `}</style>
       <div className={`flex ${props.data.imageSide === 'left' ? 'image-left' : ''}`}>

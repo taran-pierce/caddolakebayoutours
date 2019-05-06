@@ -25,6 +25,10 @@ const Footer = ( props ) => {
           list-style-type: none;
           padding: 0;
         }
+
+        .copy-right {
+          margin-bottom: 0;
+        }
       `}</style>
       <div className={'flex'}>
         <div className={'item'}>

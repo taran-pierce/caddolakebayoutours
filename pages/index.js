@@ -5,10 +5,11 @@ import SideHug from '../components/SideHug'
 import Footer from '../components/Footer'
 
 const layoutStyle = {
+  background: 'rgba(255,255,255,.8)',
+  borderLeft: '1px solid rgba(0,0,0,.4)',
+  borderRight: '1px solid rgba(0,0,0,.4)',
   margin: '0 auto',
-  padding: '0 15px',
-  // TODO make width a var on viewport
-  width: '970px',
+  padding: '0',
 }
 
 const sideHugData1 = {
@@ -38,16 +39,70 @@ const sideHugData2 = {
   imageSide: 'left',
 }
 
-const Page = () => {
-  return (
-    <div style={layoutStyle}>
-      <Header />
-      <Hero imagePath={'/static/images/sunset/lake-sunset-xl.jpg'} altText={'Caddo Lake Sunset'} />
-      <SideHug data={sideHugData1} />
-      <SideHug data={sideHugData2} />
-      <Footer />
-    </div>
-  )
+class Page extends React.Component {
+  constructor( props ) {
+    super( props )
+  
+    this.state = {
+      activeTab: 'test',
+    }
+
+    //this.onTableSizeChange = this.onTableSizeChange.bind(this)
+  }
+
+  onSizeChange( event ) {
+    event.preventDefault()
+
+    //if (this.state.imageSize === 'large') {
+    //  this.setState({ imageSize: 'small' })
+    //} else {
+    //  this.setState({ imageSize: 'large' })
+    //}
+  }
+  
+  render() {
+    return (
+      <div style={layoutStyle}>
+        <div className={'main-container'}>
+        <style jsx global>{`
+        body {
+          background-repeat: repeat;
+          background-position: top left;
+          background-image: url('/static/images/topography.png');
+          margin: 0;
+          padding: 0;
+        }
+
+        .main-container {
+          margin-left: auto;
+          margin-right: auto;
+          overflow: hidden;
+        }
+        
+        @media( min-width: 768px) {
+        }
+
+        @media( min-width: 992px) {
+          .main-container {
+            width: 768px;
+          }
+        }
+
+        @media( min-width: 1170px) {
+          .main-container {
+            width: 992px;
+          }
+        }
+        `}</style>
+        <Header />
+        <Hero imagePath={'/static/images/sunset/lake-sunset-xl.jpg'} altText={'Caddo Lake Sunset'} />
+        <SideHug data={sideHugData1} />
+        <SideHug data={sideHugData2} />
+        <Footer />
+        </div>
+      </div>
+    )
+  }
 }
 
 export default Page
