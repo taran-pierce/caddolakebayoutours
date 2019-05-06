@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 import SideHug from '../components/SideHug'
+import Footer from '../components/Footer'
 
 const layoutStyle = {
   margin: '0 auto',
@@ -44,6 +45,7 @@ const Page = () => {
       <Hero imagePath={'/static/images/sunset/lake-sunset-xl.jpg'} altText={'Caddo Lake Sunset'} />
       <SideHug data={sideHugData1} />
       <SideHug data={sideHugData2} />
+      <Footer />
     </div>
   )
 }
