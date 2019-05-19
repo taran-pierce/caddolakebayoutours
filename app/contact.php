@@ -38,7 +38,7 @@
           <div class="row">
             <div class="col-xs-12 col-sm-6">
               <h3>Rich McFarland <small>Tour Guide</small></h3>
-              <p>Tours available 7 days a week, any time from sunrise to sunset.</p>
+              <p>Tours available 7 days a week, any time of the day from sunrise to sunset.</p>
               <p>Boat tours last approximately one hour.</p>
               <p>Make sure to like us on <a href="https://www.facebook.com/caddotours/" target="_blank">FaceBook</a>.</p>
               <div class="fb-like" data-href="https://www.facebook.com/caddotours/" data-width="260px" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
