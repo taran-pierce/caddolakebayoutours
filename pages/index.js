@@ -6,8 +6,8 @@ import Footer from '../components/Footer'
 
 const layoutStyle = {
   background: 'rgba(255,255,255,.8)',
-  borderLeft: '1px solid rgba(0,0,0,.4)',
-  borderRight: '1px solid rgba(0,0,0,.4)',
+  //borderLeft: '1px solid rgba(0,0,0,.4)',
+  //borderRight: '1px solid rgba(0,0,0,.4)',
   margin: '0 auto',
   padding: '0',
 }
@@ -62,43 +62,43 @@ class Page extends React.Component {
   
   render() {
     return (
-      <div style={layoutStyle}>
+      <div className={`layout`}>
         <div className={'main-container'}>
-        <style jsx global>{`
-        body {
-          background-repeat: repeat;
-          background-position: top left;
-          background-image: url('/static/images/topography.png');
-          margin: 0;
-          padding: 0;
-        }
+          <style jsx global>{`
+            body {
+              background-repeat: repeat;
+              background-position: top left;
+              background-image: url('/static/images/topography.png');
+              margin: 0;
+              padding: 0;
+            }
 
-        .main-container {
-          margin-left: auto;
-          margin-right: auto;
-          overflow: hidden;
-        }
+            .main-container {
+              margin-left: auto;
+              margin-right: auto;
+              overflow: hidden;
+            }
         
-        @media( min-width: 768px) {
-        }
+            @media( min-width: 768px) {
+            }
 
-        @media( min-width: 992px) {
-          .main-container {
-            width: 768px;
-          }
-        }
+            @media( min-width: 992px) {
+              .main-container {
+                width: 768px;
+              }
+            }
 
-        @media( min-width: 1170px) {
-          .main-container {
-            width: 992px;
-          }
-        }
-        `}</style>
-        <Header />
-        <Hero imagePath={'/static/images/sunset/lake-sunset-xl.jpg'} altText={'Caddo Lake Sunset'} />
-        <SideHug data={sideHugData1} />
-        <SideHug data={sideHugData2} />
-        <Footer />
+            @media( min-width: 1170px) {
+              .main-container {
+                width: 992px;
+              }
+            }
+          `}</style>
+          <Header pageTitle={'Caddo Lake Bayou Tours'} canonical={'/'} />
+          <Hero imagePath={'/static/images/sunset/lake-sunset-xl.jpg'} altText={'Caddo Lake Sunset'} />
+          <SideHug data={sideHugData1} />
+          <SideHug data={sideHugData2} />
+          <Footer />
         </div>
       </div>
     )

@@ -37,11 +37,11 @@ const SideHug = ( props ) => {
       `}</style>
       <div className={`flex ${props.data.imageSide === 'left' ? 'image-left' : ''}`}>
         <div className={'item'}>
-          {props.data.titles.map( ( title ) => (
-            <div dangerouslySetInnerHTML={{__html: title}} />
+          {props.data.titles.map( ( title, index ) => (
+            <div key={index} dangerouslySetInnerHTML={{__html: title}} />
           ))}
-          {props.data.paragraphs.map( ( paragraph ) => (
-            <p key={paragraph} dangerouslySetInnerHTML={{__html: paragraph}} />
+          {props.data.paragraphs.map( ( paragraph, index ) => (
+            <p key={index} dangerouslySetInnerHTML={{__html: paragraph}} />
           ))}
         </div>
         <div className={'item'}>

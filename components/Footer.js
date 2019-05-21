@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types'
 
+const year = new Date().getFullYear();
+
 const footerStyles = {
   //overflow: 'hidden',
   // TODO should be a prop
@@ -10,17 +12,6 @@ const Footer = ( props ) => {
   return (
     <footer>
       <style jsx>{`
-        .flex {
-          display: flex;
-        }
-
-        .item {
-          width: 20%;
-        }
-        .item:nth-child(2) {
-          width: 60%;
-        }
-
         ul {
           list-style-type: none;
           padding: 0;
@@ -28,6 +19,19 @@ const Footer = ( props ) => {
 
         .copy-right {
           margin-bottom: 0;
+        }
+
+        @media (min-width: 768px) {
+          .flex {
+            display: flex;
+          }
+  
+          .item {
+            width: 20%;
+          }
+          .item:nth-child(2) {
+            width: 60%;
+          }
         }
       `}</style>
       <div className={'flex'}>
@@ -71,7 +75,7 @@ const Footer = ( props ) => {
           </ul>
         </div>
       </div>
-      <p className={'copy-right'}>Copyright 2018 &copy;</p>
+      <p className={'copy-right'}>Copyright {year} &copy;</p>
     </footer>
   )
 }

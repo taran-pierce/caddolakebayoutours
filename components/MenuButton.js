@@ -1,13 +1,9 @@
 import PropTypes from 'prop-types'
 import FontAwesome from 'react-fontawesome'
 
-const iconStyle = {
-  float: 'right',
-}
-
 const Icon = ( props ) => {
   return (
-    <span onClick={props.clickEvent} style={iconStyle}>
+    <span onClick={props.toggleMenu}>
       <style jsx>{`
         span {
           cursor: pointer;
@@ -18,8 +14,8 @@ const Icon = ( props ) => {
       <FontAwesome
         name={props.name}
         style={{ 
-          textShadow: props.active ? '0 1px 0 rgba(0, 0, 0, 0.5)' : '0 1px 0 rgba(0, 0, 0, 0.1)',
-          color: props.active ? '#dfd2c8' : '#666',
+          textShadow: props.menuOpen ? '-1px -1px 0 rgba(255,255,255,.1)' : '0 1px 0 rgba(0, 0, 0, 0.5)',
+          color: props.menuOpen ? '#595418' : '#e8e3d8',
           transition: 'all .5s ease-in-out',
         }}
         tag='i'
