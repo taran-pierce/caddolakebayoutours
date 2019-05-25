@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import TextBlock from './TextBlock'
 
 const imageLeftStyles = {
   padding: '0 1rem 0 0',
@@ -58,15 +59,12 @@ const SideHug = ( props ) => {
       `}</style>
       <div className={`flex ${props.data.imageSide === 'left' ? 'image-left' : ''}`}>
         <div className={`item ${props.data.imageSide === 'left' ? 'text-right' : 'text-left'}`}>
-          {props.data.titles.map( ( title, index ) => (
-            <div key={index} dangerouslySetInnerHTML={{__html: title}} />
-          ))}
-          {props.data.paragraphs.map( ( paragraph, index ) => (
-            <p key={index} dangerouslySetInnerHTML={{__html: paragraph}} />
+          {props.data.textData.map( ( text, index ) => (
+            <TextBlock key={index} data={text} />
           ))}
         </div>
         <div className={'item image'}>
-          <img src={props.data.imagePath} alt={props.data.imageAlt} />
+          <img src={props.data.image.path} alt={props.data.image.alt} />
         </div>
       </div>
     </section>

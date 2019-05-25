@@ -120,6 +120,11 @@ class Header extends React.Component {
           font-weight: 700;
         }
 
+        .nav li a.active {
+          font-weight: 700;
+          text-decoration: underline;
+        }
+
         @media(min-width: 992px) {
           .dropdown {
             display: none;
@@ -152,30 +157,30 @@ class Header extends React.Component {
               <MenuButton name={'bars'} toggleMenu={this.toggleMenu} menuOpen={this.state.menuOpen} />
             </li>
           </ul>
-          <ul className={`nav ${this.state.menuOpen ? 'menu-open' : ''}`}>
+          <ul className={`nav ${this.state.menuOpen && 'menu-open'}`}>
             <li>
               <Link href={'/about'}>
-                <a>About</a>
+                <a className={this.props.activeTab === 'about' && 'active'}>About</a>
               </Link>
             </li>
             <li>
               <Link href={'/directions'}>
-                <a>Directions</a>
+                <a className={this.props.activeTab === 'directions' && 'active'}>Directions</a>
               </Link>
             </li>
             <li>            
               <Link href={'/things-to-do'}>
-                <a>Things to do</a>
+                <a className={this.props.activeTab === 'things-to-do' && 'active'}>Things to do</a>
               </Link>
             </li>
             <li>
               <Link href={'/photos'}>
-                <a>Photos</a>
+                <a className={this.props.activeTab === 'photos' && 'active'}>Photos</a>
               </Link>
             </li>
             <li>
               <Link href={'/contact'}>
-                <a>Contact</a>
+                <a className={this.props.activeTab === 'contact' && 'active'}>Contact</a>
               </Link>
             </li>
           </ul>
