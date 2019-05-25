@@ -34,6 +34,7 @@ class Header extends React.Component {
           <link rel="canonical" href={`https://www.caddolakebayoutours.com${this.props.canonical}`} />
           <link rel='shortcut icon' href='/static/images/favicon.ico' type='image/x-icon'></link>
           <link href='https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700' rel='stylesheet'></link>
+          <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet"></link>
           <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
           <meta name="author" content="Taran Pierce" />
           <meta name="description" content="Caddo Lake Bayou Tours offers a guided tour of the beautiful Caddo Lake at any time from sunrise to sunset. Whether you are looking for a guided fishing
@@ -70,6 +71,7 @@ class Header extends React.Component {
         li {
           line-height: 1rem;
           padding: 1.5rem 1rem;
+          border-bottom: 1px solid rgba(0,0,0,.3);
         }
 
         .main-nav {
@@ -83,6 +85,8 @@ class Header extends React.Component {
         nav {
           background: #736d1f;
           border: 1px solid #595418;
+          border-left: none;
+          border-right: none;
         }
 
         .nav {
@@ -98,7 +102,8 @@ class Header extends React.Component {
           color: #e8e3d8;
           text-shadow: 0 1px 0 rgba(0,0,0,.4);
           text-decoration: none;
-          font-size: 1.5rem;
+          font-size: 1.2rem;
+          font-weight: 700;
         }
 
         .dropdown {
@@ -107,6 +112,33 @@ class Header extends React.Component {
 
         i {
           color: #e8e3d8; 
+        }
+
+        li a:not(.logo) {
+          text-decoration: none;
+          color: #595418;
+          font-weight: 700;
+        }
+
+        @media(min-width: 992px) {
+          .dropdown {
+            display: none;
+          }
+
+          .nav,
+          nav {
+            background: #736d1f;
+            display: flex;
+          }
+
+          .nav li a {
+            color: #e8e3d8;
+            font-weight: 400;
+          }
+          .nav li a:hover {
+            color: #fafafa;
+            text-decoration: underline;
+          }
         }
         `}</style>
         <nav>

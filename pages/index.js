@@ -4,14 +4,6 @@ import Hero from '../components/Hero'
 import SideHug from '../components/SideHug'
 import Footer from '../components/Footer'
 
-const layoutStyle = {
-  background: 'rgba(255,255,255,.8)',
-  //borderLeft: '1px solid rgba(0,0,0,.4)',
-  //borderRight: '1px solid rgba(0,0,0,.4)',
-  margin: '0 auto',
-  padding: '0',
-}
-
 const sideHugData1 = {
   titles: [
     '<h1>Caddo Lake Bayou Tours</h1>',
@@ -22,9 +14,10 @@ const sideHugData1 = {
     'Come take a boat tour on one of the most scenic and beautiful lakes in the South. Caddo Lake is approximately 26,000 acres of Bald Cypress trees, Spanish moss, abundant wildlife, and scenery that you will never forget. The lake has everything from swamps, bayous and river ways that create a one of a kind experience.',
     'Whether you are looking for a guided fishing trip, a sight–seeing tour of the wildlife or just wanting to have a relaxing day or evening on the boat on Caddo Lake then look no further. Book a tour today to see some of the beauty that awaits you.',
     'Also don\'t forget to like us on our <a href="https://www.facebook.com/caddotours/" target="_blank" rel="noopener">Facebook page</a> to see weekly updates and stay in touch with us!',
-    '<a class="button" href="/contact">Book a Tour</a>',
+    '<a class="btn" href="/contact">Book a Tour</a>',
   ],
-  imagePath: '/static/images/new-sunset.jpg',
+  imagePath: '/static/images/large/IMG_0286.jpg',
+  imageAlt: 'Caddo Lake Sunset',
 }
 
 const sideHugData2 = {
@@ -37,6 +30,7 @@ const sideHugData2 = {
   ],
   imagePath: '/static/images/medium/IMG_0268.jpg',
   imageSide: 'left',
+  imageAlt: 'Caddo Lake, rich with history',
 }
 
 class Page extends React.Component {
@@ -44,20 +38,8 @@ class Page extends React.Component {
     super( props )
   
     this.state = {
-      activeTab: 'test',
+      activeTab: 'home',
     }
-
-    //this.onTableSizeChange = this.onTableSizeChange.bind(this)
-  }
-
-  onSizeChange( event ) {
-    event.preventDefault()
-
-    //if (this.state.imageSize === 'large') {
-    //  this.setState({ imageSize: 'small' })
-    //} else {
-    //  this.setState({ imageSize: 'large' })
-    //}
   }
   
   render() {
@@ -69,8 +51,22 @@ class Page extends React.Component {
               background-repeat: repeat;
               background-position: top left;
               background-image: url('/static/images/topography.png');
+              color: #402f1d;
               margin: 0;
               padding: 0;
+            }
+            h1, h2, h3, h4, h5, h6 {
+              font-family: 'Do Hyeon',Helvetica,sans-serif;
+              margin-top: 0;
+            }
+            html {
+              font-family: 'Noto Sans', sans-serif;
+            }
+            p {
+              line-height: 1.8;
+            }
+            p:last-child {
+              margin-bottom: 0;
             }
 
             .main-container {
@@ -78,24 +74,58 @@ class Page extends React.Component {
               margin-right: auto;
               overflow: hidden;
             }
-        
+
+            .btn {
+              display: inline-block;
+              margin-bottom: 0;
+              font-weight: 400;
+              text-align: center;
+              vertical-align: middle;
+              touch-action: manipulation;
+              cursor: pointer;
+              background-image: none;
+              border: 1px solid transparent;
+              white-space: nowrap;
+              padding: 6px 12px;
+              font-size: 16px;
+              line-height: 1.6;
+              border-radius: 4px;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+              color: #fff;
+              background-color: #9b932a;
+              border-color: #5f5a1a;
+              text-decoration: none;
+              transition: all .25s ease-in-out;
+            }
+            .btn:hover {
+              box-shadow: 0 2px 2px rgba(0,0,0,.4);
+            }
+
             @media( min-width: 768px) {
             }
 
             @media( min-width: 992px) {
               .main-container {
-                width: 768px;
+                width: 970px;
               }
             }
 
             @media( min-width: 1170px) {
               .main-container {
-                width: 992px;
+                width: 1170px;
               }
             }
           `}</style>
           <Header pageTitle={'Caddo Lake Bayou Tours'} canonical={'/'} />
-          <Hero imagePath={'/static/images/sunset/lake-sunset-xl.jpg'} altText={'Caddo Lake Sunset'} />
+          <Hero 
+            imagePath={'/static/images/sunset/lake-sunset-xl.jpg'} 
+            altText={'Cypress trees at Caddo Lake'} 
+            imageHeight={'300px'}
+            imageBottomAdjustment={'270px'} 
+          />
           <SideHug data={sideHugData1} />
           <SideHug data={sideHugData2} />
           <Footer />

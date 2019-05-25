@@ -1,20 +1,30 @@
-import PropTypes from 'prop-types'
-
 const year = new Date().getFullYear();
 
 const footerStyles = {
-  //overflow: 'hidden',
-  // TODO should be a prop
-  //height: '300px',
+  padding: '0 1rem',
+  background: '#fafafa',
+  border: '1px solid rgba(0,0,0,.1)',
+  borderTop: 'none',
+  borderBottom: 'none',
 }
 
 const Footer = ( props ) => {
   return (
-    <footer>
+    <footer style={footerStyles}>
       <style jsx>{`
+        h4 {
+          background: #736d1f;
+          color: #402f1d;
+          padding: .5rem;
+        }
+       
         ul {
           list-style-type: none;
           padding: 0;
+        }
+
+        li {
+          padding: .5rem 0;
         }
 
         .copy-right {
@@ -22,6 +32,9 @@ const Footer = ( props ) => {
         }
 
         @media (min-width: 768px) {
+          h4 {
+            margin-top: 1rem;
+          }
           .flex {
             display: flex;
           }
@@ -30,7 +43,12 @@ const Footer = ( props ) => {
             width: 20%;
           }
           .item:nth-child(2) {
+            margin-top: 1rem;
             width: 60%;
+          }
+
+          .item.map {
+            padding: 0 1rem;
           }
         }
       `}</style>
@@ -53,7 +71,7 @@ const Footer = ( props ) => {
             </li>
           </ul>
         </div>
-        <div className={'item'}>
+        <div className={'item map'}>
           <div className={'map-container'}>
             <iframe title="Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13428.266285705415!2d-94.15337171079648!3d32.7108586943788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc79227c114d5c01d!2sCaddo+Lake+Bayou+Tours!5e0!3m2!1sen!2sus!4v1528217775632" width="100%" height="450" frameBorder="0" allowFullScreen></iframe>
           </div>
@@ -79,9 +97,5 @@ const Footer = ( props ) => {
     </footer>
   )
 }
-
-//Footer.propTypes = {
-//  data: PropTypes.object,
-//}
 
 export default Footer

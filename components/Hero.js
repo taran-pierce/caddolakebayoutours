@@ -1,20 +1,25 @@
 import PropTypes from 'prop-types'
 
-const heroStyles = {
-  overflow: 'hidden',
-  // TODO should be a prop
-  height: '300px',
-}
-
 const Hero = ( props ) => {
+  const heroStyles = {
+    overflow: 'hidden',
+    height: props.imageHeight,
+    borderBottom: '5px solid #afa62f',
+  }
+
   return (
-    <section style={heroStyles}>
+    <section>
       <style jsx>{`
         img {
+          display: block;
           max-width: 100%;
+          position: relative;
+          bottom: ${props.imageBottomAdjustment};
         }
       `}</style>
-      <img src={props.imagePath} alt={props.altText} />
+      <div style={heroStyles}>
+        <img src={props.imagePath} alt={props.altText} />
+      </div>
     </section>
   )
 }
@@ -22,6 +27,8 @@ const Hero = ( props ) => {
 Hero.propTypes = {
   imagePath: PropTypes.string,
   altText: PropTypes.string,
+  imageBottomAdjustment: PropTypes.string,
+  imageHeight: PropTypes.string,
 }
 
 export default Hero
