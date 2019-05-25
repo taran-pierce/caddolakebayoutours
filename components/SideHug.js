@@ -64,7 +64,10 @@ const SideHug = ( props ) => {
           ))}
         </div>
         <div className={'item image'}>
-          <img src={props.data.image.path} alt={props.data.image.alt} />
+           {props.data.image && <img src={props.data.image.path} alt={props.data.image.alt} />}
+           {props.data.googleMap && 
+             <div dangerouslySetInnerHTML={{__html: props.data.googleMap}} />
+           }
         </div>
       </div>
     </section>

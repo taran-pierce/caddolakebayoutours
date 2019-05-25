@@ -7,7 +7,7 @@ const TextBlock = ( props ) => {
         <div key={index} dangerouslySetInnerHTML={{__html: title}} />
       ))}
       {props.data.paragraphs.map( ( paragraph, index) => (
-        <div key={index} dangerouslySetInnerHTML={{__html: paragraph}} />
+        <p key={index} dangerouslySetInnerHTML={{__html: paragraph}} />
       ))}
     </div>
   )
