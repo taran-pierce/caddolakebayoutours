@@ -33,6 +33,7 @@ class Header extends React.Component {
           <meta name="robots" content="index,follow" />
           <link rel="canonical" href={`https://www.caddolakebayoutours.com${this.props.canonical}`} />
           <link rel='shortcut icon' href='/static/images/favicon.ico' type='image/x-icon'></link>
+          <link href="/static/css/base.css" rel="stylesheet" />
           <link href='https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700' rel='stylesheet'></link>
           <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet"></link>
           <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
@@ -62,89 +63,89 @@ class Header extends React.Component {
           <meta name="theme-color" content="#ffffff" />
         </Head>
         <style jsx>{`
-        ul {
-          list-style-type: none;
-          padding: 0;
-          margin: 0;
-        }
-
-        li {
-          line-height: 1rem;
-          padding: 1.5rem 1rem;
-          border-bottom: 1px solid rgba(0,0,0,.3);
-        }
-
-        .main-nav {
-          display: flex;
-        }
-
-        .main-nav li {
-          flex-grow: 1;
-        }
-
-        nav {
-          background: #736d1f;
-          border: 1px solid #595418;
-          border-left: none;
-          border-right: none;
-        }
-
-        .nav {
-          background: #fafafa;
-          display: none;
-        }
-
-        .nav.menu-open {
-          display: block;
-        }
-
-        .logo {
-          color: #e8e3d8;
-          text-shadow: 0 1px 0 rgba(0,0,0,.4);
-          text-decoration: none;
-          font-size: 1.2rem;
-          font-weight: 700;
-        }
-
-        .dropdown {
-          text-align: right;
-        }
-
-        i {
-          color: #e8e3d8; 
-        }
-
-        li a:not(.logo) {
-          text-decoration: none;
-          color: #595418;
-          font-weight: 700;
-        }
-
-        .nav li a.active {
-          font-weight: 700;
-          text-decoration: underline;
-        }
-
-        @media(min-width: 992px) {
-          .dropdown {
-            display: none;
+          ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
           }
 
-          .nav,
-          nav {
-            background: #736d1f;
+          li {
+            line-height: 1rem;
+            padding: 1.5rem 1rem;
+            border-bottom: 1px solid rgba(0,0,0,.3);
+          }
+
+          .main-nav {
             display: flex;
           }
 
-          .nav li a {
-            color: #e8e3d8;
-            font-weight: 400;
+          .main-nav li {
+            flex-grow: 1;
           }
-          .nav li a:hover {
-            color: #fafafa;
+
+          nav {
+            background: #736d1f;
+            border: 1px solid #595418;
+            border-left: none;
+            border-right: none;
+          }
+
+          .nav {
+            background: #fafafa;
+            display: none;
+          }
+
+          .nav.menu-open {
+            display: block;
+          }
+
+          .logo {
+            color: #e8e3d8;
+            text-shadow: 0 1px 0 rgba(0,0,0,.4);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 700;
+          }
+
+          .dropdown {
+            text-align: right;
+          }
+
+          i {
+            color: #e8e3d8; 
+          }
+
+          li a:not(.logo) {
+            text-decoration: none;
+            color: #595418;
+            font-weight: 700;
+          }
+
+          .nav li a.active {
+            font-weight: 700;
             text-decoration: underline;
           }
-        }
+
+          @media(min-width: 992px) {
+            .dropdown {
+              display: none;
+            }
+
+            .nav,
+            nav {
+              background: #736d1f;
+              display: flex;
+            }
+
+            .nav li a {
+              color: #e8e3d8;
+              font-weight: 400;
+            }
+            .nav li a:hover {
+              color: #fafafa;
+              text-decoration: underline;
+            }
+          }
         `}</style>
         <nav>
           <ul className={'main-nav'}>
@@ -174,8 +175,8 @@ class Header extends React.Component {
               </Link>
             </li>
             <li>
-              <Link href={'/photos'}>
-                <a className={this.props.activeTab === 'photos' && 'active'}>Photos</a>
+              <Link href={'/photo-gallery'}>
+                <a className={this.props.activeTab === 'photo-gallery' && 'active'}>Photo Gallery</a>
               </Link>
             </li>
             <li>

@@ -1,31 +1,11 @@
 import PropTypes from 'prop-types'
 import TextBlock from './TextBlock'
-
-const imageLeftStyles = {
-  padding: '0 1rem 0 0',
-  background: '#fafafa',
-  border: '1px solid rgba(0,0,0,.1)',
-  borderTop: '5px solid #afa62f',
-  borderBottom: '5px solid #afa62f',
-}
-
-const imageRightStyles = {
-  padding: '0 0 0 1rem',
-  background: '#fafafa',
-  border: '1px solid rgba(0,0,0,.1)',
-  borderTop: '5px solid #afa62f',
-  borderBottom: '5px solid #afa62f',
-}
+import { Image, CloudinaryContext, Transformation } from 'cloudinary-react'
 
 const SideHug = ( props ) => {
   return (
-    <section style={props.data.imageSide === 'left' ? imageLeftStyles : imageRightStyles}>
+    <section className="side-hug">
       <style jsx>{`
-        img {
-          display: block;
-          max-width: 100%;
-        }
-
         @media( min-width: 992px ) {
           .flex {
             display: flex;
@@ -64,10 +44,19 @@ const SideHug = ( props ) => {
           ))}
         </div>
         <div className={'item image'}>
-           {props.data.image && <img src={props.data.image.path} alt={props.data.image.alt} />}
-           {props.data.googleMap && 
-             <div dangerouslySetInnerHTML={{__html: props.data.googleMap}} />
-           }
+          {props.data.googleMap && <div dangerouslySetInnerHTML={{__html: props.data.googleMap}} /> }
+          {props.data.image && (
+            <CloudinaryContext cloudName="tpierce36">
+              <Image 
+                publicId={props.data.image.path}
+                responsive
+                width="auto"
+                crop="scale"
+              >
+                <Transformation quality="auto" fetchFormat="auto" />
+              </Image>
+            </CloudinaryContext>
+          )}
         </div>
       </div>
     </section>

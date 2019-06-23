@@ -6,8 +6,7 @@ import Footer from '../components/Footer'
 
 const sideHug1 = {
   image: {
-    path: '/static/images/large/IMG_0286.jpg',
-    alt: 'Caddo Lake Sunset',
+    path: 'lake-cypress-trees.jpg',
   },
   textData: [
     {
@@ -58,8 +57,7 @@ const sideHug1 = {
 
 const sideHug2 = {
   image: {
-    path: '/static/images/medium/IMG_0268.jpg',
-    alt: 'Caddo Lake, rich with history',
+    path: 'lake-cypress-trees-2.jpg',
   },
   imageSide: 'left',
   textData: [
@@ -112,90 +110,13 @@ class Page extends React.Component {
     return (
       <div className={`layout`}>
         <div className={'main-container'}>
-          <style jsx global>{`
-            body {
-              background-repeat: repeat;
-              background-position: top left;
-              background-image: url('/static/images/topography.png');
-              color: #402f1d;
-              margin: 0;
-              padding: 0;
-            }
-            h1, h2, h3, h4, h5, h6 {
-              font-family: 'Do Hyeon',Helvetica,sans-serif;
-              margin-top: 0;
-            }
-            html {
-              font-family: 'Noto Sans', sans-serif;
-            }
-            p {
-              line-height: 1.8;
-            }
-            p:last-child {
-              margin-bottom: 0;
-            }
-
-            .main-container {
-              margin-left: auto;
-              margin-right: auto;
-              overflow: hidden;
-            }
-
-            .btn {
-              display: inline-block;
-              margin-bottom: 0;
-              font-weight: 400;
-              text-align: center;
-              vertical-align: middle;
-              touch-action: manipulation;
-              cursor: pointer;
-              background-image: none;
-              border: 1px solid transparent;
-              white-space: nowrap;
-              padding: 6px 12px;
-              font-size: 16px;
-              line-height: 1.6;
-              border-radius: 4px;
-              -webkit-user-select: none;
-              -moz-user-select: none;
-              -ms-user-select: none;
-              user-select: none;
-              color: #fff;
-              background-color: #9b932a;
-              border-color: #5f5a1a;
-              text-decoration: none;
-              transition: all .25s ease-in-out;
-            }
-            .btn:hover {
-              box-shadow: 0 2px 2px rgba(0,0,0,.4);
-            }
-
-            @media( min-width: 768px) {
-            }
-
-            @media( min-width: 992px) {
-              .main-container {
-                width: 970px;
-              }
-            }
-
-            @media( min-width: 1170px) {
-              .main-container {
-                width: 1170px;
-              }
-            }
-          `}</style>
           <Header 
             pageTitle={'About | Caddo Lake Bayou Tours'} 
             canonical={'/about'} 
             activeTab={'about'}
           />
           <Hero 
-            imagePath={'/static/images/lake-mirror-1-banner.jpg'} 
-            altText={'Cypress trees at Caddo Lake'} 
-            imageHeight={'194px'}
-            imageBottomAdjustment={'0'} 
-          />
+            imagePath={'lake-sunset-2.jpg'} />
           <SideHug data={sideHug1} />
           <SideHug data={sideHug2} />
           <Footer />

@@ -1,7 +1,6 @@
 const year = new Date().getFullYear();
 
 const footerStyles = {
-  padding: '0 1rem',
   background: '#fafafa',
   border: '1px solid rgba(0,0,0,.1)',
   borderTop: 'none',

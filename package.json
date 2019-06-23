@@ -14,15 +14,28 @@
   },
   "homepage": "https://github.com/taran-pierce/caddolakebayoutours#readme",
   "scripts": {
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "axios": "^0.18.1",
+    "body-parser": "^1.19.0",
+    "cloudinary-react": "^1.1.1",
+    "express": "^4.17.1",
+    "isomorphic-fetch": "^2.2.1",
     "next": "^8.1.0",
+    "nodemailer": "^6.2.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-facebook": "^8.0.4",
     "react-fontawesome": "^1.6.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-livereload": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.12.0"
   }
 }

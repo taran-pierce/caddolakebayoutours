@@ -1,24 +1,25 @@
 import PropTypes from 'prop-types'
+import { Image, CloudinaryContext, Transformation } from 'cloudinary-react'
 
 const Hero = ( props ) => {
   const heroStyles = {
     overflow: 'hidden',
-    height: props.imageHeight,
     borderBottom: '5px solid #afa62f',
   }
 
   return (
-    <section>
-      <style jsx>{`
-        img {
-          display: block;
-          max-width: 100%;
-          position: relative;
-          bottom: ${props.imageBottomAdjustment};
-        }
-      `}</style>
+    <section className="hero">
       <div style={heroStyles}>
-        <img src={props.imagePath} alt={props.altText} />
+        <CloudinaryContext cloudName="tpierce36">
+            <Image 
+              publicId={props.imagePath}
+              responsive
+              width="auto"
+              crop="scale"
+            >
+              <Transformation quality="70" fetchFormat="auto" />
+            </Image>
+        </CloudinaryContext>
       </div>
     </section>
   )
@@ -26,9 +27,6 @@ const Hero = ( props ) => {
 
 Hero.propTypes = {
   imagePath: PropTypes.string,
-  altText: PropTypes.string,
-  imageBottomAdjustment: PropTypes.string,
-  imageHeight: PropTypes.string,
 }
 
 export default Hero
