@@ -4,7 +4,7 @@
     $title = "Caddo Lake Bayou Tours";
   }
 
-  $base_url = "http://www.caddolakebayoutours.com";
+  $base_url = "https://www.caddolakebayoutours.com";
   # set default canonical
   if ($canonical === null) {
     $canonical = "/";
