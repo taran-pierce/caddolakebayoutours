@@ -16,7 +16,8 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export"
   },
   "dependencies": {
     "axios": "^0.18.1",
@@ -32,6 +33,7 @@
     "react-dom": "^16.8.6",
     "react-facebook": "^8.0.4",
     "react-fontawesome": "^1.6.1",
+    "serve": "^11.0.2",
     "tar": "^4.4.10",
     "tunnel-agent": "^0.6.0"
   },
