@@ -35,6 +35,29 @@
           <p>If you have any questions please give us a call or you can contact us via email and we will get back to you as soon as possible. We will answer any questions you may have about
           what kind of guided boat tours we have available, what you can expect to encounter while on the tour and of course what you can and can not do on while on the tour of the lake.</p>
           <p>Come and enjoy the wonderful experience that is Caddo Lake. We can't wait to share it with you!</p>
+          <h3>Types of Tours for Caddo Lake</h3>
+          <ul class="list-unstyled">
+            <li>
+              <h4>Guided photography tour</h4>
+              <p>Whether you are looking to take some photography of the abundant wildlife here at Caddo Lake or some of the breath taking nature, we can show you all the best places on the lake amidst the maze of bayous and Bald Cypress trees.</p>
+            </li>
+            <li>
+              <h4>Sunrise or sunset tours</h4>
+              <p>Who can resist seeing a gorgeous sunset or sunrise over a lake? Caddo Lake is picturesque in every way, shape and form. Book a tour today and find out for yourself!</p>
+            </li>
+            <li>
+              <h4>Fishing trips</h4>
+              <p>With vast amounts of experience and knowledge of Caddo Lake, we can take you to all the best fishing spots to ensure you will have a great time and a great catch.</p>
+            </li>
+            <li>
+              <h4>Sightseeing trips</h4>
+              <p>If taking pictures isn't quite your thing then just taking a relaxing ride on Caddo Lake and getting to see the bayous and how they all intertwine first hand is worth the experience alone. Come and check out the wonders of Caddo Lake today!</p>
+            </li>
+            <li>
+              <h4>and more!</h4>
+              <p>There are so many things available to do and see on the lake that we couldn't list them all. If you think of something that you would like to do or see and you wonder if we can accommodate those plans, just send us a message and let us know! We will get back to you as soon as possible to let you know if we can help out.</p>
+            </li>
+          </ul>
           <div class="row">
             <div class="col-xs-12 col-sm-6">
               <h3>Rich McFarland <small>Tour Guide</small></h3>
