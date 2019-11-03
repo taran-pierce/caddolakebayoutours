@@ -52,46 +52,56 @@
             </div>
             <div class="row">
               <div class="col-xs-12 col-sm-6">
-                <h3>Johnson's Ranch</h3>
-                <p>Johnson's Ranch is a full service marina, supplying the sportsmen of today with boat fuel, live bait, artificial lures, snacks, soft drinks, beer, tee shirts and other souvenirs. Canoe, kayak and boat (with or without motors) are available.</p>
-                <p><a href="http://johnsonsranch.net/index.htm" target="_blank" rel="noopener">Visit their website for more information</a></p>
+                <h3>Nature Photography</h3>
+                <p>We often get a lot of great Photographer's that want to come out and take some photos of all the fantastic nature that Caddo Lake has to offer. Time to join the club and test out your photography skills!</p>
+                <p>Like our friends down at Wright Shot photography.</p>
+                <p><a href="https://www.wrightshotphotography.com/" target="_blank" rel="noopener">Visit their website for more information</a></p>
               </div>
               <div class="col-xs-12 col-sm-6">
-                <img class="img-responsive" src="/images/johnsons-ranch.jpg" alt="Johnson's Ranch Marina" />
+                <img class="img-responsive" src="/images/wright-lake-2.jpg" alt="Caddo Lake - Wright Shot Photography" />
               </div>
             </div>
             <div class="row">
               <div class="col-xs-12 col-sm-6">
-                <img class="img-responsive" src="/images/june/large/3.jpg" alt="Moonglow Lodge" />
+                <img class="img-responsive" src="/images/johnsons-ranch.jpg" alt="Johnson's Ranch Marina" />
               </div>
+              <div class="col-xs-12 col-sm-6">
+                <h3>Johnson's Ranch</h3>
+                <p>Johnson's Ranch is a full service marina, supplying the sportsmen of today with boat fuel, live bait, artificial lures, snacks, soft drinks, beer, tee shirts and other souvenirs. Canoe, kayak and boat (with or without motors) are available.</p>
+                <p><a href="http://johnsonsranch.net/index.htm" target="_blank" rel="noopener">Visit their website for more information</a></p>
+              </div>
+            </div>
+            <div class="row">
               <div class="col-xs-12 col-sm-6">
                 <h3>Jefferson Texas</h3>
                 <p>Visit historic Jefferson Texas for shopping, entertainment and dining options. From train rides, horse drawn carriage rides, riverboat rides, kayak or canoe rental and even golf cart rentals in Jefferson Texas, Caddo Lake and Lake O the Pines you will find many historic things to do.</p>
                 <p>For the shopper in you we have more antique shops than any other town in the Piney Woods. Plus so many great new boutique shops have opened up in the past few years, you will be delighted with the array of items they have to offer.</p>
                 <p><a href="https://www.jefferson-texas.com/" target="_blank" rel="noopener">Visit their website for more information</a></p>
               </div>
+              <div class="col-xs-12 col-sm-6">
+                <img class="img-responsive" src="/images/june/large/3.jpg" alt="Moonglow Lodge" />
+              </div>
             </div>
             <div class="row">
+              <div class="col-xs-12 col-sm-6">
+                <img class="img-responsive" src="/images/june/large/4.jpg" alt="Hodge Podge Cottages" />
+              </div>
               <div class="col-xs-12 col-sm-6">
                 <h3>Hodge Podge Cottages</h3>
                 <p>Come and feel time slow down in this busy world and experience everything this area has to offer. If all your questions are not answered on our website, please feel free to contact us and we will be happy to assist you.</p>
                 <p><a href="http://www.hodgepodgecottages.com/" target="_blank" rel="noopener">Visit their website for more information</a></p>
               </div>
-              <div class="col-xs-12 col-sm-6">
-                <img class="img-responsive" src="/images/june/large/4.jpg" alt="Hodge Podge Cottages" />
-              </div>
             </div>
             <div class="row">
-              <div class="col-xs-12 col-sm-6">
-                <img class="img-responsive" src="/images/june/large/5.jpg" alt="Caddo Lake State Park" />
-              </div>
               <div class="col-xs-12 col-sm-6">
                 <h3>Caddo Lake State Park</h3>
                 <p>Be sure to check out Caddo Lake State Park with it's Bald cypress trees draped with Span­ish moss tower over the maze of bayous, sloughs and ponds of Caddo Lake. Paddle these waterways, stay in a historic cabin, or try your luck fishing. Discover an East Texas treasure!</p>
                 <p><a href="https://tpwd.texas.gov/state-parks/caddo-lake" target="_blank" rel="noopener">Visit their website for more information</a></p>
               </div>
+              <div class="col-xs-12 col-sm-6">
+                <img class="img-responsive" src="/images/june/large/5.jpg" alt="Caddo Lake State Park" />
+              </div>
             </div>
-
           </div>
         </div>
       </section>

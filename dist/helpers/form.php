@@ -56,6 +56,6 @@
 
   mail( $to, $subject, $email_body, $headers);
 
-  header("Location: /thank-you");
+  header("Location: /thank-you.php");
   die();
 ?>
