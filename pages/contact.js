@@ -61,7 +61,7 @@ class Page extends React.Component {
       },
       body: JSON.stringify(data)
     }).then( ( res ) => {
-      res.status === 200 ? this.setState({ sent: true }) : ''
+      res.status === 200 ? this.setState({ sent: true }) : '';
       this.resetForm()
     })
   }

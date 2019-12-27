@@ -8,31 +8,42 @@ const handle = app.getRequestHandler()
 // set up nodemailer and get creds
 const nodemailer = require("nodemailer")
 
-// set proper route to creds if it needs to be modified
-const creds = require('./utilities/email-config')
+// get info for email
+const c = require('./conf.js')
 
 async function main(name, email, message){
 
+  // set up message
+  let newMessage = `${name} has been viewing your website and has some questions.\n
+  Email them back at their email address: ${email}\n\n\n
+  Message from ${name}:\n
+  ________________________________________\n
+  ${message}
+  `
+
   // create transporter
   let transporter = nodemailer.createTransport({
-    host: creds.HOST,
+    host: c.HOST,
+    // for gmail to work options must be set up on the account
+    // that is being used to send the mail
+    service: 'gmail',
     port: 465,
-    secure: true, // true for 465, false for other ports
+    secure: true,
     auth: {
-      user: creds.USER,
-      pass: creds.PASS
+      user: c.USER,
+      pass: c.PASS
     },
   });
 
   // send mail
   let info = await transporter.sendMail({
     from: `"${name}" <${email}>`,
-    to: creds.USER, // list of receivers
+    to: c.USER, // list of receivers
     subject: "Website Contact Form", // Subject line
-    text: message, // plain text body
+    text: newMessage, // plain text body
     envelope: {
       from: `"${name}" <${email}>`,
-      to: creds.USER,
+      to: c.USER,
       replyTo: `"${name}" <${email}>`
     },
     messageId: `"${name}" <${email}>`,
