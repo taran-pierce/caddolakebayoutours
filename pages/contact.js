@@ -53,7 +53,8 @@ class Page extends React.Component {
 
     event.preventDefault()
 
-    fetch('/send/mail', {
+    // fetch('/send/mail', {
+    fetch('/helpers/form.php', {
       method: 'post',
       headers: {
         'Accept': '*/*',

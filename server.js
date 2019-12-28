@@ -55,7 +55,7 @@ app.prepare().then(() => {
 
   server.use(bodyParser.json())
 
-  server.post('/send/mail', (req, res) => {
+  server.post('/helpers/form.php', (req, res) => {
     // set vars for incoming POST
     const { name, email, message } = req.body
 
