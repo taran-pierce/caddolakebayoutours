@@ -30,7 +30,7 @@ class Header extends React.Component {
         <Head>
           <title>{this.props.pageTitle}</title>
           <meta name='viewport' content='width=device-width' />
-          <meta name="robots" content="index,follow" />
+          <meta name="robots" content="noindex, nofollow" />
           <link rel="canonical" href={`https://www.caddolakebayoutours.com${this.props.canonical}`} />
           <link rel='shortcut icon' href='/static/images/favicon.ico' type='image/x-icon'></link>
           <link href="/static/css/base.css" rel="stylesheet" />
