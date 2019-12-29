@@ -53,16 +53,16 @@ class Page extends React.Component {
 
     event.preventDefault()
 
-    // fetch('/send/mail', {
-    fetch('/helpers/form.php', {
+    fetch('http://caddo-email-server.herokuapp.com/send/mail', {
+      mode: 'no-cors',
       method: 'post',
       headers: {
         'Accept': '*/*',
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/x-www-form-urlencoded'
       },
       body: JSON.stringify(data)
     }).then( ( res ) => {
-      res.status === 200 ? this.setState({ sent: true }) : '';
+      this.setState({ sent: true })
       this.resetForm()
     })
   }

@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/taran-pierce/caddolakebayoutours#readme",
   "scripts": {
-    "dev": "next develop",
+    "dev": "next",
     "build": "next build",
     "export": "next export"
   },
