@@ -53,7 +53,7 @@ class Page extends React.Component {
 
     event.preventDefault()
 
-    fetch('http://caddo-email-server.herokuapp.com/send/mail', {
+    fetch('//caddo-email-server.herokuapp.com/send/mail', {
       mode: 'no-cors',
       method: 'post',
       headers: {
