@@ -1,0 +1,12 @@
+@media( min-width: 768px ) {
+  .side-hug {
+    .flex {
+      display: flex;
+      align-items: center;
+    }
+  
+    .col {
+      flex-grow: 1;
+    }
+  }
+}

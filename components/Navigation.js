@@ -7,23 +7,23 @@ import './navigation.scss'
 const links = [
   {
     "name": "About",
-    "href": "/about"
+    "href": "/about/"
   },
   {
     "name": "Directions",
-    "href": "/directions"
+    "href": "/directions/"
   },
   {
     "name": "Things to do",
-    "href": "/things-to-do"
+    "href": "/things-to-do/"
   },
   {
     "name": "Photo Gallery",
-    "href": "/photo-gallery"
+    "href": "/photo-gallery/"
   },
   {
     "name": "Contact",
-    "href": "/contact"
+    "href": "/contact/"
   }
 ]
 

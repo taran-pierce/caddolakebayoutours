@@ -1,18 +1,14 @@
 import Header from './Header'
-import Hero from './Hero'
+import Footer from './Footer'
 
-const layoutStyle = {
-  margin: '0 auto',
-  padding: '0 15px',
-  // TODO make width a var on viewport
-  width: '970px',
-}
+import './layout.scss'
 
 const Layout = ( props ) => {
     return (
-      <div style={layoutStyle}>
-        <Header />
-        <Hero />
+      <div>
+        <Header pageTitle={props.pageTitle} canonical={props.canonical} />
+        {props.children}
+        <Footer />
       </div>
     )
 }

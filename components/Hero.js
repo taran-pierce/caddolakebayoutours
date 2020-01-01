@@ -1,15 +1,12 @@
 import PropTypes from 'prop-types'
 import { Image, CloudinaryContext, Transformation } from 'cloudinary-react'
 
-const Hero = ( props ) => {
-  const heroStyles = {
-    overflow: 'hidden',
-    borderBottom: '5px solid #afa62f',
-  }
+import './hero.scss'
 
+const Hero = ( props ) => {
   return (
-    <section className="hero">
-      <div style={heroStyles}>
+    <section className={`hero`}>
+      <div>
         <CloudinaryContext cloudName="tpierce36">
             <Image 
               publicId={props.imagePath}

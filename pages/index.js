@@ -1,8 +1,7 @@
 import React from 'react'
-import Header from '../components/Header'
+import Layout from '../components/Layout'
 import Hero from '../components/Hero'
-import SideHug from '../components/SideHug'
-import Footer from '../components/Footer'
+import SideHug from '../components/SideHug-v2'
 
 const sideHugData1 = {
   image: {
@@ -41,7 +40,7 @@ const sideHugData2 = {
       ],
     }
   ],
-  imageSide: 'left',
+  imageFirst: true,
 }
 
 class Page extends React.Component {
@@ -55,15 +54,11 @@ class Page extends React.Component {
   
   render() {
     return (
-      <div className={`layout`}>
-        <div className={'main-container'}>
-          <Header pageTitle={'Caddo Lake Bayou Tours'} canonical={'/'} />
-          <Hero imagePath={'caddo-lake-swamp.jpg'} />
-          <SideHug data={sideHugData1} />
-          <SideHug data={sideHugData2} />
-          <Footer />
-        </div>
-      </div>
+      <Layout pageTitle={`Caddo Lake Bayou Tours`} canonical={`/`}>
+        <Hero imagePath={`gallery/caddo-lake-11.jpg`} />
+        <SideHug data={sideHugData1} />
+        <SideHug data={sideHugData2} />
+      </Layout>
     )
   }
 }

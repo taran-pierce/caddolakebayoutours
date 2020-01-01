@@ -2,41 +2,11 @@ import PropTypes from 'prop-types'
 import TextBlock from './TextBlock'
 import { Image, CloudinaryContext, Transformation } from 'cloudinary-react'
 
+import './sideHug.scss'
+
 const SideHug = ( props ) => {
   return (
-    <section className="side-hug">
-      <style jsx>{`
-        @media( min-width: 992px ) {
-          .flex {
-            display: flex;
-            align-items: center;
-          }
-  
-          .item {
-            flex-grow: 1;
-            width: 50%;
-          }
-  
-          .image-left .item:last-child {
-            order: 0;
-          }
-          .image-left .item:first-child {
-            order: 1;
-          }
-          .item.image {
-            padding: 0;
-          }
-
-          .text-left {
-            padding-right: 1rem;
-          }
-
-          .text-right {
-            padding-left: 1rem;
-          }
-
-        }
-      `}</style>
+    <section className={`side-hug`}>
       <div className={`flex ${props.data.imageSide === 'left' ? 'image-left' : ''}`}>
         <div className={`item ${props.data.imageSide === 'left' ? 'text-right' : 'text-left'}`}>
           {props.data.textData.map( ( text, index ) => (
