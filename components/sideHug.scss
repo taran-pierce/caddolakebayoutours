@@ -5,6 +5,14 @@
   .img-wrapper {
     margin-left: -1rem;
     margin-right: -1rem;
+
+    img {
+      display: block;
+    }
+  }
+
+  .container {
+    border-top: 5px solid #afa62f;
   }
 }
 
@@ -18,13 +26,22 @@
 
 @media(min-width: 992px) {
   .side-hug {
+    padding-top: 0;
+    padding-bottom: 0;
+
     .flex {
       display: flex;
       align-items: center;
     }
   
     .col {
-      flex-grow: 1;
+      width: 50%;
+    }
+
+    .img-wrapper {
+      margin-left: 0;
+      margin-right: 0;
+      display: block;
     }
   }
 }

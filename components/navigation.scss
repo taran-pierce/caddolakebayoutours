@@ -91,23 +91,24 @@
 
 @media(min-width: 992px) {
   .header-nav {
+    display: flex;
+    justify-content: space-between;
+
     .dropdown {
       display: none;
     }
+
+    .logo {
+      font-size: 1.2rem;
+    }
   
-    .nav,
-    nav {
-      background: #736d1f;
+    .secondary-nav {
       display: flex;
-    }
-  
-    .nav li a {
-      color: #e8e3d8;
-      font-weight: 400;
-    }
-    .nav li a:hover {
-      color: #fafafa;
-      text-decoration: underline;
+      max-height: 100px;
+
+      li {
+        flex-grow: 1;
+      }
     }
   }
 }

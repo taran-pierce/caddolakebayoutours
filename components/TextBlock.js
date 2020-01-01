@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types'
 
+import './textBlock.scss'
+
 const TextBlock = ( props ) => {
   return (
-    <div>
+    <div className={`text-wrapper`}>
       {props.data.titles.map( ( title, index ) => (
         <div key={index} dangerouslySetInnerHTML={{__html: title}} />
       ))}

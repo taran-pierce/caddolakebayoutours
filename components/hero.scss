@@ -8,3 +8,11 @@
     }
   }
 }
+
+@media(min-width: 992px) {
+  .hero {
+    .img-wrapper {
+      height: 280px;
+    }
+  }
+}
