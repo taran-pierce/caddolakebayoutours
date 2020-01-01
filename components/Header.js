@@ -1,40 +1,19 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import PropTypes from 'prop-types'
-import MenuButton from '../components/MenuButton'
+import Navigation from '../components/Navigation'
 
 class Header extends React.Component {
-  constructor( props ) {
-    super( props )
-  
-    this.state = {
-      menuOpen: false,
-    }
-
-    this.toggleMenu = this.toggleMenu.bind(this)
-  }
-
-  toggleMenu( event ) {
-    event.preventDefault()
-
-    if ( this.state.menuOpen ) {
-      this.setState({ menuOpen: false })
-    } else {
-      this.setState({ menuOpen: true })
-    }
-  }
-  
   render() {
     return (
       <header>
         <Head>
           <title>{this.props.pageTitle}</title>
-          <meta name='viewport' content='width=device-width' />
+          <meta name="viewport" content="width=device-width" />
           <meta name="robots" content="noindex, nofollow" />
           <link rel="canonical" href={`https://www.caddolakebayoutours.com${this.props.canonical}`} />
-          <link rel='shortcut icon' href='/static/images/favicon.ico' type='image/x-icon'></link>
+          <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon"></link>
           <link href="/static/css/base.css" rel="stylesheet" />
-          <link href='https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700' rel='stylesheet'></link>
+          <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700" rel="stylesheet"></link>
           <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet"></link>
           <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
           <meta name="author" content="Taran Pierce" />
@@ -62,130 +41,7 @@ class Header extends React.Component {
           <meta name="msapplication-TileImage" content="/static/images/ms-icon-144x144.png" />
           <meta name="theme-color" content="#ffffff" />
         </Head>
-        <style jsx>{`
-          ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-          }
-
-          li {
-            line-height: 1rem;
-            padding: 1.5rem 1rem;
-            border-bottom: 1px solid rgba(0,0,0,.3);
-          }
-
-          .main-nav {
-            display: flex;
-          }
-
-          .main-nav li {
-            flex-grow: 1;
-          }
-
-          nav {
-            background: #736d1f;
-            border: 1px solid #595418;
-            border-left: none;
-            border-right: none;
-          }
-
-          .nav {
-            background: #fafafa;
-            display: none;
-          }
-
-          .nav.menu-open {
-            display: block;
-          }
-
-          .logo {
-            color: #e8e3d8;
-            text-shadow: 0 1px 0 rgba(0,0,0,.4);
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: 700;
-          }
-
-          .dropdown {
-            text-align: right;
-          }
-
-          i {
-            color: #e8e3d8; 
-          }
-
-          li a:not(.logo) {
-            text-decoration: none;
-            color: #595418;
-            font-weight: 700;
-          }
-
-          .nav li a.active {
-            font-weight: 700;
-            text-decoration: underline;
-          }
-
-          @media(min-width: 992px) {
-            .dropdown {
-              display: none;
-            }
-
-            .nav,
-            nav {
-              background: #736d1f;
-              display: flex;
-            }
-
-            .nav li a {
-              color: #e8e3d8;
-              font-weight: 400;
-            }
-            .nav li a:hover {
-              color: #fafafa;
-              text-decoration: underline;
-            }
-          }
-        `}</style>
-        <nav>
-          <ul className={'main-nav'}>
-            <li>
-              <Link href={'/'}>
-                <a className={'logo'}>Caddo Lake Bayou Tours</a>
-              </Link>
-            </li>
-            <li className={'dropdown'}>
-              <MenuButton name={'bars'} toggleMenu={this.toggleMenu} menuOpen={this.state.menuOpen} />
-            </li>
-          </ul>
-          <ul className={`nav ${this.state.menuOpen && 'menu-open'}`}>
-            <li>
-              <Link href={'/about'}>
-                <a className={this.props.activeTab === 'about' && 'active'}>About</a>
-              </Link>
-            </li>
-            <li>
-              <Link href={'/directions'}>
-                <a className={this.props.activeTab === 'directions' && 'active'}>Directions</a>
-              </Link>
-            </li>
-            <li>            
-              <Link href={'/things-to-do'}>
-                <a className={this.props.activeTab === 'things-to-do' && 'active'}>Things to do</a>
-              </Link>
-            </li>
-            <li>
-              <Link href={'/photo-gallery'}>
-                <a className={this.props.activeTab === 'photo-gallery' && 'active'}>Photo Gallery</a>
-              </Link>
-            </li>
-            <li>
-              <Link href={'/contact'}>
-                <a className={this.props.activeTab === 'contact' && 'active'}>Contact</a>
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <Navigation activeTab={this.props.activeTab} />
       </header>
     )
   }

@@ -1,4 +1,6 @@
-module.exports = {
+const withSass = require('@zeit/next-sass')
+
+const jsConfig = {
   exportTrailingSlash: true,
   exportPathMap: function() {
     return {
@@ -8,6 +10,8 @@ module.exports = {
       '/directions': { page: '/directions' },
       '/things-to-do': { page: '/things-to-do' },
       '/photo-gallery': { page: '/photo-gallery' },
-    };
+    }
   }
-};
+}
+
+module.exports = withSass(jsConfig);
