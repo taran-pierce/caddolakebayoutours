@@ -38,14 +38,16 @@ const SideHug = ( props ) => {
               ))
             ) : (
               <CloudinaryContext cloudName="tpierce36">
-                <Image 
-                  publicId={props.data.image.path}
-                  responsive
-                  width="auto"
-                  crop="scale"
-                >
-                  <Transformation quality="auto" fetchFormat="auto" />
-                </Image>
+                <div className={`img-wrapper`}>
+                  <Image 
+                    publicId={props.data.image.path}
+                    responsive
+                    width="auto"
+                    crop="scale"
+                  >
+                    <Transformation quality="auto" fetchFormat="auto" />
+                  </Image>
+                </div>
               </CloudinaryContext>
             )
           }

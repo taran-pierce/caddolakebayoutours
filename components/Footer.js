@@ -1,67 +1,26 @@
+import Link from 'next/link'
+
+import './footer.scss'
+
 const year = new Date().getFullYear();
 
-const footerStyles = {
-  background: '#fafafa',
-  border: '1px solid rgba(0,0,0,.1)',
-  borderTop: 'none',
-  borderBottom: 'none',
-}
-
 const Footer = ( props ) => {
+  const { links } = props
+
   return (
-    <footer style={footerStyles}>
-      <style jsx>{`
-        h4 {
-          background: #736d1f;
-          color: #402f1d;
-          padding: .5rem;
-        }
-       
-        ul {
-          list-style-type: none;
-          padding: 0;
-        }
-
-        li {
-          padding: .5rem 0;
-        }
-
-        .copy-right {
-          margin-bottom: 0;
-        }
-
-        @media (min-width: 768px) {
-          h4 {
-            margin-top: 1rem;
-          }
-          .flex {
-            display: flex;
-          }
-  
-          .item {
-            width: 20%;
-          }
-          .item:nth-child(2) {
-            margin-top: 1rem;
-            width: 60%;
-          }
-
-          .item.map {
-            padding: 0 1rem;
-          }
-        }
-      `}</style>
-      <div className={'flex'}>
+    <footer>        
+      <div className={'container flex'}>
         <div className={'item'}>
           <h4>Sitemap</h4>
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/contact">Book a Tour</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/directions">Directions</a></li>
-            <li><a href="/things-to-do-in-caddo-lake">Things to do</a></li>
-            <li><a href="/photo-gallery">Photo Gallery</a></li>
-            <li><a href="/contact">Contact</a></li>
+            {links.map( (link, index) => (
+              <li key={index}>
+                <Link href={link.href}>
+                  <a>{link.name}</a>
+                </Link>
+              </li>
+            ))}
           </ul>
           <ul>
             <li>Like us on FaceBook!</li>

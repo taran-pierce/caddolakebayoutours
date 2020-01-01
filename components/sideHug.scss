@@ -1,3 +1,13 @@
+.side-hug {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  .img-wrapper {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}
+
 @media( min-width: 768px ) {
   .side-hug {
     .flex {

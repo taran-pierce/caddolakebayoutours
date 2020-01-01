@@ -28,6 +28,7 @@
     "isomorphic-fetch": "^2.2.1",
     "js-yaml": "^3.13.1",
     "next": "^9.1.6",
+    "normalize-scss": "^7.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-facebook": "^8.0.4",

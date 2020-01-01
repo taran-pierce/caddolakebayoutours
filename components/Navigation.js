@@ -4,29 +4,6 @@ import MenuButton from '../components/MenuButton'
 
 import './navigation.scss'
 
-const links = [
-  {
-    "name": "About",
-    "href": "/about/"
-  },
-  {
-    "name": "Directions",
-    "href": "/directions/"
-  },
-  {
-    "name": "Things to do",
-    "href": "/things-to-do/"
-  },
-  {
-    "name": "Photo Gallery",
-    "href": "/photo-gallery/"
-  },
-  {
-    "name": "Contact",
-    "href": "/contact/"
-  }
-]
-
 class Navigation extends React.Component {
   constructor( props ) {
     super( props )
@@ -49,8 +26,11 @@ class Navigation extends React.Component {
   } 
 
   render() {
+    const { links } = this.props
+
+    // TODO still need to set up roles and names for keyboard control: ADA
     return (
-      <nav className={`header-nav`}>
+      <nav className={this.state.menuOpen ? 'header-nav menu-open' : 'header-nav'}>
         <ul className={'main-nav'}>
           <li>
             <Link href={'/'}>
@@ -58,10 +38,10 @@ class Navigation extends React.Component {
             </Link>
           </li>
           <li className={'dropdown'}>
-            <MenuButton name={'bars'} toggleMenu={this.toggleMenu} menuOpen={this.state.menuOpen} />
+            <MenuButton toggleMenu={this.toggleMenu} menuOpen={this.state.menuOpen} />
           </li>
         </ul>
-        <ul className={this.state.menuOpen ? 'menu-open' : undefined}>
+        <ul className={`secondary-nav`}>
           {links.map( (link, index) => (
             <li key={index} className={this.props.activeTab === link.name.toLowerCase() ? 'active' : undefined}>
               <Link href={link.href}>

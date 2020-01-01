@@ -2,6 +2,8 @@ import Head from 'next/head'
 import PropTypes from 'prop-types'
 import Navigation from '../components/Navigation'
 
+import './header.scss'
+
 class Header extends React.Component {
   render() {
     return (
@@ -39,7 +41,7 @@ class Header extends React.Component {
           <meta name="msapplication-TileImage" content="/images/ms-icon-144x144.png" />
           <meta name="theme-color" content="#ffffff" />
         </Head>
-        <Navigation activeTab={this.props.activeTab} />
+        <Navigation activeTab={this.props.activeTab} links={this.props.links} />
       </header>
     )
   }

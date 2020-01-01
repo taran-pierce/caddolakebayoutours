@@ -1,0 +1,46 @@
+footer {
+  border-top: 5px solid #afa62f;
+  padding-top: 2rem;
+
+  h4 {
+    background: #736d1f;
+    color: #402f1d;
+    padding: .5rem;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    padding: .5rem 0;
+  }
+  
+  .copy-right {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  footer {
+    h4 {
+      margin-top: 1rem;
+    }
+    .flex {
+      display: flex;
+    }
+  
+    .item {
+      width: 20%;
+    }
+    .item:nth-child(2) {
+      margin-top: 1rem;
+      width: 60%;
+    }
+  
+    .item.map {
+      padding: 0 1rem;
+    }
+  }
+}
