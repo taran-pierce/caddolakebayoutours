@@ -4,17 +4,17 @@ import './menuButton.scss'
 
 const Icon = ( props ) => {
   return (
-    <div className={`menu-button`}>
+    <div className={`menu-button`} onClick={props.toggleMenu}>
         {props.menuOpen ? 
           (
-            <a href={`#`} onClick={props.toggleMenu}>
+            <a href={`#`}>
               <span className={`menu-open`}></span>
               <span className={`menu-open`}></span>
               <span className={`menu-open`}></span>
             </a>
           ) : 
           (
-            <a href={`#`} onClick={props.toggleMenu}>
+            <a href={`#`}>
               <span className={`menu-closed`}></span>
               <span className={`menu-closed`}></span>
               <span className={`menu-closed`}></span>

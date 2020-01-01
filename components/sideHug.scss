@@ -8,7 +8,15 @@
   }
 }
 
-@media( min-width: 768px ) {
+@media(min-width: 768px) {
+  .side-hug {
+    .img-wrapper {
+      display: none;
+    }
+  }
+}
+
+@media(min-width: 992px) {
   .side-hug {
     .flex {
       display: flex;

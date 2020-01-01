@@ -1,11 +1,12 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
-import SideHug from '../components/SideHug-v2'
+import SideHug from '../components/SideHug'
 
 const sideHugData1 = {
   image: {
     path: 'lake-sunset.jpg',
+    alt: 'Caddo Lake, rich with history',
   },
   textData: [
     {
@@ -43,6 +44,24 @@ const sideHugData2 = {
   imageFirst: true,
 }
 
+const sideHugData3 = {
+  image: {
+    path: 'lake-spanish-moss.jpg',
+    alt: 'Caddo Lake, rich with history',
+  },
+  textData: [
+    {
+      titles: [
+        '<h2>Photography Tours</h2>',
+      ],
+      paragraphs: [
+        'Looking to get some great pictures of the beautiful Bald Cypress trees covered in Spanish moss? Schedule a guided tour and go on an adventure to get all the images you need to complete your photography collection.',
+        'Whether you want to go on a wildlife photography tour with a group or with the peace and quiet of being alone to get those perfect shots, we can accommodate.',
+      ],
+    }
+  ]
+}
+
 class Page extends React.Component {
   constructor( props ) {
     super( props )
@@ -58,6 +77,7 @@ class Page extends React.Component {
         <Hero imagePath={`lake-sunset-2.jpg`} />
         <SideHug data={sideHugData1} />
         <SideHug data={sideHugData2} />
+        <SideHug data={sideHugData3} />
       </Layout>
     )
   }
