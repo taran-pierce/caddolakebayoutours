@@ -3,46 +3,60 @@ import PropTypes from 'prop-types'
 import './textBlock.scss'
 
 const TextBlock = ( props ) => {
-  console.log('props.data.lists: ', props.data.lists)
+  const { titles, paragraphs, lists, cta } = props.data
+
   return (
     <div className={`text-wrapper`}>
-      {props.data.titles.map( ( title, index ) => (
+      {/* Look for titles and loop through them */}
+      {/* They include their own markup */}
+      {titles && titles.map( ( title, index ) => (
         <div key={index} dangerouslySetInnerHTML={{__html: title}} />
       ))}
 
-      {props.data.paragraphs.map( ( paragraph, index) => (
+      {/* Look for and loop through paragraphs */}
+      {paragraphs && paragraphs.map( ( paragraph, index) => (
         <p key={index} dangerouslySetInnerHTML={{__html: paragraph}} />
       ))}
       
-      {props.data.lists && props.data.lists.map( (list, index) => (
+      {/* Look for and loop through lists */}
+      {lists && props.data.lists.map( (list, index) => (
+        // check to see if it is a UL
         list.type === 'ul' ? (
           <ul key={index}>
             {list.items.map( (item, index) => (
               <li key={index}>
+                {/* if there is a title passed put it in an H4 */}
                 {item.title && (
                   <h4>{item.title}</h4>
                 )}
                 {item.paragraphs.map( (paragraph, index) => (
-                  <p>{paragraph}</p>
+                  <p key={index} dangerouslySetInnerHTML={{__html: paragraph}}></p>
                 ))}
               </li>
             ))}
           </ul>
         ) : (
+          // use an OL otherwise
           <ol key={index}>
             {list.items.map( (item, index) => (
               <li key={index}>
+                {/* if there is a title passed put it in an H4 */}
                 {item.title && (
                   <h4>{item.title}</h4>
                 )}
                 {item.paragraphs.map( (paragraph, index) => (
-                  <p>{paragraph}</p>
+                  <p key={index}>{paragraph}</p>
                 ))}
               </li>
             ))}
           </ol>
         )
       ))}
+
+      {/* Look for a Call To Action */}
+      {cta && (
+        <div dangerouslySetInnerHTML={{__html: cta}}></div>
+      )}
     </div>
   )
 }

@@ -1,85 +1,113 @@
 import PropTypes from 'prop-types'
+import { Image, CloudinaryContext, Transformation } from 'cloudinary-react'
 
 const Form = ( props ) => {
-  if ( !props.state.sent ) {
+  const { onSubmit, onFirstNameChange, onLastNameChange, onEmailChange, onMessageChange, data } = props
+  const { sent, firstName, lastName, email, message, buttonText } = props.state
+
+  if ( !sent ) {
+
+    const textData = data.textData[0]
+
     return (
-      <div>
-        <style jsx>{`
-          fieldset {
-            border: none;
-            padding: 0;
-            margin: 0;
-          }
-  
-          input, textarea {
-            border: 1px solid #cacaca;
-            border-radius: 5px;
-            padding: .5rem;
-            margin-top: .2rem;
-            margin-bottom: .5rem;
-            width: 80vw;
-          }
-  
-          button {
-            border: 1px solid #cacaca;
-            border-radius: 5px;
-            padding: 1rem;
-            margin-bottom: .5rem;
-          }
-        `}</style>
-        <form className="contact-form" onSubmit={ props.onSubmit }>
-          <fieldset>
-            <label htmlFor="first_name">First Name</label>
-            <input 
-              onChange={props.onFirstNameChange} 
-              type="text" 
-              name="first_name" 
-              id="first_name"
-              placeholder="First Name"
-              value={props.state.firstName}
-              inputMode={`text`}
-              required />
-          </fieldset>
-          <fieldset>
-            <label htmlFor="last_name">Last Name</label>
-            <input 
-              type="text" 
-              name="last_name" 
-              id="last_name"
-              onChange={props.onLastNameChange}
-              value={props.state.lastName}
-              placeholder="Last Name"
-              inputMode={`text`}  
-              required />
-          </fieldset>
-          <fieldset>
-            <label htmlFor="email">Email</label>
-            <input 
-              type="email" 
-              name="email" 
-              id="email"
-              onChange={props.onEmailChange}
-              placeholder="your@email.com"
-              value={props.state.email} 
-              inputMode={`email`}
-              required />
-          </fieldset>
-          <fieldset>
-            <label htmlFor="message">Message</label>
-            <textarea 
-              name="message" 
-              id="message"
-              onChange={props.onMessageChange}
-              value={props.state.message}
-              inputMode={`text`}
-              required>
-            </textarea>
-          </fieldset>
-          <div className="button-wrapper">
-            <button type="submit" className="btn">{ props.state.buttonText }</button>
+      <section>
+        <div className={`container flex`}>
+          <div className={`col`}>
+            {textData && (
+              textData.titles && textData.titles.map( ( title, index ) => (
+                <div key={index} dangerouslySetInnerHTML={{__html: title}}></div>
+              ))
+            )}
+            {textData && (
+              textData.paragraphs && textData.paragraphs.map( (paragraph, index) => (
+                <p key={index} dangerouslySetInnerHTML={{__html: paragraph}}></p>
+              ))
+            )}
+            {textData && (
+              textData.lists && textData.lists.map( (list, index) => (
+                <ul key={index}>
+                  {list.items.map( (item, index) => (
+                    <li key={index}>
+                      {item.title && (
+                        <h4>{item.title}</h4>
+                      )}
+                      {item.paragraphs.map((paragraph, index) => (
+                        <p key={index} dangerouslySetInnerHTML={{__html: paragraph}}></p>
+                      ))}
+                    </li>
+                  ))}
+                </ul>
+              ))
+            )}
+            <form className="contact-form" onSubmit={onSubmit}>
+              <fieldset>
+                <label htmlFor="first_name">First Name</label>
+                <input 
+                  onChange={onFirstNameChange} 
+                  type="text" 
+                  name="first_name" 
+                  id="first_name"
+                  placeholder="First Name"
+                  value={firstName}
+                  inputMode={`text`}
+                  required />
+              </fieldset>
+              <fieldset>
+                <label htmlFor="last_name">Last Name</label>
+                <input 
+                  type="text" 
+                  name="last_name" 
+                  id="last_name"
+                  onChange={onLastNameChange}
+                  value={lastName}
+                  placeholder="Last Name"
+                  inputMode={`text`}  
+                  required />
+              </fieldset>
+              <fieldset>
+                <label htmlFor="email">Email</label>
+                <input 
+                  type="email" 
+                  name="email" 
+                  id="email"
+                  onChange={onEmailChange}
+                  placeholder="your@email.com"
+                  value={email} 
+                  inputMode={`email`}
+                  required />
+              </fieldset>
+              <fieldset>
+                <label htmlFor="message">Message</label>
+                <textarea 
+                  name="message" 
+                  id="message"
+                  onChange={onMessageChange}
+                  value={message}
+                  inputMode={`text`}
+                  required>
+                </textarea>
+              </fieldset>
+              <div className="button-wrapper">
+                <button type="submit" className="btn">{buttonText}</button>
+              </div>
+            </form>
           </div>
-        </form>
-      </div>
+          <div className={`col`}>
+            <CloudinaryContext cloudName="tpierce36">
+              <div className={`img-wrapper`}>
+                <Image 
+                  publicId={data.image.path}
+                  responsive
+                  width="auto"
+                  crop="scale"
+                >
+                  <Transformation quality="auto" fetchFormat="auto" />
+                </Image>
+              </div>
+            </CloudinaryContext>
+          </div>
+        </div>
+      </section>
     )
   } else {
     return (

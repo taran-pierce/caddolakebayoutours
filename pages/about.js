@@ -11,12 +11,11 @@ const sideHugData1 = {
   textData: [
     {
       titles: [
-        '<h3>About Caddo Lake Bayou Tours</h3>',
+        '<h1>About Caddo Lake Bayou Tours</h1>',
       ],
       paragraphs: [
         'We can take you out on a variety of tours on Caddo Lake so that you can relax and enjoy your time knowing you are in the hands of a well trained guide while on the lake.',
         'No matter what you are looking for, so long as you are wanting to have a good time, there are plenty of things to do on Caddo Lake.',
-        '<a class="btn btn-info" href="/contact">Contact us today</a>',
       ],
       lists: [
         {
@@ -44,7 +43,8 @@ const sideHugData1 = {
             },
           ]
         }
-      ]
+      ],
+      cta: '<a class="btn btn-info" href="/contact/">Contact us today</a>',
     }
   ]
 }
@@ -57,33 +57,39 @@ const sideHugData2 = {
   textData: [
     {
       titles: [
-        '<h2>A lake rich with history</h2>',
+        '<h2>About Caddo Lake</h2>',
       ],
       paragraphs: [
-        'Caddo Lake is steeped in history dating back to the early 1800\'s and one of the best ways to soak it in is with a guided boat tour. Sit back and relax while you take in the history which includes the Caddo Indian tribes that inhabited the area and the steamboat navigational trade from New Orleans to Jefferson, Texas are just some of the lakes rich history.',
-        'The names of certain areas of the lake such as Alligator Bayou, Starr Ditch, Ames Spring Basin, Potters Point, Britts Gap and Government Ditch among others give the lake a certain mystic created by the characters from it\'s past. It creates the perfect atomosphere for fishing, relaxing or watching the sunset.',
+        'Caddo Lake is steeped in history dating back to the early 1800\'s. The history which includes the Caddo Indian tribes that inhabited the area and the steamboat navigational trade from New Orleans, Louisiana to Jefferson, Texas are just some of the lake\'s rich history.',
+        'Check out some of our photos from around various spots of Caddo Lake.',
+        '<a class="btn btn-info" href="/photo-gallery/">View Photos</a>',
+        'A recent study shows 216 types of birds, 90 different species of fish and reptiles and 47 different types of mammals.',
+        'Here are just a few examples of the wildlife you can expect to see:',
       ],
+      lists: [
+        {
+          'type': 'ul',
+          items: [
+            {
+              'title': 'Alligators',
+              'paragraphs': [
+                'A member of the crocodile family, the American alligator is a living fossil from the Age of Reptiles, having survived on earth for 200 million years.',
+                '<a href="https://www.fws.gov/refuge/Caddo_Lake/wildlife/alligator.html" target="_blank" rel="noopener">More info here.</a>',
+              ]
+            },
+            {
+              'title': 'Paddlefish',
+              'paragraphs': [
+                'The American paddlefish is a species of basal ray-finned fish closely related to sturgeons in the order Acipenseriformes.',
+                '<a href="https://www.fws.gov/refuge/caddo_lake/wildlife/paddlefish.html" target="_blank" rel="noopener">More info here.</a>',
+              ]
+            },
+          ]
+        }
+      ]
     }
   ],
   imageFirst: true,
-}
-
-const sideHugData3 = {
-  image: {
-    path: 'lake-spanish-moss.jpg',
-    alt: 'Caddo Lake, rich with history',
-  },
-  textData: [
-    {
-      titles: [
-        '<h2>Photography Tours</h2>',
-      ],
-      paragraphs: [
-        'Looking to get some great pictures of the beautiful Bald Cypress trees covered in Spanish moss? Schedule a guided tour and go on an adventure to get all the images you need to complete your photography collection.',
-        'Whether you want to go on a wildlife photography tour with a group or with the peace and quiet of being alone to get those perfect shots, we can accommodate.',
-      ],
-    }
-  ]
 }
 
 class Page extends React.Component {
@@ -101,7 +107,6 @@ class Page extends React.Component {
         <Hero imagePath={`lake-sunset-2.jpg`} />
         <SideHug data={sideHugData1} />
         <SideHug data={sideHugData2} />
-        <SideHug data={sideHugData3} />
       </Layout>
     )
   }
