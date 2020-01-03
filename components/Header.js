@@ -40,6 +40,7 @@ class Header extends React.Component {
           <meta name="msapplication-TileColor" content="#ffffff" />
           <meta name="msapplication-TileImage" content="/images/ms-icon-144x144.png" />
           <meta name="theme-color" content="#ffffff" />
+          <script async defer crossorigin="anonymous" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0"></script>
         </Head>
         <Navigation activeTab={this.props.activeTab} links={this.props.links} />
       </header>

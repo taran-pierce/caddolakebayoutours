@@ -25,7 +25,7 @@ const Footer = ( props ) => {
           <ul>
             <li>Like us on FaceBook!</li>
             <li>
-              <div data-href="https://www.facebook.com/caddotours/" data-width="260px" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+            <div className={`fb-like`} data-href="//www.facebook.com/caddotours/" data-width="260px" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
             </li>
           </ul>
         </div>
