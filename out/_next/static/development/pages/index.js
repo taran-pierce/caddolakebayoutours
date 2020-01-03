@@ -110,7 +110,8 @@ var Footer = function Footer(props) {
     },
     __self: this
   }, __jsx("div", {
-    "data-href": "https://www.facebook.com/caddotours/",
+    className: "fb-like",
+    "data-href": "//www.facebook.com/caddotours/",
     "data-width": "260px",
     "data-layout": "button",
     "data-action": "like",
@@ -610,12 +611,22 @@ function (_React$Component) {
           lineNumber: 42
         },
         __self: this
+      }), __jsx("script", {
+        async: true,
+        defer: true,
+        crossorigin: "anonymous",
+        src: "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 43
+        },
+        __self: this
       })), __jsx(_components_Navigation__WEBPACK_IMPORTED_MODULE_8__["default"], {
         activeTab: this.props.activeTab,
         links: this.props.links,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 45
         },
         __self: this
       }));
@@ -1030,7 +1041,34 @@ function (_React$Component) {
           },
           __self: this
         }, link.name)));
-      })));
+      }), __jsx("li", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 52
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "social-link",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 53
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "fb-like",
+        "data-href": "//www.facebook.com/caddotours/",
+        "data-width": "260px",
+        "data-layout": "button",
+        "data-action": "like",
+        "data-size": "large",
+        "data-show-faces": "true",
+        "data-share": "true",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 54
+        },
+        __self: this
+      })))));
     }
   }]);
 
@@ -27521,7 +27559,7 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 11:
+/***/ 1:
 /*!***************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fwpierce%2Fprojects%2Fcaddolakebayoutours%2Fpages%2Findex.js ***!
   \***************************************************************************************************************************************/
@@ -27544,5 +27582,5 @@ module.exports = dll_5f137288facb1107b491;
 
 /***/ })
 
-},[[11,"static/runtime/webpack.js","styles"]]]);
+},[[1,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map
