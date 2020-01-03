@@ -1,8 +1,7 @@
 import React from 'react'
-import Header from '../components/Header'
+import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import SideHug from '../components/SideHug'
-import Footer from '../components/Footer'
 
 const sideHug1 = {
   image: {
@@ -26,7 +25,7 @@ const sideHug2 = {
   image: {
     path: 'johnsons-ranch.jpg',
   },
-  imageSide: 'left',
+  imageFirst: true,
   textData: [
     {
       titles: [
@@ -62,7 +61,7 @@ const sideHug4 = {
   image: {
     path: 'lake-cypress-trees-3.jpg',
   },
-  imageSide: 'left',
+  imageFirst: true,
   textData: [
     {
       titles: [
@@ -97,29 +96,25 @@ const sideHug5 = {
 class Page extends React.Component {
   constructor( props ) {
     super( props )
+
+    this.state = {
+      activeTab: 'things-to-do'
+    }
   }
   
   render() {
     return (
-      <div className={`layout`}>
-        <div className={'main-container'}>
-          <Header 
-            pageTitle={'Things to do | Caddo Lake Bayou Tours'} 
-            canonical={'/things-to-do'} 
-            activeTab={'things-to-do'}
-          />
-          <Hero imagePath={'caddo-lake-swamp.jpg'} />
-          <section className="side-hug with-padding">
+      <Layout pageTitle={`Things to do - Caddo Lake Bayou Tours`} canonical={`/things-to-do/`}>
+        <Hero imagePath={'caddo-lake-swamp.jpg'} />
+        <section>
+          <div className={`container`}>
             <h1>Things to do in Caddo Lake</h1>
             <p>There are plenty of things to do in Caddo Lake if you are looking for something interesting and fun.</p>
             <p>Here are a few of the great places to visit while you are in Caddo Lake. Whether you are looking to book lodging for your travel so you can have a place to stay, looking for access to the lake, a place to refuel your boat, a place to get some food and drinks, or just some places to check out to have a good time. These are a few of the local attractions in the Uncertain, Texas area of Caddo Lake.</p>
-          </section>
-          <SideHug data={sideHug1} />
-          <SideHug data={sideHug2} />
-          <SideHug data={sideHug3} />
-          <SideHug data={sideHug4} />
-          <SideHug data={sideHug5} />
-          <section className="side-hug with-padding">
+          </div>
+        </section>
+        <section>
+          <div className={`container`}>
             <h2>Trying to plan your next vacation?</h2>
             <p>Texas has a lot to offer and not all of it is here on Caddo Lake. Let us give you some ideas and places to look over for your next family vacation or personal getaway.</p>
             <h2>The Graytripper</h2>
@@ -128,10 +123,14 @@ class Page extends React.Component {
             <p>
               <a href="http://thegraytripper.com/blog_East_Texas.html" target="_blank" rel="noopener">Check out their blog</a>
             </p>
-          </section>
-          <Footer />
-        </div>
-      </div>
+          </div>
+        </section>
+        <SideHug data={sideHug1} />
+        <SideHug data={sideHug2} />
+        <SideHug data={sideHug3} />
+        <SideHug data={sideHug4} />
+        <SideHug data={sideHug5} /> 
+      </Layout>
     )
   }
 }
