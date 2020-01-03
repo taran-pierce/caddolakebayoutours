@@ -1,7 +1,6 @@
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^dev.caddolakebayoutours.com$ [NC,OR]
 RewriteCond %{HTTP_HOST} ^dev.caddolakebayoutours.com$
-RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteCond %{REQUEST_URI} !out/
 RewriteRule (.*) /out/$1 [L]
 
