@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 import './footer.scss'
 
 const year = new Date().getFullYear();
@@ -13,12 +11,10 @@ const Footer = ( props ) => {
         <div className={'item'}>
           <h4>Sitemap</h4>
           <ul>
-            <li><a href="/">Home</a></li>
+            <li><a href={`/`}>Home</a></li>
             {links.map( (link, index) => (
               <li key={index}>
-                <Link href={link.href}>
-                  <a>{link.name}</a>
-                </Link>
+                <a href={link.href}>{link.name}</a>
               </li>
             ))}
           </ul>

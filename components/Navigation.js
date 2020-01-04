@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types'
-import Link from 'next/link'
 import MenuButton from '../components/MenuButton'
 
 import './navigation.scss'
@@ -33,9 +32,7 @@ class Navigation extends React.Component {
       <nav className={this.state.menuOpen ? 'header-nav menu-open' : 'header-nav'}>
         <ul className={'main-nav'}>
           <li>
-            <Link href={'/'}>
-              <a className={'logo'}>Caddo Lake Bayou Tours</a>
-            </Link>
+            <a className={'logo'} href={`/`}>Caddo Lake Bayou Tours</a>
           </li>
           <li className={'dropdown'}>
             <MenuButton toggleMenu={this.toggleMenu} menuOpen={this.state.menuOpen} />
@@ -44,9 +41,7 @@ class Navigation extends React.Component {
         <ul className={`secondary-nav`}>
           {links.map( (link, index) => (
             <li key={index} className={this.props.activeTab === link.name.toLowerCase() ? 'active' : undefined}>
-              <Link href={link.href}>
-                <a>{link.name}</a>
-              </Link>
+              <a href={link.href}>{link.name}</a>
             </li>
           ))}
           <li className={`social-link`}>
