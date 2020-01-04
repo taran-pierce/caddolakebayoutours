@@ -1,0 +1,38 @@
+.image-gallery {
+  background: #fafafa;
+  padding: 1rem;
+
+  .gallery-container {
+    border: 1px solid #cacaca;
+    padding: 1rem;
+    margin: 1rem .5rem;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    ul {
+      display: flex;
+      flex-wrap: nowrap;
+
+      li {
+        width: 50%;
+        
+        > a {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .image-gallery {
+    border-left: 1px solid #c9c9c9;
+    border-right: 1px solid #c9c9c9;
+  }
+}

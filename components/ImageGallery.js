@@ -1,6 +1,7 @@
-import Link from 'next/link'
 import PropTypes from 'prop-types'
 import { Image, CloudinaryContext, Transformation } from 'cloudinary-react'
+
+import './imageGallery.scss'
 
 const galleryName = 'gallery/caddo-lake-'
 
@@ -39,33 +40,7 @@ class ImageGallery extends React.Component {
   
   render() {
     return (
-      <div>
-        <style jsx>{`
-          .gallery-container {
-            border: 1px solid #cacaca;
-            padding: 1rem;
-            margin: 1rem .5rem;
-          }
-
-          ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-          }
-
-          nav ul {
-            display: flex;
-            flex-wrap: nowrap;
-          }
-
-          nav ul li {
-            width: 50%;
-          }
-        
-          li > a {
-            display: block;
-          }
-        `}</style>
+      <section className={`image-gallery`}>
         <h2>Pictures of Caddo Lake</h2>
         <div className={`gallery-container`}>
           <ul>
@@ -93,14 +68,9 @@ class ImageGallery extends React.Component {
             </ul>
           </nav>
         </div>
-      </div>
+      </section>
     )
   }
-}
-
-ImageGallery.propTypes = {
-  // pageTitle: PropTypes.string,
-  // canonical: PropTypes.string,
 }
 
 export default ImageGallery
