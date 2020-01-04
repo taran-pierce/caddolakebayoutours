@@ -93,6 +93,12 @@ h6 {
 }
 
 .container {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
 }

@@ -56,9 +56,9 @@
     color: #e8e3d8;
     text-shadow: 0 1px 0 rgba(0,0,0,.4);
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
-    line-height: 1.4;
+    line-height: 2;
   }
   
   .dropdown {
@@ -69,20 +69,17 @@
   }
 }
 
-@media(min-width: 414px) {
+@media (min-width: 375px) {
   .header-nav {
     .logo {
-      font-size: 1.4rem;
+      font-size: 20px;
+      line-height: 1.4;
     }
   }
 }
 
 @media(min-width: 768px) {
   .header-nav {
-    .logo {
-      font-size: 2rem;
-    }
-
     .dropdown {
       max-width: 60px;
     }
@@ -99,7 +96,7 @@
     }
 
     .logo {
-      font-size: 1.2rem;
+      font-size: 18px;
     }
   
     .secondary-nav {
@@ -109,6 +106,14 @@
       li {
         flex-grow: 1;
       }
+    }
+
+    a {
+      line-height: 1.6;
+    }
+
+    .social-link {
+      width: 170px;
     }
   }
 }

@@ -28,7 +28,7 @@ const links = [
 
 const Layout = ( props ) => {
     return (
-      <div>
+      <div className={`container`}>
         <Header pageTitle={props.pageTitle} canonical={props.canonical} links={links} />
         {props.children}
         <Footer links={links} />

@@ -9,10 +9,8 @@
   }
 }
 
-@media(min-width: 992px) {
+@media (min-width: 768px) {
   .hero {
-    .img-wrapper {
-      height: 280px;
-    }
+    height: 300px;
   }
 }

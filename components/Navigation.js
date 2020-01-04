@@ -49,8 +49,8 @@ class Navigation extends React.Component {
               </Link>
             </li>
           ))}
-          <li>
-            <div className={`social-link`}>
+          <li className={`social-link`}>
+            <div>
               <div className={`fb-like`} data-href="//www.facebook.com/caddotours/" data-width="260px" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
             </div>
           </li>
