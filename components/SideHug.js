@@ -6,9 +6,7 @@ import './sideHug.scss'
 
 const SideHug = ( props ) => {
   const { imageFirst, textData, image, googleMap } = props.data 
-
-  console.log('googleMap: ', googleMap)
-
+  
   return (
     <section className={`side-hug`}>
       <div className={`container flex`}>

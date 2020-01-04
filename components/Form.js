@@ -7,10 +7,9 @@ const Form = ( props ) => {
   const { onSubmit, onFirstNameChange, onLastNameChange, onEmailChange, onMessageChange, data } = props
   const { sent, firstName, lastName, email, message, buttonText } = props.state
 
+  const textData = data.textData[0]
+
   if ( !sent ) {
-
-    const textData = data.textData[0]
-
     return (
       <section className={`form`}>
         <div className={`container flex`}>
@@ -113,10 +112,56 @@ const Form = ( props ) => {
     )
   } else {
     return (
-      <div>
-        <h4>Message Received!</h4>
-        <p>Thanks for you interest! I will contact you as soon as possible.</p>
-      </div>
+      <section className={`form`}>
+        <div className={`container flex`}>
+          <div className={`col`}>
+            {textData && (
+              textData.titles && textData.titles.map( ( title, index ) => (
+                <div key={index} dangerouslySetInnerHTML={{__html: title}}></div>
+              ))
+            )}
+            {textData && (
+              textData.paragraphs && textData.paragraphs.map( (paragraph, index) => (
+                <p key={index} dangerouslySetInnerHTML={{__html: paragraph}}></p>
+              ))
+            )}
+            {textData && (
+              textData.lists && textData.lists.map( (list, index) => (
+                <ul key={index}>
+                  {list.items.map( (item, index) => (
+                    <li key={index}>
+                      {item.title && (
+                        <h4>{item.title}</h4>
+                      )}
+                      {item.paragraphs.map((paragraph, index) => (
+                        <p key={index} dangerouslySetInnerHTML={{__html: paragraph}}></p>
+                      ))}
+                    </li>
+                  ))}
+                </ul>
+              ))
+            )}
+            <div>
+              <h4>Message Received!</h4>
+              <p>Thanks for you interest! I will contact you as soon as possible.</p>
+            </div>
+          </div>
+          <div className={`col`}>
+            <CloudinaryContext cloudName="tpierce36">
+              <div className={`img-wrapper`}>
+                <Image 
+                  publicId={data.image.path}
+                  responsive
+                  width="auto"
+                  crop="scale"
+                >
+                  <Transformation quality="auto" fetchFormat="auto" />
+                </Image>
+              </div>
+            </CloudinaryContext>
+          </div>
+        </div>
+      </section>
     )
   }
 }
