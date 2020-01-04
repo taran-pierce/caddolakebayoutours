@@ -2,6 +2,7 @@
   background: #fafafa;
   border-bottom: 5px solid #afa62f;
   border-top: 5px solid #afa62f;
+  overflow: hidden;
 
   .img-wrapper {
     margin-left: -1rem;
@@ -15,6 +16,16 @@
   .text-wrapper {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  ul {
+    padding-top: 1rem;
+    padding-left: 0;
+    list-style-type: none;
+
+    li {
+      padding-bottom: 1rem;
+    }
   }
 }
 
