@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types'
 import { Image, CloudinaryContext, Transformation } from 'cloudinary-react'
 
+import './form.scss'
+
 const Form = ( props ) => {
   const { onSubmit, onFirstNameChange, onLastNameChange, onEmailChange, onMessageChange, data } = props
   const { sent, firstName, lastName, email, message, buttonText } = props.state
@@ -10,7 +12,7 @@ const Form = ( props ) => {
     const textData = data.textData[0]
 
     return (
-      <section>
+      <section className={`form`}>
         <div className={`container flex`}>
           <div className={`col`}>
             {textData && (
