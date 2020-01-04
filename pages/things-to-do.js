@@ -93,6 +93,44 @@ const sideHug5 = {
   ]
 }
 
+const sideHug6 = {
+  image: {
+    path: 'lake-cypress-trees.jpg',
+  },
+  textData: [
+    {
+      titles: [
+        '<h1>Things to do in Caddo Lake</h1>',
+      ],
+      paragraphs: [
+        'There are plenty of things to do in Caddo Lake if you are looking for something interesting and fun.',
+        'Here are a few of the great places to visit while you are in Caddo Lake. Whether you are looking to book lodging for your travel so you can have a place to stay, looking for access to the lake, a place to refuel your boat, a place to get some food and drinks, or just some places to check out to have a good time. These are a few of the local attractions in the Uncertain, Texas area of Caddo Lake.',
+      ]
+    }
+  ]
+}
+
+const sideHug7 = {
+  image: {
+    path: 'lake-cypress-trees.jpg',
+  },
+  imageFirst: true,
+  textData: [
+    {
+      titles: [
+        '<h2>Trying to plan your next vacation?</h2>',
+      ],
+      paragraphs: [
+        'Texas has a lot to offer and not all of it is here on Caddo Lake. Let us give you some ideas and places to look over for your next family vacation or personal getaway.',
+        '<strong>The Graytripper</strong>',
+        'A travel blog for those of us who have the beautiful natural patina of age and are still ready for the road!',
+        'Check out the various trips and get some ideas for your next trip!',
+        '<a href="http://thegraytripper.com/blog_East_Texas.html" target="_blank" rel="noopener">Check out their blog</a>',
+      ]
+    }
+  ]
+}
+
 class Page extends React.Component {
   constructor( props ) {
     super( props )
@@ -106,25 +144,8 @@ class Page extends React.Component {
     return (
       <Layout pageTitle={`Things to do - Caddo Lake Bayou Tours`} canonical={`/things-to-do/`}>
         <Hero imagePath={'caddo-lake-swamp.jpg'} />
-        <section>
-          <div className={`container`}>
-            <h1>Things to do in Caddo Lake</h1>
-            <p>There are plenty of things to do in Caddo Lake if you are looking for something interesting and fun.</p>
-            <p>Here are a few of the great places to visit while you are in Caddo Lake. Whether you are looking to book lodging for your travel so you can have a place to stay, looking for access to the lake, a place to refuel your boat, a place to get some food and drinks, or just some places to check out to have a good time. These are a few of the local attractions in the Uncertain, Texas area of Caddo Lake.</p>
-          </div>
-        </section>
-        <section>
-          <div className={`container`}>
-            <h2>Trying to plan your next vacation?</h2>
-            <p>Texas has a lot to offer and not all of it is here on Caddo Lake. Let us give you some ideas and places to look over for your next family vacation or personal getaway.</p>
-            <h2>The Graytripper</h2>
-            <p>A travel blog for those of us who have the beautilful natural patina of age and are still ready for the road!</p>
-            <p>Check out the variaous trips and get some ideas for your next trip!</p>
-            <p>
-              <a href="http://thegraytripper.com/blog_East_Texas.html" target="_blank" rel="noopener">Check out their blog</a>
-            </p>
-          </div>
-        </section>
+        <SideHug data={sideHug6} /> 
+        <SideHug data={sideHug7} /> 
         <SideHug data={sideHug1} />
         <SideHug data={sideHug2} />
         <SideHug data={sideHug3} />
