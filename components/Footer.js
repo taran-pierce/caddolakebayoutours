@@ -36,7 +36,7 @@ const Footer = ( props ) => {
           <div className={'address-block'}>
             <p>Rich McFarland, Tour Guide</p>
             <p><strong>Address:</strong> 449 Cypress Drive, Uncertain TX 75661</p>
-            <p><strong>Phone: </strong>903-570-2169</p>
+            <p><strong>Phone: </strong><a href={`tel:1-903-570-2169`}>903-570-2169</a></p>
           </div>
         </div>
         <div className={'item'}>

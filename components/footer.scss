@@ -1,6 +1,13 @@
 footer {
+  background: #fafafa;
   border-top: 5px solid #afa62f;
-  padding-top: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 
   h4 {
     background: #736d1f;
@@ -19,6 +26,11 @@ footer {
   
   .copy-right {
     margin-bottom: 0;
+    padding-left: 1rem;
+  }
+
+  .address-block {
+    margin-bottom: 1rem;
   }
 }
 
@@ -32,15 +44,41 @@ footer {
     }
   
     .item {
+      width: 200px;
+
+      &:nth-child(2) {
+        margin-top: 1rem;
+        width: 300px;
+      }
+
+      &.map {
+        padding: 0 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  footer {
+    border-left: 1px solid #c9c9c9;
+    border-right: 1px solid #c9c9c9;
+
+    .item {
       width: 20%;
+
+      &:nth-child(2) {
+        width: 53%;
+      }
     }
-    .item:nth-child(2) {
-      margin-top: 1rem;
-      width: 60%;
-    }
-  
-    .item.map {
-      padding: 0 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  footer {
+    .item {
+      &:nth-child(2) {
+        width: 54%;
+      }
     }
   }
 }
