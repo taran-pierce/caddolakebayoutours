@@ -27,6 +27,12 @@ ul {
   margin-top: 0;
 }
 
+p {
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -35,6 +41,8 @@ h5,
 h6 {
   font-family: Do Hyeon,Helvetica,sans-serif;
   color: #402f1d;
+  line-height: 1.2;
+  margin-bottom: 10px;
 }
 
 a {
@@ -90,6 +98,7 @@ h6 {
   color: #fff;
   background-color: #9b932a;
   border-color: #5f5a1a;
+  text-decoration: none;
 }
 
 .container {
@@ -100,5 +109,11 @@ h6 {
 @media (min-width: 992px) {
   .container {
     width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
   }
 }
