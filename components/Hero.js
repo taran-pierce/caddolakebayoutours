@@ -8,15 +8,19 @@ const Hero = ( props ) => {
 
   return (
     <section className={`hero`}>
-      <CloudinaryContext cloudName="tpierce36">
+      <CloudinaryContext cloudName={`tpierce36`}>
         <div className={`img-wrapper`}>
           <Image 
             publicId={imagePath}
             responsive
-            width="auto"
-            crop="scale"
+            width={`auto`}
+            crop={`scale`}
           >
-            <Transformation quality="70" fetchFormat="auto" />
+            <Transformation 
+              quality={`90`} 
+              fetchFormat={`auto`} 
+              gravity={`auto`} 
+            />
           </Image>
         </div>
       </CloudinaryContext>

@@ -14,8 +14,8 @@ class Header extends React.Component {
           <meta name="robots" content="noindex, nofollow" />
           <link rel="canonical" href={`https://www.caddolakebayoutours.com${this.props.canonical}`} />
           <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"></link>
-          <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700" rel="stylesheet"></link>
-          <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet"></link>
+          <link href="//fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700" rel="stylesheet"></link>
+          <link href="//fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet"></link>
           <meta name="author" content="Taran Pierce" />
           <meta name="description" content="Caddo Lake Bayou Tours offers a guided tour of the beautiful Caddo Lake at any time from sunrise to sunset. Whether you are looking for a guided fishing
   tour, observe some of nature's wildlife, catch a jaw-dropping sunrise or sunset, take in some of the historic Caddo Lake culture or just enjoy some relaxing sight-seeing you are in for quite
@@ -35,12 +35,12 @@ class Header extends React.Component {
           <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png" />
           <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107758647-2"></script>
+          <script async src="//www.googletagmanager.com/gtag/js?id=UA-107758647-2"></script>
           <link rel="manifest" href="/manifest.json" />
           <meta name="msapplication-TileColor" content="#ffffff" />
           <meta name="msapplication-TileImage" content="/images/ms-icon-144x144.png" />
           <meta name="theme-color" content="#ffffff" />
-          <script async defer crossorigin="anonymous" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0"></script>
+          <script async defer crossOrigin="anonymous" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0"></script>
         </Head>
         <Navigation activeTab={this.props.activeTab} links={this.props.links} />
       </header>

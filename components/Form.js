@@ -12,8 +12,8 @@ const Form = ( props ) => {
   if ( !sent ) {
     return (
       <section className={`form`}>
-        <div className={`container flex`}>
-          <div className={`col`}>
+        <div className={`flex`}>
+          <div className={`col text`}>
             {textData && (
               textData.titles && textData.titles.map( ( title, index ) => (
                 <div key={index} dangerouslySetInnerHTML={{__html: title}}></div>
@@ -113,8 +113,8 @@ const Form = ( props ) => {
   } else {
     return (
       <section className={`form`}>
-        <div className={`container flex`}>
-          <div className={`col`}>
+        <div className={`flex`}>
+          <div className={`col text`}>
             {textData && (
               textData.titles && textData.titles.map( ( title, index ) => (
                 <div key={index} dangerouslySetInnerHTML={{__html: title}}></div>

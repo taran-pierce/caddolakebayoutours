@@ -28,11 +28,13 @@ const links = [
 
 const Layout = ( props ) => {
     return (
-      <div className={`container`}>
-        <Header pageTitle={props.pageTitle} canonical={props.canonical} links={links} />
-        {props.children}
-        <Footer links={links} />
-      </div>
+      <main>
+        <div className={`container`}>
+          <Header pageTitle={props.pageTitle} canonical={props.canonical} links={links} />
+          {props.children}
+          <Footer links={links} />
+        </div>
+      </main>
     )
 }
 

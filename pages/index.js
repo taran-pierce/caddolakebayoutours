@@ -6,7 +6,7 @@ import SideHug from '../components/SideHug'
 const sideHugData1 = {
   image: {
     path: 'lake-sunset.jpg',
-    alt: 'Caddo Lake, rich with history',
+    alt: 'Sunset over Caddo Lake',
   },
   textData: [
     {
@@ -27,8 +27,8 @@ const sideHugData1 = {
 
 const sideHugData2 = {
   image: {
-    path: 'lake-spanish-moss.jpg',
-    alt: 'Caddo Lake, rich with history',
+    path: 'mike-moir-5.jpg',
+    alt: 'Caddo Lake Cypress trees with fog',
   },
   textData: [
     {
@@ -46,8 +46,8 @@ const sideHugData2 = {
 
 const sideHugData3 = {
   image: {
-    path: 'lake-spanish-moss.jpg',
-    alt: 'Caddo Lake, rich with history',
+    path: 'mike-moir-6.jpg',
+    alt: 'Crane in Cypress tree on Caddo Lake',
   },
   textData: [
     {
@@ -57,6 +57,7 @@ const sideHugData3 = {
       paragraphs: [
         'Looking to get some great pictures of the beautiful Bald Cypress trees covered in Spanish moss? Schedule a guided tour and go on an adventure to get all the images you need to complete your photography collection.',
         'Whether you want to go on a wildlife photography tour with a group or with the peace and quiet of being alone to get those perfect shots, we can accommodate.',
+        '<a class="btn" href="/contact/">Contact us today</a>'
       ],
     }
   ]
@@ -74,7 +75,7 @@ class Page extends React.Component {
   render() {
     return (
       <Layout pageTitle={`Caddo Lake Bayou Tours`} canonical={`/`}>
-        <Hero imagePath={`lake-sunset-2.jpg`} />
+        <Hero imagePath={`lake-cypress-trees-3.jpg`} />
         <SideHug data={sideHugData1} />
         <SideHug data={sideHugData2} />
         <SideHug data={sideHugData3} />

@@ -22,7 +22,8 @@ const sideHugData1 = {
 
 const sideHugData2 = {
   image: {
-    path: 'lake-sunset.jpg',
+    path: 'lake-spanish-moss.jpg',
+    alt: 'Spanish moss covered Cypress trees'
   },
   imageFirst: true,
   textData: [
@@ -52,7 +53,7 @@ class Page extends React.Component {
   render() {
     return (
       <Layout pageTitle={`Directions - Caddo Lake Bayou Tours`} canonical={`/directions/`}>
-        <Hero imagePath={`lake-sunset-2.jpg`} />
+        <Hero imagePath={`mike-moir-3.jpg`} />
         <SideHug data={sideHugData1} />
         <SideHug data={sideHugData2} />
       </Layout>

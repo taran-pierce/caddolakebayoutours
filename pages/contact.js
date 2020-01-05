@@ -80,16 +80,39 @@ class Page extends React.Component {
   render() {
     const sideHugData1 = {
       image: {
-        path: 'lake-sunset.jpg'
+        path: 'lake-with-pier.jpg',
+        alt: 'A pier on Caddo Lake'
       },
+      imageFirst: true,
       textData: [
         {
           titles: [
-            '<h1>Contact</h1>'
+            '<h2>Questions about tours?</h2>'
           ],
           paragraphs: [
             'If you have any questions please give us a call or you can contact us via email and we will get back to you as soon as possible. We will answer any questions you may have about what kind of guided boat tours we have available, what you can expect to encounter while on the tour and of course what you can and can not do on while on the tour of the lake.',
-            'Come and enjoy the wonderful experience that is Caddo Lake. We can\'t wait to share it with you!',
+            'Come and enjoy the wonderful experience that is Caddo Lake. We can\'t wait to share it with you and don\'t forgot to like us on our <a href="https://www.facebook.com/caddotours/" target="_blank">FaceBook page</a>!',
+          ],
+          lists: [
+            {
+              'type': 'ul',
+              'items': [
+                {
+                  'title': 'Where does the tour start?',
+                  'paragraphs': [
+                    'All tours start and end at the Shady Glade Marina'
+                  ]
+                },
+                {
+                  'paragraphs': [
+                    '<strong>Address</strong>',
+                    '449 Cypress Drive',
+                    'Uncertain TX 75661',
+                    '<strong>Phone:</strong> <a href="tel:1-903-570-2169">903-570-2169</a>',
+                  ]
+                }
+              ]
+            }
           ]
         }
       ]
@@ -97,9 +120,9 @@ class Page extends React.Component {
 
     const sideHugData2 = {
       image: {
-        path: 'lake-sunset.jpg'
+        path: 'lake-trees-in-fall.jpg',
+        alt: 'Caddo Lake with Cypress trees in the Fall'
       },
-      imageFirst: true,
       textData: [
         {
           titles: [
@@ -148,44 +171,26 @@ class Page extends React.Component {
 
     const formData = {
       image: {
-        path: 'lake-sunset.jpg'
+        path: 'lake-cypress-trees.jpg',
+        alt: 'Caddo Lake with Cypress trees',
       },
       textData: [
         {
           titles: [
-            '<h3>Rich McFarland <strong>Tour Guide</strong></h3>'
+            '<h1>Contact Caddo Lake Bayou Tours</h1>',
+            '<h4>Rich McFarland <strong>Tour Guide</strong></h4>'
           ],
           paragraphs: [
-            'Tours available 7 days a week, any time from sunrise to sunset.',
-            'Boat tours last approximately one hour.',
-            'Make sure to like us on <a href="https://www.facebook.com/caddotours/" target="_blank">FaceBook</a>',
-            '<strong>Book a boat tour or send a message</strong>',
-            'Ask about boat tour reservations, fishing trips, availability of dates or times, or any other general questions.',
+            'Tours available 7 days a week, any time from sunrise to sunset. Boat tours last approximately one hour.',
+            'Book a bout tour today or ask about boat tour reservations, photography tour, fishing trips, availability of dates or times, or any other general questions.',
           ],
-          lists: [
-            {
-              'type': 'ul',
-              'items': [
-                {
-                  'title': 'Address',
-                  'paragraphs': [
-                    '449 Cypress Drive',
-                    'Uncertain TX 75661',
-                    '<strong>Phone:</strong> <a href="tel:1-903-570-2169">903-570-2169</a>',
-                  ]
-                }
-              ]
-            }
-          ]
         }
       ]
     }
 
     return (
       <Layout pageTitle={`Contact - Caddo Lake Bayou Tours`} canonical={`/contact/`}>
-        <Hero imagePath={`lake-sunset-2.jpg`} />
-        <SideHug data={sideHugData1} />
-        <SideHug data={sideHugData2} />
+        <Hero imagePath={`mike-moir-2.jpg`} />
         <Form 
           data={formData}
           onFirstNameChange={this.onFirstNameChange}
@@ -195,6 +200,8 @@ class Page extends React.Component {
           onSubmit={this.onSubmit}
           state={this.state}
         />
+        <SideHug data={sideHugData1} />
+        <SideHug data={sideHugData2} />
       </Layout>
     )
   }

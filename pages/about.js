@@ -5,8 +5,8 @@ import SideHug from '../components/SideHug'
 
 const sideHugData1 = {
   image: {
-    path: 'lake-sunset.jpg',
-    alt: 'Caddo Lake, rich with history',
+    path: 'lake-trees-fog.jpg',
+    alt: 'Caddo Lake, shrouded with fog',
   },
   textData: [
     {
@@ -51,8 +51,8 @@ const sideHugData1 = {
 
 const sideHugData2 = {
   image: {
-    path: 'lake-spanish-moss.jpg',
-    alt: 'Caddo Lake, rich with history',
+    path: 'lake-sunset-3.jpg',
+    alt: 'Caddo Lake sunset',
   },
   textData: [
     {
