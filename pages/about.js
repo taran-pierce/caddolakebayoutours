@@ -14,31 +14,23 @@ const sideHugData1 = {
         '<h1>About Caddo Lake Bayou Tours</h1>',
       ],
       paragraphs: [
-        'We can take you out on a variety of tours on Caddo Lake so that you can relax and enjoy your time knowing you are in the hands of a well trained guide while on the lake.',
-        'No matter what you are looking for, so long as you are wanting to have a good time, there are plenty of things to do on Caddo Lake.',
+        'We offer a variety of boat tours on Caddo Lake and a well trained guide can take you on a photography tour so you will have an opportunity to take some excellent photos out on the lake.',
+        'If you are looking to experience a one of a kind fishing trip, we know all the good spots.',
       ],
       lists: [
         {
           'type': 'ul',
           'items': [
             {
+              'title': 'Photography Tours',
+              'paragraphs': [
+                'Fantastic landscape photography and abundant wildlife makes it a great destination for being able to take some great shots.'
+              ]
+            },
+            {
               'title': 'Fishing Trips',
               'paragraphs': [
                 'There are plenty of great fishing spots across the lake. Come take a guided fishing trip for all your fishing needs.'
-              ]
-            },
-            {
-              'title': 'Sightseeing',
-              'paragraphs': [
-                'Enjoy the beautiful lake, lots of wildlife and the overall mystique of Caddo Lake.',
-                'Visit historic Jefferson, Texas and enjoy all that it has to offer.',
-              ]
-            },
-            {
-              'title': 'Sunrise and sunset tours',
-              'paragraphs': [
-                'Caddo Lake is always a beautiful sight to behold, but the sunrises and sunsets out on the lake are among some of the most gorgeous ones in the South.',
-                'Contact us today to find out about the availability of tours and to check on seasonal prices.',
               ]
             },
           ]
@@ -52,6 +44,46 @@ const sideHugData1 = {
 const sideHugData2 = {
   image: {
     path: 'lake-sunset-3.jpg',
+    alt: 'Caddo Lake sunset',
+  },
+  textData: [
+    {
+      titles: [
+        '<h2>More tour types</h2>',
+      ],
+      paragraphs: [
+        'Maybe you are just wanting to have a nice relaxing time out on one of the most beautiful lakes in all of Texas. Come take a nice boat tour and get ready to have a fantastic time out on the lake.',
+        'Caddo Lake is a unique place to get to see a beautiful sunrise, with a gorgeous view of the Cypress trees outlining the water.',
+      ],
+      lists: [
+        {
+          'type': 'ul',
+          items: [
+            {
+              'title': 'Sightseeing',
+              'paragraphs': [
+                'Enjoy the beautiful lake, lots of wildlife and the overall mystique of Caddo Lake. Visit historic Jefferson, Texas and enjoy all that it has to offer.',
+              ]
+            },
+            {
+              'title': 'Sunrise and sunset tours',
+              'paragraphs': [
+                'Caddo Lake is always a beautiful sight to behold, but the sunrises and sunsets out on the lake are among some of the most gorgeous ones in the South.',
+                'Contact us today to find out about the availability of tours and to check on seasonal prices.',
+              ]
+            },
+          ],
+        }
+      ],
+      cta: '<a class="btn" href="/contact/">Book a tour</a>'
+    }
+  ],
+  imageFirst: true,
+}
+
+const sideHugData3 = {
+  image: {
+    path: 'lake-spanish-moss.jpg',
     alt: 'Caddo Lake sunset',
   },
   textData: [
@@ -89,7 +121,6 @@ const sideHugData2 = {
       ]
     }
   ],
-  imageFirst: true,
 }
 
 class Page extends React.Component {
@@ -104,9 +135,10 @@ class Page extends React.Component {
   render() {
     return (
       <Layout pageTitle={`About - Caddo Lake Bayou Tours`} canonical={`/about/`}>
-        <Hero imagePath={`lake-sunset-2.jpg`} />
+        <Hero imagePath={`lake-sunset-2.jpg`} alt={`Caddo Lake sunset`}/>
         <SideHug data={sideHugData1} />
         <SideHug data={sideHugData2} />
+        <SideHug data={sideHugData3} />
       </Layout>
     )
   }

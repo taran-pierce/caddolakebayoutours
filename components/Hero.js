@@ -4,7 +4,7 @@ import { Image, CloudinaryContext, Transformation } from 'cloudinary-react'
 import './hero.scss'
 
 const Hero = ( props ) => {
-  const { imagePath } = props
+  const { imagePath, alt } = props
 
   return (
     <section className={`hero`}>
@@ -15,6 +15,7 @@ const Hero = ( props ) => {
             responsive
             width={`auto`}
             crop={`scale`}
+            alt={alt}
           >
             <Transformation 
               quality={`90`} 

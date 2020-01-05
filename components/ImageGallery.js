@@ -51,6 +51,7 @@ class ImageGallery extends React.Component {
                   responsive
                   width="auto"
                   crop="scale"
+                  alt={`Caddo Lake #${this.state.currentSlide}`}
                 >
                   <Transformation quality="auto" fetchFormat="auto" />
                 </Image>

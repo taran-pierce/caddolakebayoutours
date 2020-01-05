@@ -44,6 +44,7 @@ const Footer = ( props ) => {
             <li><a href="http://www.hodgepodgecottages.com/" target="_blank" rel="noopener">HodgePodge Cottages</a></li>
             <li><a href="http://thegraytripper.com/" target="_blank" rel="noopener">The Graytripper</a></li>
             <li><a href="http://tpwd.texas.gov/state-parks/caddo-lake" target="_blank" rel="noopener">Caddo State Park</a></li>
+            <li><a href="https://www.mikemoirphotography.com/" target="_blank" rel="noopener">Mike Moir Photography</a></li>
           </ul>
         </div>
       </div>

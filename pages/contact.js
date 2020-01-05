@@ -178,7 +178,7 @@ class Page extends React.Component {
         {
           titles: [
             '<h1>Contact Caddo Lake Bayou Tours</h1>',
-            '<h4>Rich McFarland <strong>Tour Guide</strong></h4>'
+            '<h4>Rich McFarland <strong>Tour Guide</strong> <a href="tel:1-903-570-2169">903-570-2169</h4>'
           ],
           paragraphs: [
             'Tours available 7 days a week, any time from sunrise to sunset. Boat tours last approximately one hour.',
@@ -190,7 +190,7 @@ class Page extends React.Component {
 
     return (
       <Layout pageTitle={`Contact - Caddo Lake Bayou Tours`} canonical={`/contact/`}>
-        <Hero imagePath={`mike-moir-2.jpg`} />
+        <Hero imagePath={`mike-moir-2.jpg`} alt={`Caddo Lake bench`}/>
         <Form 
           data={formData}
           onFirstNameChange={this.onFirstNameChange}

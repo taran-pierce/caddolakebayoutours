@@ -27,6 +27,7 @@ const SideHug = ( props ) => {
                       responsive
                       width={`auto`}
                       crop={`scale`}
+                      alt={image.alt}
                     >
                       <Transformation 
                         quality={`auto`} 
@@ -59,6 +60,7 @@ const SideHug = ( props ) => {
                         responsive
                         width={`auto`}
                         crop={`scale`}
+                        alt={image.alt}
                       >
                       <Transformation 
                         quality={`auto`} 
