@@ -53,7 +53,7 @@ class Page extends React.Component {
   render() {
     return (
       <Layout pageTitle={`Directions - Caddo Lake Bayou Tours`} canonical={`/directions/`}>
-        <Hero imagePath={`mike-moir-3.jpg`} />
+        <Hero imagePath={`lake-cypress-trees-3.jpg`} />
         <SideHug data={sideHugData1} />
         <SideHug data={sideHugData2} />
       </Layout>

@@ -5,7 +5,8 @@ import SideHug from '../components/SideHug'
 
 const sideHug1 = {
   image: {
-    path: 'lake-cypress-trees.jpg',
+    path: 'lake-spanish-moss.jpg',
+    alt: 'Spanish moss on Cypress trees in Caddo Lake'
   },
   textData: [
     {
@@ -23,7 +24,8 @@ const sideHug1 = {
 
 const sideHug2 = {
   image: {
-    path: 'johnsons-ranch.jpg',
+    path: 'johnsons-ranch-2.jpg',
+    alt: 'People on the pier at Johnson\'s Ranch'
   },
   imageFirst: true,
   textData: [
@@ -42,6 +44,7 @@ const sideHug2 = {
 const sideHug3 = {
   image: {
     path: 'aerial-lake.jpg',
+    alt: 'Aerial view of Caddo Lake'
   },
   textData: [
     {
@@ -59,7 +62,8 @@ const sideHug3 = {
 
 const sideHug4 = {
   image: {
-    path: 'lake-cypress-trees-3.jpg',
+    path: 'hodge-podge-2.jpg',
+    alt: 'Red Cottage at Hodge Podge Cottages'
   },
   imageFirst: true,
   textData: [
@@ -69,7 +73,7 @@ const sideHug4 = {
       ],
       paragraphs: [
         'Come and feel time slow down in this busy world and experience everything this area has to offer. If all your questions are not answered on our website, please feel free to contact us and we will be happy to assist you.',
-        'For the shopper in you we have more antique shops than any other town in the Piney Woods. Plus so many great new boutique shops have opened up in the past few years, you will be delighted with the array of items they have to offer.',
+        'Plus so many great new boutique shops have opened up in the past few years, you will be delighted with the array of items they have to offer.',
         '<a href="http://www.hodgepodgecottages.com/" target="_blank" rel="noopener">Visit their website for more information</a>',
       ]
     }
@@ -79,6 +83,7 @@ const sideHug4 = {
 const sideHug5 = {
   image: {
     path: 'caddo-lake-swamp.jpg',
+    alt: 'The bayou on Caddo Lake'
   },
   textData: [
     {
@@ -96,6 +101,7 @@ const sideHug5 = {
 const sideHug6 = {
   image: {
     path: 'lake-cypress-trees.jpg',
+    alt: 'Caddo Lake with Cypress trees and lillys'
   },
   textData: [
     {
@@ -112,7 +118,8 @@ const sideHug6 = {
 
 const sideHug7 = {
   image: {
-    path: 'lake-cypress-trees.jpg',
+    path: 'lake-cypress-trees-2.jpg',
+    alt: 'Cypress trees on Caddo Lake'
   },
   imageFirst: true,
   textData: [
@@ -143,7 +150,7 @@ class Page extends React.Component {
   render() {
     return (
       <Layout pageTitle={`Things to do - Caddo Lake Bayou Tours`} canonical={`/things-to-do/`}>
-        <Hero imagePath={'caddo-lake-swamp.jpg'} />
+        <Hero imagePath={'mike-moir.jpg'} />
         <SideHug data={sideHug6} /> 
         <SideHug data={sideHug7} /> 
         <SideHug data={sideHug1} />

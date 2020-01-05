@@ -5,7 +5,7 @@ import SideHug from '../components/SideHug'
 
 const sideHugData1 = {
   image: {
-    path: 'lake-sunset.jpg',
+    path: 'mike-moir-5.jpg',
     alt: 'Sunset over Caddo Lake',
   },
   textData: [
@@ -27,7 +27,7 @@ const sideHugData1 = {
 
 const sideHugData2 = {
   image: {
-    path: 'mike-moir-5.jpg',
+    path: 'lake-sunset.jpg',
     alt: 'Caddo Lake Cypress trees with fog',
   },
   textData: [
@@ -75,7 +75,7 @@ class Page extends React.Component {
   render() {
     return (
       <Layout pageTitle={`Caddo Lake Bayou Tours`} canonical={`/`}>
-        <Hero imagePath={`lake-cypress-trees-3.jpg`} />
+        <Hero imagePath={`mike-moir-3.jpg`} />
         <SideHug data={sideHugData1} />
         <SideHug data={sideHugData2} />
         <SideHug data={sideHugData3} />
