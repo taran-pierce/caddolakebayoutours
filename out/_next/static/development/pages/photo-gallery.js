@@ -293,11 +293,26 @@ var Footer = function Footer(props) {
       lineNumber: 46
     },
     __self: this
-  }, "Caddo State Park"))))), __jsx("p", {
+  }, "Caddo State Park")), __jsx("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
+    },
+    __self: this
+  }, __jsx("a", {
+    href: "https://www.mikemoirphotography.com/",
+    target: "_blank",
+    rel: "noopener",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
+    },
+    __self: this
+  }, "Mike Moir Photography"))))), __jsx("p", {
     className: 'copy-right',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 51
     },
     __self: this
   }, "Copyright ", year, " \xA9"));
@@ -667,7 +682,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 var Hero = function Hero(props) {
-  var imagePath = props.imagePath;
+  var imagePath = props.imagePath,
+      alt = props.alt;
   return __jsx("section", {
     className: "hero",
     __source: {
@@ -694,6 +710,7 @@ var Hero = function Hero(props) {
     responsive: true,
     width: "auto",
     crop: "scale",
+    alt: alt,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
@@ -705,7 +722,7 @@ var Hero = function Hero(props) {
     gravity: "auto",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 20
     },
     __self: this
   })))));
@@ -846,6 +863,7 @@ function (_React$Component) {
         responsive: true,
         width: "auto",
         crop: "scale",
+        alt: "Caddo Lake #".concat(this.state.currentSlide),
         __source: {
           fileName: _jsxFileName,
           lineNumber: 49
@@ -856,25 +874,25 @@ function (_React$Component) {
         fetchFormat: "auto",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 56
         },
         __self: this
       }))))), __jsx("nav", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 61
         },
         __self: this
       }, __jsx("ul", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 62
         },
         __self: this
       }, __jsx("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 63
         },
         __self: this
       }, __jsx("a", {
@@ -882,13 +900,13 @@ function (_React$Component) {
         onClick: this.previousImage,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 64
         },
         __self: this
       }, "Previous")), __jsx("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 66
         },
         __self: this
       }, __jsx("a", {
@@ -896,7 +914,7 @@ function (_React$Component) {
         onClick: this.nextImage,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 67
         },
         __self: this
       }, "Next"))))));
@@ -23231,6 +23249,7 @@ function (_React$Component) {
         __self: this
       }, __jsx(_components_Hero__WEBPACK_IMPORTED_MODULE_8__["default"], {
         imagePath: 'caddo-lake-swamp.jpg',
+        alt: "Caddo Lake treeline",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 18
@@ -23239,7 +23258,7 @@ function (_React$Component) {
       }), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_5___default.a, {
         id: "4197566438",
         __self: this
-      }, "section.jsx-4197566438{background:#fafafa;padding:1rem;}.container.jsx-4197566438{width:unset;}ul.jsx-4197566438{list-style-type:none;padding:0;margin:0 0 1rem 0;}@media(min-width:768px){.flex.jsx-4197566438{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}.item.jsx-4197566438{width:50%;}img.jsx-4197566438{display:block;margin:0 auto;}}@media (min-width:992px){section.jsx-4197566438{border-left:1px solid #c9c9c9;border-right:1px solid #c9c9c9;}}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy93cGllcmNlL3Byb2plY3RzL2NhZGRvbGFrZWJheW91dG91cnMvcGFnZXMvcGhvdG8tZ2FsbGVyeS5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFrQnNCLEFBR2tDLEFBS1AsQUFJUyxBQU9OLEFBSUgsQUFJSSxBQU9nQixVQVZoQyxFQWZGLEVBbUJrQixLQXhCSCxFQVNILE9BZ0JWLEVBTWlDLENBckJmLENBVHBCLGlCQVVBLFlBcUJFLGFBaEJBIiwiZmlsZSI6Ii9Vc2Vycy93cGllcmNlL3Byb2plY3RzL2NhZGRvbGFrZWJheW91dG91cnMvcGFnZXMvcGhvdG8tZ2FsbGVyeS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCdcbmltcG9ydCBMYXlvdXQgZnJvbSAnLi4vY29tcG9uZW50cy9MYXlvdXQnXG5pbXBvcnQgSGVybyBmcm9tICcuLi9jb21wb25lbnRzL0hlcm8nXG5pbXBvcnQgSW1hZ2VHYWxsZXJ5IGZyb20gJy4uL2NvbXBvbmVudHMvSW1hZ2VHYWxsZXJ5J1xuXG5jbGFzcyBQYWdlIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcbiAgY29uc3RydWN0b3IoIHByb3BzICkge1xuICAgIHN1cGVyKCBwcm9wcyApXG4gIFxuICAgIHRoaXMuc3RhdGUgPSB7XG4gICAgICBhY3RpdmVUYWI6ICdwaG90by1nYWxsZXJ5JyxcbiAgICB9XG4gIH1cblxuICByZW5kZXIoKSB7XG4gICAgcmV0dXJuIChcbiAgICAgIDxMYXlvdXQgcGFnZVRpdGxlPXtgUGhvdG9ncmFwaHkgR2FsbGVyeSAtIENhZGRvIExha2UgQmF5b3UgVG91cnNgfSBjYW5vbmljYWw9e2AvcGhvdG8tZ2FsbGVyeS9gfT5cbiAgICAgICAgPEhlcm8gaW1hZ2VQYXRoPXsnY2FkZG8tbGFrZS1zd2FtcC5qcGcnfSAvPlxuICAgICAgICAgIDxzdHlsZSBqc3g+e2BcbiAgICAgICAgICAgIHNlY3Rpb24ge1xuICAgICAgICAgICAgICBiYWNrZ3JvdW5kOiAjZmFmYWZhO1xuICAgICAgICAgICAgICBwYWRkaW5nOiAxcmVtO1xuICAgICAgICAgICAgfSBcbiAgICAgICAgICAgIFxuICAgICAgICAgICAgLmNvbnRhaW5lciB7XG4gICAgICAgICAgICAgIHdpZHRoOiB1bnNldDtcbiAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgdWwge1xuICAgICAgICAgICAgICBsaXN0LXN0eWxlLXR5cGU6IG5vbmU7XG4gICAgICAgICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgICAgICAgIG1hcmdpbjogMCAwIDFyZW0gMDtcbiAgICAgICAgICAgIH0gXG5cbiAgICAgICAgICAgIEBtZWRpYShtaW4td2lkdGg6IDc2OHB4KSB7XG4gICAgICAgICAgICAgIC5mbGV4IHtcbiAgICAgICAgICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICAgICAgICB9XG5cbiAgICAgICAgICAgICAgLml0ZW0ge1xuICAgICAgICAgICAgICAgIHdpZHRoOiA1MCU7XG4gICAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgICBpbWcge1xuICAgICAgICAgICAgICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgICAgICAgICAgICAgIG1hcmdpbjogMCBhdXRvO1xuICAgICAgICAgICAgICB9XG4gICAgICAgICAgICB9XG5cbiAgICAgICAgICAgIEBtZWRpYSAobWluLXdpZHRoOiA5OTJweCkge1xuICAgICAgICAgICAgICBzZWN0aW9uIHtcbiAgICAgICAgICAgICAgICBib3JkZXItbGVmdDogMXB4IHNvbGlkICNjOWM5Yzk7XG4gICAgICAgICAgICAgICAgYm9yZGVyLXJpZ2h0OiAxcHggc29saWQgI2M5YzljOTtcbiAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgfVxuICAgICAgICAgIGB9PC9zdHlsZT5cbiAgICAgICAgICA8c2VjdGlvbj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPXtgY29udGFpbmVyYH0+XG4gICAgICAgICAgICAgIDxoMT5QaG90byBHYWxsZXJ5PC9oMT5cbiAgICAgICAgICAgICAgPHA+SGVyZSBhcmUgc29tZSBwaG90b3Mgb2YgQ2FkZG8gTGFrZSBhbmQgdGhlIHN1cnJvdW5kaW5nIGFyZWEgc28geW91IGNhbiBnZXQgYW4gaWRlYSBvZiB3aGF0IGl0J3MgZ29pbmcgdG8gYmUgbGlrZS4gWW91IGdldCB0aGUgYmVzdCB2aWV3cyBvZiB0aGUgbGFrZSB3aGlsZSBvdXQgb24gdGhlIGd1aWRlZCBib2F0IHRvdXJzIHNvIHRoZSB2aWV3cyBhcmUgc3BlY3RhY3VsYXIuPC9wPlxuICAgICAgICAgICAgICA8cD5PZiBjb3Vyc2UsIGxpa2UgbW9zdCB0aGluZ3MsIGl0J3MgZXZlbiBtb3JlIGJlYXV0aWZ1bCBpbiBwZXJzb24uIFlvdSBkb24ndCBoYXZlIHRvIHRha2Ugb3VyIHdvcmQgZm9yIGl0IHRob3VnaCwgeW91IGNhbiBjb21lIGFuZCBzZWUgZm9yIHlvdXJzZWxmLiA8YSBocmVmPXtgL2NvbnRhY3QvYH0+Q29udGFjdCB1cyB0b2RheSE8L2E+PC9wPlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9zZWN0aW9uPlxuICAgICAgICAgIDxJbWFnZUdhbGxlcnkgLz5cbiAgICAgIDwvTGF5b3V0PlxuICAgIClcbiAgfVxufVxuXG5leHBvcnQgZGVmYXVsdCBQYWdlIl19 */\n/*@ sourceURL=/Users/wpierce/projects/caddolakebayoutours/pages/photo-gallery.js */"), __jsx("section", {
+      }, "section.jsx-4197566438{background:#fafafa;padding:1rem;}.container.jsx-4197566438{width:unset;}ul.jsx-4197566438{list-style-type:none;padding:0;margin:0 0 1rem 0;}@media(min-width:768px){.flex.jsx-4197566438{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}.item.jsx-4197566438{width:50%;}img.jsx-4197566438{display:block;margin:0 auto;}}@media (min-width:992px){section.jsx-4197566438{border-left:1px solid #c9c9c9;border-right:1px solid #c9c9c9;}}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy93cGllcmNlL3Byb2plY3RzL2NhZGRvbGFrZWJheW91dG91cnMvcGFnZXMvcGhvdG8tZ2FsbGVyeS5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFrQnNCLEFBR2tDLEFBS1AsQUFJUyxBQU9OLEFBSUgsQUFJSSxBQU9nQixVQVZoQyxFQWZGLEVBbUJrQixLQXhCSCxFQVNILE9BZ0JWLEVBTWlDLENBckJmLENBVHBCLGlCQVVBLFlBcUJFLGFBaEJBIiwiZmlsZSI6Ii9Vc2Vycy93cGllcmNlL3Byb2plY3RzL2NhZGRvbGFrZWJheW91dG91cnMvcGFnZXMvcGhvdG8tZ2FsbGVyeS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCdcbmltcG9ydCBMYXlvdXQgZnJvbSAnLi4vY29tcG9uZW50cy9MYXlvdXQnXG5pbXBvcnQgSGVybyBmcm9tICcuLi9jb21wb25lbnRzL0hlcm8nXG5pbXBvcnQgSW1hZ2VHYWxsZXJ5IGZyb20gJy4uL2NvbXBvbmVudHMvSW1hZ2VHYWxsZXJ5J1xuXG5jbGFzcyBQYWdlIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcbiAgY29uc3RydWN0b3IoIHByb3BzICkge1xuICAgIHN1cGVyKCBwcm9wcyApXG4gIFxuICAgIHRoaXMuc3RhdGUgPSB7XG4gICAgICBhY3RpdmVUYWI6ICdwaG90by1nYWxsZXJ5JyxcbiAgICB9XG4gIH1cblxuICByZW5kZXIoKSB7XG4gICAgcmV0dXJuIChcbiAgICAgIDxMYXlvdXQgcGFnZVRpdGxlPXtgUGhvdG9ncmFwaHkgR2FsbGVyeSAtIENhZGRvIExha2UgQmF5b3UgVG91cnNgfSBjYW5vbmljYWw9e2AvcGhvdG8tZ2FsbGVyeS9gfT5cbiAgICAgICAgPEhlcm8gaW1hZ2VQYXRoPXsnY2FkZG8tbGFrZS1zd2FtcC5qcGcnfSBhbHQ9e2BDYWRkbyBMYWtlIHRyZWVsaW5lYH0vPlxuICAgICAgICAgIDxzdHlsZSBqc3g+e2BcbiAgICAgICAgICAgIHNlY3Rpb24ge1xuICAgICAgICAgICAgICBiYWNrZ3JvdW5kOiAjZmFmYWZhO1xuICAgICAgICAgICAgICBwYWRkaW5nOiAxcmVtO1xuICAgICAgICAgICAgfSBcbiAgICAgICAgICAgIFxuICAgICAgICAgICAgLmNvbnRhaW5lciB7XG4gICAgICAgICAgICAgIHdpZHRoOiB1bnNldDtcbiAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgdWwge1xuICAgICAgICAgICAgICBsaXN0LXN0eWxlLXR5cGU6IG5vbmU7XG4gICAgICAgICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgICAgICAgIG1hcmdpbjogMCAwIDFyZW0gMDtcbiAgICAgICAgICAgIH0gXG5cbiAgICAgICAgICAgIEBtZWRpYShtaW4td2lkdGg6IDc2OHB4KSB7XG4gICAgICAgICAgICAgIC5mbGV4IHtcbiAgICAgICAgICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICAgICAgICB9XG5cbiAgICAgICAgICAgICAgLml0ZW0ge1xuICAgICAgICAgICAgICAgIHdpZHRoOiA1MCU7XG4gICAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgICBpbWcge1xuICAgICAgICAgICAgICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgICAgICAgICAgICAgIG1hcmdpbjogMCBhdXRvO1xuICAgICAgICAgICAgICB9XG4gICAgICAgICAgICB9XG5cbiAgICAgICAgICAgIEBtZWRpYSAobWluLXdpZHRoOiA5OTJweCkge1xuICAgICAgICAgICAgICBzZWN0aW9uIHtcbiAgICAgICAgICAgICAgICBib3JkZXItbGVmdDogMXB4IHNvbGlkICNjOWM5Yzk7XG4gICAgICAgICAgICAgICAgYm9yZGVyLXJpZ2h0OiAxcHggc29saWQgI2M5YzljOTtcbiAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgfVxuICAgICAgICAgIGB9PC9zdHlsZT5cbiAgICAgICAgICA8c2VjdGlvbj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPXtgY29udGFpbmVyYH0+XG4gICAgICAgICAgICAgIDxoMT5QaG90byBHYWxsZXJ5PC9oMT5cbiAgICAgICAgICAgICAgPHA+SGVyZSBhcmUgc29tZSBwaG90b3Mgb2YgQ2FkZG8gTGFrZSBhbmQgdGhlIHN1cnJvdW5kaW5nIGFyZWEgc28geW91IGNhbiBnZXQgYW4gaWRlYSBvZiB3aGF0IGl0J3MgZ29pbmcgdG8gYmUgbGlrZS4gWW91IGdldCB0aGUgYmVzdCB2aWV3cyBvZiB0aGUgbGFrZSB3aGlsZSBvdXQgb24gdGhlIGd1aWRlZCBib2F0IHRvdXJzIHNvIHRoZSB2aWV3cyBhcmUgc3BlY3RhY3VsYXIuPC9wPlxuICAgICAgICAgICAgICA8cD5UaGVzZSBwaG90b3MgYXJlIGNvdXJ0ZXN5IG9mIHNvbWUgb2YgdGhlIGdyZWF0IHBob3RvZ3JhcGhlcnMgdGhhdCBoYXZlIGdvbmUgb3V0IGFuZCB0YWtlbiB0b3VycyB3aXRoIHVzLjwvcD5cbiAgICAgICAgICAgICAgPHA+T2YgY291cnNlLCBsaWtlIG1vc3QgdGhpbmdzLCBpdCdzIGV2ZW4gbW9yZSBiZWF1dGlmdWwgaW4gcGVyc29uLiBZb3UgZG9uJ3QgaGF2ZSB0byB0YWtlIG91ciB3b3JkIGZvciBpdCB0aG91Z2gsIHlvdSBjYW4gY29tZSBhbmQgc2VlIGZvciB5b3Vyc2VsZi4gPGEgaHJlZj17YC9jb250YWN0L2B9PkNvbnRhY3QgdXMgdG9kYXkhPC9hPjwvcD5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDwvc2VjdGlvbj5cbiAgICAgICAgICA8SW1hZ2VHYWxsZXJ5IC8+XG4gICAgICA8L0xheW91dD5cbiAgICApXG4gIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgUGFnZSJdfQ== */\n/*@ sourceURL=/Users/wpierce/projects/caddolakebayoutours/pages/photo-gallery.js */"), __jsx("section", {
         className: "jsx-4197566438",
         __source: {
           fileName: _jsxFileName,
@@ -23274,18 +23293,25 @@ function (_React$Component) {
           lineNumber: 61
         },
         __self: this
+      }, "These photos are courtesy of some of the great photographers that have gone out and taken tours with us."), __jsx("p", {
+        className: "jsx-4197566438",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62
+        },
+        __self: this
       }, "Of course, like most things, it's even more beautiful in person. You don't have to take our word for it though, you can come and see for yourself. ", __jsx("a", {
         href: "/contact/",
         className: "jsx-4197566438",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 62
         },
         __self: this
       }, "Contact us today!")))), __jsx(_components_ImageGallery__WEBPACK_IMPORTED_MODULE_9__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 65
         },
         __self: this
       }));
@@ -23299,7 +23325,7 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 0:
+/***/ 14:
 /*!************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fphoto-gallery&absolutePagePath=%2FUsers%2Fwpierce%2Fprojects%2Fcaddolakebayoutours%2Fpages%2Fphoto-gallery.js ***!
   \************************************************************************************************************************************************************/
@@ -23322,5 +23348,5 @@ module.exports = dll_5f137288facb1107b491;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js","styles"]]]);
+},[[14,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=photo-gallery.js.map
