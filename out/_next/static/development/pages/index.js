@@ -409,7 +409,7 @@ function (_React$Component) {
         },
         __self: this
       }), __jsx("link", {
-        href: "https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700",
+        href: "//fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700",
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
@@ -417,7 +417,7 @@ function (_React$Component) {
         },
         __self: this
       }), __jsx("link", {
-        href: "https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap",
+        href: "//fonts.googleapis.com/css?family=Do+Hyeon&display=swap",
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
@@ -571,7 +571,7 @@ function (_React$Component) {
         __self: this
       }), __jsx("script", {
         async: true,
-        src: "https://www.googletagmanager.com/gtag/js?id=UA-107758647-2",
+        src: "//www.googletagmanager.com/gtag/js?id=UA-107758647-2",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 38
@@ -612,7 +612,7 @@ function (_React$Component) {
       }), __jsx("script", {
         async: true,
         defer: true,
-        crossorigin: "anonymous",
+        crossOrigin: "anonymous",
         src: "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0",
         __source: {
           fileName: _jsxFileName,
@@ -700,8 +700,9 @@ var Hero = function Hero(props) {
     },
     __self: this
   }, __jsx(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__["Transformation"], {
-    quality: "70",
+    quality: "90",
     fetchFormat: "auto",
+    gravity: "auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19
@@ -756,11 +757,17 @@ var links = [{
 }];
 
 var Layout = function Layout(props) {
-  return __jsx("div", {
-    className: "container",
+  return __jsx("main", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
     },
     __self: this
   }, __jsx(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -769,17 +776,17 @@ var Layout = function Layout(props) {
     links: links,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 33
     },
     __self: this
   }), props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
     links: links,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 35
     },
     __self: this
-  }));
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
@@ -1165,7 +1172,7 @@ var SideHug = function SideHug(props) {
       data: text,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 41
       },
       __self: this
     });
@@ -1173,7 +1180,7 @@ var SideHug = function SideHug(props) {
     className: "col",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 46
     },
     __self: this
   }, imageFirst ? textData.map(function (text, index) {
@@ -1182,7 +1189,7 @@ var SideHug = function SideHug(props) {
       data: text,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47
+        lineNumber: 50
       },
       __self: this
     });
@@ -1191,14 +1198,14 @@ var SideHug = function SideHug(props) {
     cloudName: "tpierce36",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 55
     },
     __self: this
   }, __jsx("div", {
     className: "img-wrapper",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 56
     },
     __self: this
   }, __jsx(cloudinary_react__WEBPACK_IMPORTED_MODULE_3__["Image"], {
@@ -1208,7 +1215,7 @@ var SideHug = function SideHug(props) {
     crop: "scale",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 57
     },
     __self: this
   }, __jsx(cloudinary_react__WEBPACK_IMPORTED_MODULE_3__["Transformation"], {
@@ -1216,7 +1223,7 @@ var SideHug = function SideHug(props) {
     fetchFormat: "auto",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 63
     },
     __self: this
   })))), googleMap && __jsx("iframe", {
@@ -1228,7 +1235,7 @@ var SideHug = function SideHug(props) {
     allowFullScreen: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 74
     },
     __self: this
   }))));
@@ -22630,7 +22637,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
 var sideHugData1 = {
   image: {
     path: 'lake-sunset.jpg',
-    alt: 'Caddo Lake, rich with history'
+    alt: 'Sunset over Caddo Lake'
   },
   textData: [{
     titles: ['<h1>Caddo Lake Bayou Tours</h1>', '<h2>Book a tour today!</h2>', '<h3><a href="tel:903-570-2169">903-570-2169</a></h3>'],
@@ -22639,8 +22646,8 @@ var sideHugData1 = {
 };
 var sideHugData2 = {
   image: {
-    path: 'lake-spanish-moss.jpg',
-    alt: 'Caddo Lake, rich with history'
+    path: 'mike-moir-5.jpg',
+    alt: 'Caddo Lake Cypress trees with fog'
   },
   textData: [{
     titles: ['<h2>A lake rich with history</h2>'],
@@ -22650,12 +22657,12 @@ var sideHugData2 = {
 };
 var sideHugData3 = {
   image: {
-    path: 'lake-spanish-moss.jpg',
-    alt: 'Caddo Lake, rich with history'
+    path: 'mike-moir-6.jpg',
+    alt: 'Crane in Cypress tree on Caddo Lake'
   },
   textData: [{
     titles: ['<h2>Photography Tours</h2>'],
-    paragraphs: ['Looking to get some great pictures of the beautiful Bald Cypress trees covered in Spanish moss? Schedule a guided tour and go on an adventure to get all the images you need to complete your photography collection.', 'Whether you want to go on a wildlife photography tour with a group or with the peace and quiet of being alone to get those perfect shots, we can accommodate.']
+    paragraphs: ['Looking to get some great pictures of the beautiful Bald Cypress trees covered in Spanish moss? Schedule a guided tour and go on an adventure to get all the images you need to complete your photography collection.', 'Whether you want to go on a wildlife photography tour with a group or with the peace and quiet of being alone to get those perfect shots, we can accommodate.', '<a class="btn" href="/contact/">Contact us today</a>']
   }]
 };
 
@@ -22684,35 +22691,35 @@ function (_React$Component) {
         canonical: "/",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76
-        },
-        __self: this
-      }, __jsx(_components_Hero__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        imagePath: "lake-sunset-2.jpg",
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 77
         },
         __self: this
-      }), __jsx(_components_SideHug__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        data: sideHugData1,
+      }, __jsx(_components_Hero__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        imagePath: "lake-cypress-trees-3.jpg",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 78
         },
         __self: this
       }), __jsx(_components_SideHug__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        data: sideHugData2,
+        data: sideHugData1,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 79
         },
         __self: this
       }), __jsx(_components_SideHug__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        data: sideHugData3,
+        data: sideHugData2,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 80
+        },
+        __self: this
+      }), __jsx(_components_SideHug__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        data: sideHugData3,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 81
         },
         __self: this
       }));

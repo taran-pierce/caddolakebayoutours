@@ -356,14 +356,14 @@ var Form = function Form(props) {
       },
       __self: this
     }, __jsx("div", {
-      className: "container flex",
+      className: "flex",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 15
       },
       __self: this
     }, __jsx("div", {
-      className: "col",
+      className: "col text",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 16
@@ -607,14 +607,14 @@ var Form = function Form(props) {
       },
       __self: this
     }, __jsx("div", {
-      className: "container flex",
+      className: "flex",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 116
       },
       __self: this
     }, __jsx("div", {
-      className: "col",
+      className: "col text",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 117
@@ -855,7 +855,7 @@ function (_React$Component) {
         },
         __self: this
       }), __jsx("link", {
-        href: "https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700",
+        href: "//fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700",
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
@@ -863,7 +863,7 @@ function (_React$Component) {
         },
         __self: this
       }), __jsx("link", {
-        href: "https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap",
+        href: "//fonts.googleapis.com/css?family=Do+Hyeon&display=swap",
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
@@ -1017,7 +1017,7 @@ function (_React$Component) {
         __self: this
       }), __jsx("script", {
         async: true,
-        src: "https://www.googletagmanager.com/gtag/js?id=UA-107758647-2",
+        src: "//www.googletagmanager.com/gtag/js?id=UA-107758647-2",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 38
@@ -1058,7 +1058,7 @@ function (_React$Component) {
       }), __jsx("script", {
         async: true,
         defer: true,
-        crossorigin: "anonymous",
+        crossOrigin: "anonymous",
         src: "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0",
         __source: {
           fileName: _jsxFileName,
@@ -1146,8 +1146,9 @@ var Hero = function Hero(props) {
     },
     __self: this
   }, __jsx(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__["Transformation"], {
-    quality: "70",
+    quality: "90",
     fetchFormat: "auto",
+    gravity: "auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19
@@ -1202,11 +1203,17 @@ var links = [{
 }];
 
 var Layout = function Layout(props) {
-  return __jsx("div", {
-    className: "container",
+  return __jsx("main", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
     },
     __self: this
   }, __jsx(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -1215,17 +1222,17 @@ var Layout = function Layout(props) {
     links: links,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 33
     },
     __self: this
   }), props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
     links: links,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 35
     },
     __self: this
-  }));
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
@@ -1611,7 +1618,7 @@ var SideHug = function SideHug(props) {
       data: text,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 41
       },
       __self: this
     });
@@ -1619,7 +1626,7 @@ var SideHug = function SideHug(props) {
     className: "col",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 46
     },
     __self: this
   }, imageFirst ? textData.map(function (text, index) {
@@ -1628,7 +1635,7 @@ var SideHug = function SideHug(props) {
       data: text,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47
+        lineNumber: 50
       },
       __self: this
     });
@@ -1637,14 +1644,14 @@ var SideHug = function SideHug(props) {
     cloudName: "tpierce36",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 55
     },
     __self: this
   }, __jsx("div", {
     className: "img-wrapper",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 56
     },
     __self: this
   }, __jsx(cloudinary_react__WEBPACK_IMPORTED_MODULE_3__["Image"], {
@@ -1654,7 +1661,7 @@ var SideHug = function SideHug(props) {
     crop: "scale",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 57
     },
     __self: this
   }, __jsx(cloudinary_react__WEBPACK_IMPORTED_MODULE_3__["Transformation"], {
@@ -1662,7 +1669,7 @@ var SideHug = function SideHug(props) {
     fetchFormat: "auto",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 63
     },
     __self: this
   })))), googleMap && __jsx("iframe", {
@@ -1674,7 +1681,7 @@ var SideHug = function SideHug(props) {
     allowFullScreen: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 74
     },
     __self: this
   }))));
@@ -23240,18 +23247,29 @@ function (_React$Component) {
     value: function render() {
       var sideHugData1 = {
         image: {
-          path: 'lake-sunset.jpg'
+          path: 'lake-with-pier.jpg',
+          alt: 'A pier on Caddo Lake'
         },
+        imageFirst: true,
         textData: [{
-          titles: ['<h1>Contact</h1>'],
-          paragraphs: ['If you have any questions please give us a call or you can contact us via email and we will get back to you as soon as possible. We will answer any questions you may have about what kind of guided boat tours we have available, what you can expect to encounter while on the tour and of course what you can and can not do on while on the tour of the lake.', 'Come and enjoy the wonderful experience that is Caddo Lake. We can\'t wait to share it with you!']
+          titles: ['<h2>Questions about tours?</h2>'],
+          paragraphs: ['If you have any questions please give us a call or you can contact us via email and we will get back to you as soon as possible. We will answer any questions you may have about what kind of guided boat tours we have available, what you can expect to encounter while on the tour and of course what you can and can not do on while on the tour of the lake.', 'Come and enjoy the wonderful experience that is Caddo Lake. We can\'t wait to share it with you and don\'t forgot to like us on our <a href="https://www.facebook.com/caddotours/" target="_blank">FaceBook page</a>!'],
+          lists: [{
+            'type': 'ul',
+            'items': [{
+              'title': 'Where does the tour start?',
+              'paragraphs': ['All tours start and end at the Shady Glade Marina']
+            }, {
+              'paragraphs': ['<strong>Address</strong>', '449 Cypress Drive', 'Uncertain TX 75661', '<strong>Phone:</strong> <a href="tel:1-903-570-2169">903-570-2169</a>']
+            }]
+          }]
         }]
       };
       var sideHugData2 = {
         image: {
-          path: 'lake-sunset.jpg'
+          path: 'lake-trees-in-fall.jpg',
+          alt: 'Caddo Lake with Cypress trees in the Fall'
         },
-        imageFirst: true,
         textData: [{
           titles: ['<h2>Types of Tours for Caddo Lake</h2>'],
           lists: [{
@@ -23277,18 +23295,12 @@ function (_React$Component) {
       };
       var formData = {
         image: {
-          path: 'lake-sunset.jpg'
+          path: 'lake-cypress-trees.jpg',
+          alt: 'Caddo Lake with Cypress trees'
         },
         textData: [{
-          titles: ['<h3>Rich McFarland <strong>Tour Guide</strong></h3>'],
-          paragraphs: ['Tours available 7 days a week, any time from sunrise to sunset.', 'Boat tours last approximately one hour.', 'Make sure to like us on <a href="https://www.facebook.com/caddotours/" target="_blank">FaceBook</a>', '<strong>Book a boat tour or send a message</strong>', 'Ask about boat tour reservations, fishing trips, availability of dates or times, or any other general questions.'],
-          lists: [{
-            'type': 'ul',
-            'items': [{
-              'title': 'Address',
-              'paragraphs': ['449 Cypress Drive', 'Uncertain TX 75661', '<strong>Phone:</strong> <a href="tel:1-903-570-2169">903-570-2169</a>']
-            }]
-          }]
+          titles: ['<h1>Contact Caddo Lake Bayou Tours</h1>', '<h4>Rich McFarland <strong>Tour Guide</strong></h4>'],
+          paragraphs: ['Tours available 7 days a week, any time from sunrise to sunset. Boat tours last approximately one hour.', 'Book a bout tour today or ask about boat tour reservations, photography tour, fishing trips, availability of dates or times, or any other general questions.']
         }]
       };
       return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -23296,28 +23308,14 @@ function (_React$Component) {
         canonical: "/contact/",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 185
+          lineNumber: 192
         },
         __self: this
       }, __jsx(_components_Hero__WEBPACK_IMPORTED_MODULE_9__["default"], {
-        imagePath: "lake-sunset-2.jpg",
+        imagePath: "mike-moir-2.jpg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 186
-        },
-        __self: this
-      }), __jsx(_components_SideHug__WEBPACK_IMPORTED_MODULE_10__["default"], {
-        data: sideHugData1,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 187
-        },
-        __self: this
-      }), __jsx(_components_SideHug__WEBPACK_IMPORTED_MODULE_10__["default"], {
-        data: sideHugData2,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 188
+          lineNumber: 193
         },
         __self: this
       }), __jsx(_components_Form__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -23330,7 +23328,21 @@ function (_React$Component) {
         state: this.state,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 189
+          lineNumber: 194
+        },
+        __self: this
+      }), __jsx(_components_SideHug__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        data: sideHugData1,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 203
+        },
+        __self: this
+      }), __jsx(_components_SideHug__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        data: sideHugData2,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 204
         },
         __self: this
       }));
@@ -23344,7 +23356,7 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 12:
+/***/ 9:
 /*!************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fcontact&absolutePagePath=%2FUsers%2Fwpierce%2Fprojects%2Fcaddolakebayoutours%2Fpages%2Fcontact.js ***!
   \************************************************************************************************************************************************/
@@ -23367,5 +23379,5 @@ module.exports = dll_5f137288facb1107b491;
 
 /***/ })
 
-},[[12,"static/runtime/webpack.js","styles"]]]);
+},[[9,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=contact.js.map

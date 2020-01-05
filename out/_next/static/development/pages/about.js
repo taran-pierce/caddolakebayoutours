@@ -409,7 +409,7 @@ function (_React$Component) {
         },
         __self: this
       }), __jsx("link", {
-        href: "https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700",
+        href: "//fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700",
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
@@ -417,7 +417,7 @@ function (_React$Component) {
         },
         __self: this
       }), __jsx("link", {
-        href: "https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap",
+        href: "//fonts.googleapis.com/css?family=Do+Hyeon&display=swap",
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
@@ -571,7 +571,7 @@ function (_React$Component) {
         __self: this
       }), __jsx("script", {
         async: true,
-        src: "https://www.googletagmanager.com/gtag/js?id=UA-107758647-2",
+        src: "//www.googletagmanager.com/gtag/js?id=UA-107758647-2",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 38
@@ -612,7 +612,7 @@ function (_React$Component) {
       }), __jsx("script", {
         async: true,
         defer: true,
-        crossorigin: "anonymous",
+        crossOrigin: "anonymous",
         src: "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0",
         __source: {
           fileName: _jsxFileName,
@@ -700,8 +700,9 @@ var Hero = function Hero(props) {
     },
     __self: this
   }, __jsx(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__["Transformation"], {
-    quality: "70",
+    quality: "90",
     fetchFormat: "auto",
+    gravity: "auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19
@@ -756,11 +757,17 @@ var links = [{
 }];
 
 var Layout = function Layout(props) {
-  return __jsx("div", {
-    className: "container",
+  return __jsx("main", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
     },
     __self: this
   }, __jsx(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -769,17 +776,17 @@ var Layout = function Layout(props) {
     links: links,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 33
     },
     __self: this
   }), props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
     links: links,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 35
     },
     __self: this
-  }));
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
@@ -1165,7 +1172,7 @@ var SideHug = function SideHug(props) {
       data: text,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 41
       },
       __self: this
     });
@@ -1173,7 +1180,7 @@ var SideHug = function SideHug(props) {
     className: "col",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 46
     },
     __self: this
   }, imageFirst ? textData.map(function (text, index) {
@@ -1182,7 +1189,7 @@ var SideHug = function SideHug(props) {
       data: text,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47
+        lineNumber: 50
       },
       __self: this
     });
@@ -1191,14 +1198,14 @@ var SideHug = function SideHug(props) {
     cloudName: "tpierce36",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 55
     },
     __self: this
   }, __jsx("div", {
     className: "img-wrapper",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 56
     },
     __self: this
   }, __jsx(cloudinary_react__WEBPACK_IMPORTED_MODULE_3__["Image"], {
@@ -1208,7 +1215,7 @@ var SideHug = function SideHug(props) {
     crop: "scale",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 57
     },
     __self: this
   }, __jsx(cloudinary_react__WEBPACK_IMPORTED_MODULE_3__["Transformation"], {
@@ -1216,7 +1223,7 @@ var SideHug = function SideHug(props) {
     fetchFormat: "auto",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 63
     },
     __self: this
   })))), googleMap && __jsx("iframe", {
@@ -1228,7 +1235,7 @@ var SideHug = function SideHug(props) {
     allowFullScreen: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 74
     },
     __self: this
   }))));
@@ -22629,8 +22636,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
 
 var sideHugData1 = {
   image: {
-    path: 'lake-sunset.jpg',
-    alt: 'Caddo Lake, rich with history'
+    path: 'lake-trees-fog.jpg',
+    alt: 'Caddo Lake, shrouded with fog'
   },
   textData: [{
     titles: ['<h1>About Caddo Lake Bayou Tours</h1>'],
@@ -22653,8 +22660,8 @@ var sideHugData1 = {
 };
 var sideHugData2 = {
   image: {
-    path: 'lake-spanish-moss.jpg',
-    alt: 'Caddo Lake, rich with history'
+    path: 'lake-sunset-3.jpg',
+    alt: 'Caddo Lake sunset'
   },
   textData: [{
     titles: ['<h2>About Caddo Lake</h2>'],
@@ -22733,7 +22740,7 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 9:
+/***/ 11:
 /*!********************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fabout&absolutePagePath=%2FUsers%2Fwpierce%2Fprojects%2Fcaddolakebayoutours%2Fpages%2Fabout.js ***!
   \********************************************************************************************************************************************/
@@ -22756,5 +22763,5 @@ module.exports = dll_5f137288facb1107b491;
 
 /***/ })
 
-},[[9,"static/runtime/webpack.js","styles"]]]);
+},[[11,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=about.js.map
