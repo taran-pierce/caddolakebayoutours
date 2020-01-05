@@ -23318,7 +23318,7 @@ function (_React$Component) {
           alt: 'Caddo Lake with Cypress trees'
         },
         textData: [{
-          titles: ['<h1>Contact Caddo Lake Bayou Tours</h1>', '<h4>Rich McFarland <strong>Tour Guide</strong> <a href="tel:1-903-570-2169">903-570-2169</h4>'],
+          titles: ['<h1>Contact Caddo Lake Bayou Tours</h1>', '<h4>Rich McFarland <strong>Tour Guide</strong> <a href="tel:1-903-570-2169">903-570-2169</a></h4>'],
           paragraphs: ['Tours available 7 days a week, any time from sunrise to sunset. Boat tours last approximately one hour.', 'Book a bout tour today or ask about boat tour reservations, photography tour, fishing trips, availability of dates or times, or any other general questions.']
         }]
       };

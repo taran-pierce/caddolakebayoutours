@@ -306,30 +306,6 @@ h6 {
       margin-right: 0;
       display: block; } }
 
-.image-gallery {
-  background: #fafafa;
-  padding: 1rem; }
-  .image-gallery .gallery-container {
-    border: 1px solid #cacaca;
-    padding: 1rem;
-    margin: 1rem .5rem; }
-  .image-gallery ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0; }
-  .image-gallery nav ul {
-    display: flex;
-    flex-wrap: nowrap; }
-    .image-gallery nav ul li {
-      width: 50%; }
-      .image-gallery nav ul li > a {
-        display: block; }
-
-@media (min-width: 992px) {
-  .image-gallery {
-    border-left: 1px solid #c9c9c9;
-    border-right: 1px solid #c9c9c9; } }
-
 section.form {
   background: #fafafa;
   border-left: 1px solid #c9c9c9;
