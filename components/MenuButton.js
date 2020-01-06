@@ -3,9 +3,11 @@ import PropTypes from 'prop-types'
 import './menuButton.scss'
 
 const Icon = ( props ) => {
+  const { menuOpen, toggleMenu } = props
+
   return (
-    <div className={`menu-button`} onClick={props.toggleMenu}>
-        {props.menuOpen ? 
+    <div className={`menu-button`} onClick={toggleMenu}>
+        {menuOpen ? 
           (
             <a href={`#`}>
               <span className={`menu-open`}></span>
@@ -26,8 +28,8 @@ const Icon = ( props ) => {
 }
 
 Icon.propTypes = {
-  clickEvent: PropTypes.func,
-  active: PropTypes.any,
+  toggleMenu: PropTypes.func,
+  menuOpen: PropTypes.bool,
 }
 
 export default Icon

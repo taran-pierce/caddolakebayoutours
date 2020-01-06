@@ -39,6 +39,9 @@ class ImageGallery extends React.Component {
   }
   
   render() {
+    const { previousImage, nextImage } = this.props
+    const { currentSlide } = this.state
+
     return (
       <section className={`image-gallery`}>
         <h2>Pictures of Caddo Lake</h2>
@@ -47,11 +50,11 @@ class ImageGallery extends React.Component {
             <li>
               <CloudinaryContext cloudName="tpierce36">
                 <Image 
-                  publicId={`${galleryName}${this.state.currentSlide}.jpg`}
+                  publicId={`${galleryName}${currentSlide}.jpg`}
                   responsive
                   width="auto"
                   crop="scale"
-                  alt={`Caddo Lake #${this.state.currentSlide}`}
+                  alt={`Caddo Lake #${currentSlide}`}
                 >
                   <Transformation quality="auto" fetchFormat="auto" />
                 </Image>
@@ -61,10 +64,10 @@ class ImageGallery extends React.Component {
           <nav>
             <ul>
               <li>
-                <a className={`btn ${this.state.currentSlide == 1 && 'disabled'}`} onClick={this.previousImage}>Previous</a>
+                <a className={`btn ${currentSlide == 1 && 'disabled'}`} onClick={previousImage}>Previous</a>
               </li>
               <li>
-                <a className={`btn ${this.state.currentSlide == 11 && 'disabled'}`} onClick={this.nextImage}>Next</a>
+                <a className={`btn ${currentSlide == 11 && 'disabled'}`} onClick={nextImage}>Next</a>
               </li>
             </ul>
           </nav>
@@ -72,6 +75,12 @@ class ImageGallery extends React.Component {
       </section>
     )
   }
+}
+
+ImageGallery.PropTypes = {
+  currentSlide: PropTypes.number,
+  previousImage: PropTypes.func,
+  nextImage: PropTypes.func,
 }
 
 export default ImageGallery

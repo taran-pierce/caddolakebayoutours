@@ -31,6 +31,7 @@ const Hero = ( props ) => {
 
 Hero.propTypes = {
   imagePath: PropTypes.string,
+  alt: PropTypes.string,
 }
 
 export default Hero

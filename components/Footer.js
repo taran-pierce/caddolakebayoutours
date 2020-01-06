@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 import './footer.scss'
 
 const year = new Date().getFullYear();
@@ -51,6 +53,10 @@ const Footer = ( props ) => {
       <p className={'copy-right'}>Copyright {year} &copy;</p>
     </footer>
   )
+}
+
+Footer.propTypes = {
+  links: PropTypes.array,
 }
 
 export default Footer

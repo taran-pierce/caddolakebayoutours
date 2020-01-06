@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import Header from './Header'
 import Footer from './Footer'
 
@@ -27,15 +28,22 @@ const links = [
 ]
 
 const Layout = ( props ) => {
+  const { pageTitle, canonical } = props
+
     return (
       <main>
         <div className={`container`}>
-          <Header pageTitle={props.pageTitle} canonical={props.canonical} links={links} />
+          <Header pageTitle={pageTitle} canonical={canonical} links={links} />
           {props.children}
           <Footer links={links} />
         </div>
       </main>
     )
+}
+
+Layout.propTypes = {
+  pageTitle: PropTypes.string,
+  canonical: PropTypes.string,
 }
 
 export default Layout

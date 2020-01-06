@@ -1,6 +1,11 @@
 const withSass = require('@zeit/next-sass')
 
 const jsConfig = {
+  sassLoaderOptions: {
+    includePaths: [
+      '/node_modules/normalize-scss/sass/normalize'
+    ]
+  },
   exportTrailingSlash: true,
   exportPathMap: function() {
     return {
