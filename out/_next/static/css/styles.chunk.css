@@ -159,7 +159,7 @@ body {
   background: #fafafa url("/images/topography.png") center center repeat;
   margin: 0;
   padding: 0;
-  font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-family: 'Noto Sans',Helvetica Neue,Helvetica,Arial,sans-serif;
   font-size: 1rem;
   color: #262512;
   line-height: 1.6; }
@@ -305,54 +305,6 @@ h6 {
       margin-left: 0;
       margin-right: 0;
       display: block; } }
-
-section.form {
-  background: #fafafa;
-  border-left: 1px solid #c9c9c9;
-  border-right: 1px solid #c9c9c9;
-  border-bottom: 5px solid #afa62f;
-  border-top: 5px solid #afa62f;
-  overflow: hidden; }
-  section.form .col.text {
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem; }
-  section.form ul {
-    padding-top: 1rem;
-    padding-left: 0;
-    list-style-type: none; }
-  section.form form {
-    margin-bottom: 1rem; }
-  section.form fieldset {
-    border: none;
-    padding-left: 0; }
-  section.form label {
-    display: block;
-    font-weight: 900;
-    margin-bottom: .5rem; }
-  section.form input,
-  section.form textarea {
-    border: 1px solid #c9c9c9;
-    border-radius: 4px;
-    font-size: 100%;
-    padding: 1rem;
-    width: fit-content;
-    width: -webkit-fill-available; }
-  section.form textarea {
-    min-height: 100px; }
-  section.form img {
-    display: block; }
-
-@media (min-width: 992px) {
-  section.form .flex {
-    display: flex;
-    align-items: center; }
-  section.form .col {
-    flex-grow: 1;
-    width: 50%; }
-  section.form input,
-  section.form textarea {
-    padding: .5rem; } }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/
