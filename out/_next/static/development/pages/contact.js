@@ -450,25 +450,41 @@ var Form = function Form(props) {
           });
         }));
       }));
-    }), __jsx("form", {
+    }), props.loading ? __jsx("div", {
+      className: "loading-screen",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45
+      },
+      __self: this
+    }, __jsx("img", {
+      className: "rotating",
+      src: "/images/loading.svg",
+      alt: "Contacting email server",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46
+      },
+      __self: this
+    })) : __jsx("form", {
       className: "contact-form",
       onSubmit: onSubmit,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 43
+        lineNumber: 50
       },
       __self: this
     }, __jsx("fieldset", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44
+        lineNumber: 51
       },
       __self: this
     }, __jsx("label", {
       htmlFor: "first_name",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45
+        lineNumber: 52
       },
       __self: this
     }, "First Name"), __jsx("input", {
@@ -482,20 +498,20 @@ var Form = function Form(props) {
       required: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 53
       },
       __self: this
     })), __jsx("fieldset", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 63
       },
       __self: this
     }, __jsx("label", {
       htmlFor: "last_name",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57
+        lineNumber: 64
       },
       __self: this
     }, "Last Name"), __jsx("input", {
@@ -509,20 +525,20 @@ var Form = function Form(props) {
       required: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 58
+        lineNumber: 65
       },
       __self: this
     })), __jsx("fieldset", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68
+        lineNumber: 75
       },
       __self: this
     }, __jsx("label", {
       htmlFor: "email",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 69
+        lineNumber: 76
       },
       __self: this
     }, "Email"), __jsx("input", {
@@ -536,20 +552,20 @@ var Form = function Form(props) {
       required: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70
+        lineNumber: 77
       },
       __self: this
     })), __jsx("fieldset", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 80
+        lineNumber: 87
       },
       __self: this
     }, __jsx("label", {
       htmlFor: "message",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 81
+        lineNumber: 88
       },
       __self: this
     }, "Message"), __jsx("textarea", {
@@ -561,14 +577,14 @@ var Form = function Form(props) {
       required: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 82
+        lineNumber: 89
       },
       __self: this
     })), __jsx("div", {
       className: "button-wrapper",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 91
+        lineNumber: 98
       },
       __self: this
     }, __jsx("button", {
@@ -576,28 +592,28 @@ var Form = function Form(props) {
       className: "btn",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 92
+        lineNumber: 99
       },
       __self: this
     }, buttonText)))), __jsx("div", {
       className: "col",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 96
+        lineNumber: 105
       },
       __self: this
     }, __jsx(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__["CloudinaryContext"], {
       cloudName: "tpierce36",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 97
+        lineNumber: 106
       },
       __self: this
     }, __jsx("div", {
       className: "img-wrapper",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 98
+        lineNumber: 107
       },
       __self: this
     }, __jsx(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__["Image"], {
@@ -607,7 +623,7 @@ var Form = function Form(props) {
       crop: "scale",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 99
+        lineNumber: 108
       },
       __self: this
     }, __jsx(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__["Transformation"], {
@@ -615,7 +631,7 @@ var Form = function Form(props) {
       fetchFormat: "auto",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 105
+        lineNumber: 114
       },
       __self: this
     })))))));
@@ -624,21 +640,21 @@ var Form = function Form(props) {
       className: "form",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 115
+        lineNumber: 124
       },
       __self: this
     }, __jsx("div", {
       className: "flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 116
+        lineNumber: 125
       },
       __self: this
     }, __jsx("div", {
       className: "col text",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 117
+        lineNumber: 126
       },
       __self: this
     }, textData && textData.titles && textData.titles.map(function (title, index) {
@@ -649,7 +665,7 @@ var Form = function Form(props) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 120
+          lineNumber: 129
         },
         __self: this
       });
@@ -661,7 +677,7 @@ var Form = function Form(props) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 125
+          lineNumber: 134
         },
         __self: this
       });
@@ -670,7 +686,7 @@ var Form = function Form(props) {
         key: index,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 130
+          lineNumber: 139
         },
         __self: this
       }, list.items.map(function (item, index) {
@@ -678,13 +694,13 @@ var Form = function Form(props) {
           key: index,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 132
+            lineNumber: 141
           },
           __self: this
         }, item.title && __jsx("h4", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 134
+            lineNumber: 143
           },
           __self: this
         }, item.title), item.paragraphs.map(function (paragraph, index) {
@@ -695,66 +711,50 @@ var Form = function Form(props) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 137
+              lineNumber: 146
             },
             __self: this
           });
         }));
       }));
-    }), props.state.loading ? __jsx("div", {
+    }), __jsx("div", {
       className: "loading-screen",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 146
-      },
-      __self: this
-    }, __jsx("img", {
-      className: "rotating",
-      src: "/images/loading.svg",
-      alt: "Contacting email server",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 147
-      },
-      __self: this
-    })) : __jsx("div", {
-      className: "loading-screen",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 150
+        lineNumber: 153
       },
       __self: this
     }, __jsx("h4", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 151
+        lineNumber: 154
       },
       __self: this
     }, "Message Received!"), __jsx("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 152
+        lineNumber: 155
       },
       __self: this
     }, "Thanks for you interest! I will contact you as soon as possible."))), __jsx("div", {
       className: "col",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 157
+        lineNumber: 158
       },
       __self: this
     }, __jsx(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__["CloudinaryContext"], {
       cloudName: "tpierce36",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 158
+        lineNumber: 159
       },
       __self: this
     }, __jsx("div", {
       className: "img-wrapper",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 159
+        lineNumber: 160
       },
       __self: this
     }, __jsx(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__["Image"], {
@@ -764,7 +764,7 @@ var Form = function Form(props) {
       crop: "scale",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 160
+        lineNumber: 161
       },
       __self: this
     }, __jsx(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__["Transformation"], {
@@ -772,7 +772,7 @@ var Form = function Form(props) {
       fetchFormat: "auto",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 166
+        lineNumber: 167
       },
       __self: this
     })))))));
@@ -23195,7 +23195,7 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 9:
+/***/ 1:
 /*!************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fcontact&absolutePagePath=%2FUsers%2Fwpierce%2Fprojects%2Fcaddolakebayoutours%2Fpages%2Fcontact.js ***!
   \************************************************************************************************************************************************/
@@ -23218,5 +23218,5 @@ module.exports = dll_5f137288facb1107b491;
 
 /***/ })
 
-},[[9,"static/runtime/webpack.js","styles"]]]);
+},[[1,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=contact.js.map
