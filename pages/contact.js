@@ -82,8 +82,6 @@ class Page extends React.Component {
   }
   
   render() {
-    const { onFirstNameChange, onLastNameChange, onMessageChange, onEmailChange, onSubmit } = this.props
-
     const sideHugData1 = {
       image: {
         path: 'lake-with-pier.jpg',
@@ -199,11 +197,11 @@ class Page extends React.Component {
         <Hero imagePath={`mike-moir-2.jpg`} alt={`Caddo Lake bench`}/>
         <Form 
           data={formData}
-          onFirstNameChange={onFirstNameChange}
-          onLastNameChange={onLastNameChange}  
-          onMessageChange={onMessageChange}
-          onEmailChange={onEmailChange}
-          onSubmit={onSubmit}
+          onFirstNameChange={this.onFirstNameChange}
+          onLastNameChange={this.onLastNameChange}  
+          onMessageChange={this.onMessageChange}
+          onEmailChange={this.onEmailChange}
+          onSubmit={this.onSubmit}
           state={this.state}
         />
         <SideHug data={sideHugData1} />
