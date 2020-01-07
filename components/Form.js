@@ -141,10 +141,18 @@ const Form = ( props ) => {
                 </ul>
               ))
             )}
-            <div>
-              <h4>Message Received!</h4>
-              <p>Thanks for you interest! I will contact you as soon as possible.</p>
-            </div>
+            {props.state.loading ?
+              (
+                <div className={`loading-screen`}>
+                  <img className={`rotating`} src={`/images/loading.svg`} alt={`Contacting email server`} />
+                </div>
+              ) : (
+                <div className={`loading-screen`}>
+                  <h4>Message Received!</h4>
+                  <p>Thanks for you interest! I will contact you as soon as possible.</p>
+                </div>
+              )
+            }    
           </div>
           <div className={`col`}>
             <CloudinaryContext cloudName="tpierce36">

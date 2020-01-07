@@ -15,9 +15,10 @@ class Page extends React.Component {
       message: '',
       email: '',
       sent: false,
-      error: null,
+      error: false,
       buttonText: 'Send Message',
       activeTab: 'contact',
+      loading: false,
     }
 
     this.onFirstNameChange = this.onFirstNameChange.bind(this)
@@ -53,6 +54,8 @@ class Page extends React.Component {
 
     event.preventDefault()
 
+    this.setState({ loading: true })
+
     fetch('//caddo-email-server.herokuapp.com/send/mail', {
       mode: 'no-cors',
       method: 'post',
@@ -63,6 +66,7 @@ class Page extends React.Component {
       body: JSON.stringify(data)
     }).then( ( res ) => {
       this.setState({ sent: true })
+      this.setState({ loading: false })
       this.resetForm()
     })
   }
@@ -78,6 +82,8 @@ class Page extends React.Component {
   }
   
   render() {
+    const { onFirstNameChange, onLastNameChange, onMessageChange, onEmailChange, onSubmit } = this.props
+
     const sideHugData1 = {
       image: {
         path: 'lake-with-pier.jpg',
@@ -193,11 +199,11 @@ class Page extends React.Component {
         <Hero imagePath={`mike-moir-2.jpg`} alt={`Caddo Lake bench`}/>
         <Form 
           data={formData}
-          onFirstNameChange={this.onFirstNameChange}
-          onLastNameChange={this.onLastNameChange}  
-          onMessageChange={this.onMessageChange}
-          onEmailChange={this.onEmailChange}
-          onSubmit={this.onSubmit}
+          onFirstNameChange={onFirstNameChange}
+          onLastNameChange={onLastNameChange}  
+          onMessageChange={onMessageChange}
+          onEmailChange={onEmailChange}
+          onSubmit={onSubmit}
           state={this.state}
         />
         <SideHug data={sideHugData1} />
