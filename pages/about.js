@@ -28,9 +28,9 @@ const sideHugData1 = {
               ]
             },
             {
-              'title': 'Fishing Trips',
+              'title': 'Sightseeing',
               'paragraphs': [
-                'There are plenty of great fishing spots across the lake. Come take a guided fishing trip for all your fishing needs.'
+                'Enjoy the beautiful lake, lots of wildlife and the overall mystique of Caddo Lake. Visit historic Jefferson, Texas and enjoy all that it has to offer.',
               ]
             },
           ]
@@ -60,9 +60,9 @@ const sideHugData2 = {
           'type': 'ul',
           items: [
             {
-              'title': 'Sightseeing',
+              'title': 'Fishing Trips',
               'paragraphs': [
-                'Enjoy the beautiful lake, lots of wildlife and the overall mystique of Caddo Lake. Visit historic Jefferson, Texas and enjoy all that it has to offer.',
+                'There are plenty of great fishing spots across the lake. Come take a guided fishing trip for all your fishing needs.'
               ]
             },
             {
