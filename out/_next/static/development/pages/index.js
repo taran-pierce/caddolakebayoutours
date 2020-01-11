@@ -1,467 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/contact.js"],{
-
-/***/ "./components/Form.js":
-/*!****************************!*\
-  !*** ./components/Form.js ***!
-  \****************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var cloudinary_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! cloudinary-react */ "./node_modules/cloudinary-react/lib/index.js");
-/* harmony import */ var cloudinary_react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _form_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./form.scss */ "./components/form.scss");
-/* harmony import */ var _form_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_form_scss__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/wpierce/projects/caddolakebayoutours/components/Form.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-var Form = function Form(props) {
-  var onSubmit = props.onSubmit,
-      onFirstNameChange = props.onFirstNameChange,
-      onLastNameChange = props.onLastNameChange,
-      onEmailChange = props.onEmailChange,
-      onMessageChange = props.onMessageChange,
-      data = props.data;
-  var _props$state = props.state,
-      sent = _props$state.sent,
-      firstName = _props$state.firstName,
-      lastName = _props$state.lastName,
-      email = _props$state.email,
-      message = _props$state.message,
-      buttonText = _props$state.buttonText;
-  var textData = data.textData[0];
-
-  if (!sent) {
-    return __jsx("section", {
-      className: "form",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 14
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "flex",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 15
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "col text",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 16
-      },
-      __self: this
-    }, textData && textData.titles && textData.titles.map(function (title, index) {
-      return __jsx("div", {
-        key: index,
-        dangerouslySetInnerHTML: {
-          __html: title
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 19
-        },
-        __self: this
-      });
-    }), textData && textData.paragraphs && textData.paragraphs.map(function (paragraph, index) {
-      return __jsx("p", {
-        key: index,
-        dangerouslySetInnerHTML: {
-          __html: paragraph
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 24
-        },
-        __self: this
-      });
-    }), textData && textData.lists && textData.lists.map(function (list, index) {
-      return __jsx("ul", {
-        key: index,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 29
-        },
-        __self: this
-      }, list.items.map(function (item, index) {
-        return __jsx("li", {
-          key: index,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 31
-          },
-          __self: this
-        }, item.title && __jsx("h4", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 33
-          },
-          __self: this
-        }, item.title), item.paragraphs.map(function (paragraph, index) {
-          return __jsx("p", {
-            key: index,
-            dangerouslySetInnerHTML: {
-              __html: paragraph
-            },
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 36
-            },
-            __self: this
-          });
-        }));
-      }));
-    }), props.loading ? __jsx("div", {
-      className: "loading-screen",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 45
-      },
-      __self: this
-    }, __jsx("img", {
-      className: "rotating",
-      src: "/images/loading.svg",
-      alt: "Contacting email server",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 46
-      },
-      __self: this
-    })) : __jsx("form", {
-      className: "contact-form",
-      onSubmit: onSubmit,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 50
-      },
-      __self: this
-    }, __jsx("fieldset", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 51
-      },
-      __self: this
-    }, __jsx("label", {
-      htmlFor: "first_name",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 52
-      },
-      __self: this
-    }, "First Name"), __jsx("input", {
-      onChange: onFirstNameChange,
-      type: "text",
-      name: "first_name",
-      id: "first_name",
-      placeholder: "First Name",
-      value: firstName,
-      inputMode: "text",
-      required: true,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 53
-      },
-      __self: this
-    })), __jsx("fieldset", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 63
-      },
-      __self: this
-    }, __jsx("label", {
-      htmlFor: "last_name",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 64
-      },
-      __self: this
-    }, "Last Name"), __jsx("input", {
-      type: "text",
-      name: "last_name",
-      id: "last_name",
-      onChange: onLastNameChange,
-      value: lastName,
-      placeholder: "Last Name",
-      inputMode: "text",
-      required: true,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 65
-      },
-      __self: this
-    })), __jsx("fieldset", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 75
-      },
-      __self: this
-    }, __jsx("label", {
-      htmlFor: "email",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 76
-      },
-      __self: this
-    }, "Email"), __jsx("input", {
-      type: "email",
-      name: "email",
-      id: "email",
-      onChange: onEmailChange,
-      placeholder: "your@email.com",
-      value: email,
-      inputMode: "email",
-      required: true,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 77
-      },
-      __self: this
-    })), __jsx("fieldset", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 87
-      },
-      __self: this
-    }, __jsx("label", {
-      htmlFor: "message",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 88
-      },
-      __self: this
-    }, "Message"), __jsx("textarea", {
-      name: "message",
-      id: "message",
-      onChange: onMessageChange,
-      value: message,
-      inputMode: "text",
-      required: true,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 89
-      },
-      __self: this
-    })), __jsx("div", {
-      className: "button-wrapper",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 98
-      },
-      __self: this
-    }, __jsx("button", {
-      type: "submit",
-      className: "btn",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 99
-      },
-      __self: this
-    }, buttonText)))), __jsx("div", {
-      className: "col",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 105
-      },
-      __self: this
-    }, __jsx(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__["CloudinaryContext"], {
-      cloudName: "tpierce36",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 106
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "img-wrapper",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 107
-      },
-      __self: this
-    }, __jsx(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__["Image"], {
-      publicId: data.image.path,
-      responsive: true,
-      width: "auto",
-      crop: "scale",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 108
-      },
-      __self: this
-    }, __jsx(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__["Transformation"], {
-      quality: "auto",
-      fetchFormat: "auto",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 114
-      },
-      __self: this
-    })))))));
-  } else {
-    return __jsx("section", {
-      className: "form",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 124
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "flex",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 125
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "col text",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 126
-      },
-      __self: this
-    }, textData && textData.titles && textData.titles.map(function (title, index) {
-      return __jsx("div", {
-        key: index,
-        dangerouslySetInnerHTML: {
-          __html: title
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 129
-        },
-        __self: this
-      });
-    }), textData && textData.paragraphs && textData.paragraphs.map(function (paragraph, index) {
-      return __jsx("p", {
-        key: index,
-        dangerouslySetInnerHTML: {
-          __html: paragraph
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 134
-        },
-        __self: this
-      });
-    }), textData && textData.lists && textData.lists.map(function (list, index) {
-      return __jsx("ul", {
-        key: index,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 139
-        },
-        __self: this
-      }, list.items.map(function (item, index) {
-        return __jsx("li", {
-          key: index,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 141
-          },
-          __self: this
-        }, item.title && __jsx("h4", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 143
-          },
-          __self: this
-        }, item.title), item.paragraphs.map(function (paragraph, index) {
-          return __jsx("p", {
-            key: index,
-            dangerouslySetInnerHTML: {
-              __html: paragraph
-            },
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 146
-            },
-            __self: this
-          });
-        }));
-      }));
-    }), __jsx("div", {
-      className: "loading-screen",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 153
-      },
-      __self: this
-    }, __jsx("h4", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 154
-      },
-      __self: this
-    }, "Message Received!"), __jsx("p", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 155
-      },
-      __self: this
-    }, "Thanks for you interest! I will contact you as soon as possible."))), __jsx("div", {
-      className: "col",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 158
-      },
-      __self: this
-    }, __jsx(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__["CloudinaryContext"], {
-      cloudName: "tpierce36",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 159
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "img-wrapper",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 160
-      },
-      __self: this
-    }, __jsx(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__["Image"], {
-      publicId: data.image.path,
-      responsive: true,
-      width: "auto",
-      crop: "scale",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 161
-      },
-      __self: this
-    }, __jsx(cloudinary_react__WEBPACK_IMPORTED_MODULE_2__["Transformation"], {
-      quality: "auto",
-      fetchFormat: "auto",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 167
-      },
-      __self: this
-    })))))));
-  }
-};
-
-Form.propTypes = {
-  onFirstNameChange: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
-  onLastNameChange: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
-  onMessageChange: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
-  onEmailChange: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
-  onSubmit: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
-  state: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.any
-};
-/* harmony default export */ __webpack_exports__["default"] = (Form);
-
-/***/ }),
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
 
 /***/ "./components/Hero.js":
 /*!****************************!*\
@@ -863,17 +400,6 @@ TextBlock.propTypes = {
   data: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (TextBlock);
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/json/stringify */ "./node_modules/core-js/library/fn/json/stringify.js");
 
 /***/ }),
 
@@ -11066,22 +10592,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 /***/ }),
 
-/***/ "./node_modules/core-js/library/fn/json/stringify.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/core-js/library/fn/json/stringify.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var core = __webpack_require__(/*! ../../modules/_core */ "./node_modules/core-js/library/modules/_core.js");
-var $JSON = core.JSON || (core.JSON = { stringify: JSON.stringify });
-module.exports = function stringify(it) { // eslint-disable-line no-unused-vars
-  return $JSON.stringify.apply($JSON, arguments);
-};
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/library/fn/object/create.js":
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/library/fn/object/create.js ***!
@@ -13011,23 +12521,6 @@ var toString = {}.toString;
 module.exports = Array.isArray || function (arr) {
   return toString.call(arr) == '[object Array]';
 };
-
-
-/***/ }),
-
-/***/ "./node_modules/isomorphic-fetch/fetch-npm-browserify.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/isomorphic-fetch/fetch-npm-browserify.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// the whatwg-fetch polyfill installs the fetch() function
-// on the global object (window or self)
-//
-// Return that as the export for use in Webpack, Browserify etc.
-__webpack_require__(/*! whatwg-fetch */ "./node_modules/next/dist/build/polyfills/fetch/whatwg-fetch.js");
-module.exports = self.fetch.bind(self);
 
 
 /***/ }),
@@ -19291,18 +18784,6 @@ module.exports = values;
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/polyfills/fetch/whatwg-fetch.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/next/dist/build/polyfills/fetch/whatwg-fetch.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals self */exports.Headers=self.Headers;exports.Request=self.Request;exports.Response=self.Response;exports.fetch=self.fetch;
-
-/***/ }),
-
 /***/ "./node_modules/next/dist/build/polyfills/object-assign.js":
 /*!***********************************************************************************************************************!*\
   !*** delegated ./node_modules/next/dist/build/polyfills/object-assign.js from dll-reference dll_5f137288facb1107b491 ***!
@@ -19314,21 +18795,21 @@ module.exports = (__webpack_require__(/*! dll-reference dll_5f137288facb1107b491
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcontact&absolutePagePath=%2FUsers%2Fwpierce%2Fprojects%2Fcaddolakebayoutours%2Fpages%2Fcontact.js!./":
-/*!********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcontact&absolutePagePath=%2FUsers%2Fwpierce%2Fprojects%2Fcaddolakebayoutours%2Fpages%2Fcontact.js ***!
-  \********************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fwpierce%2Fprojects%2Fcaddolakebayoutours%2Fpages%2Findex.js!./":
+/*!***********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fwpierce%2Fprojects%2Fcaddolakebayoutours%2Fpages%2Findex.js ***!
+  \***********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/contact", function() {
-      var mod = __webpack_require__(/*! ./pages/contact.js */ "./pages/contact.js")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/", function() {
+      var mod = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
       if(true) {
-        module.hot.accept(/*! ./pages/contact.js */ "./pages/contact.js", function() {
-          if(!next.router.components["/contact"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/contact.js */ "./pages/contact.js")
-          next.router.update("/contact", updatedPage)
+        module.hot.accept(/*! ./pages/index.js */ "./pages/index.js", function() {
+          if(!next.router.components["/"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
+          next.router.update("/", updatedPage)
         })
       }
       return mod
@@ -21260,10 +20741,10 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./pages/contact.js":
-/*!**************************!*\
-  !*** ./pages/contact.js ***!
-  \**************************/
+/***/ "./pages/index.js":
+/*!************************!*\
+  !*** ./pages/index.js ***!
+  \************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -21271,240 +20752,111 @@ module.exports = function(module) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _components_Hero__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/Hero */ "./components/Hero.js");
-/* harmony import */ var _components_SideHug__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/SideHug */ "./components/SideHug.js");
-/* harmony import */ var _components_Form__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/Form */ "./components/Form.js");
-/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! isomorphic-fetch */ "./node_modules/isomorphic-fetch/fetch-npm-browserify.js");
-/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_Hero__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Hero */ "./components/Hero.js");
+/* harmony import */ var _components_SideHug__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/SideHug */ "./components/SideHug.js");
 
 
 
 
 
 
-
-
-var _jsxFileName = "/Users/wpierce/projects/caddolakebayoutours/pages/contact.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
-
+var _jsxFileName = "/Users/wpierce/projects/caddolakebayoutours/pages/index.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
 
 
-
+var sideHugData1 = {
+  image: {
+    path: 'mike-moir-5.jpg',
+    alt: 'Sunset over Caddo Lake'
+  },
+  textData: [{
+    titles: ['<h1>Caddo Lake Bayou Tours</h1>', '<h2>Book a tour today!</h2>', '<h3><a href="tel:903-570-2169">903-570-2169</a></h3>'],
+    paragraphs: ['Come take a boat tour on one of the most scenic and beautiful lakes in the South. Caddo Lake is approximately 26,000 acres of Bald Cypress trees, Spanish moss, abundant wildlife, and scenery that you will never forget. The lake has everything from swamps, bayous and river ways that create a one of a kind experience.', 'Whether you are looking for a guided fishing trip, a sight seeing tour of the wildlife or just wanting to have a relaxing day or evening on the boat on Caddo Lake then look no further. Book a tour today to see some of the beauty that awaits you.', 'Also don\'t forget to like us on our <a href="https://www.facebook.com/caddotours/" target="_blank" rel="noopener">Facebook page</a> to see weekly updates and stay in touch with us!', '<a class="btn" href="/contact">Book a Tour</a>']
+  }]
+};
+var sideHugData2 = {
+  image: {
+    path: 'lake-sunset.jpg',
+    alt: 'Caddo Lake Cypress trees with fog'
+  },
+  textData: [{
+    titles: ['<h2>A lake rich with history</h2>'],
+    paragraphs: ['Caddo Lake is steeped in history dating back to the early 1800\'s and one of the best ways to soak it in is with a guided boat tour. Sit back and relax while you take in the history which includes the Caddo Indian tribes that inhabited the area and the steamboat navigational trade from New Orleans to Jefferson, Texas are just some of the lakes rich history.', 'The names of certain areas of the lake such as Alligator Bayou, Starr Ditch, Ames Spring Basin, Potters Point, Britts Gap and Government Ditch among others give the lake a certain mystic created by the characters from it\'s past. It creates the perfect atomosphere for fishing, relaxing or watching the sunset.']
+  }],
+  imageFirst: true
+};
+var sideHugData3 = {
+  image: {
+    path: 'mike-moir-6.jpg',
+    alt: 'Crane in Cypress tree on Caddo Lake'
+  },
+  textData: [{
+    titles: ['<h2>Photography Tours</h2>'],
+    paragraphs: ['Looking to get some great pictures of the beautiful Bald Cypress trees covered in Spanish moss? Schedule a guided tour and go on an adventure to get all the images you need to complete your photography collection.', 'Whether you want to go on a wildlife photography tour with a group or with the peace and quiet of being alone to get those perfect shots, we can accommodate.', '<a class="btn" href="/contact/">Contact us today</a>']
+  }]
+};
 
 var Page =
 /*#__PURE__*/
 function (_React$Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_7__["default"])(Page, _React$Component);
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Page, _React$Component);
 
   function Page(props) {
     var _this;
 
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Page);
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, Page);
 
-    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(Page).call(this, props));
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(Page).call(this, props));
     _this.state = {
-      firstName: '',
-      lastName: '',
-      message: '',
-      email: '',
-      sent: false,
-      error: false,
-      buttonText: 'Send Message',
-      activeTab: 'contact',
-      loading: false
+      activeTab: 'home'
     };
-    _this.onFirstNameChange = _this.onFirstNameChange.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this));
-    _this.onLastNameChange = _this.onLastNameChange.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this));
-    _this.onEmailChange = _this.onEmailChange.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this));
-    _this.onMessageChange = _this.onMessageChange.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this));
-    _this.onSubmit = _this.onSubmit.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this));
     return _this;
   }
 
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(Page, [{
-    key: "onFirstNameChange",
-    value: function onFirstNameChange(e) {
-      this.setState({
-        firstName: e.target.value
-      });
-    }
-  }, {
-    key: "onLastNameChange",
-    value: function onLastNameChange(e) {
-      this.setState({
-        lastName: e.target.value
-      });
-    }
-  }, {
-    key: "onMessageChange",
-    value: function onMessageChange(e) {
-      this.setState({
-        message: e.target.value
-      });
-    }
-  }, {
-    key: "onEmailChange",
-    value: function onEmailChange(e) {
-      this.setState({
-        email: e.target.value
-      });
-    }
-  }, {
-    key: "onSubmit",
-    value: function onSubmit() {
-      var _this2 = this;
-
-      var data = {
-        name: "".concat(this.state.firstName, " ").concat(this.state.lastName),
-        email: this.state.email,
-        message: this.state.message
-      };
-      event.preventDefault();
-      this.setState({
-        loading: true
-      });
-      fetch('//caddo-email-server.herokuapp.com/send/mail', {
-        mode: 'no-cors',
-        method: 'post',
-        headers: {
-          'Accept': '*/*',
-          'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(data)
-      }).then(function (res) {
-        _this2.setState({
-          sent: true
-        });
-
-        _this2.setState({
-          loading: false
-        });
-
-        _this2.resetForm();
-      });
-    }
-  }, {
-    key: "resetForm",
-    value: function resetForm() {
-      this.setState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        message: '',
-        buttonText: 'Send'
-      });
-    }
-  }, {
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Page, [{
     key: "render",
     value: function render() {
-      var sideHugData1 = {
-        image: {
-          path: 'lake-with-pier.jpg',
-          alt: 'A pier on Caddo Lake'
-        },
-        imageFirst: true,
-        textData: [{
-          titles: ['<h2>Questions about tours?</h2>'],
-          paragraphs: ['If you have any questions please give us a call or you can contact us via email and we will get back to you as soon as possible. We will answer any questions you may have about what kind of guided boat tours we have available, what you can expect to encounter while on the tour and of course what you can and can not do on while on the tour of the lake.', 'Come and enjoy the wonderful experience that is Caddo Lake. We can\'t wait to share it with you and don\'t forgot to like us on our <a href="https://www.facebook.com/caddotours/" target="_blank">FaceBook page</a>!'],
-          lists: [{
-            'type': 'ul',
-            'items': [{
-              'title': 'Where does the tour start?',
-              'paragraphs': ['All tours start and end at the Shady Glade Marina']
-            }, {
-              'paragraphs': ['<strong>Address</strong>', '449 Cypress Drive', 'Uncertain TX 75661', '<strong>Phone:</strong> <a href="tel:1-903-570-2169">903-570-2169</a>']
-            }]
-          }]
-        }]
-      };
-      var sideHugData2 = {
-        image: {
-          path: 'lake-trees-in-fall.jpg',
-          alt: 'Caddo Lake with Cypress trees in the Fall'
-        },
-        textData: [{
-          titles: ['<h2>Types of Tours for Caddo Lake</h2>'],
-          lists: [{
-            'type': 'ul',
-            'items': [{
-              'title': 'Guided photography tour',
-              'paragraphs': ['Whether you are looking to take some photography of the abundant wildlife here at Caddo Lake or some of the breath taking nature, we can show you all the best places on the lake amidst the maze of bayous and Bald Cypress trees.']
-            }, {
-              'title': 'Sunrise or sunset tours',
-              'paragraphs': ['Who can resist seeing a gorgeous sunset or sunrise over a lake? Caddo Lake is picturesque in every way, shape and form. Book a tour today and find out for yourself!']
-            }, {
-              'title': 'Fishing trips',
-              'paragraphs': ['With vast amounts of experience and knowledge of Caddo Lake, we can take you to all the best fishing spots to ensure you will have a great time and a great catch.']
-            }, {
-              'title': 'Sightseeing trips',
-              'paragraphs': ['If taking pictures isn\'t quite your thing then just taking a relaxing ride on Caddo Lake and getting to see the bayous and how they all intertwine first hand is worth the experience alone. Come and check out the wonders of Caddo Lake today!']
-            }, {
-              'title': 'and more!',
-              'paragraphs': ['There are so many things available to do and see on the lake that we couldn\'t list them all. If you think of something that you would like to do or see and you wonder if we can accommodate those plans, just send us a message and let us know! We will get back to you as soon as possible to let you know if we can help out.']
-            }]
-          }]
-        }]
-      };
-      var formData = {
-        image: {
-          path: 'lake-cypress-trees.jpg',
-          alt: 'Caddo Lake with Cypress trees'
-        },
-        textData: [{
-          titles: ['<h1>Contact Caddo Lake Bayou Tours</h1>', '<h4>Rich McFarland <strong>Tour Guide</strong> <a href="tel:1-903-570-2169">903-570-2169</a></h4>'],
-          paragraphs: ['Tours available 7 days a week, any time from sunrise to sunset. Boat tours last approximately one hour.', 'Book a bout tour today or ask about boat tour reservations, photography tour, fishing trips, availability of dates or times, or any other general questions.']
-        }]
-      };
       return __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 195
+          lineNumber: 76
         },
         __self: this
-      }, __jsx(_components_Hero__WEBPACK_IMPORTED_MODULE_9__["default"], {
-        imagePath: "mike-moir-2.jpg",
-        alt: "Caddo Lake bench",
+      }, __jsx(_components_Hero__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        imagePath: "mike-moir-3.jpg",
+        alt: "Caddo Lake sunrise",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 196
+          lineNumber: 77
         },
         __self: this
-      }), __jsx(_components_Form__WEBPACK_IMPORTED_MODULE_11__["default"], {
-        data: formData,
-        onFirstNameChange: this.onFirstNameChange,
-        onLastNameChange: this.onLastNameChange,
-        onMessageChange: this.onMessageChange,
-        onEmailChange: this.onEmailChange,
-        onSubmit: this.onSubmit,
-        state: this.state,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 197
-        },
-        __self: this
-      }), __jsx(_components_SideHug__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      }), __jsx(_components_SideHug__WEBPACK_IMPORTED_MODULE_8__["default"], {
         data: sideHugData1,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 206
+          lineNumber: 78
         },
         __self: this
-      }), __jsx(_components_SideHug__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      }), __jsx(_components_SideHug__WEBPACK_IMPORTED_MODULE_8__["default"], {
         data: sideHugData2,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 207
+          lineNumber: 79
+        },
+        __self: this
+      }), __jsx(_components_SideHug__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        data: sideHugData3,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 80
         },
         __self: this
       }));
@@ -21512,7 +20864,7 @@ function (_React$Component) {
   }]);
 
   return Page;
-}(react__WEBPACK_IMPORTED_MODULE_8___default.a.Component);
+}(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
 
 Page.getInitialProps = function _callee(_ref) {
   var req, canonical, pageTitle, activeTab;
@@ -21521,13 +20873,13 @@ Page.getInitialProps = function _callee(_ref) {
       switch (_context.prev = _context.next) {
         case 0:
           req = _ref.req;
-          canonical = '/contact/';
-          pageTitle = 'Contact - Caddo Lake Bayou Tours';
-          activeTab = 'contact';
+          canonical = '/';
+          pageTitle = 'Caddo Lake Bayou Tours';
+          activeTab = 'home';
           return _context.abrupt("return", {
+            activeTab: activeTab,
             canonical: canonical,
-            pageTitle: pageTitle,
-            activeTab: activeTab
+            pageTitle: pageTitle
           });
 
         case 5:
@@ -21542,14 +20894,14 @@ Page.getInitialProps = function _callee(_ref) {
 
 /***/ }),
 
-/***/ 15:
-/*!************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fcontact&absolutePagePath=%2FUsers%2Fwpierce%2Fprojects%2Fcaddolakebayoutours%2Fpages%2Fcontact.js ***!
-  \************************************************************************************************************************************************/
+/***/ 5:
+/*!***************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fwpierce%2Fprojects%2Fcaddolakebayoutours%2Fpages%2Findex.js ***!
+  \***************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fcontact&absolutePagePath=%2FUsers%2Fwpierce%2Fprojects%2Fcaddolakebayoutours%2Fpages%2Fcontact.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcontact&absolutePagePath=%2FUsers%2Fwpierce%2Fprojects%2Fcaddolakebayoutours%2Fpages%2Fcontact.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fwpierce%2Fprojects%2Fcaddolakebayoutours%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fwpierce%2Fprojects%2Fcaddolakebayoutours%2Fpages%2Findex.js!./");
 
 
 /***/ }),
@@ -21565,5 +20917,5 @@ module.exports = dll_5f137288facb1107b491;
 
 /***/ })
 
-},[[15,"static/runtime/webpack.js","styles"]]]);
-//# sourceMappingURL=contact.js.map
+},[[5,"static/runtime/webpack.js","styles"]]]);
+//# sourceMappingURL=index.js.map
