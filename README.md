@@ -1,4 +1,4 @@
-# caddolakebayoutours `2.2.12`
+# caddolakebayoutours `2.2.13`
 Caddo Lake Boat Tours website built in React.
 
 ## Setup for development
@@ -22,7 +22,6 @@ Once all changes are ready to be deployed to production.
 
 ### Important details
 * `next.config.js` - has the export map for pages so it can be statically generated
-* `gulpfile.js` - TODO - could get rid of this if it is only being used to compile one CSS file
 * `server.js` - not much being done here as the email is handled in a different app
 * `/pages/` - automatically routes any `.js` file to a page on the site
 * `/components/` - place all components here and their `.scss` files
