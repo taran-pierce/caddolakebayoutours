@@ -1,8 +1,8 @@
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^dev.caddolakebayoutours.com$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^dev.caddolakebayoutours.com$
-RewriteCond %{REQUEST_URI} !/out/
-RewriteRule (.*) /out/$1 [L]
+RewriteCond %{HTTP_HOST} ^www.caddolakebayoutours.com$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.caddolakebayoutours.com$
+RewriteCond %{REQUEST_URI} !/caddolakebayoutours/out/
+RewriteRule (.*) /caddolakebayoutours/out/$1 [L]
 
 
 <IfModule mod_expires.c> 
