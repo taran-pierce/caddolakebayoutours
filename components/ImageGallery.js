@@ -39,7 +39,6 @@ class ImageGallery extends React.Component {
   }
   
   render() {
-    const { previousImage, nextImage } = this.props
     const { currentSlide } = this.state
 
     return (
@@ -64,10 +63,10 @@ class ImageGallery extends React.Component {
           <nav>
             <ul>
               <li>
-                <a className={`btn ${currentSlide == 1 && 'disabled'}`} onClick={previousImage}>Previous</a>
+                <a className={`btn ${currentSlide == 1 && 'disabled'}`} onClick={this.previousImage}>Previous</a>
               </li>
               <li>
-                <a className={`btn ${currentSlide == 11 && 'disabled'}`} onClick={nextImage}>Next</a>
+                <a className={`btn ${currentSlide == 11 && 'disabled'}`} onClick={this.nextImage}>Next</a>
               </li>
             </ul>
           </nav>
@@ -77,7 +76,7 @@ class ImageGallery extends React.Component {
   }
 }
 
-ImageGallery.PropTypes = {
+ImageGallery.propTypes = {
   currentSlide: PropTypes.number,
   previousImage: PropTypes.func,
   nextImage: PropTypes.func,

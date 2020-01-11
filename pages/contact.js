@@ -1,5 +1,4 @@
 import React from 'react'
-import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import SideHug from '../components/SideHug'
 import Form from '../components/Form'
@@ -193,7 +192,7 @@ class Page extends React.Component {
     }
 
     return (
-      <Layout pageTitle={`Contact - Caddo Lake Bayou Tours`} canonical={`/contact/`}>
+      <div>
         <Hero imagePath={`mike-moir-2.jpg`} alt={`Caddo Lake bench`}/>
         <Form 
           data={formData}
@@ -206,8 +205,20 @@ class Page extends React.Component {
         />
         <SideHug data={sideHugData1} />
         <SideHug data={sideHugData2} />
-      </Layout>
+      </div>
     )
+  }
+}
+
+Page.getInitialProps = async ({ req }) => {
+  const canonical = '/contact/'
+  const pageTitle = 'Contact - Caddo Lake Bayou Tours'
+  const activeTab = 'contact'
+  
+  return {
+    canonical,
+    pageTitle,
+    activeTab,
   }
 }
 

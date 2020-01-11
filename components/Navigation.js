@@ -25,7 +25,7 @@ class Navigation extends React.Component {
   } 
 
   render() {
-    const { links, toggleMenu, activeTab } = this.props
+    const { links, activeTab } = this.props
     const { menuOpen } = this.state
 
     // TODO still need to set up roles and names for keyboard control: ADA
@@ -36,7 +36,7 @@ class Navigation extends React.Component {
             <a className={'logo'} href={`/`}>Caddo Lake Bayou Tours</a>
           </li>
           <li className={'dropdown'}>
-            <MenuButton toggleMenu={toggleMenu} menuOpen={menuOpen} />
+            <MenuButton toggleMenu={this.toggleMenu} menuOpen={menuOpen} />
           </li>
         </ul>
         <ul className={`secondary-nav`}>

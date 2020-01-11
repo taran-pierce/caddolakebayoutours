@@ -31,13 +31,10 @@ const Layout = ( props ) => {
   const { pageTitle, canonical } = props
 
     return (
-      <main>
-        <div className={`container`}>
-          <Header pageTitle={pageTitle} canonical={canonical} links={links} />
-          {props.children}
-          <Footer links={links} />
-        </div>
-      </main>
+      <div className={`container`}>
+        {props.children}
+        <Footer links={links} />
+      </div>
     )
 }
 

@@ -11,16 +11,13 @@ class MyDocument extends Document {
       <Html lang={`en`}>
         <Head>
           <meta name="viewport" content="width=device-width" />
-          <meta name="robots" content="noindex, nofollow" />
+          <meta name="robots" content="index, follow" />
           <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"></link>
           <link href="//fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700" rel="stylesheet"></link>
           <link href="//fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet"></link>
           <meta name="author" content="Taran Pierce" />
-          <meta name="description" content="Caddo Lake Bayou Tours offers a guided tour of the beautiful Caddo Lake at any time from sunrise to sunset. Whether you are looking for a guided fishing
-  tour, observe some of nature's wildlife, catch a jaw-dropping sunrise or sunset, take in some of the historic Caddo Lake culture or just enjoy some relaxing sight-seeing you are in for quite
-   a treat. Book a boat tour with Caddo Lake Bayou Tours and experience the wonder for yourself." />
-          <meta name="keywords" content="Caddo Lake boat tours, bayou tours, caddo lake tour, tours of Caddo Lake, caddo lake photos, guided fishing trip, cypress lake, caddo lake history, jefferson
-  texas boat tours, alligator bayou tours, lake bayou, fishing trip, fishing tour, fishing guide tours, river tours, Caddo Lake, caddo lake bayou tours, caddo lake tour guide, fishing guide, travel agency, sunrise tours, sunset tours, swamp tours, caddo lake swamp, boat tours, personal tours, backwater, wildlife tours, gator, alligator, lake guide, caddo, lake, texas lake, natural lake, Louisiana lake, boats, bird watching, sightseeing, Caddo businesses, Texas, caddo lake information, uncertain texas, swamp tour, swamp adventure, caddo indians, spanish moss, fishing, caddo lake history" />
+          <meta name="description" content="Caddo Lake Bayou Tours offers a guided tour of the beautiful Caddo Lake at any time from sunrise to sunset. Whether you are looking for a guided fishing tour, observe some of nature's wildlife, catch a jaw-dropping sunrise or sunset, take in some of the historic Caddo Lake culture or just enjoy some relaxing sight-seeing you are in for quite a treat. Book a boat tour with Caddo Lake Bayou Tours and experience the wonder for yourself." />
+          <meta name="keywords" content="Caddo Lake boat tours, bayou tours, caddo lake tour, tours of Caddo Lake, caddo lake photos, guided fishing trip, cypress lake, caddo lake history, jefferson texas boat tours, alligator bayou tours, lake bayou, fishing trip, fishing tour, fishing guide tours, river tours, Caddo Lake, caddo lake bayou tours, caddo lake tour guide, fishing guide, travel agency, sunrise tours, sunset tours, swamp tours, caddo lake swamp, boat tours, personal tours, backwater, wildlife tours, gator, alligator, lake guide, caddo, lake, texas lake, natural lake, Louisiana lake, boats, bird watching, sightseeing, Caddo businesses, Texas, caddo lake information, uncertain texas, swamp tour, swamp adventure, caddo indians, spanish moss, fishing, caddo lake history" />
           <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-icon-57x57.png" />
           <link rel="apple-touch-icon" sizes="60x60" href="/images/apple-icon-60x60.png" />
           <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-icon-72x72.png" />

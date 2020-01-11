@@ -1,5 +1,4 @@
 import React from 'react'
-import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import SideHug from '../components/SideHug'
 
@@ -134,13 +133,25 @@ class Page extends React.Component {
   
   render() {
     return (
-      <Layout pageTitle={`About - Caddo Lake Bayou Tours`} canonical={`/about/`}>
+      <div>
         <Hero imagePath={`lake-sunset-2.jpg`} alt={`Caddo Lake sunset`}/>
         <SideHug data={sideHugData1} />
         <SideHug data={sideHugData2} />
         <SideHug data={sideHugData3} />
-      </Layout>
+      </div>
     )
+  }
+}
+
+Page.getInitialProps = async ({ req }) => {
+  const canonical = '/about/'
+  const pageTitle = 'About - Caddo Lake Bayou Tours'
+  const activeTab = 'about'
+  
+  return {
+    canonical,
+    pageTitle,
+    activeTab,
   }
 }
 
