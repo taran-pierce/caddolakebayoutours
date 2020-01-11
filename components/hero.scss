@@ -1,0 +1,16 @@
+.hero {
+  overflow: hidden;
+  border-bottom: 5px solid #afa62f;
+
+  .img-wrapper {
+    img {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    height: 460px;
+  }
+}

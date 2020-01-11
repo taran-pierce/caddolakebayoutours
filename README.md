@@ -1,32 +1,40 @@
-# Caddo Lake Bayou Tours
-Boat tours of Caddo Lake.
+# caddolakebayoutours `2.2.12`
+Caddo Lake Boat Tours website built in React.
 
-## Setup
-After cloning the repo you will need to `npm install` in `/caddolakebayoutours/`
-Next `cd app` and `npm install`
-From there you can use gulp to do various tasks.
+## Setup for development
+* `git clone https://github.com/taran-pierce/caddolakebayoutours.git`
+* `npm run dev` - Compiles the site and starts the dev server
+* Pages are all located in `/pages/`
+* Components are located in `/components/`
+* Browser refreshes automatically on all changes except changes to `server.js`, which requires a the dev server to be restarted.
 
-### Gulp Commands
-* `gulp` - default task will compile scss, move images and start up browserSync.
-* `gulp prod` - task will prepare the project to be built for production. It will compress the images, compile the assets and move everything over to `dist`.
+## Build for production
+Once all changes are ready to be deployed to production.
+* `npm run build` - prepares and optimizes the build for production.
+* `npm run export` - statically generates the site into the `/out/` directory.
+  * the site has `.htaccess` rules to route everything to `/out/`
 
-### NPM Tasks
-* `npm run tar` - will create `website.tar.gz` to make deploying the website easier.
+## Update production - (currently on `develop`)
+* ssh into server
+* cd to proper `/dir/`
+* `git remote update`
+* `git pull origin develop`
+
+### Important details
+* `next.config.js` - has the export map for pages so it can be statically generated
+* `gulpfile.js` - TODO - could get rid of this if it is only being used to compile one CSS file
+* `server.js` - not much being done here as the email is handled in a different app
+* `/pages/` - automatically routes any `.js` file to a page on the site
+* `/components/` - place all components here and their `.scss` files
 
 ## Directory structure should look as follows:
-This of course can be modified, but the gulpfile.js will need to be updated as well if you do so that all assets get placed in the location you are expecting.
-
 ```
   /caddolakebayoutours
   |
-  |-app
-  |  |-scss
-  |  |-js
-  |  |-css
-  |  |-images
-  |  |-fonts
-  |  |-templates
-  |  |-helpers
-  |
-  |-dist
+  |-/pages
+  |-/components
+  |-/static
+  |  |-/css
+  |  |-/images
+  |-/styles ( not sure I actually use this )
 ```
