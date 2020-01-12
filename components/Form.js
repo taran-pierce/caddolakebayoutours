@@ -5,7 +5,7 @@ import './form.scss'
 
 const Form = ( props ) => {
   const { onSubmit, onFirstNameChange, onLastNameChange, onEmailChange, onMessageChange, data } = props
-  const { sent, firstName, lastName, email, message, buttonText } = props.state
+  const { sent, firstName, lastName, email, message, buttonText, loading } = props.state
 
   const textData = data.textData[0]
 
@@ -40,9 +40,10 @@ const Form = ( props ) => {
                 </ul>
               ))
             )}
-            {props.loading ?
+            {loading ?
               (
                 <div className={`loading-screen`}>
+                  <h5>Sending...</h5>
                   <img className={`rotating`} src={`/images/loading.svg`} alt={`Contacting email server`} />
                 </div>
               ) :
