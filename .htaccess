@@ -1,4 +1,15 @@
 RewriteEngine on
+RewriteCond %{HTTP_HOST} ^caddolakebayoutours.com [NC]
+RewriteRule ^(.*)$ https://www.caddolakebayoutours.com/$1 [L,R=301]
+
+# redirects for old pages
+redirectMatch 301 ^/about.php$ https://www.caddolakebayoutours.com/about/
+redirectMatch 301 ^/directions.php$ https://www.caddolakebayoutours.com/directions/
+redirectMatch 301 ^/photo-gallery.php$ https://www.caddolakebayoutours.com/photo-gallery/
+redirectMatch 301 ^/things-to-do-in-caddo-lake.php$ https://www.caddolakebayoutours.com/things-to-do/
+redirectMatch 301 ^/contact.php$ https://www.caddolakebayoutours.com/contact/
+
+
 RewriteCond %{HTTP_HOST} ^www.caddolakebayoutours.com$ [NC,OR]
 RewriteCond %{HTTP_HOST} ^www.caddolakebayoutours.com$
 RewriteCond %{REQUEST_URI} !/caddolakebayoutours/out/
