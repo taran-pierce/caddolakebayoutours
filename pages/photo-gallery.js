@@ -14,7 +14,11 @@ class Page extends React.Component {
   render() {
     return (
       <div>
-        <Hero imagePath={'caddo-lake-swamp.jpg'} alt={`Caddo Lake treeline`}/>
+        <Hero 
+          imagePath={'caddo-lake-swamp.jpg'}
+          alt={`Caddo Lake treeline`}
+          bottom={100}
+        />
           <style jsx>{`
             section {
               background: #fafafa;

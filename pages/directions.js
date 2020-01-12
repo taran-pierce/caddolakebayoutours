@@ -52,7 +52,11 @@ class Page extends React.Component {
   render() {
     return (
       <div>
-        <Hero imagePath={`lake-cypress-trees-3.jpg`} alt={`Caddo Lake cypress trees`}/>
+        <Hero 
+          imagePath={`lake-cypress-trees-3.jpg`} 
+          alt={`Caddo Lake cypress trees`}
+          bottom={240}
+        />
         <SideHug data={sideHugData1} />
         <SideHug data={sideHugData2} />
       </div>

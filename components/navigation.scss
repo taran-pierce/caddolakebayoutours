@@ -98,13 +98,27 @@
     .logo {
       font-size: 18px;
     }
+
+    .main-nav {
+      li {
+        border-bottom: none;
+      }
+    }
   
     .secondary-nav {
       display: flex;
+      transition: none;
       max-height: 100px;
 
       li {
         flex-grow: 1;
+
+        &.active {
+          a {
+            color: #c6c6c6;
+            text-decoration: underline;
+          }
+        }
       }
     }
 

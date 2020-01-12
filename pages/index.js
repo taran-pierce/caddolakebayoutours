@@ -74,7 +74,11 @@ class Page extends React.Component {
   render() {
     return (
       <div>
-        <Hero imagePath={`mike-moir-3.jpg`} alt={`Caddo Lake sunrise`} />
+        <Hero 
+          imagePath={`mike-moir-3.jpg`} 
+          alt={`Caddo Lake sunrise`}
+          bottom={30}
+        />
         <SideHug data={sideHugData1} />
         <SideHug data={sideHugData2} />
         <SideHug data={sideHugData3} />
