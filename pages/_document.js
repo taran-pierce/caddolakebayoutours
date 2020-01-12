@@ -36,6 +36,7 @@ class MyDocument extends Document {
           <meta name="msapplication-TileColor" content="#ffffff" />
           <meta name="msapplication-TileImage" content="/images/ms-icon-144x144.png" />
           <meta name="theme-color" content="#ffffff" />
+          <meta name="google-site-verification" content="B2p1pPmxNrh11r3HKQ5EfPlheeORHUacKHqpcLin5g8" />
           <script async defer crossOrigin="anonymous" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0"></script>
         </Head>
         <body>
