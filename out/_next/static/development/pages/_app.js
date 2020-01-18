@@ -218,13 +218,28 @@ var Footer = function Footer(props) {
     rel: "noopener",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 44
     },
     __self: this
   }, "Shady Glade Resort")), __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 46
+    },
+    __self: this
+  }, __jsx("a", {
+    href: "https://riverbendoutfitters.com/",
+    target: "_blank",
+    rel: "noopener",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
+    },
+    __self: this
+  }, "Riverbend Outfitters")), __jsx("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49
     },
     __self: this
   }, __jsx("a", {
@@ -233,13 +248,13 @@ var Footer = function Footer(props) {
     rel: "noopener",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 50
     },
     __self: this
   }, "Johnson's Ranch Marina")), __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 52
     },
     __self: this
   }, __jsx("a", {
@@ -248,13 +263,13 @@ var Footer = function Footer(props) {
     rel: "noopener",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 53
     },
     __self: this
   }, "Moonglow Lodge")), __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 55
     },
     __self: this
   }, __jsx("a", {
@@ -263,13 +278,13 @@ var Footer = function Footer(props) {
     rel: "noopener",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 56
     },
     __self: this
   }, "HodgePodge Cottages")), __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 58
     },
     __self: this
   }, __jsx("a", {
@@ -278,13 +293,13 @@ var Footer = function Footer(props) {
     rel: "noopener",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 59
     },
     __self: this
   }, "The Graytripper")), __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 61
     },
     __self: this
   }, __jsx("a", {
@@ -293,13 +308,13 @@ var Footer = function Footer(props) {
     rel: "noopener",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 62
     },
     __self: this
   }, "Caddo State Park")), __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 64
     },
     __self: this
   }, __jsx("a", {
@@ -308,14 +323,14 @@ var Footer = function Footer(props) {
     rel: "noopener",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 65
     },
     __self: this
   }, "Mike Moir Photography"))))), __jsx("p", {
     className: 'copy-right',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 70
     },
     __self: this
   }, "Copyright ", year, " \xA9"));
