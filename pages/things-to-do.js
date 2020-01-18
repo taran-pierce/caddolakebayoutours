@@ -137,6 +137,26 @@ const sideHug7 = {
   ]
 }
 
+const sideHug8 = {
+  image: {
+    path: 'riverbend-outfitters.jpg',
+    alt: 'Couple canoeing on Caddo Lake'
+  },
+  imageFirst: true,
+  textData: [
+    {
+      titles: [
+        '<h2>Riverbend Outfitters</h2>',
+      ],
+      paragraphs: [
+        'If you are looking to control the speed of your tour of the lake then you should definately check out Riverbend Outfitters!',
+        'They can set you up with Kayaks or canoes so that you can move about the lake at your own pace to explore.',
+        '<a href="https://riverbendoutfitters.com/" target="_blank" rel="noopener">Check out their site</a>',
+      ]
+    }
+  ]
+}
+
 class Page extends React.Component {
   constructor( props ) {
     super( props )
@@ -153,10 +173,11 @@ class Page extends React.Component {
         <SideHug data={sideHug6} /> 
         <SideHug data={sideHug7} /> 
         <SideHug data={sideHug1} />
-        <SideHug data={sideHug2} />
+        <SideHug data={sideHug8} />  
         <SideHug data={sideHug3} />
         <SideHug data={sideHug4} />
-        <SideHug data={sideHug5} /> 
+        <SideHug data={sideHug5} />
+        <SideHug data={sideHug2} />
       </div>
     )
   }

@@ -9,7 +9,7 @@ const Hero = ( props ) => {
   return (
     <section className={`hero`}>
       <CloudinaryContext cloudName={`tpierce36`}>
-        {bottom && (
+        {bottom ? (
           <style jsx>{`
             @media(min-width: 992px) {
               .hero .img-wrapper img {
@@ -18,7 +18,7 @@ const Hero = ( props ) => {
               }
             }
           `}</style>
-        )}
+        ) : null }
         <div className={`img-wrapper`}>
           <Image 
             publicId={imagePath}
