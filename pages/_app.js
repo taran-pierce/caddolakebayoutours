@@ -1,5 +1,6 @@
 import Layout from '../components/Layout'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 const links = [
   {
@@ -36,6 +37,7 @@ function MyApp({ Component, pageProps }) {
         activeTab={activeTab} 
       />
       <Component {...pageProps} />
+      <Footer links={links} />
     </Layout>
   )
 }
