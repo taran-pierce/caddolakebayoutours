@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types'
-import Header from './Header'
 import Footer from './Footer'
 
 import './layout.scss'
@@ -28,11 +27,11 @@ const links = [
 ]
 
 const Layout = ( props ) => {
-  const { pageTitle, canonical } = props
+  const { pageTitle, canonical, children } = props
 
     return (
       <div className={`container`}>
-        {props.children}
+        {children}
         <Footer links={links} />
       </div>
     )
