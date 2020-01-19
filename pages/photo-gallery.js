@@ -1,5 +1,4 @@
 import React from 'react'
-import Hero from '../components/Hero'
 import ImageGallery from '../components/ImageGallery'
 
 class Page extends React.Component {
@@ -14,11 +13,6 @@ class Page extends React.Component {
   render() {
     return (
       <div>
-        <Hero 
-          imagePath={'caddo-lake-swamp.jpg'}
-          alt={`Caddo Lake treeline`}
-          bottom={100}
-        />
           <style jsx>{`
             section {
               background: #fafafa;

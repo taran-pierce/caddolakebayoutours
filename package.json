@@ -1,6 +1,6 @@
 {
   "name": "caddolakebayoutours",
-  "version": "2.3.20",
+  "version": "2.4.20",
   "description": "",
   "main": "pages/index.js",
   "repository": {
@@ -16,7 +16,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "export": "next export"
+    "export": "next export",
+    "prodBuild": "next build && next export"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",

@@ -8,10 +8,25 @@
     margin: 1rem .5rem;
   }
 
+  img {
+    display: block;
+  }
+
   ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+  }
+
+  .btn {
+    border-radius: 0;
+    transition: all .5s ease-in-out;
+
+    &.disabled {
+      color: #666;
+      opacity: .7;
+      text-shadow: none;
+    }
   }
 
   nav {
@@ -27,6 +42,16 @@
         }
       }
     }
+  }
+
+  .light-box {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    display: fixed;
   }
 }
 

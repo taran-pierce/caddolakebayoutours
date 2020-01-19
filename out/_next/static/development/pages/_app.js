@@ -460,60 +460,25 @@ Header.propTypes = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
-/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Footer */ "./components/Footer.js");
-/* harmony import */ var _layout_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./layout.scss */ "./components/layout.scss");
-/* harmony import */ var _layout_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_layout_scss__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _layout_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./layout.scss */ "./components/layout.scss");
+/* harmony import */ var _layout_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_layout_scss__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "/Users/wpierce/projects/caddolakebayoutours/components/Layout.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-
-
-var links = [{
-  "name": "About",
-  "href": "/about/"
-}, {
-  "name": "Directions",
-  "href": "/directions/"
-}, {
-  "name": "Things to do",
-  "href": "/things-to-do/"
-}, {
-  "name": "Photo Gallery",
-  "href": "/photo-gallery/"
-}, {
-  "name": "Contact",
-  "href": "/contact/"
-}];
-
 var Layout = function Layout(props) {
-  var pageTitle = props.pageTitle,
-      canonical = props.canonical;
+  var children = props.children;
   return __jsx("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 7
     },
     __self: this
-  }, props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    links: links,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: this
-  }));
+  }, children);
 };
 
-Layout.propTypes = {
-  pageTitle: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
-  canonical: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
-};
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
 
 /***/ }),
@@ -5620,10 +5585,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.js");
 /* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Header */ "./components/Header.js");
+/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Footer */ "./components/Footer.js");
 
 var _jsxFileName = "/Users/wpierce/projects/caddolakebayoutours/pages/_app.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
 
 
 var links = [{
@@ -5652,7 +5619,7 @@ function MyApp(_ref) {
   return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 32
     },
     __self: this
   }, __jsx(_components_Header__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -5662,28 +5629,24 @@ function MyApp(_ref) {
     activeTab: activeTab,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 33
     },
     __self: this
   }), __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 39
     },
     __self: this
-  })));
-} // Only uncomment this method if you have blocking data requirements for
-// every single page in your application. This disables the ability to
-// perform automatic static optimization, causing every page in your app to
-// be server-side rendered.
-//
-// MyApp.getInitialProps = async (appContext) => {
-//   // calls page's `getInitialProps` and fills `appProps.pageProps`
-//   const appProps = await App.getInitialProps(appContext);
-//
-//   return { ...appProps }
-// }
-
+  })), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    links: links,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: this
+  }));
+}
 
 /* harmony default export */ __webpack_exports__["default"] = (MyApp);
 

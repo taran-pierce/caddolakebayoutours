@@ -11,11 +11,13 @@ class ImageGallery extends React.Component {
   
     this.state = {
       currentSlide: 1,
-      lastSlide: 11
+      lastSlide: 11,
+      lightBoxOpen: false,
     }
 
     this.previousImage = this.previousImage.bind(this)
     this.nextImage = this.nextImage.bind(this)
+    this.toggleLightBox = this.toggleLightBox.bind(this)
   }
 
   nextImage( event ) {
@@ -38,25 +40,51 @@ class ImageGallery extends React.Component {
     }
   }
   
+  toggleLightBox( event ) {
+    event.preventDefault()
+  
+    this.setState({ lightBoxOpen: !this.state.lightBoxOpen })
+  }
+  
   render() {
-    const { currentSlide } = this.state
+    const { currentSlide, lightBoxOpen } = this.state
 
     return (
       <section className={`image-gallery`}>
         <h2>Pictures of Caddo Lake</h2>
         <div className={`gallery-container`}>
+          <nav>
+            <ul>
+              <li>
+                <a
+                  className={`btn ${currentSlide == 1 && 'disabled'}`}
+                  onClick={this.previousImage}
+                >Previous</a>
+              </li>
+              <li>
+                <a
+                  className={`btn ${currentSlide == 11 && 'disabled'}`}
+                  onClick={this.nextImage}
+                >Next</a>
+              </li>
+            </ul>
+          </nav>
           <ul>
             <li>
               <CloudinaryContext cloudName="tpierce36">
-                <Image 
-                  publicId={`${galleryName}${currentSlide}.jpg`}
-                  responsive
-                  width="auto"
-                  crop="scale"
-                  alt={`Caddo Lake #${currentSlide}`}
+                <a 
+                  href={`https://res.cloudinary.com/tpierce36/image/upload/v1578238226/${galleryName}${currentSlide}.jpg`}
                 >
-                  <Transformation quality="auto" fetchFormat="auto" />
-                </Image>
+                  <Image 
+                    publicId={`${galleryName}${currentSlide}.jpg`}
+                    responsive
+                    width="auto"
+                    crop="scale"
+                    alt={`Caddo Lake #${currentSlide}`}
+                  >
+                    <Transformation quality="auto" fetchFormat="auto" />
+                  </Image>
+                </a>
               </CloudinaryContext>
             </li>
           </ul>
