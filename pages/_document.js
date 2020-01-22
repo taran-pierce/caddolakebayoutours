@@ -30,6 +30,14 @@ class MyDocument extends Document {
           <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png" />
           <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107758647-2"></script>
+          <script dangerouslySetInnerHTML={{ __html: 
+            `window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments)};
+            gtag('js', new Date());
+            gtag('config', 'UA-107758647-2');`
+          }} />
+            
           <script async src="//www.googletagmanager.com/gtag/js?id=UA-107758647-2"></script>
           <link rel="manifest" href="/manifest.json" />
           <meta name="msapplication-TileColor" content="#ffffff" />
@@ -39,6 +47,14 @@ class MyDocument extends Document {
           <script async defer crossOrigin="anonymous" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0"></script>
         </Head>
         <body>
+          <noscript>
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-N9HT2T6"
+              height="0"
+              width="0"
+              style={{display: 'none', visibility: 'hidden'}}
+            ></iframe>
+          </noscript>
           <Main />
           <NextScript />
         </body>
