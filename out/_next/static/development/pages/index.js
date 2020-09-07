@@ -20812,6 +20812,17 @@ var sideHugData3 = {
     paragraphs: ['Looking to get some great pictures of the beautiful Bald Cypress trees covered in Spanish moss? Schedule a guided tour and go on an adventure to get all the images you need to complete your photography collection.', 'Whether you want to go on a wildlife photography tour with a group or with the peace and quiet of being alone to get those perfect shots, we can accommodate.', '<a class="btn" href="/contact/">Contact us today</a>']
   }]
 };
+var sideHugData4 = {
+  image: {
+    path: 'lake-trees-fog.jpg',
+    alt: 'Cypress trees with plenty of fog over the water'
+  },
+  textData: [{
+    titles: ['<h2>Featured on TravelAwaits Article</h2>'],
+    paragraphs: ['TravelAwaits is a great blog that features destinations all over the world and gives you great tips on things to do there.', 'We are lucky enough to have been mentioned in an article over things to do near Jefferson Texas.', 'Caddo Lake Bayou tours is number seven on the list and click the link below if you would like to read the full article!', '<a class="btn" target="_blank" rel="noopener" href="https://www.travelawaits.com/2552685/outdoor-activities-near-jefferson-texas/">View Article</a>']
+  }],
+  imageFirst: true
+};
 
 var Page =
 /*#__PURE__*/
@@ -20836,7 +20847,7 @@ function (_React$Component) {
       return __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76
+          lineNumber: 97
         },
         __self: this
       }, __jsx(_components_Hero__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -20845,28 +20856,35 @@ function (_React$Component) {
         bottom: 30,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 98
         },
         __self: this
       }), __jsx(_components_SideHug__WEBPACK_IMPORTED_MODULE_8__["default"], {
         data: sideHugData1,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 103
         },
         __self: this
       }), __jsx(_components_SideHug__WEBPACK_IMPORTED_MODULE_8__["default"], {
         data: sideHugData2,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83
+          lineNumber: 104
         },
         __self: this
       }), __jsx(_components_SideHug__WEBPACK_IMPORTED_MODULE_8__["default"], {
         data: sideHugData3,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 84
+          lineNumber: 105
+        },
+        __self: this
+      }), __jsx(_components_SideHug__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        data: sideHugData4,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 106
         },
         __self: this
       }));

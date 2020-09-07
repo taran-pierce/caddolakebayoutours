@@ -258,7 +258,7 @@ var Footer = function Footer(props) {
     },
     __self: this
   }, __jsx("a", {
-    href: "http://www.moonglowlodge.com/",
+    href: "https://www.travelawaits.com/2552685/outdoor-activities-near-jefferson-texas/",
     target: "_blank",
     rel: "noopener",
     __source: {
@@ -266,10 +266,25 @@ var Footer = function Footer(props) {
       lineNumber: 53
     },
     __self: this
-  }, "Moonglow Lodge")), __jsx("li", {
+  }, "TravelAwaits")), __jsx("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 55
+    },
+    __self: this
+  }, __jsx("a", {
+    href: "http://www.moonglowlodge.com/",
+    target: "_blank",
+    rel: "noopener",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56
+    },
+    __self: this
+  }, "Moonglow Lodge")), __jsx("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58
     },
     __self: this
   }, __jsx("a", {
@@ -278,13 +293,13 @@ var Footer = function Footer(props) {
     rel: "noopener",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 59
     },
     __self: this
   }, "HodgePodge Cottages")), __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 61
     },
     __self: this
   }, __jsx("a", {
@@ -293,13 +308,13 @@ var Footer = function Footer(props) {
     rel: "noopener",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 62
     },
     __self: this
   }, "The Graytripper")), __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 64
     },
     __self: this
   }, __jsx("a", {
@@ -308,13 +323,13 @@ var Footer = function Footer(props) {
     rel: "noopener",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 65
     },
     __self: this
   }, "Caddo State Park")), __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 67
     },
     __self: this
   }, __jsx("a", {
@@ -323,14 +338,14 @@ var Footer = function Footer(props) {
     rel: "noopener",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 68
     },
     __self: this
   }, "Mike Moir Photography"))))), __jsx("p", {
     className: 'copy-right',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 73
     },
     __self: this
   }, "Copyright ", year, " \xA9"));
