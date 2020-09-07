@@ -62,26 +62,48 @@ const sideHugData3 = {
   ]
 }
 
+const sideHugData4 = {
+  image: {
+    path: 'lake-trees-fog.jpg',
+    alt: 'Cypress trees with plenty of fog over the water',
+  },
+  textData: [
+    {
+      titles: [
+        '<h2>Featured on TravelAwaits Article</h2>',
+      ],
+      paragraphs: [
+        'TravelAwaits is a great blog that features destinations all over the world and gives you great tips on things to do there.',
+        'We are lucky enough to have been mentioned in an article over things to do near Jefferson Texas.',
+        'Caddo Lake Bayou tours is number seven on the list and click the link below if you would like to read the full article!',
+        '<a class="btn" target="_blank" rel="noopener" href="https://www.travelawaits.com/2552685/outdoor-activities-near-jefferson-texas/">View Article</a>'
+      ],
+    }
+  ],
+  imageFirst: true,
+}
+
 class Page extends React.Component {
   constructor( props ) {
     super( props )
-  
+
     this.state = {
       activeTab: 'home',
     }
   }
-  
+
   render() {
     return (
       <div>
-        <Hero 
-          imagePath={`mike-moir-3.jpg`} 
+        <Hero
+          imagePath={`mike-moir-3.jpg`}
           alt={`Caddo Lake sunrise`}
           bottom={30}
         />
         <SideHug data={sideHugData1} />
         <SideHug data={sideHugData2} />
         <SideHug data={sideHugData3} />
+        <SideHug data={sideHugData4} />
       </div>
     )
   }
@@ -91,7 +113,7 @@ Page.getInitialProps = async ({ req }) => {
   const canonical = '/'
   const pageTitle = 'Caddo Lake Bayou Tours'
   const activeTab = 'home'
-  
+
   return {
     activeTab,
     canonical,

@@ -8,7 +8,7 @@ const Footer = ( props ) => {
   const { links } = props
 
   return (
-    <footer>        
+    <footer>
       <div className={'container flex'}>
         <div className={'item'}>
           <h4>Sitemap</h4>
@@ -48,6 +48,9 @@ const Footer = ( props ) => {
             </li>
             <li>
               <a href="http://johnsonsranch.net/" target="_blank" rel="noopener">Johnson's Ranch Marina</a>
+            </li>
+            <li>
+              <a href="https://www.travelawaits.com/2552685/outdoor-activities-near-jefferson-texas/" target="_blank" rel="noopener">TravelAwaits</a>
             </li>
             <li>
               <a href="http://www.moonglowlodge.com/" target="_blank" rel="noopener">Moonglow Lodge</a>

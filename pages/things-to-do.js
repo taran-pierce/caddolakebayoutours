@@ -157,6 +157,27 @@ const sideHug8 = {
   ]
 }
 
+const sideHug9 = {
+  image: {
+    path: 'lake-cypress-trees-2.jpg',
+    alt: 'Cypress trees on Caddo Lake'
+  },
+  textData: [
+    {
+      titles: [
+        '<h2>TravelAwaits - things near Jefferson Texas</h2>',
+      ],
+      paragraphs: [
+        'Fantastic blog about travel that features places from around the world.',
+        'There are plenty of articles about Texas in general, but there is also an article specifically about things to do near Jefferson.',
+        'Caddo Lake Bayou Tours is excited to say that we were mentioned in their article (item 7) as one of the great things that you should do while visiting.',
+        'Please check out the full article by click the link down below!',
+        '<a href="https://www.travelawaits.com/2552685/outdoor-activities-near-jefferson-texas/" target="_blank" rel="noopener">View Article</a>',
+      ]
+    }
+  ]
+}
+
 class Page extends React.Component {
   constructor( props ) {
     super( props )
@@ -165,19 +186,20 @@ class Page extends React.Component {
       activeTab: 'things-to-do'
     }
   }
-  
+
   render() {
     return (
       <div>
         <Hero imagePath={'mike-moir.jpg'} alt={`Caddo Lake fog`}/>
-        <SideHug data={sideHug6} /> 
-        <SideHug data={sideHug7} /> 
+        <SideHug data={sideHug6} />
+        <SideHug data={sideHug7} />
         <SideHug data={sideHug1} />
-        <SideHug data={sideHug8} />  
+        <SideHug data={sideHug8} />
         <SideHug data={sideHug3} />
         <SideHug data={sideHug4} />
         <SideHug data={sideHug5} />
         <SideHug data={sideHug2} />
+        <SideHug data={sideHug9} />
       </div>
     )
   }
@@ -187,7 +209,7 @@ Page.getInitialProps = async ({ req }) => {
   const canonical = '/things-to-do/'
   const pageTitle = 'Things to do - Caddo Lake Bayou Tours'
   const activeTab = 'things-to-do'
-  
+
   return {
     canonical,
     pageTitle,
