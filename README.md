@@ -1,4 +1,4 @@
-# caddolakebayoutours `2.5.20`
+# caddolakebayoutours `2.5.21`
 Caddo Lake Boat Tours website built in React.
 
 ## Setup for development
@@ -13,13 +13,13 @@ Once all changes are ready to be deployed to production.
 * `npm run build` - prepares and optimizes the build for production.
 * `npm run export` - statically generates the site into the `/out/` directory.
   * the site has `.htaccess` rules to route everything to `/caddolakebayoutours/out/`
-  * if updates are made to `.htaccess` the file needs to be copied over to `/public_html/` 
+  * if updates are made to `.htaccess` the file needs to be copied over to `/public_html/`
 
-## Update production - (currently on `develop`)
+## Update production - (currently on `v2.5.21`)
 * ssh into server
 * cd to proper `/dir/`
 * `git remote update`
-* `git pull origin develop`
+* `git checkout [tag]`
 
 ### Important details
 * `next.config.js` - has the export map for pages so it can be statically generated
