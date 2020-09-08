@@ -156,13 +156,13 @@ Page.getInitialProps = async ({ req }) => {
   const canonical = '/about/'
   const pageTitle = 'About - Caddo Lake Bayou Tours'
   const activeTab = 'about'
-  const heroImage = 'https://res.cloudinary.com/tpierce36/image/upload/f_auto,g_auto,q_90/c_scale,w_375/lake-sunset-2.jpg'
+  // const heroImage = 'https://res.cloudinary.com/tpierce36/image/upload/f_auto,g_auto,q_90/c_scale,w_375/lake-sunset-2.jpg'
 
   return {
     canonical,
     pageTitle,
     activeTab,
-    heroImage,
+    // heroImage,
   }
 }
 
