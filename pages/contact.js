@@ -193,7 +193,16 @@ class Page extends React.Component {
 
     return (
       <div>
-        <Hero imagePath={`mike-moir-2.jpg`} alt={`Caddo Lake bench`}/>
+        <Hero
+          imagePath={`mike-moir-2.jpg`}
+          alt={`Caddo Lake bench`}
+          bottom={1}
+          minHeight={{
+            mobile: '250px',
+            tablet: '513px',
+            desktop: '646px',
+          }}
+        />
         <Form
           data={formData}
           onFirstNameChange={this.onFirstNameChange}

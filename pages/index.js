@@ -99,6 +99,11 @@ class Page extends React.Component {
           imagePath={`mike-moir-3.jpg`}
           alt={`Caddo Lake sunrise`}
           bottom={30}
+          minHeight={{
+            mobile: '212px',
+            tablet: '434px',
+            desktop: '518px',
+          }}
         />
         <SideHug data={sideHugData1} />
         <SideHug data={sideHugData2} />
