@@ -7,7 +7,7 @@ import 'isomorphic-fetch'
 class Page extends React.Component {
   constructor( props ) {
     super( props )
-    
+
     this.state = {
       firstName: '',
       lastName: '',
@@ -79,7 +79,7 @@ class Page extends React.Component {
       buttonText: 'Send',
     })
   }
-  
+
   render() {
     const sideHugData1 = {
       image: {
@@ -194,10 +194,10 @@ class Page extends React.Component {
     return (
       <div>
         <Hero imagePath={`mike-moir-2.jpg`} alt={`Caddo Lake bench`}/>
-        <Form 
+        <Form
           data={formData}
           onFirstNameChange={this.onFirstNameChange}
-          onLastNameChange={this.onLastNameChange}  
+          onLastNameChange={this.onLastNameChange}
           onMessageChange={this.onMessageChange}
           onEmailChange={this.onEmailChange}
           onSubmit={this.onSubmit}
@@ -214,11 +214,13 @@ Page.getInitialProps = async ({ req }) => {
   const canonical = '/contact/'
   const pageTitle = 'Contact - Caddo Lake Bayou Tours'
   const activeTab = 'contact'
-  
+  const heroImage = 'https://res.cloudinary.com/tpierce36/image/upload/f_auto,g_auto,q_90/c_scale,w_375/mike-moir-2.jpg'
+
   return {
     canonical,
     pageTitle,
     activeTab,
+    heroImage,
   }
 }
 

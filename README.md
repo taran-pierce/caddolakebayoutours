@@ -1,4 +1,4 @@
-# caddolakebayoutours `2.5.23`
+# caddolakebayoutours `2.6.0`
 Caddo Lake Boat Tours website built in React.
 
 ## Setup for development
@@ -15,7 +15,7 @@ Once all changes are ready to be deployed to production.
   * the site has `.htaccess` rules to route everything to `/caddolakebayoutours/out/`
   * if updates are made to `.htaccess` the file needs to be copied over to `/public_html/`
 
-## Update production - (currently on `v2.5.23`)
+## Update production - (currently on `v2.6.0`)
 * ssh into server
 * cd to proper `/dir/`
 * `git remote update`

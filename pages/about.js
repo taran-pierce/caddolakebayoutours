@@ -125,17 +125,17 @@ const sideHugData3 = {
 class Page extends React.Component {
   constructor( props ) {
     super( props )
-  
+
     this.state = {
       activeTab: 'about',
     }
   }
-  
+
   render() {
     return (
       <div>
-        <Hero 
-          imagePath={`lake-sunset-2.jpg`} 
+        <Hero
+          imagePath={`lake-sunset-2.jpg`}
           alt={`Caddo Lake sunset`}
           bottom={260}
         />
@@ -151,11 +151,13 @@ Page.getInitialProps = async ({ req }) => {
   const canonical = '/about/'
   const pageTitle = 'About - Caddo Lake Bayou Tours'
   const activeTab = 'about'
-  
+  const heroImage = 'https://res.cloudinary.com/tpierce36/image/upload/f_auto,g_auto,q_90/c_scale,w_375/lake-sunset-2.jpg'
+
   return {
     canonical,
     pageTitle,
     activeTab,
+    heroImage,
   }
 }
 

@@ -4,13 +4,21 @@ import { Image, CloudinaryContext, Transformation } from 'cloudinary-react'
 import './hero.scss'
 
 const Hero = ( props ) => {
-  const { imagePath, alt, bottom } = props
+  const {
+    imagePath,
+    alt,
+    bottom,
+  } = props
 
   return (
     <section className={`hero`}>
       <CloudinaryContext cloudName={`tpierce36`}>
         {bottom ? (
-          <style jsx>{`
+          <style jsx={`true`}>{`
+            .hero .img-wrapper {
+              min-height: 203px;
+            }
+
             @media(min-width: 992px) {
               .hero .img-wrapper img {
                 position: relative;
@@ -20,17 +28,17 @@ const Hero = ( props ) => {
           `}</style>
         ) : null }
         <div className={`img-wrapper`}>
-          <Image 
+          <Image
             publicId={imagePath}
             responsive
             width={`auto`}
             crop={`scale`}
             alt={alt}
           >
-            <Transformation 
-              quality={`90`} 
-              fetchFormat={`auto`} 
-              gravity={`auto`} 
+            <Transformation
+              quality={`90`}
+              fetchFormat={`auto`}
+              gravity={`auto`}
             />
           </Image>
         </div>

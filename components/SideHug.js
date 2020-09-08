@@ -1,17 +1,26 @@
 import PropTypes from 'prop-types'
 import TextBlock from './TextBlock'
-import { Image, CloudinaryContext, Transformation } from 'cloudinary-react'
+import {
+  Image,
+  CloudinaryContext,
+  Transformation,
+} from 'cloudinary-react'
 
 import './sideHug.scss'
 
 const SideHug = ( props ) => {
-  const { imageFirst, textData, image, googleMap } = props.data 
-  
+  const {
+    imageFirst,
+    textData,
+    image,
+    googleMap,
+  } = props.data
+
   return (
     <section className={`side-hug`}>
       <div className={`container flex`}>
         <div className={`col`}>
-          {imageFirst ? 
+          {imageFirst ?
             (
               // display google map if we have one
               googleMap && (
@@ -22,16 +31,17 @@ const SideHug = ( props ) => {
               image && (
                 <CloudinaryContext cloudName="tpierce36">
                   <div className={`img-wrapper`}>
-                    <Image 
+                    <Image
                       publicId={image.path}
                       responsive
                       width={`auto`}
                       crop={`scale`}
                       alt={image.alt}
+                      loading={`lazy`}
                     >
-                      <Transformation 
-                        quality={`auto`} 
-                        fetchFormat={`auto`} 
+                      <Transformation
+                        quality={`auto`}
+                        fetchFormat={`auto`}
                       />
                     </Image>
                   </div>
@@ -55,16 +65,17 @@ const SideHug = ( props ) => {
               image && (
                 <CloudinaryContext cloudName="tpierce36">
                   <div className={`img-wrapper`}>
-                    <Image 
-                        publicId={image.path}
-                        responsive
-                        width={`auto`}
-                        crop={`scale`}
-                        alt={image.alt}
+                    <Image
+                      publicId={image.path}
+                      responsive
+                      width={`auto`}
+                      crop={`scale`}
+                      alt={image.alt}
+                      loading={`lazy`}
                       >
-                      <Transformation 
-                        quality={`auto`} 
-                        fetchFormat={`auto`} 
+                      <Transformation
+                        quality={`auto`}
+                        fetchFormat={`auto`}
                       />
                     </Image>
                   </div>

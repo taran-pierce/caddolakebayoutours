@@ -209,11 +209,13 @@ Page.getInitialProps = async ({ req }) => {
   const canonical = '/things-to-do/'
   const pageTitle = 'Things to do - Caddo Lake Bayou Tours'
   const activeTab = 'things-to-do'
+  const heroImage = 'https://res.cloudinary.com/tpierce36/image/upload/f_auto,g_auto,q_90/c_scale,w_375/mike-moir.jpg'
 
   return {
     canonical,
     pageTitle,
     activeTab,
+    heroImage,
   }
 }
 

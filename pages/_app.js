@@ -26,15 +26,21 @@ const links = [
 ]
 
 function MyApp({ Component, pageProps }) {
-  const { canonical, pageTitle, activeTab } = pageProps
+  const {
+    canonical,
+    pageTitle,
+    activeTab,
+    heroImage,
+  } = pageProps
 
   return (
     <Layout>
-      <Header 
-        pageTitle={pageTitle} 
-        canonical={canonical} 
+      <Header
+        pageTitle={pageTitle}
+        canonical={canonical}
         links={links}
-        activeTab={activeTab} 
+        activeTab={activeTab}
+        heroImage={heroImage}
       />
       <Component {...pageProps} />
       <Footer links={links} />
