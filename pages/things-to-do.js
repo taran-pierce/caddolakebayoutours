@@ -53,6 +53,7 @@ const sideHug3 = {
       paragraphs: [
         'Visit historic Jefferson Texas for shopping, entertainment and dining options. From train rides, horse drawn carriage rides, riverboat rides, kayak or canoe rental and even golf cart rentals in Jefferson Texas, Caddo Lake and Lake O the Pines you will find many historic things to do.',
         'For the shopper in you we have more antique shops than any other town in the Piney Woods. Plus so many great new boutique shops have opened up in the past few years, you will be delighted with the array of items they have to offer.',
+        'Jefferson has a history of being one of the most haunted town in Texas so come and take the Ghost Walk Tour and stay in some of the haunted hotels in the area such as the Kahn Hotel, Excelsior and the Jefferson Hotel. These places all have interesting stories about their past.',
         '<a href="https://www.jefferson-texas.com/" target="_blank" rel="noopener">Visit their website for more information</a>'
       ]
     }

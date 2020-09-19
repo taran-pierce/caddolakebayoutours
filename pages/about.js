@@ -115,6 +115,41 @@ const sideHugData3 = {
                 '<a href="https://www.fws.gov/refuge/caddo_lake/wildlife/paddlefish.html" target="_blank" rel="noopener">More info here.</a>',
               ]
             },
+            {
+              'title': 'Bald Eagles',
+              'paragraphs': [
+                'The Caddo Lake Institute and Last Chance Forever are proud to announce that Caddo Lake is now home to one more gorgeous Southern Bald Eagle!',
+                '<a href="https://caddolakeinstitute.org/caddo-lake-now-home-to-another-southern-bald-eagle/" target="_blank" rel="noopener">More info here.</a>',
+              ]
+            },
+            {
+              'title': 'Osprey',
+              'paragraphs': [
+                'Ospreys are very large, distinctively shaped hawks. Despite their size, their bodies are slender, with long, narrow wings and long legs.',
+                '<a href="https://texashighways.com/travel/outdoors/this-east-texas-natural-wonder-is-one-of-the-world-s-largest-cypress-groves/" target="_blank" rel="noopener">More info here.</a>',
+              ]
+            },
+            {
+              'title': 'Blue Heron',
+              'paragraphs': [
+                'Despite their impressive size, Great Blue Herons weigh only 5 to 6 pounds thanks in part to their hollow bones—a feature all birds share.',
+                '<a href="https://www.allaboutbirds.org/guide/Great_Blue_Heron/overview" target="_blank" rel="noopener">More info here.</a>',
+              ]
+            },
+            {
+              'title': 'Egrets',
+              'paragraphs': [
+                'Twice the size of Snowy Egret. Note yellowish beak and legs.',
+                '<a href="http://www.surfbirds.com/namericanbirds/heron-egret.html" target="_blank" rel="noopener">More info here.</a>',
+              ]
+            },
+            {
+              'title': 'Ibis',
+              'paragraphs': [
+                'All white with black wing tips in flight. Note curved bill and red legs.',
+                '<a href="http://www.surfbirds.com/namericanbirds/heron-egret.html" target="_blank" rel="noopener">More info here.</a>',
+              ]
+            },
           ]
         }
       ]
