@@ -1,6 +1,9 @@
 import React from 'react'
+import dynamic from 'next/dynamic'
 import Hero from '../components/Hero'
 import SideHug from '../components/SideHug'
+
+const LazySideHug = dynamic(import('../components/LazySideHug'));
 
 const sideHugData1 = {
   image: {
@@ -106,9 +109,9 @@ class Page extends React.Component {
           }}
         />
         <SideHug data={sideHugData1} />
-        <SideHug data={sideHugData2} />
-        <SideHug data={sideHugData3} />
-        <SideHug data={sideHugData4} />
+        <LazySideHug data={sideHugData2} />
+        <LazySideHug data={sideHugData3} />
+        <LazySideHug data={sideHugData4} />
       </div>
     )
   }
