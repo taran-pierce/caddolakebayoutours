@@ -1,8 +1,7 @@
 import React from 'react'
-import Hero from '../components/Hero'
 import SideHug from '../components/SideHug'
 
-const sideHug1 = {
+const shadyGlade = {
   image: {
     path: 'lake-spanish-moss.jpg',
     alt: 'Spanish moss on Cypress trees in Caddo Lake'
@@ -13,7 +12,7 @@ const sideHug1 = {
         '<h3>Shady Glade</h3>',
       ],
       paragraphs: [
-        'Shadey Glade is an amazing place that has it all. Marina, Boat Ramp, Fishing Pier, Cabins, Motel, Storage, Pavilion, RV Park & Cafe. Specializing in families, couples, fishing enthusiasts, duck hunters, bird watchers, family reunions, photographers, artists & so much more.',
+        'Shady Glade is an amazing place that has it all. Marina, Boat Ramp, Fishing Pier, Cabins, Motel, Storage, Pavilion, RV Park & Cafe. Specializing in families, couples, fishing enthusiasts, duck hunters, bird watchers, family reunions, photographers, artists & so much more.',
         'If you come and visit Caddo Lake, you have to go to Shady Glade.',
         '<a href="http://shadygladeresort.com/" target="_blank" rel="noopener">Visit their website for more information</a>',
       ]
@@ -21,12 +20,11 @@ const sideHug1 = {
   ]
 }
 
-const sideHug2 = {
+const johnsonsRanch = {
   image: {
     path: 'johnsons-ranch-2.jpg',
     alt: 'People on the pier at Johnson\'s Ranch'
   },
-  imageFirst: true,
   textData: [
     {
       titles: [
@@ -40,7 +38,7 @@ const sideHug2 = {
   ]
 }
 
-const sideHug3 = {
+const jeffersonTexas = {
   image: {
     path: 'aerial-lake.jpg',
     alt: 'Aerial view of Caddo Lake'
@@ -60,12 +58,11 @@ const sideHug3 = {
   ]
 }
 
-const sideHug4 = {
+const hodgePodge = {
   image: {
     path: 'hodge-podge-2.jpg',
     alt: 'Red Cottage at Hodge Podge Cottages'
   },
-  imageFirst: true,
   textData: [
     {
       titles: [
@@ -80,11 +77,12 @@ const sideHug4 = {
   ]
 }
 
-const sideHug5 = {
+const statePark = {
   image: {
     path: 'caddo-lake-swamp.jpg',
     alt: 'The bayou on Caddo Lake'
   },
+  imageFirst: true,
   textData: [
     {
       titles: [
@@ -98,7 +96,7 @@ const sideHug5 = {
   ]
 }
 
-const sideHug6 = {
+const thingsToDo = {
   image: {
     path: 'lake-cypress-trees.jpg',
     alt: 'Caddo Lake with Cypress trees and lillys'
@@ -116,7 +114,7 @@ const sideHug6 = {
   ]
 }
 
-const sideHug7 = {
+const grayTripper = {
   image: {
     path: 'lake-cypress-trees-2.jpg',
     alt: 'Cypress trees on Caddo Lake'
@@ -138,7 +136,7 @@ const sideHug7 = {
   ]
 }
 
-const sideHug8 = {
+const riverbend = {
   image: {
     path: 'riverbend-outfitters.jpg',
     alt: 'Couple canoeing on Caddo Lake'
@@ -158,11 +156,12 @@ const sideHug8 = {
   ]
 }
 
-const sideHug9 = {
+const travelAwaits = {
   image: {
     path: 'lake-cypress-trees-2.jpg',
     alt: 'Cypress trees on Caddo Lake'
   },
+  imageFirst: true,
   textData: [
     {
       titles: [
@@ -174,6 +173,26 @@ const sideHug9 = {
         'Caddo Lake Bayou Tours is excited to say that we were mentioned in their article (item 7) as one of the great things that you should do while visiting.',
         'Please check out the full article by click the link down below!',
         '<a href="https://www.travelawaits.com/2552685/outdoor-activities-near-jefferson-texas/" target="_blank" rel="noopener">View Article</a>',
+      ]
+    }
+  ]
+}
+
+const carriageHouse = {
+  image: {
+    path: 'lake-spanish-moss.jpg',
+    alt: 'Spanish moss on Cypress trees in Caddo Lake'
+  },
+  imageFirst: true,
+  textData: [
+    {
+      titles: [
+        '<h3>Carriage House Bed and Breakfast</h3>',
+      ],
+      paragraphs: [
+        'Come enjoy Southern Hospitality at one of the finest Bed and Breakfast in Jefferson Texas. It is walking distance to the Historic downtown and shopping District.',
+        'They also serve one of the finest breakfast in town and you can also make dinner reservations for Friday and Saturday nights.',
+        '<a href="https://carriagehousejefferson.com/" target="_blank" rel="noopener">To learn more click here</a>',
       ]
     }
   ]
@@ -191,15 +210,16 @@ class Page extends React.Component {
   render() {
     return (
       <>
-        <SideHug data={sideHug6} />
-        <SideHug data={sideHug7} />
-        <SideHug data={sideHug1} />
-        <SideHug data={sideHug8} />
-        <SideHug data={sideHug3} />
-        <SideHug data={sideHug4} />
-        <SideHug data={sideHug5} />
-        <SideHug data={sideHug2} />
-        <SideHug data={sideHug9} />
+        <SideHug data={thingsToDo} />
+        <SideHug data={grayTripper} />
+        <SideHug data={shadyGlade} />
+        <SideHug data={riverbend} />
+        <SideHug data={jeffersonTexas} />
+        <SideHug data={carriageHouse} />
+        <SideHug data={hodgePodge} />
+        <SideHug data={statePark} />
+        <SideHug data={johnsonsRanch} />
+        <SideHug data={travelAwaits} />
       </>
     )
   }
