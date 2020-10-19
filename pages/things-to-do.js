@@ -190,8 +190,8 @@ const carriageHouse = {
         '<h3>Carriage House Bed and Breakfast</h3>',
       ],
       paragraphs: [
-        'Come enjoy Southern Hospitality at one of the finest Bed and Breakfast in Jefferson Texas. It is walking distance to the Historic downtown and shopping District.',
-        'They also serve one of the finest breakfast in town and you can also make dinner reservations for Friday and Saturday nights.',
+        'Come enjoy Southern Hospitality at one of the finest Bed and Breakfast in Jefferson Texas. It is in walking distance to the Historic downtown and shopping District.',
+        'They serve one of the finest breakfast in town and you can also make dinner reservations for Friday and Saturday nights.',
         '<a href="https://carriagehousejefferson.com/" target="_blank" rel="noopener">To learn more click here</a>',
       ]
     }
