@@ -52,6 +52,9 @@ const Footer = ( props ) => {
               <a href="http://shadygladeresort.com/" target="_blank" rel="noopener">Shady Glade Resort</a>
             </li>
             <li>
+              <a href="https://carriagehousejefferson.com/" target="_blank" rel="noopener">Carriage House Bed and Breakfast</a>
+            </li>
+            <li>
               <a href="https://riverbendoutfitters.com/" target="_blank" rel="noopener">Riverbend Outfitters</a>
             </li>
             <li>
