@@ -257,6 +257,47 @@ footer {
   footer .item:nth-child(2) {
     width: 54%; } }
 
+.image-gallery {
+  background: #fafafa;
+  padding: 1rem; }
+  .image-gallery .gallery-container {
+    border: 1px solid #cacaca;
+    padding: 1rem;
+    margin: 1rem .5rem; }
+  .image-gallery img {
+    display: block; }
+  .image-gallery ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+  .image-gallery .btn {
+    border-radius: 0;
+    transition: all .5s ease-in-out; }
+    .image-gallery .btn.disabled {
+      color: #666;
+      opacity: .7;
+      text-shadow: none; }
+  .image-gallery nav ul {
+    display: flex;
+    flex-wrap: nowrap; }
+    .image-gallery nav ul li {
+      width: 50%; }
+      .image-gallery nav ul li > a {
+        display: block; }
+  .image-gallery .light-box {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    display: fixed; }
+
+@media (min-width: 992px) {
+  .image-gallery {
+    border-left: 1px solid #c9c9c9;
+    border-right: 1px solid #c9c9c9; } }
+
 .hero {
   overflow: hidden;
   border-bottom: 5px solid #afa62f; }

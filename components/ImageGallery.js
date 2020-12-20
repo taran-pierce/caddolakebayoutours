@@ -8,10 +8,10 @@ const galleryName = 'gallery/caddo-lake-'
 class ImageGallery extends React.Component {
   constructor( props ) {
     super( props )
-  
+
     this.state = {
       currentSlide: 1,
-      lastSlide: 11,
+      lastSlide: 13,
       lightBoxOpen: false,
     }
 
@@ -39,13 +39,13 @@ class ImageGallery extends React.Component {
       this.setState({ currentSlide: previousSlide })
     }
   }
-  
+
   toggleLightBox( event ) {
     event.preventDefault()
-  
+
     this.setState({ lightBoxOpen: !this.state.lightBoxOpen })
   }
-  
+
   render() {
     const { currentSlide, lightBoxOpen } = this.state
 
@@ -72,10 +72,10 @@ class ImageGallery extends React.Component {
           <ul>
             <li>
               <CloudinaryContext cloudName="tpierce36">
-                <a 
+                <a
                   href={`https://res.cloudinary.com/tpierce36/image/upload/v1578238226/${galleryName}${currentSlide}.jpg`}
                 >
-                  <Image 
+                  <Image
                     publicId={`${galleryName}${currentSlide}.jpg`}
                     responsive
                     width="auto"

@@ -86,6 +86,24 @@ const sideHugData4 = {
   imageFirst: true,
 }
 
+const sideHugData5 = {
+  image: {
+    path: 'bald-eagle.jpg',
+    alt: 'Bald Eagle',
+  },
+  textData: [
+    {
+      titles: [
+        '<h2>Photos from Caddo Lake</h2>',
+      ],
+      paragraphs: [
+        'Take a look at some of the photographs that have been taken on Caddo Lake by various talented photographers.',
+        '<a class="btn" href="/photo-gallery/">Photo Gallery</a>'
+      ],
+    }
+  ]
+}
+
 class Page extends React.Component {
   constructor( props ) {
     super( props )
@@ -112,6 +130,7 @@ class Page extends React.Component {
         <LazySideHug data={sideHugData2} />
         <LazySideHug data={sideHugData3} />
         <LazySideHug data={sideHugData4} />
+        <LazySideHug data={sideHugData5} />
       </div>
     )
   }
@@ -121,13 +140,11 @@ Page.getInitialProps = async ({ req }) => {
   const canonical = '/'
   const pageTitle = 'Caddo Lake Bayou Tours'
   const activeTab = 'home'
-  // const heroImage = 'http://res.cloudinary.com/tpierce36/image/upload/f_auto,g_auto,q_90/c_scale,w_375/mike-moir-3.jpg'
 
   return {
     activeTab,
     canonical,
     pageTitle,
-    // heroImage,
   }
 }
 

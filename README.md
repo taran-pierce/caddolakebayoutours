@@ -1,4 +1,4 @@
-# caddolakebayoutours `2.6.8`
+# caddolakebayoutours `2.6.9`
 Caddo Lake Boat Tours website built in React.
 
 ## Setup for development

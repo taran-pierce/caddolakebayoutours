@@ -180,7 +180,7 @@ const travelAwaits = {
 
 const carriageHouse = {
   image: {
-    path: 'lake-spanish-moss.jpg',
+    path: 'carriagehouse.jpg',
     alt: 'Spanish moss on Cypress trees in Caddo Lake'
   },
   imageFirst: true,

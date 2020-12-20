@@ -94,6 +94,23 @@ const sideHugData3 = {
         'Caddo Lake is steeped in history dating back to the early 1800\'s. The history which includes the Caddo Indian tribes that inhabited the area and the steamboat navigational trade from New Orleans, Louisiana to Jefferson, Texas are just some of the lake\'s rich history.',
         'Check out some of our photos from around various spots of Caddo Lake.',
         '<a class="btn btn-info" href="/photo-gallery/">View Photos</a>',
+      ],
+    }
+  ],
+}
+
+const sideHugData4 = {
+  image: {
+    path: 'alligator.heic',
+    alt: 'Alligator',
+  },
+  imageFirst: true,
+  textData: [
+    {
+      titles: [
+        '<h2>Animals found at Caddo Lake</h2>',
+      ],
+      paragraphs: [
         'A recent study shows 216 types of birds, 90 different species of fish and reptiles and 47 different types of mammals.',
         'Here are just a few examples of the wildlife you can expect to see:',
       ],
@@ -116,6 +133,31 @@ const sideHugData3 = {
               ]
             },
             {
+              'title': 'Blue Heron',
+              'paragraphs': [
+                'Despite their impressive size, Great Blue Herons weigh only 5 to 6 pounds thanks in part to their hollow bones—a feature all birds share.',
+                '<a href="https://www.allaboutbirds.org/guide/Great_Blue_Heron/overview" target="_blank" rel="noopener">More info here.</a>',
+              ]
+            },
+          ]
+        }
+      ]
+    }
+  ],
+}
+
+const sideHugData5 = {
+  image: {
+    path: 'bald-eagle-2.jpg',
+    alt: 'Alligator',
+  },
+  textData: [
+    {
+      lists: [
+        {
+          'type': 'ul',
+          items: [
+            {
               'title': 'Bald Eagles',
               'paragraphs': [
                 'The Caddo Lake Institute and Last Chance Forever are proud to announce that Caddo Lake is now home to one more gorgeous Southern Bald Eagle!',
@@ -127,13 +169,6 @@ const sideHugData3 = {
               'paragraphs': [
                 'Ospreys are very large, distinctively shaped hawks. Despite their size, their bodies are slender, with long, narrow wings and long legs.',
                 '<a href="https://texashighways.com/travel/outdoors/this-east-texas-natural-wonder-is-one-of-the-world-s-largest-cypress-groves/" target="_blank" rel="noopener">More info here.</a>',
-              ]
-            },
-            {
-              'title': 'Blue Heron',
-              'paragraphs': [
-                'Despite their impressive size, Great Blue Herons weigh only 5 to 6 pounds thanks in part to their hollow bones—a feature all birds share.',
-                '<a href="https://www.allaboutbirds.org/guide/Great_Blue_Heron/overview" target="_blank" rel="noopener">More info here.</a>',
               ]
             },
             {
@@ -182,6 +217,8 @@ class Page extends React.Component {
         <SideHug data={sideHugData1} />
         <SideHug data={sideHugData2} />
         <SideHug data={sideHugData3} />
+        <SideHug data={sideHugData4} />
+        <SideHug data={sideHugData5} />
       </div>
     )
   }
