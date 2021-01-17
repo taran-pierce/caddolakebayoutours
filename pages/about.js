@@ -27,9 +27,10 @@ const sideHugData1 = {
               ]
             },
             {
-              'title': 'Sightseeing',
+              'title': 'Sightseeing Pontoon Boat Tour',
               'paragraphs': [
-                'Enjoy the beautiful lake, lots of wildlife and the overall mystique of Caddo Lake. Visit historic Jefferson, Texas and enjoy all that it has to offer.',
+                'Experience a tour through the mysterious swamps and Spanish Moss covered Bayous. There is plenty of wildlife and beauty to see as you ride on our comfortable Pontoon boat.',
+                'We can accommodate a large family or group but also take smaller parties who wish to have a more private tour.'
               ]
             },
           ]
