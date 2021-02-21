@@ -11,9 +11,14 @@ class MyDocument extends Document {
       <Html lang={`en`}>
         <Head>
           <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"></link>
-          <link rel="dns-prefetch" href="//fonts.googleapis.com/"></link>
-          <link rel="dns-prefetch" href="//res.cloudinary.com/"></link>
+          <link rel="preconnect" href="//fonts.googleapis.com"></link>
+          <link rel="dns-prefetch" href="//fonts.googleapis.com"></link>
+          <link rel="preconnect" href="//fonts.gstatic.com"></link>
+          <link rel="dns-prefetch" href="//fonts.gstatic.com"></link>
           <link href="//fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap" rel="stylesheet"></link>
+
+          <link rel="dns-prefetch" href="//res.cloudinary.com"></link>
+          <link rel="preconnect" href="//res.cloudinary.com"></link>
           <script async defer src="https://www.googletagmanager.com/gtag/js?id=UA-107758647-2"></script>
           <script dangerouslySetInnerHTML={{ __html:
             `window.dataLayer = window.dataLayer || [];

@@ -1,3 +1,4 @@
+import React, {useEffect, useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 import TextBlock from './TextBlock'
 import {
@@ -16,6 +17,21 @@ const SideHug = ( props ) => {
     googleMap,
   } = props.data
 
+  const imageColumnRef = useRef(null);
+
+  const [imageColumnWidth, setImageColumnWidth] = useState(585);
+  const [imageColumnHeight, setImageColumnHeight] = useState(661);
+
+  useEffect(() => {
+    const {
+      width,
+      height,
+    } = imageColumnRef?.current?.getBoundingClientRect();
+
+    setImageColumnWidth(width);
+    setImageColumnHeight(height);
+  }, []);
+
   return (
     <section className={`side-hug`}>
       <div className={`container flex`}>
@@ -30,11 +46,11 @@ const SideHug = ( props ) => {
               // display image if we have one
               image && (
                 <CloudinaryContext cloudName="tpierce36">
-                  <div className={`img-wrapper`}>
+                  <div className={`img-wrapper`} ref={imageColumnRef}>
                     <Image
                       publicId={image.path}
                       responsive
-                      width={`auto`}
+                      width={imageColumnWidth}
                       crop={`scale`}
                       alt={image.alt}
                       loading={`lazy`}
@@ -64,11 +80,11 @@ const SideHug = ( props ) => {
               // display image if we have one
               image && (
                 <CloudinaryContext cloudName="tpierce36">
-                  <div className={`img-wrapper`}>
+                  <div className={`img-wrapper`} ref={imageColumnRef}>
                     <Image
                       publicId={image.path}
                       responsive
-                      width={`auto`}
+                      width={imageColumnWidth}
                       crop={`scale`}
                       alt={image.alt}
                       loading={`lazy`}
@@ -84,12 +100,12 @@ const SideHug = ( props ) => {
             )
           }
           {googleMap && (
-            <iframe 
-              title="Google Maps" 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13428.266285705415!2d-94.15337171079648!3d32.7108586943788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc79227c114d5c01d!2sCaddo+Lake+Bayou+Tours!5e0!3m2!1sen!2sus!4v1528217775632" 
-              width="100%" 
-              height="460" 
-              frameBorder="0" 
+            <iframe
+              title="Google Maps"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13428.266285705415!2d-94.15337171079648!3d32.7108586943788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc79227c114d5c01d!2sCaddo+Lake+Bayou+Tours!5e0!3m2!1sen!2sus!4v1528217775632"
+              width="100%"
+              height="460"
+              frameBorder="0"
               allowFullScreen
               importance="low"
               loading="lazy"
