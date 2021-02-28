@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import Head from 'next/head'
 import Navigation from '../components/Navigation'
 
-import './header.scss'
+// import './header.scss'
 
 class Header extends React.Component {
 

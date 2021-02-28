@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-import './footer.scss'
+// import './footer.scss'
 
 const year = new Date().getFullYear();
 

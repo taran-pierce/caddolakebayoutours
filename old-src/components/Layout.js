@@ -1,4 +1,4 @@
-import './layout.scss'
+// import './layout.scss'
 
 const Layout = ( props ) => {
   const { children } = props
