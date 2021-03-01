@@ -9,5 +9,8 @@ module.exports = {
   },
   coveragePathIgnorePatterns: [
     '__content__',
+  ],
+  snapshotSerializers: [
+    'enzyme-to-json/serializer'
   ]
 };

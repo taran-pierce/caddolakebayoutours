@@ -1,11 +1,15 @@
-import React from 'react';
+import React, {
+  useEffect,
+  useState,
+} from 'react';
 import PropTypes, {
   string,
+  bool,
 } from 'prop-types';
 import Link from 'next/link';
 import styles from './navigation.module.css';
 
-function Navigation(props) {
+const Navigation = (props) => {
   const {
     activePage,
   } = props;
@@ -33,9 +37,54 @@ function Navigation(props) {
     }
   ];
 
+  // toggle mobile Nav open/closed
+  const clickHandler = (e) => {
+    e.preventDefault;
+
+    setIsNavOpen(!isNavOpen);
+  }
+
+  // should these be in the Navigation component?
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // set mobile state
+  useEffect(() => {
+    const shouldBeMobile = window?.innerWidth <= 768;
+
+    setIsMobile(shouldBeMobile);
+  }, []);
+
+  const MobileNav = () => {
+    const {
+      mobileMenu,
+      mobileNavWrapperClosed,
+      mobileNavWrapperOpen,
+      mobileNavBar,
+      mobileNavBarOpen,
+    } = styles;
+
+    return (
+      <div
+        className={(isMobile && !isNavOpen) ? mobileNavWrapperClosed : mobileNavWrapperOpen}
+      >
+        <a
+          href={`#`}
+          onClick={clickHandler}
+          className={mobileMenu}
+        >
+          <span className={(isMobile && !isNavOpen) ? mobileNavBar : mobileNavBarOpen} />
+          <span className={(isMobile && !isNavOpen) ? mobileNavBar : mobileNavBarOpen} />
+          <span className={(isMobile && !isNavOpen) ? mobileNavBar : mobileNavBarOpen} />
+        </a>
+      </div>
+    );
+  };
+
   return (
     <nav>
-      <ul className={styles.mainNavigation}>
+      {isMobile && <MobileNav />}
+      <ul className={(isMobile && !isNavOpen) ? styles.mainNavigationClosed : styles.mainNavigation}>
         {links.map((link, index) => {
           const {
             href,
@@ -60,10 +109,12 @@ function Navigation(props) {
 
 Navigation.defaultProps = {
   activePage: '',
+  isNavOpen: false,
 };
 
 Navigation.propTypes = {
   activePage: string,
+  isNavOpen: bool,
 };
 
 export default Navigation;

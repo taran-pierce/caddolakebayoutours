@@ -2,3 +2,55 @@
   list-style-type: none;
   padding-left: 0;
 }
+
+.mainNavigationClosed {
+  list-style-type: none;
+  padding-left: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.mobileNavWrapperClosed {
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: .5rem;
+  min-height: 1.5rem;
+  max-width: 1.5rem;
+  position: relative;
+}
+
+.mobileMenu {
+  width: 100%;
+  height: 100%;
+}
+
+.mobileNavWrapperOpen {
+  border: 1px solid blue;
+  border-radius: 8px;
+  padding: .5rem;
+  min-height: 1.5rem;
+  max-width: 1.5rem;
+  position: relative;
+}
+
+.mobileNavBar {
+  height: 2px;
+  margin-bottom: .5rem;
+  width: 100%;
+  background: black;
+  display: block;
+}
+
+.mobileNavBarOpen {
+  height: 2px;
+  margin-bottom: .5rem;
+  width: 100%;
+  background: black;
+  display: block;
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+.mobileNavBarOpen:last-child {
+  transform: rotate(-45deg);
+}

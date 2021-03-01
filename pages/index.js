@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Header from '../components/Header';
+import Layout from '../components/Layout';
 
 function Index(props) {
   return (
     <>
-      <Header
-        activePage={`/`}
-      />
-      <h1>Taran</h1>
+      <Layout>
+        <h1>Taran</h1>
+      </Layout>
     </>
   );
 }

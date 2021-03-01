@@ -1,7 +1,9 @@
 import React from 'react';
-import Enzyme, {shallow} from 'enzyme';
+import Enzyme, {
+  shallow,
+  mount,
+} from 'enzyme';
 import * as renderer from "react-test-renderer";
-import toJson from 'enzyme-to-json';
 import Adapter from 'enzyme-adapter-react-16';
 import Navigation from '../components/Navigation';
 
@@ -14,7 +16,7 @@ const {
   activePage: componentActivePage,
 } = content;
 
-describe('Does the <Navigation /> render properly?', () => {
+describe('Does the <Navigation /> render at desktop properly?', () => {
   it('contains a <nav> element', () => {
     const component = shallow(<Navigation />);
 
@@ -48,7 +50,73 @@ describe('Does the <Navigation /> render properly?', () => {
   });
 
   it('matches snapshot', () => {
-    const tree = renderer.create(<Navigation activePage={componentActivePage} />).toJSON();
+    const tree = renderer.create(
+      <Navigation activePage={componentActivePage} />
+    ).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+});
+
+describe('Does the <Navigation /> render at mobile properly?', () => {
+  beforeEach(() => {
+    global.innerWidth = 320;
+
+    global.dispatchEvent(new Event('resize'));
+  });
+
+  it('has the <MobileNav>', () => {
+    const component = mount(
+      <Navigation
+        activePage={componentActivePage}
+      />);
+
+    const mobileNav = component.find('MobileNav');
+
+    // mobile nav only renders in certain viewports
+    expect(mobileNav.exists()).toBe(true);
+  });
+
+  it('defaults to closed nav state', () => {
+    const component = mount(
+      <Navigation
+        activePage={componentActivePage}
+      />);
+
+    const mobileNav = component.find('.mobileNavWrapperClosed');
+
+    // mobile nav only renders in certain viewports
+    expect(mobileNav.exists()).toBe(true);
+  });
+
+  it('can toggle mobile nav state properly', () => {
+    const component = mount(
+      <Navigation
+        activePage={componentActivePage}
+      />);
+
+    // dropdown should not be visible to start
+    const dropdownMenu = component.find('.mainNavigation');
+
+    expect(dropdownMenu.exists()).toBe(false);
+
+    // click mobileMenu button
+    const menuButton = component.find('.mobileMenu');
+
+    menuButton.simulate('click');
+
+    component.update();
+
+    // dropdown should be visible
+    const dropdownMenuAfterClick = component.find('.mainNavigation');
+
+    expect(dropdownMenuAfterClick.exists()).toBe(true);
+  });
+
+  it('matches snapshot', () => {
+    const tree = renderer.create(
+      <Navigation activePage={componentActivePage} />
+    ).toJSON();
 
     expect(tree).toMatchSnapshot();
   });
