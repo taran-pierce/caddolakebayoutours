@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Header from '../components/Header';
 
-function Index(props) {
+function PhotoGallery(props) {
   return (
     <>
       <Header
-        activePage={`/`}
+        activePage={`photo-gallery`}
       />
-      <h1>Taran</h1>
+      <h1>PhotoGallery</h1>
     </>
   );
 }
 
-export default Index;
+export default PhotoGallery;

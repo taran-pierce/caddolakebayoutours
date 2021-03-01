@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Does the <Navigation /> render properly? matches snapshot 1`] = `
+<nav>
+  <ul
+    className="mainNavigation"
+  >
+    <li>
+      <a
+        href="/about"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        About
+      </a>
+    </li>
+    <li>
+      <a
+        className="active"
+        href="/directions"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Directions
+      </a>
+    </li>
+    <li>
+      <a
+        href="/things-to-do"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Things to do
+      </a>
+    </li>
+    <li>
+      <a
+        href="/photo-gallery"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Photo Gallery
+      </a>
+    </li>
+    <li>
+      <a
+        href="/contact"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Contact
+      </a>
+    </li>
+  </ul>
+</nav>
+`;

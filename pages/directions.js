@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Header from '../components/Header';
 
-function Index(props) {
+function Directions(props) {
   return (
     <>
       <Header
-        activePage={`/`}
+        activePage={`directions`}
       />
-      <h1>Taran</h1>
+      <h1>Directions</h1>
     </>
   );
 }
 
-export default Index;
+export default Directions;

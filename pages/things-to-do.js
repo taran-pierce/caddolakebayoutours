@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Header from '../components/Header';
 
-function Index(props) {
+function ThingsToDo(props) {
   return (
     <>
       <Header
-        activePage={`/`}
+        activePage={`things-to-do`}
       />
-      <h1>Taran</h1>
+      <h1>ThingsToDo</h1>
     </>
   );
 }
 
-export default Index;
+export default ThingsToDo;

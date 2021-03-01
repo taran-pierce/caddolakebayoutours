@@ -1,23 +1,42 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, {
+  string,
+} from 'prop-types';
+import Link from 'next/link';
 import Navigation from '../Navigation';
 import styles from './header.module.css';
 
 function Header(props) {
+  const {
+    activePage,
+  } = props;
+
   return (
     <>
       <header className={styles.container}>
         <div className={styles.column}>
           <p>
-            <a href={`/`}>Caddo Lake Bayou Tours</a>
+            <Link href={`/`}>
+              <a>Caddo Lake Bayou Tours</a>
+            </Link>
           </p>
         </div>
         <div className={styles.column}>
-          <Navigation />
+          <Navigation
+            activePage={activePage}
+          />
         </div>
       </header>
     </>
   );
 }
+
+Header.defaultProps = {
+  activePage: '',
+};
+
+Header.propTypes = {
+  activePage: string,
+};
 
 export default Header;

@@ -1,8 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, {
+  string,
+} from 'prop-types';
+import Link from 'next/link';
 import styles from './navigation.module.css';
 
 function Navigation(props) {
+  const {
+    activePage,
+  } = props;
+
   const links = [
     {
       "name": "About",
@@ -35,11 +42,14 @@ function Navigation(props) {
             name,
           } = link;
 
+          const active = activePage === name.toLowerCase();
           const key = `${name.split(' ').join('_').toLowerCase()}-${index}`;
 
           return (
             <li key={key}>
-              <a href={href}>{name}</a>
+              <Link href={href}>
+                <a className={active ? 'active' : undefined}>{name}</a>
+              </Link>
             </li>
           )
         })}
@@ -47,5 +57,13 @@ function Navigation(props) {
     </nav>
   );
 }
+
+Navigation.defaultProps = {
+  activePage: '',
+};
+
+Navigation.propTypes = {
+  activePage: string,
+};
 
 export default Navigation;

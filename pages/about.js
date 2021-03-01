@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Header from '../components/Header';
 
-function Index(props) {
+function About(props) {
   return (
     <>
       <Header
-        activePage={`/`}
+        activePage={`about`}
       />
-      <h1>Taran</h1>
+      <h1>About</h1>
     </>
   );
 }
 
-export default Index;
+export default About;
