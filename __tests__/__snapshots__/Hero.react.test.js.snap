@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Does the <Hero /> render at desktop properly? matches the snapshot 1`] = `
+<section>
+  <img
+    alt="Some alt text here"
+    height={300}
+    src="https://www.fillmurray.com/"
+    width={992}
+  />
+</section>
+`;

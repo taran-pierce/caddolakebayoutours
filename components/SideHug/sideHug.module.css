@@ -1,0 +1,23 @@
+.container {
+  margin: 0 auto;
+  padding: 1rem .5rem;
+}
+
+.flexContainer {
+  display: flex;
+}
+
+.flexContainerReverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.flexColumn {
+  width: 50%;
+}
+
+.flexColumnImage {
+  text-align: center;
+  width: 50%;
+}
+
