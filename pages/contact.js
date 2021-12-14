@@ -103,7 +103,7 @@ class Page extends React.Component {
                 {
                   'title': 'Where does the tour start?',
                   'paragraphs': [
-                    'All tours start and end at the Shady Glade Marina'
+                    'All tours start and end at the Shady Glade Marina.'
                   ]
                 },
                 {
