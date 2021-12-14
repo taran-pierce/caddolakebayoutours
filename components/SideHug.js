@@ -15,7 +15,7 @@ const SideHug = ( props ) => {
     textData,
     image,
     googleMap,
-  } = props.data
+  } = props.data;
 
   const imageColumnRef = useRef(null);
 
@@ -28,19 +28,14 @@ const SideHug = ( props ) => {
       height,
     } = imageColumnRef?.current?.getBoundingClientRect();
 
-    console.log({
-      width,
-      height,
-    });
-
     setImageColumnWidth(width);
     setImageColumnHeight(height);
-  }, []);
+  }, [imageColumnRef]);
 
   return (
     <section className={`side-hug`}>
       <div className={`container flex`}>
-        <div className={`col`}>
+        <div className={`col`} ref={imageColumnRef}>
           {imageFirst ?
             (
               // display google map if we have one
@@ -51,7 +46,7 @@ const SideHug = ( props ) => {
               // display image if we have one
               image && (
                 <CloudinaryContext cloudName="tpierce36">
-                  <div className={`img-wrapper`} ref={imageColumnRef}>
+                  <div className={`img-wrapper`}>
                     <Image
                       publicId={image.path}
                       responsive

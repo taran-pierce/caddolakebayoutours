@@ -6,7 +6,7 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://www.caddolakebayoutours.com/</loc>
-    <lastmod>2020-12-20T17:26:28+00:00</lastmod>
+    <lastmod>2021-12-12T17:26:28+00:00</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
@@ -16,7 +16,7 @@
   </url>
   <url>
     <loc>https://www.caddolakebayoutours.com/directions/</loc>
-    <lastmod>2020-10-20T17:26:28+00:00</lastmod>
+    <lastmod>2021-12-12T17:26:28+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
@@ -26,17 +26,17 @@
   </url>
   <url>
     <loc>https://www.caddolakebayoutours.com/photo-gallery/</loc>
-    <lastmod>2020-12-17T17:26:28+00:00</lastmod>
+    <lastmod>2021-12-12T17:26:28+00:00</lastmod>
     <priority>0.60</priority>
   </url>
   <url>
     <loc>https://www.caddolakebayoutours.com/contact/</loc>
-    <lastmod>2020-10-20T17:26:28+00:00</lastmod>
+    <lastmod>2021-12-12T17:26:28+00:00</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://www.caddolakebayoutours.com/sitemap/</loc>
-    <lastmod>2020-10-20T17:26:28+00:00</lastmod>
+    <lastmod>2021-12-12T17:26:28+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 </urlset>

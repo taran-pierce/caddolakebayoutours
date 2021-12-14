@@ -16,7 +16,7 @@ const sideHugData1 = {
         'Bayou Tours is located at Shady Glade Resort, five miles from Caddo Lake State Park. <strong>Guide Boat tours are available daily.</strong>',
       ]
     }
-  ]
+  ],
 }
 
 const sideHugData2 = {

@@ -117,9 +117,9 @@ class Page extends React.Component {
     return (
       <div>
         <Hero
-          imagePath={`mike-moir-3.jpg`}
+          imagePath={`gallery/caddo-lake-32`}
           alt={`Caddo Lake sunrise`}
-          bottom={30}
+          bottom={90}
           minHeight={{
             mobile: '212px',
             tablet: '434px',

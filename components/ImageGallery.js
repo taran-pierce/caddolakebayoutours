@@ -11,7 +11,7 @@ class ImageGallery extends React.Component {
 
     this.state = {
       currentSlide: 1,
-      lastSlide: 13,
+      lastSlide: 32,
       lightBoxOpen: false,
     }
 
