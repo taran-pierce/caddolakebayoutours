@@ -58,9 +58,6 @@ const Footer = ( props ) => {
               <a href="https://riverbendoutfitters.com/" target="_blank" rel="noopener">Riverbend Outfitters</a>
             </li>
             <li>
-              <a href="https://johnsonsranch.net/" target="_blank" rel="noopener">Johnson's Ranch Marina</a>
-            </li>
-            <li>
               <a href="https://www.travelawaits.com/2552685/outdoor-activities-near-jefferson-texas/" target="_blank" rel="noopener">TravelAwaits</a>
             </li>
             <li>
@@ -68,9 +65,6 @@ const Footer = ( props ) => {
             </li>
             <li>
               <a href="https://www.hodgepodgecottages.com/" target="_blank" rel="noopener">HodgePodge Cottages</a>
-            </li>
-            <li>
-              <a href="https://thegraytripper.com/" target="_blank" rel="noopener">The Graytripper</a>
             </li>
             <li>
               <a href="https://tpwd.texas.gov/state-parks/caddo-lake" target="_blank" rel="noopener">Caddo State Park</a>
