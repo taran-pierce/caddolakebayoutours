@@ -20,24 +20,6 @@ const shadyGlade = {
   ]
 }
 
-const johnsonsRanch = {
-  image: {
-    path: 'johnsons-ranch-2.jpg',
-    alt: 'People on the pier at Johnson\'s Ranch'
-  },
-  textData: [
-    {
-      titles: [
-        '<h3>Johnson\'s Ranch</h3>',
-      ],
-      paragraphs: [
-        'Johnson\'s Ranch is a full service marina, supplying the sportsmen of today with boat fuel, live bait, artificial lures, snacks, soft drinks, beer, tee shirts and other souvenirs. Canoe, kayak and boat (with or without motors) are available.',
-        '<a href="http://johnsonsranch.net/index.htm" target="_blank" rel="noopener">Visit their website for more information</a>',
-      ]
-    }
-  ]
-}
-
 const jeffersonTexas = {
   image: {
     path: 'aerial-lake.jpg',
@@ -218,7 +200,6 @@ class Page extends React.Component {
         <SideHug data={carriageHouse} />
         <SideHug data={hodgePodge} />
         <SideHug data={statePark} />
-        <SideHug data={johnsonsRanch} />
         <SideHug data={travelAwaits} />
       </>
     )
