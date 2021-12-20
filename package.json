@@ -38,7 +38,7 @@
     "react-fontawesome": "^1.6.1",
     "set-value": "^2.0.1",
     "styled-jsx": "^4.0.1",
-    "tar": "^2.2.2",
+    "tar": "^4.4.18",
     "tunnel-agent": "^0.6.0"
   },
   "devDependencies": {
