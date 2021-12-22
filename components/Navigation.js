@@ -40,7 +40,7 @@ function Navigation({
           </li>
         ))}
         <li className={styles.socialLink}>
-          <div>
+          <div className={styles.fbLike}>
             <span className={`fb-like`} data-href="//www.facebook.com/caddotours/" data-width="170px" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true" />
           </div>
         </li>

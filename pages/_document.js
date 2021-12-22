@@ -1,4 +1,9 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Document, { 
+  Html, 
+  Head, 
+  Main, 
+  NextScript,
+ } from 'next/document';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -10,24 +15,15 @@ class MyDocument extends Document {
     return (
       <Html lang={`en`}>
         <Head>
-          <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"></link>
-          <link rel="preconnect" href="//fonts.googleapis.com"></link>
-          <link rel="dns-prefetch" href="//fonts.googleapis.com"></link>
-          <link rel="preconnect" href="//fonts.gstatic.com"></link>
-          <link rel="dns-prefetch" href="//fonts.gstatic.com"></link>
-          <link href="//fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap" rel="stylesheet"></link>
-
-          <link rel="dns-prefetch" href="//res.cloudinary.com"></link>
-          <link rel="preconnect" href="//res.cloudinary.com"></link>
-          <script async defer src="https://www.googletagmanager.com/gtag/js?id=UA-107758647-2"></script>
-          <script dangerouslySetInnerHTML={{ __html:
-            `window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments)};
-            gtag('js', new Date());
-            gtag('config', 'UA-107758647-2');`
-          }} />
+          <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+          <link rel="preconnect" href="//fonts.googleapis.com" />
+          <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+          <link rel="preconnect" href="//fonts.gstatic.com" />
+          <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+          <link rel="dns-prefetch" href="//res.cloudinary.com" />
+          <link rel="preconnect" href="//res.cloudinary.com" />
           <link rel="manifest" href="/manifest.json" />
-         <script async defer crossOrigin="anonymous" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0"></script>
+          <script async defer crossOrigin="anonymous" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0" />
         </Head>
         <body>
           <noscript>

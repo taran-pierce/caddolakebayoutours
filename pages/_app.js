@@ -1,6 +1,8 @@
 import Layout from '../components/Layout';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Script from 'next/script';
+import Head from 'next/head';
 
 import '../styles/base.scss';
 
@@ -39,19 +41,31 @@ function MyApp({
   } = pageProps;
 
   return (
-    <Layout>
-      <Header
-        pageTitle={pageTitle}
-        canonical={canonical}
-        links={links}
-        activeTab={activeTab}
-        heroImage={heroImage}
+    <>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=UA-107758647-2"
+        strategy="afterInteractive"
       />
-      <Component {...pageProps} />
-      <Footer 
-        links={links} 
-      />
-    </Layout>
+      <script dangerouslySetInnerHTML={{ __html:
+        `window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments)};
+        gtag('js', new Date());
+        gtag('config', 'UA-107758647-2');`
+      }} />
+      <Layout>
+        <Header
+          pageTitle={pageTitle}
+          canonical={canonical}
+          links={links}
+          activeTab={activeTab}
+          heroImage={heroImage}
+        />
+        <Component {...pageProps} />
+        <Footer 
+          links={links} 
+        />
+      </Layout>
+    </>
   )
 }
 

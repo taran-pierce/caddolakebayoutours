@@ -15,7 +15,6 @@ const jsConfig = {
       '/directions/': { page: '/directions' },
       '/things-to-do/': { page: '/things-to-do' },
       '/photo-gallery/': { page: '/photo-gallery' },
-      '/sitemap/': { page: '/sitemap'},
     }
   }
 }
