@@ -1,5 +1,10 @@
-import React, { useRef, useEffect, useState } from 'react';
-import PropTypes from 'prop-types'
+import { 
+  useRef, 
+  useEffect, 
+  useState, } from 'react';
+import {
+  object,
+} from 'prop-types'
 import TextBlock from './TextBlock'
 import {
   Image,
@@ -7,15 +12,17 @@ import {
   Transformation,
 } from 'cloudinary-react'
 
-import './sideHug.scss'
+import styles from './sideHug.module.scss';
 
-const SideHug = ( props ) => {
+function SideHug( {
+  data,
+} ) {
   const {
     imageFirst,
     textData,
     image,
     googleMap,
-  } = props.data;
+  } = data;
 
   const imageColumnRef = useRef(null);
 
@@ -32,70 +39,69 @@ const SideHug = ( props ) => {
     setImageColumnHeight(height);
   }, [imageColumnRef]);
 
+  const CurrentImage = () => {
+    return (
+      <CloudinaryContext cloudName="tpierce36">
+        <div className={styles.imgWrapper}>
+          <Image
+            publicId={image.path}
+            responsive
+            width={imageColumnWidth}
+            crop={`scale`}
+            alt={image.alt}
+            loading={`lazy`}
+          >
+            <Transformation
+              quality={`auto`}
+              fetchFormat={`auto`}
+            />
+          </Image>
+        </div>
+      </CloudinaryContext>
+    );
+  };
+
   return (
-    <section className={`side-hug`}>
-      <div className={`container flex`}>
-        <div className={`col`} ref={imageColumnRef}>
+    <section className={styles.sideHug}>
+      <div className={styles.mainContainer}>
+        <div className={styles.col} ref={imageColumnRef}>
           {imageFirst ?
             (
               // display google map if we have one
               googleMap && (
-              <div>{googleMap}</div>
+                <div>{googleMap}</div>
               ),
-
               // display image if we have one
               image && (
-                <CloudinaryContext cloudName="tpierce36">
-                  <div className={`img-wrapper`}>
-                    <Image
-                      publicId={image.path}
-                      responsive
-                      width={imageColumnWidth}
-                      crop={`scale`}
-                      alt={image.alt}
-                      loading={`lazy`}
-                    >
-                      <Transformation
-                        quality={`auto`}
-                        fetchFormat={`auto`}
-                      />
-                    </Image>
-                  </div>
-                </CloudinaryContext>
+                <CurrentImage />
               )
             ) : (
               textData.map( (text, index) => (
-                <TextBlock key={index} data={text} />
+                <div 
+                  className={styles.container}
+                  key={index}
+                >
+                  <TextBlock key={index} data={text} />
+                </div>
               ))
             )
           }
         </div>
-        <div className={`col`}>
+        <div className={styles.col}>
           {imageFirst ?
             (
               textData.map( (text, index) => (
-                <TextBlock key={index} data={text} />
+                <div 
+                  className={styles.container}
+                  key={index}
+                >
+                  <TextBlock key={index} data={text} />
+                </div>
               ))
             ) : (
               // display image if we have one
               image && (
-                <CloudinaryContext cloudName="tpierce36">
-                  <div className={`img-wrapper`} ref={imageColumnRef}>
-                    <Image
-                      publicId={image.path}
-                      responsive
-                      width={imageColumnWidth}
-                      crop={`scale`}
-                      alt={image.alt}
-                      loading={`lazy`}
-                      >
-                      <Transformation
-                        quality={`auto`}
-                        fetchFormat={`auto`}
-                      />
-                    </Image>
-                  </div>
-                </CloudinaryContext>
+                <CurrentImage />
               )
             )
           }
@@ -109,6 +115,7 @@ const SideHug = ( props ) => {
               allowFullScreen
               importance="low"
               loading="lazy"
+              className={styles.iframe}
             ></iframe>
           )}
         </div>
@@ -118,7 +125,7 @@ const SideHug = ( props ) => {
 }
 
 SideHug.propTypes = {
-  data: PropTypes.object,
+  data: object,
 }
 
-export default SideHug
+export default SideHug;

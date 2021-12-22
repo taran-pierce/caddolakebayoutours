@@ -1,9 +1,5 @@
-import React from 'react'
-import dynamic from 'next/dynamic'
-import Hero from '../components/Hero'
-import SideHug from '../components/SideHug'
-
-const LazySideHug = dynamic(import('../components/LazySideHug'));
+import Hero from '../components/Hero';
+import SideHug from '../components/SideHug';
 
 const sideHugData1 = {
   image: {
@@ -25,7 +21,7 @@ const sideHugData1 = {
       ]
     }
   ]
-}
+};
 
 const sideHugData2 = {
   image: {
@@ -44,7 +40,7 @@ const sideHugData2 = {
     }
   ],
   imageFirst: true,
-}
+};
 
 const sideHugData3 = {
   image: {
@@ -63,7 +59,7 @@ const sideHugData3 = {
       ],
     }
   ]
-}
+};
 
 const sideHugData4 = {
   image: {
@@ -84,7 +80,7 @@ const sideHugData4 = {
     }
   ],
   imageFirst: true,
-}
+};
 
 const sideHugData5 = {
   image: {
@@ -102,21 +98,12 @@ const sideHugData5 = {
       ],
     }
   ]
-}
+};
 
-class Page extends React.Component {
-  constructor( props ) {
-    super( props )
-
-    this.state = {
-      activeTab: 'home',
-    }
-  }
-
-  render() {
-    return (
-      <div>
-        <Hero
+function Page() {
+  return (
+    <>
+      <Hero
           imagePath={`gallery/caddo-lake-32`}
           alt={`Caddo Lake sunrise`}
           bottom={90}
@@ -127,25 +114,26 @@ class Page extends React.Component {
           }}
         />
         <SideHug data={sideHugData1} />
-        <LazySideHug data={sideHugData2} />
-        <LazySideHug data={sideHugData3} />
-        <LazySideHug data={sideHugData4} />
-        <LazySideHug data={sideHugData5} />
-      </div>
-    )
-  }
-}
+        <SideHug data={sideHugData2} />
+        <SideHug data={sideHugData3} />
+        <SideHug data={sideHugData4} />
+        <SideHug data={sideHugData5} />
+    </>
+  );
+};
 
-Page.getInitialProps = async ({ req }) => {
-  const canonical = '/'
-  const pageTitle = 'Caddo Lake Bayou Tours'
-  const activeTab = 'home'
+export async function getStaticProps(context) {
+  const canonical = 'https://www.caddolakebayoutours.com/';
+  const pageTitle = 'Caddo Lake Bayou Tours';
+  const activeTab = 'home';
 
   return {
-    activeTab,
-    canonical,
-    pageTitle,
+    props: {
+      activeTab,
+      canonical,
+      pageTitle,
+    }
   }
 }
 
-export default Page
+export default Page;

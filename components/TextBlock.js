@@ -1,12 +1,19 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
-import './textBlock.scss'
+import styles from './textBlock.module.scss';
 
-const TextBlock = ( props ) => {
-  const { titles, paragraphs, lists, cta } = props.data
+const TextBlock = ( {
+  data,
+} ) => {
+  const { 
+    titles, 
+    paragraphs, 
+    lists,
+    cta,
+  } = data;
 
   return (
-    <div className={`text-wrapper`}>
+    <div className={styles.textWrapper}>
       {/* Look for titles and loop through them */}
       {/* They include their own markup */}
       {titles && titles.map( ( title, index ) => (

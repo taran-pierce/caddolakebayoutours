@@ -1,35 +1,48 @@
-import PropTypes from 'prop-types'
+import {
+  func,
+  bool,
+} from 'prop-types';
 
-import './menuButton.scss'
+import styles from './menuButton.module.scss';
 
-const Icon = ( props ) => {
-  const { menuOpen, toggleMenu } = props
-
+function Icon({
+  menuOpen, 
+  toggleMenu, 
+} ) {
   return (
-    <div className={`menu-button`} onClick={toggleMenu}>
-        {menuOpen ? 
-          (
-            <a href={`#`}>
-              <span className={`menu-open`}></span>
-              <span className={`menu-open`}></span>
-              <span className={`menu-open`}></span>
-            </a>
-          ) : 
-          (
-            <a href={`#`}>
-              <span className={`menu-closed`}></span>
-              <span className={`menu-closed`}></span>
-              <span className={`menu-closed`}></span>
-            </a>
-          )
-        }
-    </div>
+    <div 
+      className={menuOpen ? styles.menuButtonOpen : styles.menuButtonClosed} 
+      onClick={toggleMenu}
+    >
+      {menuOpen ?
+        (
+          <a 
+            href={`#`}
+            className={styles.a}
+          >
+            <span className={styles.spanOpen} />
+            <span className={styles.spanOpen} />
+            <span className={styles.spanOpenLast} />
+          </a>
+        ) : 
+        (
+          <a 
+            href={`#`}
+            className={styles.a}
+          >
+            <span className={styles.spanClosed} />
+            <span className={styles.spanClosed} />
+            <span className={styles.spanClosedLast} />
+          </a>
+        )
+      }
+  </div>
   )
 }
 
 Icon.propTypes = {
-  toggleMenu: PropTypes.func,
-  menuOpen: PropTypes.bool,
-}
+  toggleMenu: func.isRequired,
+  menuOpen: bool.isRequired,
+};
 
-export default Icon
+export default Icon;

@@ -1,6 +1,8 @@
-import Layout from '../components/Layout'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Layout from '../components/Layout';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+
+import '../styles/base.scss';
 
 const links = [
   {
@@ -23,15 +25,18 @@ const links = [
     "name": "Contact",
     "href": "/contact/"
   }
-]
+];
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ 
+  Component, 
+  pageProps,
+ }) {
   const {
     canonical,
     pageTitle,
     activeTab,
     heroImage,
-  } = pageProps
+  } = pageProps;
 
   return (
     <Layout>
@@ -43,9 +48,11 @@ function MyApp({ Component, pageProps }) {
         heroImage={heroImage}
       />
       <Component {...pageProps} />
-      <Footer links={links} />
+      <Footer 
+        links={links} 
+      />
     </Layout>
   )
 }
 
-export default MyApp
+export default MyApp;

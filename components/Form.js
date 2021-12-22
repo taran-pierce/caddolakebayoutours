@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { Image, CloudinaryContext, Transformation } from 'cloudinary-react'
 
-import './form.scss'
+// import './form.scss'
 
 const Form = ( props ) => {
   const { onSubmit, onFirstNameChange, onLastNameChange, onEmailChange, onMessageChange, data } = props

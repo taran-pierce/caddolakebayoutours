@@ -1,4 +1,4 @@
-const withSass = require('@zeit/next-sass')
+// const withSass = require('@zeit/next-sass')
 
 const jsConfig = {
   sassLoaderOptions: {
@@ -6,7 +6,7 @@ const jsConfig = {
       '/node_modules/normalize-scss/sass/normalize'
     ]
   },
-  exportTrailingSlash: true,
+  trailingSlash: true,
   exportPathMap: function() {
     return {
       '/': { page: '/' },
@@ -20,4 +20,5 @@ const jsConfig = {
   }
 }
 
-module.exports = withSass(jsConfig);
+// module.exports = withSass(jsConfig);
+module.exports = jsConfig;

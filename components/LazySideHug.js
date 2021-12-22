@@ -7,7 +7,7 @@ import {
   Transformation,
 } from 'cloudinary-react'
 
-import './sideHug.scss'
+// import './sideHug.scss'
 
 const SideHug = ( props ) => {
   const {

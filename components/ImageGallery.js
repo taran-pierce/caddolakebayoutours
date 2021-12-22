@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { Image, CloudinaryContext, Transformation } from 'cloudinary-react'
 
-import './imageGallery.scss'
+// import './imageGallery.scss'
 
 const galleryName = 'gallery/caddo-lake-'
 

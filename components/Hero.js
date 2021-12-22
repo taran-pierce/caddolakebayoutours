@@ -1,18 +1,23 @@
-import PropTypes from 'prop-types'
-import { Image, CloudinaryContext, Transformation } from 'cloudinary-react'
+import {
+  string,
+  number,
+} from 'prop-types';
+import { 
+  Image, 
+  CloudinaryContext, 
+  Transformation,
+ } from 'cloudinary-react';
 
-import './hero.scss'
+import styles from './hero.module.scss';
 
-const Hero = ( props ) => {
-  const {
-    imagePath,
-    alt,
-    bottom,
-    minHeight,
-  } = props
-
+function Hero({
+  imagePath,
+  alt,
+  bottom,
+  minHeight,
+} ) {
   return (
-    <section className={`hero`}>
+    <section className={styles.hero}>
       <CloudinaryContext cloudName={`tpierce36`}>
         {/* TODO bottom should not be required to get styles */}
         {bottom ? (
@@ -43,7 +48,7 @@ const Hero = ( props ) => {
             }
           `}</style>
         ) : null }
-        <div className={`img-wrapper`}>
+        <div className={styles.imgWrapper}>
           <Image
             publicId={imagePath}
             responsive
@@ -63,10 +68,14 @@ const Hero = ( props ) => {
   )
 }
 
+Hero.defaultProps = {
+  bottom: 0,
+};
+
 Hero.propTypes = {
-  imagePath: PropTypes.string,
-  alt: PropTypes.string,
-  bottom: PropTypes.number,
+  imagePath: string.isRequired,
+  alt: string.isRequired,
+  bottom: number,
 }
 
-export default Hero
+export default Hero;
