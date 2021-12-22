@@ -142,7 +142,7 @@ const travelAwaits = {
     path: 'lake-cypress-trees-2.jpg',
     alt: 'Cypress trees on Caddo Lake'
   },
-  imageFirst: true,
+  imageFirst: false,
   textData: [
     {
       titles: [

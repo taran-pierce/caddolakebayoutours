@@ -29,7 +29,10 @@ function TextBlock({
       {lists && data.lists.map( (list, index) => (
         // check to see if it is a UL
         list.type === 'ul' ? (
-          <ul key={index}>
+          <ul 
+            key={index}
+            className={styles.ul}
+          >
             {list.items.map( (item, index) => (
               <li key={index}>
                 {/* if there is a title passed put it in an H4 */}
