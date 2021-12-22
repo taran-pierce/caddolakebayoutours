@@ -37,13 +37,10 @@
     "sass": "^1.45.0",
     "set-value": "^2.0.1",
     "styled-jsx": "^4.0.1",
-    "tar": "^6.1.11",
     "tunnel-agent": "^0.6.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.14",
     "eslint": "^8.5.0",
-    "eslint-config-next": "12.0.7",
-    "node-sass": "^4.14.0"
+    "eslint-config-next": "12.0.7"
   }
 }
