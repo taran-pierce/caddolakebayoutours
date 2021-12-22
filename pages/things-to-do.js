@@ -1,5 +1,4 @@
-import React from 'react'
-import SideHug from '../components/SideHug'
+import SideHug from '../components/SideHug';
 
 const shadyGlade = {
   image: {
@@ -180,42 +179,34 @@ const carriageHouse = {
   ]
 }
 
-class Page extends React.Component {
-  constructor( props ) {
-    super( props )
-
-    this.state = {
-      activeTab: 'things-to-do'
-    }
-  }
-
-  render() {
-    return (
-      <>
-        <SideHug data={thingsToDo} />
-        <SideHug data={grayTripper} />
-        <SideHug data={shadyGlade} />
-        <SideHug data={riverbend} />
-        <SideHug data={jeffersonTexas} />
-        <SideHug data={carriageHouse} />
-        <SideHug data={hodgePodge} />
-        <SideHug data={statePark} />
-        <SideHug data={travelAwaits} />
-      </>
-    )
-  }
+function ThingsToDo() {
+  return (
+    <>
+      <SideHug data={thingsToDo} />
+      <SideHug data={grayTripper} />
+      <SideHug data={shadyGlade} />
+      <SideHug data={riverbend} />
+      <SideHug data={jeffersonTexas} />
+      <SideHug data={carriageHouse} />
+      <SideHug data={hodgePodge} />
+      <SideHug data={statePark} />
+      <SideHug data={travelAwaits} />
+    </>
+  );
 }
 
-Page.getInitialProps = async ({ req }) => {
-  const canonical = '/things-to-do/'
-  const pageTitle = 'Things to do - Caddo Lake Bayou Tours'
-  const activeTab = 'things-to-do'
+export async function getStaticProps() {
+  const canonical = 'https://www.caddolakebayoutours.com/things-to-do/';
+  const pageTitle = 'Things to do - Caddo Lake Bayou Tours';
+  const activeTab = 'things-to-do';
 
   return {
-    canonical,
-    pageTitle,
-    activeTab,
+    props: {
+      canonical,
+      pageTitle,
+      activeTab,
+    }
   }
 }
 
-export default Page
+export default ThingsToDo;

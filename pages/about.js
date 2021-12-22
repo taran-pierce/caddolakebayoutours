@@ -1,6 +1,5 @@
-import React from 'react'
-import Hero from '../components/Hero'
-import SideHug from '../components/SideHug'
+import Hero from '../components/Hero';
+import SideHug from '../components/SideHug';
 
 const sideHugData1 = {
   image: {
@@ -193,50 +192,40 @@ const sideHugData5 = {
   ],
 }
 
-class Page extends React.Component {
-  constructor( props ) {
-    super( props )
-
-    this.state = {
-      activeTab: 'about',
-    }
-  }
-
-  render() {
-    return (
-      <div>
-        <Hero
-          imagePath={`lake-sunset-2.jpg`}
-          alt={`Caddo Lake sunset`}
-          bottom={260}
-          minHeight={{
-            mobile: '281px',
-            tablet: '576px',
-            desktop: '468px',
-          }}
-        />
-        <SideHug data={sideHugData1} />
-        <SideHug data={sideHugData2} />
-        <SideHug data={sideHugData3} />
-        <SideHug data={sideHugData4} />
-        <SideHug data={sideHugData5} />
-      </div>
-    )
-  }
+function About() {
+  return (
+    <>
+      <Hero
+        imagePath={`lake-sunset-2.jpg`}
+        alt={`Caddo Lake sunset`}
+        bottom={260}
+        minHeight={{
+          mobile: '281px',
+          tablet: '576px',
+          desktop: '468px',
+        }}
+      />
+      <SideHug data={sideHugData1} />
+      <SideHug data={sideHugData2} />
+      <SideHug data={sideHugData3} />
+      <SideHug data={sideHugData4} />
+      <SideHug data={sideHugData5} />
+    </>
+  );
 }
 
-Page.getInitialProps = async ({ req }) => {
-  const canonical = '/about/'
-  const pageTitle = 'About - Caddo Lake Bayou Tours'
-  const activeTab = 'about'
-  // const heroImage = 'https://res.cloudinary.com/tpierce36/image/upload/f_auto,g_auto,q_90/c_scale,w_375/lake-sunset-2.jpg'
+export async function getStaticProps(context) {
+  const canonical = 'https://www.caddolakebayoutours.com/about/';
+  const pageTitle = 'About - Caddo Lake Bayou Tours';
+  const activeTab = 'about';
 
   return {
-    canonical,
-    pageTitle,
-    activeTab,
-    // heroImage,
+    props: {
+      canonical,
+      pageTitle,
+      activeTab,
+    }
   }
 }
 
-export default Page
+export default About;

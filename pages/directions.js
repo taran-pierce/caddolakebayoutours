@@ -1,6 +1,5 @@
-import React from 'react'
-import Hero from '../components/Hero'
-import SideHug from '../components/SideHug'
+import Hero from '../components/Hero';
+import SideHug from '../components/SideHug';
 
 const sideHugData1 = {
   googleMap: '<iframe title="Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13428.266285705415!2d-94.15337171079648!3d32.7108586943788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc79227c114d5c01d!2sCaddo+Lake+Bayou+Tours!5e0!3m2!1sen!2sus!4v1528217775632" width="100%" height="460" frameBorder="0" allowFullScreen></iframe>',
@@ -40,47 +39,37 @@ const sideHugData2 = {
   ]
 }
 
-class Page extends React.Component {
-  constructor( props ) {
-    super( props )
-
-    this.state = {
-      activeTab: 'directions',
-    }
-  }
-
-  render() {
-    return (
-      <div>
-        <Hero
-          imagePath={`lake-cypress-trees-3.jpg`}
-          alt={`Caddo Lake cypress trees`}
-          bottom={240}
-          minHeight={{
-            mobile: '281px',
-            tablet: '576px',
-            desktop: '487px',
-          }}
-        />
-        <SideHug data={sideHugData1} />
-        <SideHug data={sideHugData2} />
-      </div>
-    )
-  }
+function Directions() {
+  return (
+    <>
+      <Hero
+        imagePath={`lake-cypress-trees-3.jpg`}
+        alt={`Caddo Lake cypress trees`}
+        bottom={240}
+        minHeight={{
+          mobile: '281px',
+          tablet: '576px',
+          desktop: '487px',
+        }}
+      />
+      <SideHug data={sideHugData1} />
+      <SideHug data={sideHugData2} />
+    </>
+  );
 }
 
-Page.getInitialProps = async ({ req }) => {
-  const canonical = '/directions/'
-  const pageTitle = 'Directions - Caddo Lake Bayou Tours'
-  const activeTab = 'directions'
-  // const heroImage = 'https://res.cloudinary.com/tpierce36/image/upload/f_auto,g_auto,q_90/c_scale,w_375/lake-cypress-trees-3.jpg'
+export async function getStaticProps(context) {
+  const canonical = 'https://www.caddolakebayoutours.com/directions/';
+  const pageTitle = 'Directions - Caddo Lake Bayou Tours';
+  const activeTab = 'directions';
 
   return {
-    canonical,
-    pageTitle,
-    activeTab,
-    // heroImage,
+    props: {
+      canonical,
+      pageTitle,
+      activeTab,
+    }
   }
 }
 
-export default Page
+export default Directions;

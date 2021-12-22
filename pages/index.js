@@ -100,24 +100,24 @@ const sideHugData5 = {
   ]
 };
 
-function Page() {
+function Index() {
   return (
     <>
       <Hero
-          imagePath={`gallery/caddo-lake-32`}
-          alt={`Caddo Lake sunrise`}
-          bottom={90}
-          minHeight={{
-            mobile: '212px',
-            tablet: '434px',
-            desktop: '518px',
-          }}
-        />
-        <SideHug data={sideHugData1} />
-        <SideHug data={sideHugData2} />
-        <SideHug data={sideHugData3} />
-        <SideHug data={sideHugData4} />
-        <SideHug data={sideHugData5} />
+        imagePath={`gallery/caddo-lake-32`}
+        alt={`Caddo Lake sunrise`}
+        bottom={90}
+        minHeight={{
+          mobile: '212px',
+          tablet: '434px',
+          desktop: '518px',
+        }}
+      />
+      <SideHug data={sideHugData1} />
+      <SideHug data={sideHugData2} />
+      <SideHug data={sideHugData3} />
+      <SideHug data={sideHugData4} />
+      <SideHug data={sideHugData5} />
     </>
   );
 };
@@ -136,4 +136,4 @@ export async function getStaticProps(context) {
   }
 }
 
-export default Page;
+export default Index;

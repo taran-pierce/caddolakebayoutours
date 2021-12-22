@@ -1,113 +1,108 @@
-import PropTypes from 'prop-types'
-import { Image, CloudinaryContext, Transformation } from 'cloudinary-react'
+import { useState } from 'react';
+import { 
+  string,
+  number,
+ } from 'prop-types';
+import { Image, CloudinaryContext, Transformation } from 'cloudinary-react';
 
-// import './imageGallery.scss'
+import styles from './imageGallery.module.scss';
 
-const galleryName = 'gallery/caddo-lake-'
+function ImageGallery({
+  galleryName,
+  lastSlide,
+}) {
+  const [currentSlide, setCurrentSlide] = useState(1);
+  const [lightBoxOpen, setLightBoxOpen] = useState(false);
+  
+  const nextImage = ( event ) => {
+    event.preventDefault();
 
-class ImageGallery extends React.Component {
-  constructor( props ) {
-    super( props )
-
-    this.state = {
-      currentSlide: 1,
-      lastSlide: 32,
-      lightBoxOpen: false,
+    if ( currentSlide < lastSlide ) {
+      setCurrentSlide(currentSlide + 1);
     }
+  };
 
-    this.previousImage = this.previousImage.bind(this)
-    this.nextImage = this.nextImage.bind(this)
-    this.toggleLightBox = this.toggleLightBox.bind(this)
-  }
+  const previousImage = ( event ) => {
+    event.preventDefault();
 
-  nextImage( event ) {
-    event.preventDefault()
-
-    let nextSlide = this.state.currentSlide + 1
-
-    if ( this.state.currentSlide != this.state.lastSlide ) {
-      this.setState({ currentSlide: nextSlide })
+    if ( currentSlide != 1 ) {
+      setCurrentSlide(currentSlide - 1);
     }
-  }
+  };
 
-  previousImage( event ) {
-    event.preventDefault()
+  const toggleLightBox = ( event ) => {
+    event.preventDefault();
 
-    let previousSlide = this.state.currentSlide - 1
+    console.log('toggleLightBox');
 
-    if ( this.state.currentSlide != 1 ) {
-      this.setState({ currentSlide: previousSlide })
-    }
-  }
+    setLightBoxOpen(!lightBoxOpen);
+  };
 
-  toggleLightBox( event ) {
-    event.preventDefault()
-
-    this.setState({ lightBoxOpen: !this.state.lightBoxOpen })
-  }
-
-  render() {
-    const { currentSlide, lightBoxOpen } = this.state
-
-    return (
-      <section className={`image-gallery`}>
-        <h2>Pictures of Caddo Lake</h2>
-        <div className={`gallery-container`}>
-          <nav>
-            <ul>
-              <li>
-                <a
-                  className={`btn ${currentSlide == 1 && 'disabled'}`}
-                  onClick={this.previousImage}
-                >Previous</a>
-              </li>
-              <li>
-                <a
-                  className={`btn ${currentSlide == 11 && 'disabled'}`}
-                  onClick={this.nextImage}
-                >Next</a>
-              </li>
-            </ul>
-          </nav>
-          <ul>
-            <li>
-              <CloudinaryContext cloudName="tpierce36">
-                <a
-                  href={`https://res.cloudinary.com/tpierce36/image/upload/v1578238226/${galleryName}${currentSlide}.jpg`}
-                >
-                  <Image
-                    publicId={`${galleryName}${currentSlide}.jpg`}
-                    responsive
-                    width="auto"
-                    crop="scale"
-                    alt={`Caddo Lake #${currentSlide}`}
-                  >
-                    <Transformation quality="auto" fetchFormat="auto" />
-                  </Image>
-                </a>
-              </CloudinaryContext>
+  return (
+    <section className={styles.imageGallery}>
+      <h2>Pictures of Caddo Lake</h2>
+      <div className={styles.galleryContainer}>
+        <nav className={styles.nav}>
+          <ul className={styles.ul}>
+            <li className={styles.li}>
+              <a
+                className={styles.btn}
+                onClick={previousImage}
+              >Previous</a>
+            </li>
+            <li className={styles.li}>
+              <a
+                className={styles.btn}
+                onClick={nextImage}
+              >Next</a>
             </li>
           </ul>
-          <nav>
-            <ul>
-              <li>
-                <a className={`btn ${currentSlide == 1 && 'disabled'}`} onClick={this.previousImage}>Previous</a>
-              </li>
-              <li>
-                <a className={`btn ${currentSlide == 11 && 'disabled'}`} onClick={this.nextImage}>Next</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </section>
-    )
-  }
+        </nav>
+        <ul className={styles.ul}>
+          <li className={styles.li}>
+            <CloudinaryContext cloudName="tpierce36">
+              <a
+                href={`https://res.cloudinary.com/tpierce36/image/upload/v1578238226/${galleryName}${currentSlide}.jpg`}
+                onClick={toggleLightBox}
+              >
+                <Image
+                  publicId={`${galleryName}${currentSlide}.jpg`}
+                  responsive
+                  width="auto"
+                  crop="scale"
+                  alt={`Caddo Lake #${currentSlide}`}
+                  className={styles.img}
+                >
+                  <Transformation quality="auto" fetchFormat="auto" />
+                </Image>
+              </a>
+            </CloudinaryContext>
+          </li>
+        </ul>
+        <nav className={styles.nav}>
+          <ul className={styles.ul}>
+            <li className={styles.li}>
+              <a 
+                className={styles.btn} 
+                onClick={previousImage}
+              >Previous</a>
+            </li>
+            <li className={styles.li}>
+              <a 
+                className={styles.btn} 
+                onClick={nextImage}
+              >Next</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+  )
 }
 
 ImageGallery.propTypes = {
-  currentSlide: PropTypes.number,
-  previousImage: PropTypes.func,
-  nextImage: PropTypes.func,
-}
+  galleryName: string.isRequired,
+  lastSlide: number.isRequired,
+};
 
-export default ImageGallery
+export default ImageGallery;

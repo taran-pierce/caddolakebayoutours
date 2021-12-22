@@ -1,27 +1,49 @@
-import PropTypes from 'prop-types'
-import { Image, CloudinaryContext, Transformation } from 'cloudinary-react'
+import {
+  func,
+  object,
+} from 'prop-types';
+import { 
+  Image, 
+  CloudinaryContext, 
+  Transformation,
+ } from 'cloudinary-react';
 
-// import './form.scss'
+import styles from './form.module.scss';
 
-const Form = ( props ) => {
-  const { onSubmit, onFirstNameChange, onLastNameChange, onEmailChange, onMessageChange, data } = props
-  const { sent, firstName, lastName, email, message, buttonText, loading } = props.state
+function Form( {
+  onSubmit, 
+  onFirstNameChange, 
+  onLastNameChange, 
+  onEmailChange, 
+  onMessageChange, 
+  data,
+  buttonText,
+  state,
+} ) {
+  const { 
+    sent,
+    firstName,
+    lastName,
+    email,
+    message,
+    loading,
+  } = state;
 
-  const textData = data.textData[0]
+  const textData = data.textData[0];
 
   if ( !sent ) {
     return (
-      <section className={`form`}>
-        <div className={`flex`}>
-          <div className={`col text`}>
+      <section className={styles.formWrapper}>
+        <div className={styles.flex}>
+          <div className={styles.col}>
             {textData && (
               textData.titles && textData.titles.map( ( title, index ) => (
-                <div key={index} dangerouslySetInnerHTML={{__html: title}}></div>
+                <div key={index} dangerouslySetInnerHTML={{__html: title}} />
               ))
             )}
             {textData && (
               textData.paragraphs && textData.paragraphs.map( (paragraph, index) => (
-                <p key={index} dangerouslySetInnerHTML={{__html: paragraph}}></p>
+                <p key={index} dangerouslySetInnerHTML={{__html: paragraph}} />
               ))
             )}
             {textData && (
@@ -33,7 +55,7 @@ const Form = ( props ) => {
                         <h4>{item.title}</h4>
                       )}
                       {item.paragraphs.map((paragraph, index) => (
-                        <p key={index} dangerouslySetInnerHTML={{__html: paragraph}}></p>
+                        <p key={index} dangerouslySetInnerHTML={{__html: paragraph}} />
                       ))}
                     </li>
                   ))}
@@ -42,15 +64,25 @@ const Form = ( props ) => {
             )}
             {loading ?
               (
-                <div className={`loading-screen`}>
+                <div className={styles.loadingScreen}>
                   <h5>Sending...</h5>
-                  <img className={`rotating`} src={`/images/loading.svg`} alt={`Contacting email server`} />
+                  <img 
+                    className={styles.rotating} 
+                    src={`/images/loading.svg`} 
+                    alt={`Contacting email server`} 
+                  />
                 </div>
               ) :
               (
-                <form className="contact-form" onSubmit={onSubmit}>
-                  <fieldset>
-                    <label htmlFor="first_name">First Name</label>
+                <form 
+                  className={styles.form}
+                  onSubmit={onSubmit}
+                >
+                  <fieldset className={styles.fieldset}>
+                    <label 
+                      htmlFor="first_name"
+                      className={styles.label}
+                    >First Name</label>
                     <input 
                       onChange={onFirstNameChange} 
                       type="text" 
@@ -59,10 +91,14 @@ const Form = ( props ) => {
                       placeholder="First Name"
                       value={firstName}
                       inputMode={`text`}
+                      className={styles.input}
                       required />
                   </fieldset>
-                  <fieldset>
-                    <label htmlFor="last_name">Last Name</label>
+                  <fieldset  className={styles.fieldset}>
+                    <label 
+                      htmlFor="last_name"
+                      className={styles.label}
+                    >Last Name</label>
                     <input 
                       type="text" 
                       name="last_name" 
@@ -71,10 +107,14 @@ const Form = ( props ) => {
                       value={lastName}
                       placeholder="Last Name"
                       inputMode={`text`}  
+                      className={styles.input}
                       required />
                   </fieldset>
-                  <fieldset>
-                    <label htmlFor="email">Email</label>
+                  <fieldset className={styles.fieldset}>
+                    <label 
+                      htmlFor="email"
+                      className={styles.label}
+                    >Email</label>
                     <input 
                       type="email" 
                       name="email" 
@@ -83,34 +123,40 @@ const Form = ( props ) => {
                       placeholder="your@email.com"
                       value={email} 
                       inputMode={`email`}
+                      className={styles.input}
                       required />
                   </fieldset>
-                  <fieldset>
-                    <label htmlFor="message">Message</label>
+                  <fieldset  className={styles.fieldset}>
+                    <label 
+                      htmlFor="message"
+                      className={styles.label}
+                    >Message</label>
                     <textarea 
                       name="message" 
                       id="message"
                       onChange={onMessageChange}
                       value={message}
                       inputMode={`text`}
+                      className={styles.textarea}
                       required>
                     </textarea>
                   </fieldset>
-                  <div className="button-wrapper">
+                  <div className={styles.buttonWrapper}>
                     <button type="submit" className="btn">{buttonText}</button>
                   </div>
                 </form>    
               )
             }
             </div>
-          <div className={`col`}>
+          <div className={styles.col}>
             <CloudinaryContext cloudName="tpierce36">
-              <div className={`img-wrapper`}>
+              <div className={styles.imgWrapper}>
                 <Image 
                   publicId={data.image.path}
                   responsive
                   width="auto"
                   crop="scale"
+                  className={styles.img}
                 >
                   <Transformation quality="auto" fetchFormat="auto" />
                 </Image>
@@ -122,9 +168,9 @@ const Form = ( props ) => {
     )
   } else {
     return (
-      <section className={`form`}>
-        <div className={`flex`}>
-          <div className={`col text`}>
+      <section className={styles.formWrapper}>
+        <div className={styles.flex}>
+          <div className={styles.text}>
             {textData && (
               textData.titles && textData.titles.map( ( title, index ) => (
                 <div key={index} dangerouslySetInnerHTML={{__html: title}}></div>
@@ -151,7 +197,7 @@ const Form = ( props ) => {
                 </ul>
               ))
             )}
-            <div className={`loading-screen`}>
+            <div className={styles.loadingScreen}>
               <h4>Message Received!</h4>
               <p>Thanks for you interest! I will contact you as soon as possible.</p>
             </div>
@@ -177,12 +223,12 @@ const Form = ( props ) => {
 }
 
 Form.propTypes = {
-  onFirstNameChange: PropTypes.func,
-  onLastNameChange: PropTypes.func,
-  onMessageChange: PropTypes.func,
-  onEmailChange: PropTypes.func,
-  onSubmit: PropTypes.func,
-  state: PropTypes.any,
+  onFirstNameChange: func.isRequired,
+  onLastNameChange: func.isRequired,
+  onMessageChange: func.isRequired,
+  onEmailChange: func.isRequired,
+  onSubmit: func.isRequired,
+  state: object.isRequired,
 }
 
-export default Form
+export default Form;

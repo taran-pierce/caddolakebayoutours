@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 
 import styles from './textBlock.module.scss';
 
-const TextBlock = ( {
+function TextBlock({
   data,
-} ) => {
+}) {
   const { 
     titles, 
     paragraphs, 
@@ -26,7 +26,7 @@ const TextBlock = ( {
       ))}
       
       {/* Look for and loop through lists */}
-      {lists && props.data.lists.map( (list, index) => (
+      {lists && data.lists.map( (list, index) => (
         // check to see if it is a UL
         list.type === 'ul' ? (
           <ul key={index}>
