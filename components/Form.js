@@ -36,6 +36,7 @@ function Form( {
       <section className={styles.formWrapper}>
         <div className={styles.flex}>
           <div className={styles.col}>
+            <div className={styles.formContainer}>
             {textData && (
               textData.titles && textData.titles.map( ( title, index ) => (
                 <div key={index} dangerouslySetInnerHTML={{__html: title}} />
@@ -62,7 +63,7 @@ function Form( {
                 </ul>
               ))
             )}
-            {loading ?
+            {!loading ?
               (
                 <div className={styles.loadingScreen}>
                   <h5>Sending...</h5>
@@ -148,6 +149,7 @@ function Form( {
               )
             }
             </div>
+          </div>
           <div className={styles.col}>
             <CloudinaryContext cloudName="tpierce36">
               <div className={styles.imgWrapper}>
@@ -157,6 +159,7 @@ function Form( {
                   width="auto"
                   crop="scale"
                   className={styles.img}
+                  alt={`Picture of Caddo Lake`}
                 >
                   <Transformation quality="auto" fetchFormat="auto" />
                 </Image>
@@ -210,6 +213,7 @@ function Form( {
                   responsive
                   width="auto"
                   crop="scale"
+                  alt={`Picture of Caddo Lake`}
                 >
                   <Transformation quality="auto" fetchFormat="auto" />
                 </Image>

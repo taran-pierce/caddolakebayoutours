@@ -15,6 +15,10 @@
   }
 }
 
+.formContainer {
+  padding: 0 1rem;
+}
+
 .rotating {
   -webkit-animation: rotating 3.5s linear infinite;
   -moz-animation: rotating 3.5s linear infinite;
@@ -76,6 +80,7 @@
   .loadingScreen {
     padding-top: 2rem;
     padding-bottom: 2rem;
+    text-align: center;
   }
 }
 

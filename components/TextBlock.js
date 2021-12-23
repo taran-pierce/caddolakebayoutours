@@ -34,7 +34,10 @@ function TextBlock({
             className={styles.ul}
           >
             {list.items.map( (item, index) => (
-              <li key={index}>
+              <li 
+                key={index}
+                className={styles.li}
+              >
                 {/* if there is a title passed put it in an H4 */}
                 {item.title && (
                   <h4>{item.title}</h4>

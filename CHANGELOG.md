@@ -8,7 +8,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Updated
  
-- Fixed TextBlock UL styling
+- Fix TextBlock UL styling
+- Fix Form styling
 
 ## [3.0.0] - 2021-12-20
 
