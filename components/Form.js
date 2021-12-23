@@ -63,7 +63,7 @@ function Form( {
                 </ul>
               ))
             )}
-            {!loading ?
+            {loading ?
               (
                 <div className={styles.loadingScreen}>
                   <h5>Sending...</h5>

@@ -63,8 +63,6 @@ Navigation.defaultProps = {
 Navigation.propTypes = {
   activeTab: string,
   links: array.isRequired,
-  toggleMenu: func.isRequired,
-  menuOpen: bool.isRequired,
 }
 
 export default Navigation;

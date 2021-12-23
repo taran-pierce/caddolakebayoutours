@@ -32,7 +32,10 @@ function Header({
         <meta name="theme-color" content="#ffffff" />
         <meta name="google-site-verification" content="B2p1pPmxNrh11r3HKQ5EfPlheeORHUacKHqpcLin5g8" />
       </Head>
-      <Navigation activeTab={activeTab} links={links} />
+      <Navigation 
+        activeTab={activeTab} 
+        links={links} 
+      />
     </header>
   )
 };
