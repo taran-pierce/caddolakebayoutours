@@ -1,6 +1,12 @@
 import { useState } from 'react';
-import PropTypes from 'prop-types';
+import {
+  string,
+  array,
+  func,
+  bool,
+} from 'prop-types';
 import MenuButton from '../components/MenuButton';
+import Link from 'next/link';
 
 import styles from './navigation.module.scss';
 
@@ -21,7 +27,9 @@ function Navigation({
     <nav className={menuOpen ? styles.headerNavOpen : styles.headerNav}>
       <ul className={styles.mainNav}>
         <li className={styles.li}>
-          <a className={styles.logo} href={`/`}>Caddo Lake Bayou Tours</a>
+          <Link href={`/`}>
+            <a className={styles.logo}>Caddo Lake Bayou Tours</a>
+          </Link>
         </li>
         <li className={styles.dropdown}>
           <MenuButton toggleMenu={toggleMenu} menuOpen={menuOpen} />
@@ -33,10 +41,9 @@ function Navigation({
             key={index} 
             className={activeTab === link.name.toLowerCase() ? styles.li : styles.li}
           >
-            <a 
-              href={link.href}
-              className={styles.a}
-            >{link.name}</a>
+            <Link href={link.href}>
+              <a className={styles.a}>{link.name}</a>
+            </Link>
           </li>
         ))}
         <li className={styles.socialLink}>
@@ -49,11 +56,15 @@ function Navigation({
   );
 }
 
+Navigation.defaultProps = {
+  activeTab: '',
+};
+
 Navigation.propTypes = {
-  activeTab: PropTypes.string,
-  links: PropTypes.array,
-  toggleMenu: PropTypes.func,
-  menuOpen: PropTypes.bool,
+  activeTab: string,
+  links: array.isRequired,
+  toggleMenu: func.isRequired,
+  menuOpen: bool.isRequired,
 }
 
 export default Navigation;

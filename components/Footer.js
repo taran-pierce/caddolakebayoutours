@@ -2,6 +2,8 @@ import {
   array,
   object,
 } from 'prop-types'
+import Link from 'next/link';
+
 import styles from './footer.module.scss'
 
 const year = new Date().getFullYear();
@@ -60,11 +62,15 @@ const Footer = ( {
           <h4 className={styles.h4}>Sitemap</h4>
           <ul className={styles.ul}>
             <li className={styles.li}>
-              <a href={`/`}>Home</a>
+              <Link href={`/`}>
+                <a>Home</a>
+              </Link>
             </li>
             {links.map( (link, index) => (
               <li key={index} className={styles.li}>
-                <a href={link.href}>{link.name}</a>
+                <Link href={link.href}>
+                  <a>{link.name}</a>
+                </Link>
               </li>
             ))}
           </ul>

@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
  
 - Fix TextBlock UL styling
 - Fix Form styling
+- Made Navigation use Next Link
 
 ## [3.0.0] - 2021-12-20
 
