@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { 
+  useState,
+  useEffect,
+ } from 'react';
 import {
   string,
   array,
-  func,
-  bool,
 } from 'prop-types';
 import MenuButton from '../components/MenuButton';
 import Link from 'next/link';
@@ -22,13 +23,28 @@ function Navigation({
     setMenuOpen(!menuOpen);
   };
 
+  const closeMenu = (event) => {
+    if (windowWidth < 992) {
+      setMenuOpen(false);
+    }
+  };
+
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+  }, []);
+
   // TODO still need to set up roles and names for keyboard control: ADA
   return (
     <nav className={menuOpen ? styles.headerNavOpen : styles.headerNav}>
       <ul className={styles.mainNav}>
         <li className={styles.li}>
           <Link href={`/`}>
-            <a className={styles.logo}>Caddo Lake Bayou Tours</a>
+            <a 
+              className={styles.logo}
+              onClick={closeMenu}
+            >Caddo Lake Bayou Tours</a>
           </Link>
         </li>
         <li className={styles.dropdown}>
@@ -42,7 +58,10 @@ function Navigation({
             className={activeTab === link.name.toLowerCase() ? styles.li : styles.li}
           >
             <Link href={link.href}>
-              <a className={styles.a}>{link.name}</a>
+              <a 
+                className={styles.a}
+                onClick={closeMenu}
+              >{link.name}</a>
             </Link>
           </li>
         ))}
