@@ -59,7 +59,7 @@ const Footer = ( {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.item}>
-          <h4 className={styles.h4}>Sitemap</h4>
+          <h2 className={styles.h4}>Sitemap</h2>
           <ul className={styles.ul}>
             <li className={styles.li}>
               <Link href={`/`}>
@@ -98,7 +98,7 @@ const Footer = ( {
           </div>
         </div>
         <div className={styles.item}>
-          <h4 className={styles.h4}>Quick Links</h4>
+          <h2 className={styles.h4}>Quick Links</h2>
           <ul className={styles.ul}>
             {quickLinks.map(quickLink => (
               <li 
