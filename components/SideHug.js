@@ -1,16 +1,12 @@
-import { 
-  useRef, 
-  useEffect, 
-  useState, } from 'react';
 import {
   object,
-} from 'prop-types'
-import TextBlock from './TextBlock'
+} from 'prop-types';
+import TextBlock from './TextBlock';
 import {
   Image,
   CloudinaryContext,
   Transformation,
-} from 'cloudinary-react'
+} from 'cloudinary-react';
 
 import styles from './sideHug.module.scss';
 
@@ -24,29 +20,17 @@ function SideHug( {
     googleMap,
   } = data;
 
-  const imageColumnRef = useRef(null);
-
-  const [imageColumnWidth, setImageColumnWidth] = useState(585);
-  const [imageColumnHeight, setImageColumnHeight] = useState(661);
-
-  useEffect(() => {
-    const {
-      width,
-      height,
-    } = imageColumnRef?.current?.getBoundingClientRect();
-
-    setImageColumnWidth(width);
-    setImageColumnHeight(height);
-  }, [imageColumnRef]);
-
   const CurrentImage = () => {
     return (
-      <CloudinaryContext cloudName="tpierce36">
+      <CloudinaryContext
+        cloudName="tpierce36"
+        secure
+      >
         <div className={styles.imgWrapper}>
           <Image
             publicId={image.path}
+            width={`auto`}
             responsive
-            width={imageColumnWidth}
             crop={`scale`}
             alt={image.alt}
             loading={`lazy`}
@@ -64,7 +48,7 @@ function SideHug( {
   return (
     <section className={styles.sideHug}>
       <div className={styles.mainContainer}>
-        <div className={styles.col} ref={imageColumnRef}>
+        <div className={styles.col}>
           {imageFirst ?
             (
               // display google map if we have one

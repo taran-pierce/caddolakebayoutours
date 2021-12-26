@@ -18,36 +18,10 @@ function Hero({
 } ) {
   return (
     <section className={styles.hero}>
-      <CloudinaryContext cloudName={`tpierce36`}>
-        {/* TODO bottom should not be required to get styles */}
-        {bottom ? (
-          <style jsx={`true`}>{`
-            .hero {
-              height: ${minHeight && minHeight.mobile ? minHeight.mobile : 'auto'};
-            }
-
-            .hero .img-wrapper {
-              min-height: 203px;
-            }
-
-            @media (min-width: 768px) {
-              .hero {
-                height: ${minHeight && minHeight.tablet ? minHeight.tablet : 'auto'};
-              }
-            }
-
-            @media (min-width: 992px) {
-              .hero {
-                height: ${minHeight && minHeight.desktop ? minHeight.desktop : 'auto'};
-              }
-
-              .hero .img-wrapper img {
-                position: relative;
-                bottom: ${bottom}px;
-              }
-            }
-          `}</style>
-        ) : null }
+      <CloudinaryContext 
+        cloudName={`tpierce36`}
+        secure
+      >
         <div className={styles.imgWrapper}>
           <Image
             publicId={imagePath}
