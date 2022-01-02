@@ -96,7 +96,7 @@
     }
 
     .logo {
-      font-size: 18px;
+      font-size: 17px;
       line-height: 2.8;
     }
 
@@ -134,5 +134,13 @@
 
   .fbLike {
     top: 2rem;
+  }
+}
+
+@media(min-width: 1200px) {
+  .headerNav {
+    .logo {
+      font-size: 18px;
+    }
   }
 }

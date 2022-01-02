@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.0.5] - 2021-12-26
+
+### Updated
+ 
+- Comment out Quick Links
+- Add robots.txt
+
 ## [3.0.4] - 2021-12-26
 
 ### Updated
