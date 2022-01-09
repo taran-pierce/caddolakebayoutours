@@ -17,7 +17,8 @@
     "dev": "next",
     "build": "next build",
     "export": "next export",
-    "prodBuild": "rm -rf out/ && next build && next export"
+    "prodBuild": "next build && next export",
+    "setupProd": "mv out/* ./ && rm -rf out/"
   },
   "dependencies": {
     "axios": "^0.21.1",
