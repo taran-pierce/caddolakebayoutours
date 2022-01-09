@@ -1,5 +1,3 @@
-// const withSass = require('@zeit/next-sass')
-
 const jsConfig = {
   sassLoaderOptions: {
     includePaths: [
@@ -7,7 +5,10 @@ const jsConfig = {
     ]
   },
   trailingSlash: true,
-  exportPathMap: function() {
+  exportPathMap: async function (
+    defaultPathMap,
+    { dev, dir, outDir, distDir, buildId }
+  ) {
     return {
       '/': { page: '/' },
       '/about/': { page: '/about' },
@@ -16,8 +17,7 @@ const jsConfig = {
       '/things-to-do/': { page: '/things-to-do' },
       '/photo-gallery/': { page: '/photo-gallery' },
     }
-  }
+  },
 }
 
-// module.exports = withSass(jsConfig);
 module.exports = jsConfig;

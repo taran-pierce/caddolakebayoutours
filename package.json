@@ -1,8 +1,8 @@
 {
   "name": "caddolakebayoutours",
-  "version": "3.0.5",
+  "version": "4.0.0",
   "description": "",
-  "main": "pages/index.js",
+  "main": "src/pages/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/taran-pierce/caddolakebayoutours.git"
@@ -12,7 +12,7 @@
   "bugs": {
     "url": "https://github.com/taran-pierce/caddolakebayoutours/issues"
   },
-  "homepage": "https://github.com/taran-pierce/caddolakebayoutours#readme",
+  "homepage": "https://www.caddolakebayoutours.com/",
   "scripts": {
     "dev": "next",
     "build": "next build",
