@@ -1,6 +1,6 @@
 {
   "name": "caddolakebayoutours",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "",
   "main": "src/pages/index.js",
   "repository": {
@@ -18,7 +18,8 @@
     "build": "next build",
     "export": "next export",
     "prodBuild": "next build && next export",
-    "setupProd": "mv out/* ./ && rm -rf out/"
+    "cleanDir": "./cleanDir.sh",
+    "setupProd": "mv -f out/* ./ && rm -rf out/ && cp -r src/public ./"
   },
   "dependencies": {
     "axios": "^0.21.1",

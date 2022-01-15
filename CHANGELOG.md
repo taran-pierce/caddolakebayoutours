@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [4.0.1] - 2022-01-8
+- Tweak build script
+
+## [4.0.0] - 2022-01-8
+- Modify production build to no longer require htaccess to mask routes
+
+### Updated
+ 
+- Comment out Quick Links
+- Add robots.txt
+
 ## [3.0.5] - 2021-12-26
 
 ### Updated
