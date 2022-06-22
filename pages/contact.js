@@ -190,7 +190,8 @@ function Contact({
           desktop: '646px',
         }}
       />
-      <Form
+      {/* TODO comment out until it is fixed */}
+      {/* <Form
         data={formData}
         onFirstNameChange={onFirstNameChange}
         onLastNameChange={onLastNameChange}
@@ -206,7 +207,7 @@ function Contact({
           loading,
         }}
         buttonText={`Submit`}
-      />
+      /> */}
       <SideHug data={sideHugData1} />
       <SideHug data={sideHugData2} />
     </>
