@@ -16,11 +16,14 @@ const sideHugData1 = {
   textData: [
     {
       titles: [
+        '<h1>Contact Caddo Lake Bayou Tours</h1>',
         '<h2>Questions about tours?</h2>'
       ],
       paragraphs: [
         'If you have any questions please give us a call or you can contact us via email and we will get back to you as soon as possible. We will answer any questions you may have about what kind of guided boat tours we have available, what you can expect to encounter while on the tour and of course what you can and can not do on while on the tour of the lake.',
         'Come and enjoy the wonderful experience that is Caddo Lake. We can\'t wait to share it with you and don\'t forgot to like us on our <a href="https://www.facebook.com/caddotours/" target="_blank">FaceBook page</a>!',
+        '<strong>Rich McFarland <strong>Tour Guide</strong> <a href="tel:1-903-570-2169">903-570-2169</a></strong>',
+        'U.S. Coast Guard Merchant Marine Captain License',
       ],
       lists: [
         {
@@ -107,7 +110,7 @@ const formData = {
     {
       titles: [
         '<h1>Contact Caddo Lake Bayou Tours</h1>',
-        '<h4>Rich McFarland <strong>Tour Guide</strong> <a href="tel:1-903-570-2169">903-570-2169</a></h4>'
+        '<h4>Rich McFarland <strong>Tour Guide</strong> <a href="tel:1-903-570-2169">903-570-2169</a></h4>',
       ],
       paragraphs: [
         'Tours available 7 days a week, any time from sunrise to sunset. Boat tours last approximately one hour.',

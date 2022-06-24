@@ -93,6 +93,7 @@ const Footer = ( {
           ></iframe>
           <div className={styles.addressBlock}>
             <p>Rich McFarland, Tour Guide</p>
+            <p>U.S. Coast Guard Merchant Marine Captain License</p>
             <p><strong>Address:</strong> 449 Cypress Drive, Uncertain TX 75661</p>
             <p><strong>Phone: </strong><a href={`tel:1-903-570-2169`}>903-570-2169</a></p>
           </div>
