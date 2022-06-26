@@ -1,7 +1,4 @@
-import { 
-  useState,
-  useEffect,
- } from 'react';
+import { useState } from 'react';
 import Hero from '../components/Hero';
 import SideHug from '../components/SideHug';
 import Form from '../components/Form';
@@ -120,10 +117,7 @@ const formData = {
   ]
 }
 
-function Contact({
-  buttonText,
-  activeTab,
-}) {
+function Contact(props) {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [message, setMessage] = useState('');
@@ -166,20 +160,32 @@ function Contact({
 
     setLoading(true);
 
-    fetch('//caddo-email-server.herokuapp.com/send/mail', {
-      mode: 'no-cors',
-      method: 'post',
+  // Example POST method implementation:
+  async function postData(url = '', data = {}) {
+    // Default options are marked with *
+    const response = await fetch(url, {
+      method: 'POST', // *GET, POST, PUT, DELETE, etc.
+      mode: 'cors', // no-cors, *cors, same-origin
+      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
       headers: {
-        'Accept': '*/*',
-        'Content-Type': 'application/x-www-form-urlencoded'
+        'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: JSON.stringify(data)
-    }).then( ( res ) => {
+      redirect: 'follow', // manual, *follow, error
+      referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+      body: JSON.stringify(data) // body data type must match "Content-Type" header
+    });
+
+    return response;
+  }
+
+  postData('https://email-server-v2.herokuapp.com/send/mail', data)
+    .then(data => {
       setSent(true);
       setLoading(false);
       resetForm();
-    })
+    });
   }
+
 
   return (
     <>
@@ -193,8 +199,7 @@ function Contact({
           desktop: '646px',
         }}
       />
-      {/* TODO comment out until it is fixed */}
-      {/* <Form
+      <Form
         data={formData}
         onFirstNameChange={onFirstNameChange}
         onLastNameChange={onLastNameChange}
@@ -210,7 +215,7 @@ function Contact({
           loading,
         }}
         buttonText={`Submit`}
-      /> */}
+      />
       <SideHug data={sideHugData1} />
       <SideHug data={sideHugData2} />
     </>
