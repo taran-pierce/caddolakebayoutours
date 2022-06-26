@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [5.0.1] - 2022-06-26
 ### Updated
 - update sitemap
+- add back quick links
 
 ## [5.0.0] - 2022-06-26
 ### Updated
