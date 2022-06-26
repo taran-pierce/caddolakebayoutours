@@ -1,10 +1,6 @@
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^caddolakebayoutours.com [NC]
-RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
-RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
-RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
-RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
-RewriteRule ^(.*)$ https://dev.caddolakebayoutours.com/$1 [L,R=301]
+RewriteEngine On 
+RewriteCond %{HTTPS} off 
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # redirects for old pages
 redirectMatch 301 ^/about$ https://www.caddolakebayoutours.com/about/
@@ -17,13 +13,6 @@ redirectMatch 301 ^/things-to-do-in-caddo-lake$ https://www.caddolakebayoutours.
 redirectMatch 301 ^/things-to-do-in-caddo-lake.php$ https://www.caddolakebayoutours.com/things-to-do/
 redirectMatch 301 ^/contact$ https://www.caddolakebayoutours.com/contact/
 redirectMatch 301 ^/contact.php$ https://www.caddolakebayoutours.com/contact/
-
-
-RewriteCond %{HTTP_HOST} ^dev.caddolakebayoutours.com$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^dev.caddolakebayoutours.com$
-RewriteCond %{REQUEST_URI} !/caddolakebayoutours/out/
-RewriteRule (.*) /caddolakebayoutours/out/$1 [L]
-
 
 <IfModule mod_expires.c> 
   ExpiresActive On
