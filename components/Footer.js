@@ -29,26 +29,24 @@ const Footer = ( {
       href: 'https://www.travelawaits.com/2552685/outdoor-activities-near-jefferson-texas/',
       name: 'TravelAwaits',
     },
-    {
-      href: 'https://www.moonglowlodge.com/',
-      name: 'Moonglow Lodge',
-    },
+    // TODO they are temp closed
+    // {
+    //   href: 'https://www.moonglowlodge.com/',
+    //   name: 'Moonglow Lodge',
+    // },
     {
       href: 'https://www.hodgepodgecottages.com/',
       name: 'HodgePodge Cottages',
     },
     {
-      href: 'https://tpwd.texas.gov/state-parks/caddo-lake',
-      name: 'Caddo State Park',
-    },
-    {
       href: 'https://www.mikemoirphotography.com/',
       name: 'Mike Moir Photography',
     },
-    {
-      href: 'https://albertmoyerjr.com/',
-      name: 'Albert Moyer, Jr. Photography',
-    },
+    // TODO this site was linking to bad content (I think)
+    // {
+    //   href: 'https://albertmoyerjr.com/',
+    //   name: 'Albert Moyer, Jr. Photography',
+    // },
     {
       href: 'https://westerman.photo/index.php/travels/jefferson-texas/',
       name: 'WesterBlog',
@@ -98,7 +96,7 @@ const Footer = ( {
             <p><strong>Phone: </strong><a href={`tel:1-903-570-2169`}>903-570-2169</a></p>
           </div>
         </div>
-        {/* <div className={styles.item}>
+        <div className={styles.item}>
           <h2 className={styles.h4}>Quick Links</h2>
           <ul className={styles.ul}>
             {quickLinks.map(quickLink => (
@@ -114,7 +112,7 @@ const Footer = ( {
               </li>
             ))}
           </ul>
-        </div> */}
+        </div>
       </div>
       <p className={styles.copyright}>Copyright {year} &copy;</p>
     </footer>
