@@ -38,16 +38,8 @@ const Footer = ( {
       name: 'HodgePodge Cottages',
     },
     {
-      href: 'https://tpwd.texas.gov/state-parks/caddo-lake',
-      name: 'Caddo State Park',
-    },
-    {
       href: 'https://www.mikemoirphotography.com/',
       name: 'Mike Moir Photography',
-    },
-    {
-      href: 'https://albertmoyerjr.com/',
-      name: 'Albert Moyer, Jr. Photography',
     },
     {
       href: 'https://westerman.photo/index.php/travels/jefferson-texas/',
@@ -98,7 +90,7 @@ const Footer = ( {
             <p><strong>Phone: </strong><a href={`tel:1-903-570-2169`}>903-570-2169</a></p>
           </div>
         </div>
-        {/* <div className={styles.item}>
+        <div className={styles.item}>
           <h2 className={styles.h4}>Quick Links</h2>
           <ul className={styles.ul}>
             {quickLinks.map(quickLink => (
@@ -114,7 +106,7 @@ const Footer = ( {
               </li>
             ))}
           </ul>
-        </div> */}
+        </div>
       </div>
       <p className={styles.copyright}>Copyright {year} &copy;</p>
     </footer>
