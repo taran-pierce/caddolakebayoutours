@@ -178,7 +178,7 @@ function Contact(props) {
     return response;
   }
 
-  postData('https://email-server-v2.herokuapp.com/send/mail', data)
+  postData('https://caddo-email-server.herokuapp.com/send/mail', data)
     .then(data => {
       setSent(true);
       setLoading(false);
@@ -199,8 +199,7 @@ function Contact(props) {
           desktop: '646px',
         }}
       />
-      {/* TODO disable form while I work on a patch */}
-      {/* <Form
+      <Form
         data={formData}
         onFirstNameChange={onFirstNameChange}
         onLastNameChange={onLastNameChange}
@@ -216,7 +215,7 @@ function Contact(props) {
           loading,
         }}
         buttonText={`Submit`}
-      /> */}
+      />
       <SideHug data={sideHugData1} />
       <SideHug data={sideHugData2} />
     </>
