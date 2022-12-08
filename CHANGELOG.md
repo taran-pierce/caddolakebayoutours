@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.1.2] - 2022-12-7
+### Updated
+- Remove form on /contact page
+
 ## [5.1.1] - 2022-07-1
 ### Updated
 - Add quick links back
