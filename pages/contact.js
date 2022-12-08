@@ -199,7 +199,8 @@ function Contact(props) {
           desktop: '646px',
         }}
       />
-      <Form
+      {/* TODO find a fix for the form */}
+      {/* <Form
         data={formData}
         onFirstNameChange={onFirstNameChange}
         onLastNameChange={onLastNameChange}
@@ -215,7 +216,7 @@ function Contact(props) {
           loading,
         }}
         buttonText={`Submit`}
-      />
+      /> */}
       <SideHug data={sideHugData1} />
       <SideHug data={sideHugData2} />
     </>
