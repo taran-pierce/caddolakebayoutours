@@ -122,14 +122,14 @@ const sideHugData4 = {
               'title': 'Alligators',
               'paragraphs': [
                 'A member of the crocodile family, the American alligator is a living fossil from the Age of Reptiles, having survived on earth for 200 million years.',
-                '<a href="https://www.fws.gov/refuge/Caddo_Lake/wildlife/alligator.html" target="_blank" rel="noopener">More info here.</a>',
+                '<a href="https://www.fws.gov/refuge/caddo-lake/species" target="_blank" rel="noopener">More info here.</a>',
               ]
             },
             {
               'title': 'Paddlefish',
               'paragraphs': [
                 'The American paddlefish is a species of basal ray-finned fish closely related to sturgeons in the order Acipenseriformes.',
-                '<a href="https://www.fws.gov/refuge/caddo_lake/wildlife/paddlefish.html" target="_blank" rel="noopener">More info here.</a>',
+                '<a href="https://www.fws.gov/refuge/caddo-lake/species" target="_blank" rel="noopener">More info here.</a>',
               ]
             },
             {
