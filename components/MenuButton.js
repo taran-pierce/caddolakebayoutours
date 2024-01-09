@@ -16,24 +16,24 @@ function Icon({
     >
       {menuOpen ?
         (
-          <a 
-            href={`#`}
+          <div
+            // href={`#`}
             className={styles.a}
           >
             <span className={styles.spanOpen} />
             <span className={styles.spanOpen} />
             <span className={styles.spanOpenLast} />
-          </a>
+          </div>
         ) : 
         (
-          <a 
-            href={`#`}
+          <div
+            // href={`#`}
             className={styles.a}
           >
             <span className={styles.spanClosed} />
             <span className={styles.spanClosed} />
             <span className={styles.spanClosedLast} />
-          </a>
+          </div>
         )
       }
   </div>

@@ -1,0 +1,14 @@
+.fbLike {
+  position: relative;
+  top: -1rem;
+}
+
+.socialLink {
+  width: 170px;
+}
+
+@media (min-width: 992px) {  
+  .fbLike {
+    top: 2rem;
+  }
+}

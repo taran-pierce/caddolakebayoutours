@@ -100,7 +100,7 @@ function SideHug( {
               importance="low"
               loading="lazy"
               className={styles.iframe}
-            ></iframe>
+            />
           )}
         </div>
       </div>

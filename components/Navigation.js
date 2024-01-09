@@ -7,6 +7,7 @@ import {
   array,
 } from 'prop-types';
 import MenuButton from '../components/MenuButton';
+import FacebookLikeButton from './FacebookLikeButton';
 import Link from 'next/link';
 
 import styles from './navigation.module.scss';
@@ -40,12 +41,11 @@ function Navigation({
     <nav className={menuOpen ? styles.headerNavOpen : styles.headerNav}>
       <ul className={styles.mainNav}>
         <li className={styles.li}>
-          <Link href={`/`}>
-            <a 
-              className={styles.logo}
-              onClick={closeMenu}
-            >Caddo Lake Bayou Tours</a>
-          </Link>
+          <Link
+            href={`/`}
+            className={styles.logo}
+            onClick={closeMenu}
+          >Caddo Lake Bayou Tours</Link>
         </li>
         <li className={styles.dropdown}>
           <MenuButton toggleMenu={toggleMenu} menuOpen={menuOpen} />
@@ -57,19 +57,14 @@ function Navigation({
             key={index} 
             className={activeTab === link.name.toLowerCase() ? styles.li : styles.li}
           >
-            <Link href={link.href}>
-              <a 
-                className={styles.a}
-                onClick={closeMenu}
-              >{link.name}</a>
-            </Link>
+            <Link
+              href={link.href}
+              className={styles.a}
+              onClick={closeMenu}
+            >{link.name}</Link>
           </li>
         ))}
-        <li className={styles.socialLink}>
-          <div className={styles.fbLike}>
-            <div className={`fb-like`} data-href="//www.facebook.com/caddotours/" data-width="170px" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true" />
-          </div>
-        </li>
+        <FacebookLikeButton listItemRequired />
       </ul>
     </nav>
   );

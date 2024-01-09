@@ -12,11 +12,6 @@
   padding: .75rem 0;
 }
 
-.fbLike {
-  position: relative;
-  top: -1rem;
-}
-
 // logo and home link
 .mainNav {
   display: flex;
@@ -126,14 +121,6 @@
     .a {
       line-height: 1.6;
     }
-
-    .socialLink {
-      width: 170px;
-    }
-  }
-
-  .fbLike {
-    top: 2rem;
   }
 }
 
