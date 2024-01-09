@@ -3,10 +3,11 @@ import {
   object,
 } from 'prop-types';
 import { 
-  Image, 
+  Image,
   CloudinaryContext, 
   Transformation,
  } from 'cloudinary-react';
+import Loading from './Loading';
 
 import styles from './form.module.scss';
 
@@ -67,11 +68,7 @@ function Form( {
               (
                 <div className={styles.loadingScreen}>
                   <h5>Sending...</h5>
-                  <img 
-                    className={styles.rotating} 
-                    src={`/images/loading.svg`} 
-                    alt={`Contacting email server`} 
-                  />
+                  <Loading />
                 </div>
               ) :
               (
