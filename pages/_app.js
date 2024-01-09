@@ -4,6 +4,8 @@ import Footer from '../components/Footer';
 import Script from 'next/script';
 import Head from 'next/head';
 
+// this does not get placed at the top of the page
+// looks to be appended to the module css for the components used on the page
 import '../styles/base.scss';
 
 const links = [
@@ -28,7 +30,7 @@ const links = [
     "href": "/contact/"
   }
 ];
-
+ 
 function MyApp({ 
   Component, 
   pageProps,
@@ -45,6 +47,7 @@ function MyApp({
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=UA-107758647-2"
         strategy="afterInteractive"
+        defer
       />
       <script dangerouslySetInnerHTML={{ __html:
         `window.dataLayer = window.dataLayer || [];

@@ -2,11 +2,13 @@ import {
   string,
   number,
 } from 'prop-types';
-import { 
-  Image, 
-  CloudinaryContext, 
-  Transformation,
- } from 'cloudinary-react';
+import { CldImage } from 'next-cloudinary';
+
+// import { 
+//   Image, 
+//   CloudinaryContext, 
+//   Transformation,
+//  } from 'cloudinary-react';
 
 import styles from './hero.module.scss';
 
@@ -18,7 +20,14 @@ function Hero({
 } ) {
   return (
     <section className={styles.hero}>
-      <CloudinaryContext 
+      <CldImage
+        width="960"
+        height="465"
+        crop="scale"
+        src={imagePath}
+        alt={'testing stuff up'}
+      />
+      {/* <CloudinaryContext 
         cloudName={`tpierce36`}
         secure
       >
@@ -37,7 +46,7 @@ function Hero({
             />
           </Image>
         </div>
-      </CloudinaryContext>
+      </CloudinaryContext> */}
     </section>
   )
 }

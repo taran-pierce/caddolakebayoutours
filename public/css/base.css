@@ -1,18 +1,19 @@
 body {
   background-repeat: repeat;
   background-position: top left;
-  background-image: url("/static/images/topography.png");
+  /* background-image: url("/static/images/topography.png"); */
+  background-image: url("/static/images/topography.webp");
   color: #402f1d;
   margin: 0;
   padding: 0; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Do Hyeon',Helvetica,sans-serif;
+  /* font-family: 'Do Hyeon',Helvetica,sans-serif; */
   margin-top: 0;
   margin-bottom: .3rem; }
 
 html {
-  font-family: 'Noto Sans', sans-serif; }
+  /* font-family: 'Noto Sans', sans-serif; } */
 
 p {
   line-height: 1.8;

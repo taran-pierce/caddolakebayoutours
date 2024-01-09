@@ -30,6 +30,7 @@
     "lodash": "^4.17.20",
     "mixin-deep": "^1.3.2",
     "next": "^14.0.4",
+    "next-cloudinary": "^5.18.0",
     "normalize-scss": "^7.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
