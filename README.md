@@ -1,8 +1,9 @@
-# caddolakebayoutours `3.0.0`
-Caddo Lake Boat Tours website built in React.
+# caddolakebayoutours `6.0.0`
+Caddo Lake Boat Tours website built in React using NextJS.
 
 ## Setup for development
 * `git clone https://github.com/taran-pierce/caddolakebayoutours.git`
+* cd into repo and run `npm install`
 * `npm run dev` - Compiles the site and starts the dev server
 * Pages are all located in `/pages/`
 * Components are located in `/components/`
@@ -36,5 +37,5 @@ Once all changes are ready to be deployed to production.
   |-/static
   |  |-/css
   |  |-/images
-  |-/styles ( not sure I actually use this )
+  |-/styles
 ```
