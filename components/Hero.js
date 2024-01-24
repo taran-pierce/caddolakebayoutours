@@ -1,64 +1,52 @@
 import {
   string,
-  number,
 } from 'prop-types';
+import {
+  useEffect,
+  useState,
+  useRef,
+} from 'react';
 import { CldImage } from 'next-cloudinary';
-
-// import { 
-//   Image, 
-//   CloudinaryContext, 
-//   Transformation,
-//  } from 'cloudinary-react';
-
 import styles from './hero.module.scss';
 
 function Hero({
   imagePath,
   alt,
-  bottom,
-  minHeight,
 } ) {
+  const [heroDimensions, setHeroDimensions] = useState({
+    height: undefined,
+    width: undefined,
+  });
+  
+  const ref = useRef(undefined);
+
+  useEffect(() => {
+    const { current } = ref;
+
+    setHeroDimensions({
+      height: current.clientHeight,
+      width: current.clientWidth,
+    });
+  }, []);
+
   return (
-    <section className={styles.hero}>
-      <CldImage
-        width="960"
-        height="465"
-        crop="scale"
-        src={imagePath}
-        alt={'testing stuff up'}
-      />
-      {/* <CloudinaryContext 
-        cloudName={`tpierce36`}
-        secure
-      >
-        <div className={styles.imgWrapper}>
-          <Image
-            publicId={imagePath}
-            responsive
-            width={`auto`}
-            crop={`scale`}
-            alt={alt}
-          >
-            <Transformation
-              quality={`90`}
-              fetchFormat={`auto`}
-              gravity={`auto`}
-            />
-          </Image>
-        </div>
-      </CloudinaryContext> */}
+    <section className={styles.hero} ref={ref}>
+      {heroDimensions.height && heroDimensions.width && (
+        <CldImage
+          width={heroDimensions.width}
+          height={heroDimensions.height}
+          crop='fill'
+          src={imagePath}
+          alt={alt}
+        />
+      )}
     </section>
   )
 }
 
-Hero.defaultProps = {
-  bottom: 0,
-};
-
 Hero.propTypes = {
   imagePath: string.isRequired,
   alt: string.isRequired,
-  bottom: number,
 }
 
 export default Hero;
