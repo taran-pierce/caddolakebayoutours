@@ -2,7 +2,6 @@ import Layout from '../components/Layout';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Script from 'next/script';
-import Head from 'next/head';
 
 // this does not get placed at the top of the page
 // looks to be appended to the module css for the components used on the page

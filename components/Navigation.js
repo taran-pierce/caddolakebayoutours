@@ -8,7 +8,6 @@ import {
 } from 'prop-types';
 import MenuButton from '../components/MenuButton';
 import FacebookLikeButton from './FacebookLikeButton';
-import Link from 'next/link';
 
 import styles from './navigation.module.scss';
 
@@ -41,11 +40,11 @@ function Navigation({
     <nav className={menuOpen ? styles.headerNavOpen : styles.headerNav}>
       <ul className={styles.mainNav}>
         <li className={styles.li}>
-          <Link
+          <a
             href={`/`}
-            className={styles.logo}
+            className={styles.log}
             onClick={closeMenu}
-          >Caddo Lake Bayou Tours</Link>
+          >Caddo Lake Bayou Tours</a>
         </li>
         <li className={styles.dropdown}>
           <MenuButton toggleMenu={toggleMenu} menuOpen={menuOpen} />
@@ -57,11 +56,11 @@ function Navigation({
             key={index} 
             className={activeTab === link.name.toLowerCase() ? styles.li : styles.li}
           >
-            <Link
+            <a
               href={link.href}
               className={styles.a}
               onClick={closeMenu}
-            >{link.name}</Link>
+            >{link.name}</a>
           </li>
         ))}
         <FacebookLikeButton listItemRequired />
