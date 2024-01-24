@@ -42,7 +42,7 @@ function Navigation({
         <li className={styles.li}>
           <a
             href={`/`}
-            className={styles.log}
+            className={styles.logo}
             onClick={closeMenu}
           >Caddo Lake Bayou Tours</a>
         </li>

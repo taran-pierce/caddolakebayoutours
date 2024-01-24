@@ -1,11 +1,14 @@
 import Layout from '../components/Layout';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import router from 'next/router';
 import Script from 'next/script';
+import { NProgress } from 'nprogress';
 
 // this does not get placed at the top of the page
 // looks to be appended to the module css for the components used on the page
 import '../styles/base.scss';
+import 'nprogress/nprogress.css';
 
 const links = [
   {
@@ -29,6 +32,15 @@ const links = [
     "href": "/contact/"
   }
 ];
+
+router.events.on('routeChangeStart', () => {
+  console.log({
+    NProgress,
+  });
+  NProgress.start()
+});
+router.events.on('routeChangeComplete', () => NProgress.done());
+router.events.on('routeChangeError', () => NProgress.done());
  
 function MyApp({ 
   Component, 

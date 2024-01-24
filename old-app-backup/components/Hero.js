@@ -36,6 +36,8 @@ function Hero({
           width={heroDimensions.width}
           height={heroDimensions.height}
           crop='fill'
+          gravity='center'
+          quality="50"
           src={imagePath}
           alt={alt}
         />
