@@ -1,0 +1,19 @@
+.header {
+  background: var(--primary-color);
+  overflow: hidden;
+
+  h1 {
+    color: var(--white);
+    font-size: 2.2rem;
+    margin: 0;
+    font-weight: 700;
+    line-height: 2;
+  }
+
+  .logoWrapper {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+  }
+}

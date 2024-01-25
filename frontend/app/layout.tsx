@@ -1,4 +1,9 @@
-import Header from "./components/Header"
+'use client'
+
+import Header from "./components/Header";
+import { MenuStateProvider } from "./utils/menuState";
+
+import './global.scss';
 
 export default function RootLayout({
   children,
@@ -7,11 +12,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en-US">
-      <body>
-        <Header />
-        {children}
-        <footer>Footer</footer>
-      </body>
+      <MenuStateProvider>
+        <body>
+          <Header />
+          {children}
+          <footer>Footer</footer>
+        </body>
+      </MenuStateProvider>
     </html>
   )
 };

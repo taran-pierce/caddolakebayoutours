@@ -1,0 +1,46 @@
+:root {
+  --black: #000;
+  --white: #fff;
+  --primary-color: #736d1f;
+  --primary-color-light: #867f25;
+  --primary-color-dark: #756f1f;
+  --transparent-black-light: rgba(0,0,0,.3);
+  --transparent-black-dark: rgba(0,0,0,.6);
+  --font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 1.5rem;
+  line-height: 2;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-family);
+}
+
+

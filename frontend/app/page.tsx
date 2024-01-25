@@ -1,4 +1,8 @@
-export default function Page() {
+'use client'
+
+import { object } from 'prop-types';
+
+export function Page() {
   return (
     <main>
       <h1>Hello Home Page!</h1>
@@ -11,3 +15,9 @@ export default function Page() {
     </main>
     );
 };
+
+Page.propTypes = {
+  query: object,
+};
+
+export default Page;
