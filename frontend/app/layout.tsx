@@ -2,10 +2,11 @@
 
 import Header from "./components/Header";
 import { MenuStateProvider } from "./utils/menuState";
+import Footer from "./components/Footer";
 
 import './global.scss';
 
-export default function RootLayout({
+export function RootLayout({
   children,
 }: {
   children: React.ReactNode
@@ -16,9 +17,11 @@ export default function RootLayout({
         <body>
           <Header />
           {children}
-          <footer>Footer</footer>
+          <Footer />
         </body>
       </MenuStateProvider>
     </html>
   )
 };
+
+export default RootLayout;

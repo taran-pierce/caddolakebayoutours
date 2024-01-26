@@ -1,0 +1,22 @@
+.heading {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: .5rem;
+}
+
+.listItems {
+  list-style-type: none;
+  padding-left: 0;
+
+  a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-size: 1.8rem;
+  }
+}
+
+.map {
+  padding: 0 1rem;
+  margin-top: 1rem;
+  width: 100%;
+}

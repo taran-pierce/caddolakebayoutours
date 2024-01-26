@@ -1,0 +1,16 @@
+.container {
+  padding: 0 var(--container-padding);
+}
+
+@media(min-width: 992px) {
+  .container {
+    border-left: 1px solid var(--transparent-black-dark);
+    border-right: 1px solid var(--transparent-black-dark);
+    margin: 0 auto;
+    max-width: 960px;
+
+    h1 {
+      margin-top: 0;
+    }
+  }
+}

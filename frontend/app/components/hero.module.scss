@@ -1,0 +1,17 @@
+.hero {
+  overflow: hidden;
+  height: 220px;
+  border-bottom: 5px solid var(--primary-color);
+}
+
+@media(min-width: 768px) {
+  .hero {
+    height: 330px;
+  }
+}
+
+@media(min-width: 992px) {
+  .hero {
+    height: 400px;
+  }
+}

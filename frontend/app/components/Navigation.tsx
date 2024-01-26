@@ -2,10 +2,11 @@
 
 import Link from 'next/link';
 import { useMenu } from '../utils/menuState.js';
+import { getWindowDimensions } from '../utils/getDimensions.js';
 
 import styles from './navigation.module.scss';
 
-const links = [
+export const links = [
   {
     name: 'About',
     href: '/about/'
@@ -34,7 +35,16 @@ export default function Navigation() {
     closeMenu,
   } = useMenu();
 
-  const navigationClass = menuOpen ? styles.menuOpen : styles.menuClose;
+  const {
+    height,
+    width,
+  } = getWindowDimensions();
+
+  let navigationClass = menuOpen ? styles.menuOpen : styles.menuClose;
+
+  if (width && width >= 992) {
+    navigationClass = styles.menuDesktop;
+  }
 
   function handleClick(e: any) {
     closeMenu();

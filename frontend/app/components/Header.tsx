@@ -14,18 +14,20 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <div className={styles.logoWrapper}>
-        <Link 
-          href={{
-            pathname: "/"
-          }}
-          onClick={() => handleClick()}
-        >
-          <h1>Caddo Lake Bayou Tours</h1>
-        </Link>
-        <MenuToggle />
+      <div className={styles.headerContainer}>
+        <div className={styles.logoWrapper}>
+          <Link 
+            href={{
+              pathname: "/"
+            }}
+            onClick={() => handleClick()}
+          >
+            <h1>Caddo Lake Bayou Tours</h1>
+          </Link>
+          <MenuToggle />
+        </div>
+        <Navigation />
       </div>
-      <Navigation />
     </header>
   );
 };
