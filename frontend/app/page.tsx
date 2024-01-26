@@ -1,6 +1,5 @@
 'use client'
 
-import { object } from 'prop-types';
 import Hero from './components/Hero';
 import SplitContent from './components/SplitContent';
 
@@ -27,7 +26,7 @@ const sideHugData1 = {
   ]
 };
 
-export function Page() {
+export default function Page() {
   return (
     <main>
       <Hero
@@ -41,9 +40,3 @@ export function Page() {
     </main>
     );
 };
-
-Page.propTypes = {
-  query: object,
-};
-
-export default Page;

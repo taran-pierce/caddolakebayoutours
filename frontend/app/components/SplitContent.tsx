@@ -10,7 +10,10 @@ export default function SplitContent({
   image,
   textData,
 }: {
-  image: object,
+  image: {
+    path: string,
+    alt: string,
+  },
   textData: Array<object>,
 }) {
   const [imageDimensions, setImageDimensions] = useState({

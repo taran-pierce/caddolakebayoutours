@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 
 import './global.scss';
 
-export function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
@@ -23,5 +23,3 @@ export function RootLayout({
     </html>
   )
 };
-
-export default RootLayout;
