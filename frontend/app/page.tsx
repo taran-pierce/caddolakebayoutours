@@ -36,6 +36,12 @@ export default function Page() {
       <SplitContent 
         image={sideHugData1.image}
         textData={sideHugData1.textData}
+        imageFirst={false}
+      />
+      <SplitContent 
+        image={sideHugData1.image}
+        textData={sideHugData1.textData}
+        imageFirst={true}
       />
     </main>
     );

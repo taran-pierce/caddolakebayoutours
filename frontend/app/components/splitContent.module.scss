@@ -1,5 +1,44 @@
 .imageWrapper {
-  overflow: hidden;
+  width: 100%;
+  height: 300px;
   margin-left: var(--container-negative-padding);
   margin-right: var(--container-negative-padding);
+}
+
+.imageLast {
+  border-bottom: 3px solid var(--primary-color);
+  overflow: hidden;
+}
+
+.textWrapper {
+  padding-bottom: 2rem;
+} 
+
+@media(min-width: 992px) {
+  .imageWrapper {
+    overflow: hidden;
+    margin-right: var(--container-padding);
+    height: auto;
+
+    img {
+      display: block;
+    }
+  }
+
+  .imageLast {
+    .imageWrapper {
+      margin-left: var(--container-padding);
+      margin-right: var(--container-negative-padding);
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .textWrapper {
+    padding-top: var(--container-padding);
+    padding-bottom: var(--container-padding);
+  }
 }
