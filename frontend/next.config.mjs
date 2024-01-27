@@ -5,7 +5,11 @@ const nextConfig = {
     CONTENTFUL_SPACE_ID: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
     CONTENTFUL_ENVIRONMENT: process.env.CONTENTFUL_ENVIRONMENT,
   },
-  output: 'export'
+  output: 'export',
+  // TODO or set up a loader
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;

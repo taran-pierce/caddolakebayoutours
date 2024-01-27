@@ -7,7 +7,20 @@ const client = createClient({
 
 export const getContent = async (id) => {
   try {
-    const response = await client.getEntry({id});
+    const response = await client.getEntries().then((entries) => {
+      const { items } = entries;
+
+      const selectedItem = items && items.filter((item) => item.sys.id === id)[0];
+
+      if (!selectedItem) {
+        // we had an issue
+        return null;
+      }
+
+      const content = selectedItem.fields;
+
+      return content;
+    });
 
     return response;
   } catch (error) {
