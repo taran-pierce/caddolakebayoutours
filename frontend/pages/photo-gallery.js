@@ -12,12 +12,6 @@ export default function Page({
     hero,
   } = content || null;
 
-  console.log({
-    content,
-    hero,
-    splitContentSections,
-  });
-
   return (
     <main>
       <Head>

@@ -1,3 +1,8 @@
+.section {
+  border-bottom: 3px solid var(--primary-color);
+  border-top: 3px solid var(--primary-color);
+}
+
 .imageWrapper {
   width: 100%;
   height: 300px;
@@ -6,15 +11,20 @@
 }
 
 .imageLast {
-  border-bottom: 3px solid var(--primary-color);
   overflow: hidden;
 }
 
 .textWrapper {
-  padding-bottom: 2rem;
+  padding-bottom: var(--container-padding);
+  padding-top: var(--container-padding);
 } 
 
 @media(min-width: 992px) {
+  .section {
+    border-top: 0;
+    border-bottom: 0;
+  }
+
   .imageWrapper {
     overflow: hidden;
     margin-right: var(--container-padding);

@@ -12,7 +12,7 @@ export default function Page({
     splitContentSections,
     hero,
   } = content || null;
-  
+
   return (
     <main>
       <Head>

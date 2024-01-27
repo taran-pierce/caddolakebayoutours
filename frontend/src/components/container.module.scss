@@ -1,4 +1,5 @@
 .container {
+  background: var(--white);
   padding: 0 var(--container-padding);
 }
 
@@ -7,9 +8,12 @@
     background-color: var(--white);
     border-left: 1px solid var(--transparent-black-dark);
     border-right: 1px solid var(--transparent-black-dark);
-    box-shadow: 0 1px 8px var(--transparent-black-dark);
     margin: 0 auto;
     max-width: 960px;
+
+    &.borderTop {
+      border-top: 3px solid var(--primary-color);
+    }
 
     h1 {
       margin-top: 0;

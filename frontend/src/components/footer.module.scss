@@ -12,6 +12,9 @@
     color: var(--primary-color);
     text-decoration: underline;
     font-size: 1.8rem;
+    display: block;
+    padding: 1.5rem;
+    padding-left: 0;
   }
 }
 
@@ -24,5 +27,16 @@
 @media(min-width: 992px) {
   .heading {
     margin-top: 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 2rem;
+    padding-top: 2rem;
+
+    iframe {
+      margin: 0;
+    }
   }
 }

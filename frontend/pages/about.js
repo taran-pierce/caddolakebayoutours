@@ -12,10 +12,6 @@ export default function Page({
     hero,
   } = content || null;
 
-  console.log({
-    content,
-  });
-
   return (
     <main>
       <Head>

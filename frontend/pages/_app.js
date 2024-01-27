@@ -4,7 +4,7 @@ import Header from '../src/components/Header';
 import Footer from '../src/components/Footer';
 
 // TODO  move this file or something
-import '../app/global.scss';
+import '../src/app/globals.css';
  
 export default function MyApp({ Component, pageProps }) {
   return (

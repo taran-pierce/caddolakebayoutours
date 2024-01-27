@@ -1,8 +1,8 @@
 'use client'
 
 import Link from 'next/link';
-import { useMenu } from '../utils/menuState.js';
-import { getWindowDimensions } from '../utils/getDimensions.js';
+import { useMenu } from '../utils/menuState';
+import { getWindowDimensions } from '../utils/getDimensions';
 
 import styles from './navigation.module.scss';
 
