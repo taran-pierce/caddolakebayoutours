@@ -1,8 +1,35 @@
 import Link from 'next/link';
 import Container from './Container';
 import { links } from './Navigation';
+import { DOMAttributes } from 'react';
 
 import styles from './footer.module.scss';
+
+// TODO probably a better way to type the Google Map
+// using their library that provides the Web Component though
+// and the docs did not go over how to type those specifically
+type GoogleMap<T> = Partial<T & DOMAttributes<T> & {
+  children: any,
+  center: any,
+  zoom: any,
+  style: any,
+  "map-id": any,
+}>;
+
+type GoogleMapMarker<T> = Partial<T & DOMAttributes<T> & {
+  children: any,
+  position: any,
+  title: any,
+}>;
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      ['gmp-map']: GoogleMap<any>;
+      ['gmp-advanced-marker']: GoogleMapMarker<any>;
+    }
+  }
+}
 
 const quickLinks = [
   {
@@ -55,15 +82,19 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <iframe
-              title="Google Maps"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13428.266285705415!2d-94.15337171079648!3d32.7108586943788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc79227c114d5c01d!2sCaddo+Lake+Bayou+Tours!5e0!3m2!1sen!2sus!4v1528217775632"
-              width="100%"
-              height="450"
-              allowFullScreen
-              loading="lazy"
-              className={styles.map}
-            />
+            {/* TODO look into the various things that can be configured */}
+            {/*  https://github.com/googlemaps/extended-component-library */}
+            {/*  https://developers.google.com/maps/documentation/javascript/reference/advanced-markers */}
+            <gmp-map
+              center="32.71221923828125,-94.12107849121094"
+              zoom="17"
+              map-id="caddo-lake-location"
+              style={{
+                maxHeight: 400,
+              }}
+            >
+              <gmp-advanced-marker position="32.71221923828125,-94.12107849121094" title="Caddo Lake Bayou Tours"></gmp-advanced-marker>
+            </gmp-map>
             <div className={styles.addressBlock}>
               <p>Rich McFarland, Tour Guide</p>
               <p>U.S. Coast Guard Merchant Marine Captain License</p>

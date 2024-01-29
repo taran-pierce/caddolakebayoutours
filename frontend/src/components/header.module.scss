@@ -17,6 +17,16 @@
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 2rem;
+
+    a {
+      text-decoration: none;
+      transition: all .3s ease-in;
+
+      &:hover {
+        text-shadow: 0 4px 8px var(--transparent-black-dark);
+        text-decoration: none;
+      }
+    }
   }
 }
 

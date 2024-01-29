@@ -12,6 +12,13 @@
     font-weight: 700;
     line-height: 2;
     text-decoration: none;
+    transition: all .3s ease-in;
+
+    &:hover {
+      color: var(--white);
+      text-shadow: 0 4px 8px var(--transparent-black-dark);
+      text-decoration: underline;
+    }
   }
 }
 
