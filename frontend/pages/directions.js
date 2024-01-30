@@ -25,6 +25,7 @@ export default function Page({
       )}
       {splitContentSections && splitContentSections.map((splitContentSection) => (
         <SplitContent
+          key={splitContentSection.sys.id}
           contentfulData={splitContentSection}
           imageFirst={splitContentSection?.fields?.imageFirst}
         />

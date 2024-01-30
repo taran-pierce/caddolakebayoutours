@@ -6,6 +6,7 @@ import {
 import { CldImage } from "next-cloudinary";
 import Container from './Container';
 import Button from './Button';
+import GoogleMap from './GoogleMap';
 import { getWindowDimensions } from '../utils/getDimensions';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
@@ -30,10 +31,13 @@ export default function SplitContent({
 
   const {
     text,
-    image: contentfulImage,
+    // image: contentfulImage,
     imageSource,
     imageAltText,
+    enableGoogleMap,
   } = contentfulData.fields;
+
+  const hasImage = imageSource && imageAltText.length > 0;
 
   // options for custom components in contentful
   const options = {
@@ -112,12 +116,14 @@ export default function SplitContent({
           {!imageFirst && (
             <>
               <TextWrapper />
-              <ImageWrapper />
+              {hasImage && (<ImageWrapper />)}
+              {enableGoogleMap && (<GoogleMap />)}
             </>
           )}
           {imageFirst && (
             <>
-              <ImageWrapper />
+              {hasImage && (<ImageWrapper />)}
+              {enableGoogleMap && (<GoogleMap />)}
               <TextWrapper />
             </>
           )}
