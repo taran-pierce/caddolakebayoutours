@@ -14,10 +14,6 @@ export default function Page({
     hero,
   } = content || null;
 
-  console.log({
-    photoGalleryImages,
-  });
-
   return (
     <main>
       <Head>
@@ -55,7 +51,9 @@ export async function getStaticProps() {
   // TODO get images from Cloudinary
   // need to go through Cloudinary and tag my images for the "gallery"
   // that way I can just grab them all
-  const photoGalleryImages = await cloudinary.v2.api.resources_by_tag('gallery', {}).then((res) => {
+  const photoGalleryImages = await cloudinary.v2.api.resources_by_tag('gallery', {
+    max_results: 50,
+  }).then((res) => {
     const imageArray = res?.resources;
 
     return imageArray;

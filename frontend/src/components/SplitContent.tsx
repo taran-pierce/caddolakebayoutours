@@ -111,7 +111,7 @@ export default function SplitContent({
       <Container
         borderBottom
       >
-        <div className={`${styles.grid} ${styles.textOnly}`}>
+        <div className={`${styles.grid} ${(!imageSource) ? styles.textOnly : ''}`}>
           {!imageFirst && (
             <>
               <TextWrapper />
