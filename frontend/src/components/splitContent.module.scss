@@ -25,6 +25,10 @@
     border-bottom: 0;
   }
 
+  .googleMapWrapper {
+    margin-right: -2rem;
+  }
+
   .imageWrapper {
     overflow: hidden;
     margin-right: var(--container-padding);
@@ -45,6 +49,10 @@
   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    &.textOnly {
+      grid-template-columns: auto;
+    }
   }
 
   .textWrapper {

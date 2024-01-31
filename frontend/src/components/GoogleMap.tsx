@@ -1,7 +1,5 @@
 import { DOMAttributes } from 'react';
 
-import styles from './googleMap.module.scss';
-
 // TODO probably a better way to type the Google Map
 // using their library that provides the Web Component though
 // and the docs did not go over how to type those specifically
@@ -36,7 +34,8 @@ export default function GoogleMap() {
     <gmp-map
       center="32.71221923828125,-94.12107849121094"
       zoom="17"
-      map-id="caddo-lake-location"
+      map-id="Caddo Lake Bayou Tours"
+      id="caddo-lake-location"
     >
       <gmp-advanced-marker 
         position="32.71221923828125,-94.12107849121094"

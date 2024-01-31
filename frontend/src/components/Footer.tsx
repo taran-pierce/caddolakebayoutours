@@ -55,7 +55,7 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-          <div className={styles.centerColumn}>
+          <div className={styles.mapColumn}>
             <GoogleMap />
             <div className={styles.addressBlock}>
               <p>Rich McFarland, Tour Guide</p>

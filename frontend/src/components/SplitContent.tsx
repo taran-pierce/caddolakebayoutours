@@ -31,7 +31,6 @@ export default function SplitContent({
 
   const {
     text,
-    // image: contentfulImage,
     imageSource,
     imageAltText,
     enableGoogleMap,
@@ -112,18 +111,26 @@ export default function SplitContent({
       <Container
         borderBottom
       >
-        <div className={styles.grid}>
+        <div className={`${styles.grid} ${styles.textOnly}`}>
           {!imageFirst && (
             <>
               <TextWrapper />
               {hasImage && (<ImageWrapper />)}
-              {enableGoogleMap && (<GoogleMap />)}
+              {enableGoogleMap && (
+                <div className={styles.googleMapWrapper}>
+                  <GoogleMap />
+                </div>
+              )}
             </>
           )}
           {imageFirst && (
             <>
               {hasImage && (<ImageWrapper />)}
-              {enableGoogleMap && (<GoogleMap />)}
+              {enableGoogleMap && (
+                <div className={styles.googleMapWrapper}>
+                  <GoogleMap />
+                </div>
+              )}
               <TextWrapper />
             </>
           )}

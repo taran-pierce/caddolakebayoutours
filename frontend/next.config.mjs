@@ -9,7 +9,7 @@ const nextConfig = {
   // TODO or set up a loader
   images: {
     unoptimized: true,
-  },
+  }
 };
 
 export default nextConfig;

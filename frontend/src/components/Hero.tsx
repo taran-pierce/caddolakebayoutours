@@ -44,7 +44,7 @@ export default function Hero({
           quality="50"
           src={imagePath}
           alt={alt}
-          // priority={true}
+          priority={true}
         />
       )}
     </section>
