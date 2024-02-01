@@ -7,6 +7,7 @@ import { CldImage } from "next-cloudinary";
 import Container from './Container';
 import Button from './Button';
 import GoogleMap from './GoogleMap';
+import Form from './Form';
 import { getWindowDimensions } from '../utils/getDimensions';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
@@ -34,6 +35,7 @@ export default function SplitContent({
     imageSource,
     imageAltText,
     enableGoogleMap,
+    enableForm,
   } = contentfulData.fields;
 
   const hasImage = imageSource && imageAltText.length > 0;
@@ -89,6 +91,9 @@ export default function SplitContent({
       <div className={styles.textWrapper}>
         {text && (
           documentToReactComponents(text, options)
+        )}
+        {enableForm && (
+          <Form />
         )}
       </div>
     );
