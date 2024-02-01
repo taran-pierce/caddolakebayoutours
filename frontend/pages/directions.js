@@ -16,6 +16,7 @@ export default function Page({
     <main>
       <Head>
         <title>{content.pageTitle}</title>
+        <link rel="canonical" href="https://www.caddolakebayoutours.com/directions/" />
       </Head>
       {hero && (
         <Hero
