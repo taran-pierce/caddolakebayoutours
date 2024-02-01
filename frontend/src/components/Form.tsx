@@ -83,35 +83,37 @@ export default function Form() {
           id="contact"
           className={styles.form}
         >
-          <label id="name" htmlFor="name">Name: 
-            <input
-              id="name"
-              type="text"
-              name="name"
-              placeholder='Name'
-              required
-              className={`${hasError.hasError ? styles.hasError : ''}`}
-            />
-          </label>
-          <label id="email" htmlFor="email">Email: 
-            <input
-              id="email"
-              name="email"
-              type="email"
-              placeholder='Email'
-              required
-              className={`${hasError.hasError ? styles.hasError : ''}`}
-            />
-          </label>
-          <label id="message" htmlFor="message">Message: 
-            <textarea
-              id="message"
-              name="message"
-              required
-              className={`${hasError.hasError ? styles.hasError : ''}`}
-            ></textarea>
-          </label>
-          <button type="submit">Submit</button>
+          <fieldset disabled={isLoading}>
+            <label id="name" htmlFor="name">Name: 
+              <input
+                id="name"
+                type="text"
+                name="name"
+                placeholder='Name'
+                required
+                className={`${hasError.hasError ? styles.hasError : ''}`}
+              />
+            </label>
+            <label id="email" htmlFor="email">Email: 
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder='Email'
+                required
+                className={`${hasError.hasError ? styles.hasError : ''}`}
+              />
+            </label>
+            <label id="message" htmlFor="message">Message: 
+              <textarea
+                id="message"
+                name="message"
+                required
+                className={`${hasError.hasError ? styles.hasError : ''}`}
+              ></textarea>
+            </label>
+            <button type="submit">Submit</button>
+          </fieldset>
         </form>
       )}
       {hasSubmitted && (
