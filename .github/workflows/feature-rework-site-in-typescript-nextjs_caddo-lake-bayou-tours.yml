@@ -32,8 +32,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18.x'
+
+        env:
           CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
-          publish-profile: ${{ secrets.AZURE_WEBAPP }}
 
       - name: npm install, build, and test
         run: |
