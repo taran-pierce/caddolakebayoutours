@@ -1,8 +1,8 @@
 {
   "name": "caddolakebayoutours",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "description": "Caddo Lake Bayou Tours website",
-  "main": "index.js",
+  "main": "dist/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
