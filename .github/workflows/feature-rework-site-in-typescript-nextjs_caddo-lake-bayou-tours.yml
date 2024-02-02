@@ -20,7 +20,7 @@ env:
   CONTENTFUL_PREVIEW_SECRET: ${{ secrets.CONTENTFUL_PREVIEW_SECRET }}
   CONTENTFUL_REVALIDATE_SECRET: ${{ secrets.CONTENTFUL_REVALIDATE_SECRET }}
   CONTENTFUL_ENVIRONMENT: ${{ secrets.CONTENTFUL_ENVIRONMENT }}
-  NEXT_PUBLIC_GOOGLE_MAP_API_KEY: ${{ secrets.NEXT_PUBLIC_GOOGLE_MAP_API_KEY }}
+  NEXT_PUBLIC_GOOGLE_MAP_API_KEY: ${{ vars.NEXT_PUBLIC_GOOGLE_MAP_API_KEY }}
 
 jobs:
   build:
@@ -32,6 +32,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18.x'
+          publish-profile: ${{ secretes.AZURE_WEBAPP }}
 
       - name: npm install, build, and test
         run: |
