@@ -1,4 +1,4 @@
-# caddolakebayoutours `7.1.0`
+# caddolakebayoutours `7`
 Caddo Lake Boat Tours website built in React using NextJS.
 
 ## Setup for development

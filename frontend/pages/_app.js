@@ -5,7 +5,6 @@ import { MenuStateProvider } from '../src/utils/menuState';
 import Header from '../src/components/Header';
 import Footer from '../src/components/Footer';
 
-// TODO  move this file or something
 import '../src/app/globals.css';
  
 export default function MyApp({ Component, pageProps }) {

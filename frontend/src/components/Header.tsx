@@ -1,7 +1,10 @@
+import Link from 'next/link';
+import {
+  useEffect,
+  useState,
+} from 'react';
 import Navigation from "./Navigation";
 import MenuToggle from "./MenuToggle";
-import Link from 'next/link';
-import { useEffect, useState } from 'react';
 import { useMenu } from '../utils/menuState';
 
 import styles from './header.module.scss';

@@ -1,4 +1,8 @@
-import { useRef, useState, useEffect } from 'react';
+import {
+  useRef,
+  useState,
+  useEffect,
+} from 'react';
 import { CldImage } from 'next-cloudinary';
 import Container from './Container';
 import { getWindowDimensions } from '@/utils/getDimensions';
