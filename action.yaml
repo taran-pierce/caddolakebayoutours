@@ -1,0 +1,5 @@
+name: 'Caddo Lake Bayou Tours'
+description: 'build for Azure'
+runs:
+  using: 'node20'
+  main: 'dist/index.html'
