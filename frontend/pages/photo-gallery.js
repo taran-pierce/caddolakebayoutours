@@ -49,9 +49,8 @@ export async function getStaticProps() {
   const page = await getContent("3nrYNfkOdzKEeYhCfeLGPt");
   const content = page;
 
-  // TODO get images from Cloudinary
-  // need to go through Cloudinary and tag my images for the "gallery"
-  // that way I can just grab them all
+
+  // get images from Cloudinary tagged with 'gallery'
   const photoGalleryImages = await cloudinary.v2.api.resources_by_tag('gallery', {
     max_results: 50,
   }).then((res) => {

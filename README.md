@@ -11,3 +11,17 @@ Caddo Lake Boat Tours website built in React using NextJS.
 ## Build for production
 Merging into the branch (currently feature/rework-site-in-typescript-nextjs) kicks off the build in Azure
 
+### Items to fix
+- PWA
+  - URL is not valid
+  - "display" property is not valid
+- Facebook Share goes away when you navigate
+  - also not positioned correctly
+- Contact form is not working
+  - looks like its still using localhost
+  - input fields also empty out randomly
+- Google Map
+  - needs to have "Caddo Lake Bayou Tours" selected
+- Photo Gallery
+  - better transitions
+  - better navigation

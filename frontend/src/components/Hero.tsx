@@ -45,6 +45,7 @@ export default function Hero({
           src={imagePath}
           alt={alt}
           priority={true}
+          format='webp'
         />
       )}
     </section>

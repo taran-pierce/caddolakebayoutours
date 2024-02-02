@@ -6,9 +6,9 @@ const nextConfig = {
     CONTENTFUL_ENVIRONMENT: process.env.CONTENTFUL_ENVIRONMENT,
   },
   output: 'export',
-  // TODO or set up a loader
   images: {
-    unoptimized: true,
+    loader: 'custom',
+    loaderFile: './src/utils/loader.js',
   }
 };
 

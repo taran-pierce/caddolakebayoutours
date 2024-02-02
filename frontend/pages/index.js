@@ -13,6 +13,10 @@ export default function Page({
     hero,
   } = content || null;
 
+  console.log({
+    hero,
+  });
+
   return (
     <main>
       <Head>
