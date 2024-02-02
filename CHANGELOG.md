@@ -4,12 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [7.1.3] - 2024-02-02
+### Updated
+- commenting out action.yaml
+- updated titles for pages in CMS
+
 ## [7.1.2] - 2024-02-02
 ### Updated
 - Updated to latest nextjs `v14.1.0`
 - Updated with new next-cloudinary module
 - Connected to Contentful for content
 - Created a loader for the images for static build
+- Merges deploy with Azure to dev
 
 ## [5.1.3] - 2022-12-8
 ### Updated
