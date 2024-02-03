@@ -20,6 +20,8 @@ export default function SplitContent({
 
   const hasImage = imageSource && imageAltText.length > 0;
 
+  const textColumnOnly = (!imageSource && !enableGoogleMap);
+
   return (
     <section
       className={`${styles.section} ${!imageFirst ? styles.imageLast : ''}`}
@@ -27,14 +29,14 @@ export default function SplitContent({
       <Container
         borderBottom
       >
-        <div className={`${styles.grid} ${(!imageSource) ? styles.textOnly : ''}`}>
+        <div className={`${styles.grid} ${(textColumnOnly) ? styles.textOnly : ''}`}>
           {!imageFirst && (
             <>
               <TextBlock data={contentfulData.fields} />
               {hasImage && (<ImageBlock imageSource={imageSource} imageAltText={imageAltText} />)}
               {enableGoogleMap && (
                 <div className={styles.googleMapWrapper}>
-                  <GoogleMap />
+                  <GoogleMap id="splitContentMap" />
                 </div>
               )}
             </>
@@ -44,7 +46,7 @@ export default function SplitContent({
               {hasImage && (<ImageBlock imageSource={imageSource} imageAltText={imageAltText} />)}
               {enableGoogleMap && (
                 <div className={styles.googleMapWrapper}>
-                  <GoogleMap />
+                  <GoogleMap id="splitContentMap" />
                 </div>
               )}
               <TextBlock data={contentfulData.fields} />

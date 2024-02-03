@@ -59,7 +59,11 @@ function toggleHighlight(markerView: any, content: any) {
 // TODO look into the various things that can be configured
 // https://github.com/googlemaps/extended-component-library
 // https://developers.google.com/maps/documentation/javascript/reference/advanced-markers
-export default function GoogleMap() {
+export default function GoogleMap({
+  id,
+}: {
+  id: string,
+}) {
   const loader = new Loader({
     apiKey: process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY || '',
     version: "weekly",
@@ -78,7 +82,7 @@ export default function GoogleMap() {
       } = await google.maps.importLibrary("marker") as google.maps.MarkerLibrary;
   
       // create the map with right zoom
-      const map = new Map(document.getElementById("map") as HTMLElement, {
+      const map = new Map(document.getElementById(id) as HTMLElement, {
         center: {
           lat: 32.71249923828125,
           lng: -94.12107849121094
@@ -126,6 +130,6 @@ export default function GoogleMap() {
   }, []);
 
   return (
-    <div id="map" className={styles.mapWrapper}></div>
+    <div id={id} className={styles.mapWrapper}></div>
   );
 }
