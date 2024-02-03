@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [7.1.6] - 2024-02-03
+### Updated
+- Google Map updates
+  - adjusted loading
+  - customized map
+
 ## [7.1.5] - 2024-02-02
 ### Updated
 - Fixed build issue
