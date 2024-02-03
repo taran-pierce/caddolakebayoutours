@@ -3,11 +3,11 @@ name: Azure Static Web Apps CI/CD
 on:
   push:
     branches:
-      - feature/rework-site-in-typescript-nextjs
+      - develop
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
-      - feature/rework-site-in-typescript-nextjs
+      - develop
 
 env:
   AZURE_WEBAPP_NAME: caddo-lake-bayou-tours
