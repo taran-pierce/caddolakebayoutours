@@ -1,0 +1,19 @@
+.mapWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.mapPopUpWrapper {
+  padding: 1rem;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.mapDetailsWrapper {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #555;
+}
