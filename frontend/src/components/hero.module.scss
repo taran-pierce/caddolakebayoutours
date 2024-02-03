@@ -1,0 +1,19 @@
+.hero {
+  overflow: hidden;
+  height: 220px;
+  border-bottom: 3px solid var(--primary-color);
+}
+
+@media(min-width: 768px) {
+  .hero {
+    height: 330px;
+  }
+}
+
+@media(min-width: 992px) {
+  .hero {
+    height: 400px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}

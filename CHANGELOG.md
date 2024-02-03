@@ -4,6 +4,42 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [7.1.5] - 2024-02-02
+### Updated
+- Fixed build issue
+
+## [7.1.4] - 2024-02-02
+### Updated
+- removed unused directories
+- refactored split content component
+- cleaned up files
+
+## [7.1.3] - 2024-02-02
+### Updated
+- commenting out action.yaml
+- updated titles for pages in CMS
+
+## [7.1.2] - 2024-02-02
+### Updated
+- Updated to latest nextjs `v14.1.0`
+- Updated with new next-cloudinary module
+- Connected to Contentful for content
+- Created a loader for the images for static build
+- Merges deploy with Azure to dev
+
+## [5.1.3] - 2022-12-8
+### Updated
+- Added back form on /contact page
+- Updated reference to Email server app
+
+## [5.1.2] - 2022-12-7
+### Updated
+- Remove form on /contact page
+
+## [5.1.1] - 2022-07-1
+### Updated
+- Add quick links back
+
 ## [5.1.0] - 2022-06-26
 ### Updated
 - Fix contact form
