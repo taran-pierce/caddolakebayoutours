@@ -9,7 +9,7 @@ Caddo Lake Boat Tours website built in React using NextJS.
 * Components are located in `/frontend/src/components/`
 
 ## Build for production
-Merging into the branch (currently feature/rework-site-in-typescript-nextjs) kicks off the build in Azure
+Merging into the develop branch kicks off the build in Azure
 
 ### Items to fix
 - PWA
