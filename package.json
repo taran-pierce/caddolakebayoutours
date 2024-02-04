@@ -1,6 +1,6 @@
 {
   "name": "caddolakebayoutours",
-  "version": "7.1.11",
+  "version": "7.1.12",
   "description": "Caddo Lake Bayou Tours website",
   "main": "dist/index.html",
   "scripts": {

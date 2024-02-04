@@ -29,11 +29,10 @@ export default function Form() {
       // TODO should probably just move these URLs to the .env too
       const env = process.env.NODE_ENV;
       
-      // migth complain about it not beeing https
       // http://custommail.caddolakebayoutours.com/
-      // http://dev-custommail.caddolakebayoutours.com/
+      // https://dev-custommail.caddolakebayoutours.com/
       // const url = env === 'development' ? 'http://localhost:3001/send/mail' : 'https://caddo-email-server.herokuapp.com/send/mail';
-      const url = env === 'development' ? 'http://localhost:3001/send/mail' : 'http://dev-custommail.caddolakebayoutours.com/';
+      const url = env === 'development' ? 'http://localhost:3001/send/mail' : 'https://dev-custommail.caddolakebayoutours.com/';
 
       console.log(`Sending to ${url}`);
 
