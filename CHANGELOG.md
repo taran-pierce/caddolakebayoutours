@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [7.1.11] - 2024-02-04
+### Updated
+- Using custom dns for email server
+
 ## [7.1.10] - 2024-02-03
 ### Updated
 - Fix bad env check on contact form
