@@ -1,7 +1,8 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 import GoogleMap from './GoogleMap';
 import Container from './Container';
 import { links } from './Navigation';
+import FaceBookButton from './FaceBookButton';
 
 import styles from './footer.module.scss';
 
@@ -50,9 +51,14 @@ export default function Footer() {
             <ul className={styles.listItems}>
               {links.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href}>{link.name}</Link>
+                  {/* TODO temp until figure out bug with next link and Facebook */}
+                  {/* <Link href={link.href}>{link.name}</Link> */}
+                  <a href={link.href}>{link.name}</a>
                 </li>
               ))}
+              <li>
+                <FaceBookButton />
+              </li>
             </ul>
           </div>
           <div className={styles.mapColumn}>

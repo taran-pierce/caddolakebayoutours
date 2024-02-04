@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [7.1.14] - 2024-02-04
+### Updated
+- Fix facebook bug when navigating pages
+
 ## [7.1.13] - 2024-02-04
 ### Updated
 - Fixed contact form on dev

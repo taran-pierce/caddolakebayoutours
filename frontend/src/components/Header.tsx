@@ -1,61 +1,37 @@
-import Link from 'next/link';
-import {
-  useEffect,
-  useState,
-} from 'react';
+// import Link from 'next/link';
 import Navigation from "./Navigation";
 import MenuToggle from "./MenuToggle";
+import FaceBookButton from './FaceBookButton';
 import { useMenu } from '../utils/menuState';
 
 import styles from './header.module.scss';
 
 export default function Header() {
-  const [domLoaded, setDomLoaded] = useState(false);
   const { closeMenu } = useMenu();
 
   function handleClick() {
     closeMenu();
   }
 
-  const CoreButton = () => {
-    return (
-      <>
-        <div
-          className={`fb-like`}
-          data-href="//www.facebook.com/caddotours/"
-          data-width="170px"
-          data-layout="button"
-          data-action="like"
-          data-size="large"
-          data-show-faces="true"
-          data-share="true"
-        />
-      </>
-    )
-  };
-
-  useEffect(() => {
-    setDomLoaded(true);
-  }, []);
-
   return (
     <header className={styles.header}>
       <div className={styles.headerContainer}>
         <div className={styles.logoWrapper}>
-          <Link 
+          {/* TODO temp until figure out bug with next link and Facebook */}
+          {/* <Link 
             href={{
               pathname: "/"
             }}
             onClick={() => handleClick()}
-          >
-            <h1>Caddo Lake Bayou Tours</h1>
-          </Link>
+          > */}
+            <a href="/" onClick={() => handleClick()}>
+              <h1>Caddo Lake Bayou Tours</h1>
+            </a>
+          {/* </Link> */}
           <MenuToggle />
         </div>
         <Navigation />
-        {domLoaded && (
-          <CoreButton />
-        )}
+        <FaceBookButton />
       </div>
     </header>
   );

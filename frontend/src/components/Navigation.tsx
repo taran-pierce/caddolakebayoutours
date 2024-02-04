@@ -55,12 +55,14 @@ export default function Navigation() {
       <ul className={styles.navigation}>
         {links && links.map((link) => (
           <li key={link.name}>
-            <Link 
+            {/* TODO the Facebook button really hates next/link */}
+            {/* <Link 
               href={{
                 pathname: link.href,
               }}
               onClick={(e) => handleClick(e)}
-            >{link.name}</Link>
+            >{link.name}</Link> */}
+            <a href={link.href} onClick={(e) => handleClick(e)}>{link.name}</a>
           </li>
         ))}
       </ul>
