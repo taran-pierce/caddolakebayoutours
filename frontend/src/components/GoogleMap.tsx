@@ -106,7 +106,7 @@ export default function GoogleMap({
           lng: -94.12065849121094
         },
         content: pinScaled.element,
-        title: 'Caddo Lake Bayou Tours',
+        title: 'Tours leave from Shady Glade Marina',
       });
   
       const CaddoLakeMarketElement = new google.maps.marker.AdvancedMarkerElement({
@@ -116,7 +116,7 @@ export default function GoogleMap({
           lat: 32.71247923828125,
           lng: -94.12070049121094
         },
-        title: 'Caddo Lake Bayou Tours',
+        title: 'Tours leave from Shady Glade Marina',
       });
   
       Marker.addListener("click", () => {
