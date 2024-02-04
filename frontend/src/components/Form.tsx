@@ -27,7 +27,13 @@ export default function Form() {
 
     try {
       // TODO should probably just move these URLs to the .env too
-      const url = process.env.NODE_ENV ? 'http://localhost:3001/send/mail' : 'https://caddo-email-server.herokuapp.com/send/mail';
+      const env = process.env.NODE_ENV;
+      
+      console.log({
+        env,
+      });
+
+      const url = env === 'development' ? 'http://localhost:3001/send/mail' : 'https://caddo-email-server.herokuapp.com/send/mail';
 
       // send info to the form
       const response = await fetch(url, {
