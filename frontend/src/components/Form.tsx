@@ -32,7 +32,7 @@ export default function Form() {
       // http://custommail.caddolakebayoutours.com/
       // https://dev-custommail.caddolakebayoutours.com/
       // const url = env === 'development' ? 'http://localhost:3001/send/mail' : 'https://caddo-email-server.herokuapp.com/send/mail';
-      const url = env === 'development' ? 'http://localhost:3001/send/mail' : 'https://dev-custommail.caddolakebayoutours.com/';
+      const url = env === 'development' ? 'http://localhost:3001/send/mail' : 'https://dev-custommail.caddolakebayoutours.com/send/mail';
 
       console.log(`Sending to ${url}`);
 
