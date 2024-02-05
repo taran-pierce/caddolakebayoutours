@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [7.1.17] - 2024-02-05
+### Updated
+- Working on preview env in Azure
+
 ## [7.1.16] - 2024-02-05
 ### Updated
 - Removed prefetch of google font domains

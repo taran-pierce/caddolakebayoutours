@@ -1,36 +1,7 @@
-import {
-  DOMAttributes,
-  useEffect,
-} from 'react';
+import { useEffect } from 'react';
 import { Loader } from '@googlemaps/js-api-loader';
 
 import styles from './googleMap.module.scss';
-
-// TODO probably a better way to type the Google Map
-// using their library that provides the Web Component though
-// and the docs did not go over how to type those specifically
-type GoogleMap<T> = Partial<T & DOMAttributes<T> & {
-  children: any,
-  center: any,
-  zoom: any,
-  style: any,
-  "map-id": any,
-}>;
-
-type GoogleMapMarker<T> = Partial<T & DOMAttributes<T> & {
-  children: any,
-  position: any,
-  title: any,
-}>;
-
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      ['gmp-map']: GoogleMap<any>;
-      ['gmp-advanced-marker']: GoogleMapMarker<any>;
-    }
-  }
-}
 
 // content for little tooltip thing on google map
 // should find something cooler to do with this
