@@ -16,10 +16,6 @@ export default function Document() {
         <meta name="theme-color" content="#ffffff" />
         <meta name="google-site-verification" content="B2p1pPmxNrh11r3HKQ5EfPlheeORHUacKHqpcLin5g8" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="preconnect" href="//fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="preconnect" href="//fonts.gstatic.com" />
-        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         <link rel="dns-prefetch" href="//res.cloudinary.com" />
         <link rel="preconnect" href="//res.cloudinary.com" />
         <link rel="manifest" href="/manifest.json" />
