@@ -1,7 +1,7 @@
 // import Link from 'next/link';
 import Navigation from "./Navigation";
 import MenuToggle from "./MenuToggle";
-import FaceBookButton from './FaceBookButton';
+// import FaceBookButton from './FaceBookButton';
 import { useMenu } from '../utils/menuState';
 
 import styles from './header.module.scss';
@@ -31,7 +31,7 @@ export default function Header() {
           <MenuToggle />
         </div>
         <Navigation />
-        <FaceBookButton />
+        {/* <FaceBookButton /> */}
       </div>
     </header>
   );

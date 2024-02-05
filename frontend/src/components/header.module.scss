@@ -45,14 +45,23 @@
     }
 
     h1 {
-      line-height: 2.3;
+      line-height: 4;
+      font-size: 1.4rem;
     }
 
     .headerContainer {
       margin: 0 auto;
       max-width: 960px;
       display: grid;
-      grid-template-columns: 3fr 6fr;
+      grid-template-columns: 2fr 7fr;
+    }
+  }
+}
+
+@media(min-width: 1200px) {
+  .header {
+    .headerContainer {
+      max-width: 1080px;
     }
   }
 }
