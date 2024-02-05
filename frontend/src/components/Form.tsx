@@ -29,10 +29,8 @@ export default function Form() {
       // TODO should probably just move these URLs to the .env too
       const env = process.env.NODE_ENV;
       
-      // TODO needs to be able to toggle through dev-custommail and jsut custommail
-      // https://custommail.caddolakebayoutours.com/
-      // https://dev-custommail.caddolakebayoutours.com/
-      const url = env === 'development' ? 'http://localhost:3001/send/mail' : 'https://dev-custommail.caddolakebayoutours.com/send/mail';
+      // TODO should still be able to toggle between "local", "dev", "prod"
+      const url = env === 'development' ? 'https://dev-custommail.caddolakebayoutours.com/send/mail' : 'https://custommail.caddolakebayoutours.com/send/mail';
 
       // send info to the form
       const response = await fetch(url, {
