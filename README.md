@@ -1,40 +1,27 @@
-# caddolakebayoutours `3.0.0`
-Caddo Lake Boat Tours website built in React.
+# caddolakebayoutours `7`
+Caddo Lake Boat Tours website built in React using NextJS.
 
 ## Setup for development
 * `git clone https://github.com/taran-pierce/caddolakebayoutours.git`
+* cd into `/frontend/` and run `npm install`
 * `npm run dev` - Compiles the site and starts the dev server
-* Pages are all located in `/pages/`
-* Components are located in `/components/`
-* Browser refreshes automatically on all changes except changes to `server.js`, which requires a the dev server to be restarted.
+* Pages are all located in `/frontend/pages/`
+* Components are located in `/frontend/src/components/`
 
 ## Build for production
-Once all changes are ready to be deployed to production.
-* `npm run build` - prepares and optimizes the build for production.
-* `npm run export` - statically generates the site into the `/out/` directory.
-  * the site has `.htaccess` rules to route everything to `/caddolakebayoutours/out/`
-  * if updates are made to `.htaccess` the file needs to be copied over to `/public_html/`
+Merging into the develop branch kicks off the build in Azure
 
-## Update production
-* ssh into server
-* cd to proper `/dir/`
-* `git remote update`
-* `git checkout [tag]`
-
-### Important details
-* `next.config.js` - has the export map for pages so it can be statically generated
-* `server.js` - not much being done here as the email is handled in a different app
-* `/pages/` - automatically routes any `.js` file to a page on the site
-* `/components/` - place all components here and their `.scss` files
-
-## Directory structure should look as follows:
-```
-  /caddolakebayoutours
-  |
-  |-/pages
-  |-/components
-  |-/static
-  |  |-/css
-  |  |-/images
-  |-/styles ( not sure I actually use this )
-```
+### Items to fix
+- PWA
+  - URL is not valid
+  - "display" property is not valid
+- Facebook Share goes away when you navigate
+  - also not positioned correctly
+- Contact form is not working
+  - looks like its still using localhost
+  - input fields also empty out randomly
+- Google Map
+  - needs to have "Caddo Lake Bayou Tours" selected
+- Photo Gallery
+  - better transitions
+  - better navigation

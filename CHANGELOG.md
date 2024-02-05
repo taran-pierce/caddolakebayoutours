@@ -4,6 +4,81 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [7.1.17] - 2024-02-05
+### Updated
+- Working on preview env in Azure
+
+## [7.1.16] - 2024-02-05
+### Updated
+- Removed prefetch of google font domains
+
+## [7.1.15] - 2024-02-05
+### Updated
+- Fixed Hero preloading of image
+
+## [7.1.14] - 2024-02-04
+### Updated
+- Fix facebook bug when navigating pages
+
+## [7.1.13] - 2024-02-04
+### Updated
+- Fixed contact form on dev
+
+## [7.1.12] - 2024-02-04
+### Updated
+- Setup SSL on Heroku
+
+## [7.1.11] - 2024-02-04
+### Updated
+- Using custom dns for email server
+
+## [7.1.10] - 2024-02-03
+### Updated
+- Fix bad env check on contact form
+
+## [7.1.9] - 2024-02-03
+### Updated
+- Fix accessibility issue on google map
+- Adjust hero to preload image
+
+## [7.1.8] - 2024-02-03
+### Updated
+- Fix css on google map for mobile
+
+## [7.1.7] - 2024-02-03
+### Updated
+- Fix check on split content for single column
+- Fix duplicate id on Google Map
+
+## [7.1.6] - 2024-02-03
+### Updated
+- Google Map updates
+  - adjusted loading
+  - customized map
+
+## [7.1.5] - 2024-02-02
+### Updated
+- Fixed build issue
+
+## [7.1.4] - 2024-02-02
+### Updated
+- removed unused directories
+- refactored split content component
+- cleaned up files
+
+## [7.1.3] - 2024-02-02
+### Updated
+- commenting out action.yaml
+- updated titles for pages in CMS
+
+## [7.1.2] - 2024-02-02
+### Updated
+- Updated to latest nextjs `v14.1.0`
+- Updated with new next-cloudinary module
+- Connected to Contentful for content
+- Created a loader for the images for static build
+- Merges deploy with Azure to dev
+
 ## [5.1.3] - 2022-12-8
 ### Updated
 - Added back form on /contact page

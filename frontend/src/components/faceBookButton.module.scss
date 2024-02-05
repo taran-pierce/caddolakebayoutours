@@ -1,0 +1,15 @@
+.faceBookWrapper {
+  padding-left: 2rem;
+
+  // force share button width
+  // TODO figure out why it wont take regular width settings
+  iframe {
+    width: 300px !important;
+  }
+}
+
+@media(min-width: 992px) {
+  .faceBookWrapper {
+    padding-top: 2rem;
+  }
+}
