@@ -16,6 +16,7 @@ export default function MyApp({ Component, pageProps }) {
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=UA-107758647-2"
         strategy="afterInteractive"
+        async
         defer
       />
       <script dangerouslySetInnerHTML={{ __html:
