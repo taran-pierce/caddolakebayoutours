@@ -1,6 +1,7 @@
 'use client'
 
-import Link from 'next/link';
+// import Link from 'next/link';
+import FaceBookButton from './FaceBookButton';
 import { useMenu } from '../utils/menuState';
 import { getWindowDimensions } from '../utils/getDimensions';
 
@@ -55,14 +56,19 @@ export default function Navigation() {
       <ul className={styles.navigation}>
         {links && links.map((link) => (
           <li key={link.name}>
-            <Link 
+            {/* TODO the Facebook button really hates next/link */}
+            {/* <Link 
               href={{
                 pathname: link.href,
               }}
               onClick={(e) => handleClick(e)}
-            >{link.name}</Link>
+            >{link.name}</Link> */}
+            <a href={link.href} onClick={(e) => handleClick(e)}>{link.name}</a>
           </li>
         ))}
+        <li>
+          <FaceBookButton />
+        </li>
       </ul>
     </nav>
   );

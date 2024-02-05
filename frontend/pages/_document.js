@@ -23,7 +23,6 @@ export default function Document() {
         <link rel="dns-prefetch" href="//res.cloudinary.com" />
         <link rel="preconnect" href="//res.cloudinary.com" />
         <link rel="manifest" href="/manifest.json" />
-        <script async defer crossOrigin="anonymous" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0" />
       </Head>
       <body>
         <noscript>
