@@ -1,8 +1,8 @@
 {
   "name": "caddolakebayoutours",
-  "version": "7.1.17",
+  "version": "7.1.18",
   "description": "Caddo Lake Bayou Tours website",
-  "main": "dist/index.html",
+  "main": "out/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,7 +12,13 @@
   },
   "keywords": [
     "react",
-    "nextjs"
+    "nextjs",
+    "sass",
+    "typescript",
+    "azure",
+    "contentful",
+    "axios",
+    "cloudinary"
   ],
   "engines": {
     "node": ">=18.0.0"
