@@ -4,7 +4,10 @@ import {
   useRef,
 } from 'react';
 import Head from 'next/head';
-import { CldImage } from 'next-cloudinary';
+import {
+  CldImage,
+  getCldImageUrl,
+} from 'next-cloudinary';
 
 import styles from './hero.module.scss';
 
@@ -24,6 +27,8 @@ export default function Hero({
 
   const ref: any = useRef(undefined);
 
+  // filter to find the hero selected from Contentful
+  // will be an array of heros, need the matching one for this page
   const currentHero = heroImageData && heroImageData.filter((hero: any) => hero.public_id === imagePath)[0];
 
   useEffect(() => {
@@ -40,9 +45,25 @@ export default function Hero({
       ref={ref}
       className={styles.hero}
     >
-      {currentHero && (
+      {currentHero && heroDimensions.height && (
         <Head>
-          <link rel="preload" fetchpriority="high" as="image" href={currentHero.secure_url} type={`${currentHero.resource_type}/${currentHero.format}`} />
+          <link
+            rel="preload"
+            fetchpriority="high"
+            as="image"
+            // getCldImageUrl will fetch the matching URL with the transforms that is called below
+            // this way the correct image url can be preloaded since it is above the fold
+            href={getCldImageUrl({
+              width: heroDimensions.width,
+              height: heroDimensions.height,
+              src: currentHero.public_id,
+              quality: '50',
+              format: 'webp',
+              gravity: 'center',
+              crop: 'fill',
+            })}
+            type={`${currentHero.resource_type}/${currentHero.format}`}
+          />
         </Head>
       )}
       {heroDimensions.height && heroDimensions.width && (
