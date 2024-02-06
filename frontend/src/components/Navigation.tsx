@@ -3,7 +3,7 @@
 // import Link from 'next/link';
 import FaceBookButton from './FaceBookButton';
 import { useMenu } from '../utils/menuState';
-import { getWindowDimensions } from '../utils/getDimensions';
+import { useWindowDimensions } from '../utils/useWindowDimensions';
 
 import styles from './navigation.module.scss';
 
@@ -39,7 +39,7 @@ export default function Navigation() {
   const {
     height,
     width,
-  } = getWindowDimensions();
+  } = useWindowDimensions();
 
   let navigationClass = menuOpen ? styles.menuOpen : styles.menuClose;
 

@@ -1,7 +1,7 @@
 'use client'
 
 import { useMenu } from "../utils/menuState";
-import { getWindowDimensions } from '../utils/getDimensions';
+import { useWindowDimensions } from '../utils/useWindowDimensions';
 
 import styles from './menuToggle.module.scss';
 
@@ -10,7 +10,10 @@ export default function MenuToggle() {
   const { toggleMenu, menuOpen } = useMenu();
   
 
-  const { height, width } = getWindowDimensions();
+  const {
+    height,
+    width,
+  } = useWindowDimensions();
 
   // return null if width is undefined or is desktop size
   if (!width) { return null; }

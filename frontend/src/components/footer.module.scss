@@ -28,6 +28,15 @@
   max-height: 200px;
 }
 
+@media(min-width: 768px) {
+  // TODO sure there is a smoother way to pull that off
+  .facebookComponentWrapper {
+    > div {
+      padding-left: 0 !important;
+    }
+  }
+}
+
 @media(min-width: 992px) {
   .heading {
     margin-top: 0;

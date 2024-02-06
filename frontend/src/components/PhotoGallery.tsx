@@ -5,7 +5,7 @@ import {
 } from 'react';
 import { CldImage } from 'next-cloudinary';
 import Container from './Container';
-import { getWindowDimensions } from '@/utils/getDimensions';
+import { useWindowDimensions } from '../utils/useWindowDimensions';
 
 import styles from './photoGallery.module.scss';
 
@@ -22,7 +22,7 @@ export default function PhotoGallery({ images }: {
   const {
     height,
     width,
-  } = getWindowDimensions();
+  } = useWindowDimensions();
 
   const isMobile = width && width <= 768;
 

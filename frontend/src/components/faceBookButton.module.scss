@@ -10,6 +10,9 @@
 
 @media(min-width: 992px) {
   .faceBookWrapper {
+    // TODO trying to keep navigation form shifting
+    min-width: 160px;
+    padding-left: 2rem;
     padding-top: 2rem;
   }
 }
