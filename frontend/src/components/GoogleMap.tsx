@@ -35,13 +35,13 @@ export default function GoogleMap({
 }: {
   id: string,
 }) {
-  const loader = new Loader({
-    apiKey: process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY || '',
-    version: "weekly",
-    // ...additionalOptions,
-  });
-  
   useEffect(() => {
+    const loader = new Loader({
+      apiKey: process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY || '',
+      version: "weekly",
+      // ...additionalOptions,
+    });
+    
     loader.load().then(async () => {
       // standard google map library
       const { Map } = await google.maps.importLibrary("maps") as google.maps.MapsLibrary;
@@ -98,7 +98,7 @@ export default function GoogleMap({
         toggleHighlight(CaddoLakeMarketElement, buildContent());
       });
     });
-  }, []);
+  }, [id]);
 
   return (
     <div id={id} className={styles.mapWrapper}></div>

@@ -5,9 +5,12 @@
 
 .imageWrapper {
   width: 100%;
-  height: 300px;
   margin-left: var(--container-negative-padding);
   margin-right: var(--container-negative-padding);
+
+  img {
+    display: block;
+  }
 }
 
 .imageLast {

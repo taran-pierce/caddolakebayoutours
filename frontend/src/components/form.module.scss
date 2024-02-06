@@ -38,11 +38,13 @@
   }
 
   input {
+    font-size: 1.6rem;
     width: 100%;
     padding: 1.5rem;
   }
 
   textarea {
+    font-size: 1.6rem;
     padding: var(--container-padding);
     width: 100%;
     min-height: 160px;

@@ -16,6 +16,7 @@ export default function SplitContent({
     imageSource,
     imageAltText,
     enableGoogleMap,
+    enablePriority,
   } = contentfulData.fields;
 
   const hasImage = imageSource && imageAltText.length > 0;
@@ -33,7 +34,13 @@ export default function SplitContent({
           {!imageFirst && (
             <>
               <TextBlock data={contentfulData.fields} />
-              {hasImage && (<ImageBlock imageSource={imageSource} imageAltText={imageAltText} />)}
+              {hasImage && (
+                <ImageBlock
+                  imageSource={imageSource}
+                  imageAltText={imageAltText}
+                  enablePriority={enablePriority}
+                />
+              )}
               {enableGoogleMap && (
                 <div className={styles.googleMapWrapper}>
                   <GoogleMap id="splitContentMap" />
@@ -43,7 +50,13 @@ export default function SplitContent({
           )}
           {imageFirst && (
             <>
-              {hasImage && (<ImageBlock imageSource={imageSource} imageAltText={imageAltText} />)}
+              {hasImage && (
+                <ImageBlock
+                  imageSource={imageSource}
+                  imageAltText={imageAltText}
+                  enablePriority={enablePriority}
+                />
+              )}
               {enableGoogleMap && (
                 <div className={styles.googleMapWrapper}>
                   <GoogleMap id="splitContentMap" />

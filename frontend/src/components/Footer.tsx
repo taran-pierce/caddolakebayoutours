@@ -56,7 +56,7 @@ export default function Footer() {
                   <a href={link.href}>{link.name}</a>
                 </li>
               ))}
-              <li>
+              <li className={styles.facebookComponentWrapper}>
                 <FaceBookButton />
               </li>
             </ul>

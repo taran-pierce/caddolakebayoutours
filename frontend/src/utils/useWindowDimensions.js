@@ -3,7 +3,7 @@ import {
   useEffect,
 } from 'react';
 
-export function getWindowDimensions() {
+export function useWindowDimensions() {
   const [windowDimensions, setWindowDimensions] = useState({
     height: undefined,
     width: undefined,
@@ -33,6 +33,4 @@ export function getWindowDimensions() {
   return windowDimensions;
 }
 
-export default {
-  getWindowDimensions,
-}
+export default useWindowDimensions;

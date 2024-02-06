@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [7.1.19] - 2024-02-05
+### Updated
+- Refactored custom hook
+- moved eslint file to correct location
+
 ## [7.1.18] - 2024-02-05
 ### Updated
 - Minor clean up

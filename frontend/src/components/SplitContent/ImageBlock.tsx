@@ -4,7 +4,7 @@ import {
   useEffect,
 } from 'react';
 import { CldImage } from "next-cloudinary";
-import { getWindowDimensions } from '../../utils/getDimensions';
+import { useWindowDimensions } from '../../utils/useWindowDimensions';
 
 // TODO should have its own module
 import styles from './splitContent.module.scss';
@@ -12,6 +12,7 @@ import styles from './splitContent.module.scss';
 export default function ImageBlock({
   imageSource,
   imageAltText,
+  enablePriority,
 }: any) {
   const [imageDimensions, setImageDimensions] = useState({
     height: undefined,
@@ -20,7 +21,7 @@ export default function ImageBlock({
   
   const ref: any = useRef(undefined);
 
-  const { width: windowWidth } = getWindowDimensions();
+  const { width: windowWidth } = useWindowDimensions();
 
   useEffect(() => {
     const { current }: any = ref;
@@ -45,6 +46,7 @@ export default function ImageBlock({
           crop='fill'
           gravity='center'
           quality="50"
+          priority={enablePriority}
           src={imageSource}
           alt={imageAltText}
         />
