@@ -1,6 +1,6 @@
 {
   "name": "caddolakebayoutours",
-  "version": "7.1.19",
+  "version": "7.1.21",
   "description": "Caddo Lake Bayou Tours website",
   "main": "out/index.html",
   "scripts": {
@@ -22,7 +22,7 @@
   ],
   "engines": {
     "node": ">=18.0.0"
-   },
+  },
   "author": "Taran Pierce",
   "license": "ISC",
   "bugs": {

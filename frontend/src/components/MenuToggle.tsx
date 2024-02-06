@@ -7,13 +7,12 @@ import styles from './menuToggle.module.scss';
 
 export default function MenuToggle() {
   // data for the menu
-  const { toggleMenu, menuOpen } = useMenu();
-  
-
   const {
-    height,
-    width,
-  } = useWindowDimensions();
+    toggleMenu,
+    menuOpen,
+  } = useMenu();
+  
+  const { width } = useWindowDimensions();
 
   // return null if width is undefined or is desktop size
   if (!width) { return null; }
@@ -34,6 +33,7 @@ export default function MenuToggle() {
         aria-expanded={menuOpen}
         aria-controls="main-nav"
         aria-haspopup="true"
+        aria-label="Main Navigation Toggle"
       >
         <span />
         <span />

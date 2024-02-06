@@ -1,12 +1,12 @@
 {
   "name": "caddolakebayoutours",
-  "version": "7.1.19",
+  "version": "7.1.21",
   "lockfileVersion": 3,
   "requires": true,
   "packages": {
     "": {
       "name": "caddolakebayoutours",
-      "version": "7.0.9",
+      "version": "7.1.20",
       "license": "ISC",
       "dependencies": {
         "@actions/core": "^1.10.1",
