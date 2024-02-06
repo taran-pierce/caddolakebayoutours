@@ -21,7 +21,15 @@ Creating a pull request to develop will trigger a preview deploy. There is also 
 ### Build for production
 Merging into the master branch kicks will build and deploy the site to production
 
+## Commands
+- `npm run dev` - start dev server
+- `npm run build` - make production bundle
+- `npm run analyzeBundle` - runs bundle analyzer with production settings
+
 ### Items to fix
 - Photo Gallery
   - better transitions
   - better navigation
+- Google Map
+  - better popup info
+  

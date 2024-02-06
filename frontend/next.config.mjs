@@ -1,4 +1,11 @@
 /** @type {import('next').NextConfig} */
+
+import withBundleAnalyzer from '@next/bundle-analyzer';
+
+const withAnalyzer = withBundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+})
+
 const nextConfig = {
   publicRuntimeConfig: {
     CONTENTFUL_ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN,
@@ -12,4 +19,4 @@ const nextConfig = {
   }
 };
 
-export default nextConfig;
+export default withAnalyzer(nextConfig);
