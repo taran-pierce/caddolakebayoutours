@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [7.1.23] - 2024-02-06
+### Updated
+- Mobile and Tablet adjustments
+  - Hero no longer displays to improve page load performance
+
 ## [7.1.22] - 2024-02-06
 ### Updated
 - Fix bug on Hero preload

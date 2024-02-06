@@ -4,6 +4,7 @@ import {
   useRef,
 } from 'react';
 import { CldImage } from 'next-cloudinary';
+import { useWindowDimensions } from '../utils/useWindowDimensions';
 
 import styles from './hero.module.scss';
 
@@ -29,6 +30,13 @@ export default function Hero({
       width: current?.clientWidth,
     });
   }, []);
+
+  const { width } = useWindowDimensions();
+
+  if (width && width <= 992) {
+    // for performance do not even show hero at mobile or tablet
+    return null;
+  }
 
   return (
     <section
