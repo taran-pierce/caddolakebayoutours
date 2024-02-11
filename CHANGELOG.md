@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [7.1.25] - 2024-02-11
+### Updated
+- Address canonical issue
+  - canoical has trailing but actual pages do not
+
 ## [7.1.24] - 2024-02-06
 ### Updated
 - More mobile and tablet performance updates
