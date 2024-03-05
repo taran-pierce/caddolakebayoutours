@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [7.1.27] - 2024-03-05
+### Updated
+- Updated dependencies
+
 ## [7.1.26] - 2024-02-11
 ### Updated
 - Also adjusted the sitemap.xml
