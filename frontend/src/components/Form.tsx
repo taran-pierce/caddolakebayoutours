@@ -25,12 +25,8 @@ export default function Form() {
       message: formData.get('message'),
     };
 
-    try {
-      // TODO should probably just move these URLs to the .env too
-      const env = process.env.NODE_ENV;
-      
-      // TODO should still be able to toggle between "local", "dev", "prod"
-      const url = env === 'development' ? 'https://dev-custommail.caddolakebayoutours.com/send/mail' : 'https://custommail.caddolakebayoutours.com/send/mail';
+    try {      
+      const url = process.env.NEXT_PUBLIC_CONTACT_FORM_URL as string;
 
       // send info to the form
       const response = await fetch(url, {
@@ -42,7 +38,7 @@ export default function Form() {
         },
         redirect: 'follow',
         referrerPolicy: 'no-referrer',
-        body: JSON.stringify(rawFormData) // body data type must match "Content-Type" header
+        body: JSON.stringify(rawFormData)// body data type must match "Content-Type" header
       });
   
       // set submission to true if we made it here

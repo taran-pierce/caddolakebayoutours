@@ -1,5 +1,5 @@
 # caddolakebayoutours `7`
-Caddo Lake boat tour website built in React using NextJS.
+Caddo Lake Boat Tours website built in React using NextJS.
 
 ## Setup for development
 * `git clone https://github.com/taran-pierce/caddolakebayoutours.git`
