@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [7.1.28] - 2024-03-08
+### Updated
+- Updated contact form, setting it up to also work with Azure email
+
 ## [7.1.27] - 2024-03-05
 ### Updated
 - Updated dependencies
