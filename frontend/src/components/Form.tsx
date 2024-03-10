@@ -31,7 +31,7 @@ export default function Form() {
       // send info to the form
       const response = await fetch(url, {
         method: 'POST',
-        mode: 'no-cors',
+        mode: 'cors',
         cache: 'no-cache',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -39,13 +39,30 @@ export default function Form() {
         redirect: 'follow',
         referrerPolicy: 'no-referrer',
         body: JSON.stringify(rawFormData)// body data type must match "Content-Type" header
-      });
+      }).then((response) => response.json())
+        .then((data) => {
+          // if response was bad, set error state
+          if (data?.code === 500) {
+            setHasError({
+              hasError: true,
+              message: 'There was an error, please try again later',
+            });
+          }
+
+          // if a 201 comes back then show submission as success
+          if (data?.code === 201) {
+            setHasSubmitted(true);
+          }
+
+          return data;
+        }).catch((error) => {
+          console.error("Error: ", error)
+        })
+
   
       // set submission to true if we made it here
       // TODO maybe also set session or local storage to prevent them from sending messages over and over?
       // have not complained about form abuse though
-      setHasSubmitted(true);
-
       // turn loading state off
       setIsLoading(false);
     } catch (error: any) {
@@ -124,3 +141,4 @@ export default function Form() {
     </div>
   );
 };
+
