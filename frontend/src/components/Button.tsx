@@ -6,17 +6,25 @@ export default function Button({
   children,
   isLink,
   href,
-}: any) {
-  if (isLink) {
+}: {
+  children: any,
+  isLink: boolean,
+  href: string,
+}) {
+  if (isLink && href) {
     return (
       <Link
         href={href}
         className={styles.button}
+        data-testid='link'
       >{children}</Link>
     )
   }
   return (
-    <button type="button">
+    <button
+      type='button'
+      data-testid='button'
+    >
       {children}
     </button>
   );

@@ -4,9 +4,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [7.1.29] - 2024-03-10
-### Updated
-- Updates to states of contact form
+## [7.1.30] - 2024-03-13
+### Added
+- Added basic unit tests
 
 ## [7.1.28] - 2024-03-08
 ### Updated
