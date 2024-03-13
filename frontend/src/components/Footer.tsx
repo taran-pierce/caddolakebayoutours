@@ -6,7 +6,7 @@ import FaceBookButton from './FaceBookButton';
 
 import styles from './footer.module.scss';
 
-const quickLinks = [
+export const quickLinks = [
   {
     href: 'http://shadygladeresort.com/',
     name: 'Shady Glade Resort',
@@ -43,10 +43,10 @@ const quickLinks = [
 
 export default function Footer() {
   return (
-    <footer>
+    <footer data-testid='footer'>
       <Container borderTop>
         <div className={styles.grid}>
-          <div>
+          <div data-testid='sitemap'>
             <h2 className={styles.heading}>Sitemap</h2>
             <ul className={styles.listItems}>
               {links.map((link) => (
@@ -61,8 +61,11 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className={styles.mapColumn}>
-            <GoogleMap id="footer-map" />
+          <div
+            className={styles.mapColumn}
+            data-testid='google-map'
+          >
+            <GoogleMap id='footer-map' />
             <div className={styles.addressBlock}>
               <p>Rich McFarland, Tour Guide</p>
               <p>U.S. Coast Guard Merchant Marine Captain License</p>
@@ -70,12 +73,12 @@ export default function Footer() {
               <p><strong>Phone: </strong><a href={`tel:1-903-570-2169`}>903-570-2169</a></p>
             </div>
           </div>
-          <div>
+          <div data-testid='quick-link'>
             <h2 className={styles.heading}>Quick Links</h2>
             <ul className={styles.listItems}>
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} target="_blank" rel="noopener">{link.name}</a>
+                  <a href={link.href} target='_blank' rel='noopener'>{link.name}</a>
                 </li>
               ))}
             </ul>

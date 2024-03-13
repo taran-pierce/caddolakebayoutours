@@ -13,7 +13,10 @@ export default function Header() {
   }
 
   return (
-    <header className={styles.header}>
+    <header
+      className={styles.header}
+      data-testid='header'
+    >
       <div className={styles.headerContainer}>
         <div className={styles.logoWrapper}>
           {/* TODO temp until figure out bug with next link and Facebook */}
@@ -23,7 +26,7 @@ export default function Header() {
             }}
             onClick={() => handleClick()}
           > */}
-            <a href="/" onClick={() => handleClick()}>
+            <a href='/' onClick={() => handleClick()}>
               <h1>Caddo Lake Bayou Tours</h1>
             </a>
           {/* </Link> */}
