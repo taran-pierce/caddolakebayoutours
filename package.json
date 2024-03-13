@@ -1,10 +1,10 @@
 {
   "name": "caddolakebayoutours",
-  "version": "7.1.29",
+  "version": "7.1.30",
   "description": "Caddo Lake Bayou Tours website",
   "main": "out/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",

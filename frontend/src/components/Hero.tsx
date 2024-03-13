@@ -30,24 +30,32 @@ export default function Hero({
     });
   }, []);
 
+  console.log({
+    heroDimensions,
+  });
+
   return (
     <section
       ref={ref}
       className={styles.hero}
+      data-testid='hero'
     >
-      {heroDimensions.height && heroDimensions.width && (
-        <CldImage
-          width={heroDimensions.width}
-          height={heroDimensions.height}
-          crop='fill'
-          gravity='center'
-          quality="50"
-          src={imagePath}
-          alt={alt}
-          priority={true}
-          format='webp'
-        />
-      )}
+      {(heroDimensions && heroDimensions.height && heroDimensions.height > 0) 
+        && (heroDimensions && heroDimensions.width && heroDimensions.width > 0)
+        && (
+          <CldImage
+            width={heroDimensions.width}
+            height={heroDimensions.height}
+            crop='fill'
+            gravity='center'
+            quality="50"
+            src={imagePath}
+            alt={alt}
+            priority={true}
+            format='webp'
+          />
+        )
+      }
     </section>
   );
 };
