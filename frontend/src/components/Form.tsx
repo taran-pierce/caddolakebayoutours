@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import LoadingSpinner from './LoadingSpinner';
 
 import styles from './form.module.scss';
 
@@ -25,7 +26,7 @@ export default function Form() {
       message: formData.get('message'),
     };
 
-    try {      
+    try {
       const url = process.env.NEXT_PUBLIC_CONTACT_FORM_URL as string;
 
       // send info to the form
@@ -56,7 +57,7 @@ export default function Form() {
 
           return data;
         }).catch((error) => {
-          console.error("Error: ", error)
+          console.error('Error: ', error);
         })
 
   
@@ -82,9 +83,8 @@ export default function Form() {
 
   return (
     <div className={styles.formWrapper}>
-      {/* TODO replace with cool spinner or something */}
       {isLoading && (
-        <p>Loading...</p>
+        <LoadingSpinner />
       )}
       {hasError.hasError && (
         <div className={styles.errorMessageWrapper}>
@@ -141,4 +141,3 @@ export default function Form() {
     </div>
   );
 };
-

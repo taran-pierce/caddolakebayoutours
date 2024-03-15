@@ -30,10 +30,6 @@ export default function Hero({
     });
   }, []);
 
-  console.log({
-    heroDimensions,
-  });
-
   return (
     <section
       ref={ref}

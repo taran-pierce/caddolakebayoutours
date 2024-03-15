@@ -20,12 +20,6 @@ export default function Page({
         <title>{content.pageTitle}</title>
         <link rel="canonical" href="https://www.caddolakebayoutours.com/photo-gallery" />
       </Head>
-      {hero && (
-        <Hero
-          imagePath={hero.fields.imageName}
-          alt={hero.fields.imageAltText}
-        />
-      )}
       {splitContentSections && splitContentSections.map((splitContentSection) => (
         <SplitContent
           key={splitContentSection.sys.id}
