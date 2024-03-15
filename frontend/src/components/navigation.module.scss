@@ -2,7 +2,8 @@
   list-style-type: none;
   padding-left: 0;
   margin-top: 0;
-  border-top: 1px solid black;
+  border-top: 1px solid var(--transparent-black-dark);
+  text-align: right;
 
   a {
     display: block;
@@ -12,6 +13,7 @@
     font-weight: 700;
     line-height: 2;
     text-decoration: none;
+    text-shadow: 1px 1px 0 var(--transparent-black-dark); 
     transition: all .3s ease-in;
 
     &:hover {

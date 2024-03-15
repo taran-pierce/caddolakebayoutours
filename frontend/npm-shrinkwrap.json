@@ -1,12 +1,12 @@
 {
   "name": "frontend",
-  "version": "7.1.30",
+  "version": "7.1.31",
   "lockfileVersion": 3,
   "requires": true,
   "packages": {
     "": {
       "name": "frontend",
-      "version": "7.1.30",
+      "version": "7.1.31",
       "dependencies": {
         "@contentful/rich-text-react-renderer": "^15.19.3",
         "@googlemaps/js-api-loader": "^1.16.2",
@@ -3852,9 +3852,9 @@
       "dev": true
     },
     "node_modules/follow-redirects": {
-      "version": "1.15.5",
-      "resolved": "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.5.tgz",
-      "integrity": "sha512-vSFWUON1B+yAw1VN4xMfxgn5fTUiaOzAJCKBwIIgT/+7CuGy9+r+5gITvP62j3RmaD5Ph65UaERdOSRGUzZtgw==",
+      "version": "1.15.6",
+      "resolved": "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.6.tgz",
+      "integrity": "sha512-wWN62YITEaOpSK584EZXJafH1AGpO8RVgElfkuXbTOrPX4fIfOyEpW/CsiNd8JdYrAoOvafRTOEnvsO++qCqFA==",
       "funding": [
         {
           "type": "individual",

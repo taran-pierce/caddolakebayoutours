@@ -3,8 +3,7 @@ import { BLOCKS } from '@contentful/rich-text-types';
 import Button from '../Button';
 import Form from '../Form';
 
-// TODO should have its own module
-import styles from './splitContent.module.scss';
+import styles from './textBlock.module.scss';
 
 export default function TextBlock({
   data,

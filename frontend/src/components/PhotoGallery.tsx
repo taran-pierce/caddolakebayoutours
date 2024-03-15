@@ -107,8 +107,10 @@ export default function PhotoGallery({ images }: {
   }
 
   return (
-    <div>
-      <Container>
+    <div
+      className={styles.mainWrapper}
+    >
+      <div className={styles.container}>
         <h2>Pictures of Caddo Lake</h2>
         <div
           role="region"
@@ -143,7 +145,7 @@ export default function PhotoGallery({ images }: {
           </div>
           <CarouselNavigation />
         </div>
-      </Container>
+      </div>
     </div>
   );
 }

@@ -2,11 +2,12 @@
   background: var(--primary-color);
   color: var(--white);
   padding: .5rem;
+  padding-left: 2rem;
 }
 
 .listItems {
   list-style-type: none;
-  padding-left: 0;
+  padding-left: 2rem;
 
   a {
     color: var(--primary-color);
@@ -28,6 +29,10 @@
   max-height: 200px;
 }
 
+.addressBlock {
+  padding: var(--container-padding);
+}
+
 @media(min-width: 768px) {
   // TODO sure there is a smoother way to pull that off
   .facebookComponentWrapper {
@@ -40,6 +45,18 @@
 @media(min-width: 992px) {
   .heading {
     margin-top: 0;
+  }
+
+  .sitemap {
+    .heading {
+      margin-left: 2rem;
+    }
+  }
+
+  .quickLinks {
+    .heading {
+      margin-right: 2rem;
+    }
   }
 
   .grid {

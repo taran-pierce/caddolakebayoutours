@@ -6,14 +6,19 @@ import {
 import { CldImage } from "next-cloudinary";
 import { useWindowDimensions } from '../../utils/useWindowDimensions';
 
-// TODO should have its own module
-import styles from './splitContent.module.scss';
+import styles from './imageBlock.module.scss';
 
 export default function ImageBlock({
   imageSource,
   imageAltText,
   enablePriority,
-}: any) {
+  topBorder,
+}: {
+  imageSource: string,
+  imageAltText: string,
+  enablePriority?: boolean,
+  topBorder?: boolean,
+}) {
   const [imageDimensions, setImageDimensions] = useState({
     height: undefined,
     width: undefined,
@@ -34,10 +39,10 @@ export default function ImageBlock({
 
   return (
     <div
-      className={styles.imageWrapper}
+      className={`${styles.imageWrapper} ${topBorder ? styles.topBorder : ''}`}
       ref={ref}
     >
-      {imageDimensions.width && (
+      {imageDimensions.width && imageDimensions.width > 0 && (
         <CldImage
           // check window width before setting image size
           // column size becomes locked after it hits desktop
