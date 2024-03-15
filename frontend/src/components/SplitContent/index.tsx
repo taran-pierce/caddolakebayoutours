@@ -39,11 +39,15 @@ export default function SplitContent({
                   imageSource={imageSource}
                   imageAltText={imageAltText}
                   enablePriority={enablePriority}
+                  topBorder
                 />
               )}
               {enableGoogleMap && (
                 <div className={styles.googleMapWrapper}>
-                  <GoogleMap id="splitContentMap" />
+                  <GoogleMap
+                    id="splitContentMap"
+                    noBorder
+                  />
                 </div>
               )}
             </>

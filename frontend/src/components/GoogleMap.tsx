@@ -32,8 +32,10 @@ function toggleHighlight(markerView: any, content: any) {
 // https://developers.google.com/maps/documentation/javascript/reference/advanced-markers
 export default function GoogleMap({
   id,
+  noBorder,
 }: {
   id: string,
+  noBorder?: boolean,
 }) {
   useEffect(() => {
     const loader = new Loader({
@@ -101,6 +103,9 @@ export default function GoogleMap({
   }, [id]);
 
   return (
-    <div id={id} className={styles.mapWrapper}></div>
+    <div
+      id={id}
+      className={`${styles.mapWrapper} ${noBorder ? styles.noBorder : ''}`}
+    ></div>
   );
 }

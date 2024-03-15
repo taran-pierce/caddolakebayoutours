@@ -52,7 +52,12 @@ export default function Navigation() {
   }
 
   return (
-    <nav role="navigation" aria-label="Main Navigation" className={navigationClass} id="main-nav">  
+    <nav
+      role='navigation'
+      aria-label='Main Navigation'
+      className={navigationClass}
+      id='main-nav'
+    >  
       <ul className={styles.navigation}>
         {links && links.map((link) => (
           <li key={link.name}>

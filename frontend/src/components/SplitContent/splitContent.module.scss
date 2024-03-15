@@ -3,35 +3,14 @@
   border-top: 3px solid var(--primary-color);
 }
 
-.imageWrapper {
-  // keep layout from shifting as image loads
-  min-height: 360px;
-  width: 100%;
-  margin-left: var(--container-negative-padding);
-  margin-right: var(--container-negative-padding);
-
-  img {
-    display: block;
-  }
-}
-
 .imageLast {
   overflow: hidden;
 }
-
-.textWrapper {
-  padding-bottom: var(--container-padding);
-  padding-top: var(--container-padding);
-} 
 
 @media(min-width: 992px) {
   .section {
     border-top: 0;
     border-bottom: 0;
-  }
-
-  .googleMapWrapper {
-    margin-right: -2rem;
   }
 
   .imageWrapper {
@@ -58,10 +37,5 @@
     &.textOnly {
       grid-template-columns: auto;
     }
-  }
-
-  .textWrapper {
-    padding-top: var(--container-padding);
-    padding-bottom: var(--container-padding);
   }
 }

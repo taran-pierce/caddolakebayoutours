@@ -46,7 +46,10 @@ export default function Footer() {
     <footer data-testid='footer'>
       <Container borderTop>
         <div className={styles.grid}>
-          <div data-testid='sitemap'>
+          <div
+            className={styles.sitemap}
+            data-testid='sitemap'
+          >
             <h2 className={styles.heading}>Sitemap</h2>
             <ul className={styles.listItems}>
               {links.map((link) => (
@@ -73,7 +76,10 @@ export default function Footer() {
               <p><strong>Phone: </strong><a href={`tel:1-903-570-2169`}>903-570-2169</a></p>
             </div>
           </div>
-          <div data-testid='quick-link'>
+          <div
+            className={styles.quickLinks}
+            data-testid='quick-link'
+          >
             <h2 className={styles.heading}>Quick Links</h2>
             <ul className={styles.listItems}>
               {quickLinks.map((link) => (
