@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [7.1.32] - 2024-05-08
+### Updated
+- Security update
+
 ## [7.1.31] - 2024-03-15
 ### Updated
 - Various content and style updates
