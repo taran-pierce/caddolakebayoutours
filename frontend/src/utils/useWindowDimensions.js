@@ -24,7 +24,7 @@ export function useWindowDimensions() {
     // add listener on resize to also set the height/width
     window.addEventListener("resize", handleResize);
 
-    // remove listerner on unmount
+    // remove listener on unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };

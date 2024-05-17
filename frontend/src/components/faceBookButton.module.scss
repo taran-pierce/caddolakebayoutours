@@ -1,8 +1,6 @@
 .faceBookWrapper {
-  // padding-left: 2rem;
-
   // force share button width
-  // TODO figure out why it wont take regular width settings
+  // TODO not accepting documented width settings
   iframe {
     width: 300px !important;
   }
@@ -10,7 +8,6 @@
 
 @media(min-width: 992px) {
   .faceBookWrapper {
-    // TODO trying to keep navigation form shifting
     min-width: 160px;
     padding-left: 2rem;
     padding-top: 2rem;
