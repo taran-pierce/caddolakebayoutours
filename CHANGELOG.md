@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [7.1.33] - 2024-05-17
+### Updated
+- Minor refactoring of code
+- Updating more typescript
+
 ## [7.1.32] - 2024-05-08
 ### Updated
 - Security update

@@ -8,13 +8,30 @@ import { useWindowDimensions } from '../utils/useWindowDimensions';
 
 import styles from './photoGallery.module.scss';
 
+interface Image {
+  asset_id: string,
+  public_id: string,
+  format: string,
+  version: number,
+  resource_type: string,
+  type: string,
+  created_at: string,
+  bytes: number,
+  width: number,
+  height: number,
+  folder: string,
+  url: string,
+  secure_url: string,
+}
+
 export default function PhotoGallery({ images }: { 
-  images: any,
+  images: Array<Image>,
 }) {
-  const ref = useRef(null);
+  
+  const ref = useRef<HTMLDivElement>(null);
   const [carouselDimensions, setCarouselDimensions] = useState({
-    height: null,
-    width: null,
+    height: 0,
+    width: 0,
   });
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -26,11 +43,11 @@ export default function PhotoGallery({ images }: {
   const isMobile = width && width <= 768;
 
   useEffect(() => {
-    const { current }: any = ref; 
+    const { current } = ref;
 
     setCarouselDimensions({
-      height: current?.clientHeight,
-      width: current?.clientWidth,
+      height: current?.clientHeight || 0,
+      width: current?.clientWidth || 0,
     });
   }, []);
 
@@ -43,12 +60,16 @@ export default function PhotoGallery({ images }: {
       >
         <button
           type="button"
-          onClick={(e) => handleClick(e)}
+          onClick={(e) => handleClick(e, {
+            direction: "prev"
+          })}
           disabled={currentImage === 0}
         >Prev</button>
         <button
           type="button"
-          onClick={(e) => handleClick(e)}
+          onClick={(e) => handleClick(e, {
+            direction: "next"
+          })}
           disabled={currentImage === images.length - 1}
         >Next</button>
       </div>
@@ -61,14 +82,17 @@ export default function PhotoGallery({ images }: {
     images,
   }: {
     currentSlide: number,
-    clickHandler: any,
-    images: any,
+    clickHandler: Function,
+    images: Array<Image>,
   }) => {
     return (
       <div className={styles.paginationWrapper}>
-        {images.map((image: any, index: any) => (
+        {images.map((image: {
+          public_id: string,
+        }, index: number) => (
           <span
             key={index}
+            title={image.public_id}
             data-slide-number={index}
             onClick={(e) => clickHandler(e)}
             className={`${styles.pagination} ${index == currentSlide ? styles.active : ''}`}
@@ -78,12 +102,13 @@ export default function PhotoGallery({ images }: {
     );
   };
 
-  function handleClick(e: any) {
+  function handleClick(e: React.MouseEvent<HTMLButtonElement, MouseEvent>, options: {
+    direction: string,
+  }) {
     e.preventDefault();
 
-    const { target } = e;
-    const isNext = target.innerHTML === 'Next';
-    const isPrev = target.innerHTML === 'Prev';
+    const isNext = options.direction === 'next';
+    const isPrev = options.direction === 'prev';
 
     if (isNext) {
       setCurrentImage(currentImage + 1);
@@ -94,10 +119,10 @@ export default function PhotoGallery({ images }: {
     }
   }
 
-  function handleDotNavigationClick(e: any) {
+  function handleDotNavigationClick(e: React.MouseEvent<HTMLSpanElement, MouseEvent>) {
     e.preventDefault();
 
-    const { target } = e;
+    const target = e.target as HTMLElement;
     const slide = target?.dataset.slideNumber;
 
     // comes back as a string
@@ -131,7 +156,7 @@ export default function PhotoGallery({ images }: {
                 gravity='center'
                 quality="50"
                 src={images[currentImage]?.public_id}
-                alt={`Testing`}
+                alt={images[currentImage]?.public_id}
               />
              )}
           </div>
