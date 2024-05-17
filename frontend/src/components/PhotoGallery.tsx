@@ -4,7 +4,6 @@ import {
   useEffect,
 } from 'react';
 import { CldImage } from 'next-cloudinary';
-import Container from './Container';
 import { useWindowDimensions } from '../utils/useWindowDimensions';
 
 import styles from './photoGallery.module.scss';

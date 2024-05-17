@@ -39,7 +39,7 @@ export default function Form() {
         },
         redirect: 'follow',
         referrerPolicy: 'no-referrer',
-        body: JSON.stringify(rawFormData)// body data type must match "Content-Type" header
+        body: JSON.stringify(rawFormData),
       }).then((response) => response.json())
         .then((data) => {
           // if response was bad, set error state
@@ -61,9 +61,6 @@ export default function Form() {
         })
 
   
-      // set submission to true if we made it here
-      // TODO maybe also set session or local storage to prevent them from sending messages over and over?
-      // have not complained about form abuse though
       // turn loading state off
       setIsLoading(false);
     } catch (error: any) {

@@ -34,7 +34,7 @@
 }
 
 @media(min-width: 768px) {
-  // TODO sure there is a smoother way to pull that off
+  // FB component pulls in some extra markup with conflicting styling
   .facebookComponentWrapper {
     > div {
       padding-left: 0 !important;
