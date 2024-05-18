@@ -5,12 +5,66 @@ import TextBlock from './TextBlock';
 
 import styles from './splitContent.module.scss';
 
+interface NodeType {
+  nodeType: string,
+  data: {},
+  content: Array<object>,
+}
+
+interface ContentfulData {
+  metadata: {
+    tags: Array<string>,
+  },
+  sys: {
+    space: {
+      sys: {
+        id: string,
+        type: string,
+        linkType: string,
+      }
+    },
+    id: string,
+    type: string,
+    createdAt: string,
+    updatedAt: string,
+    environment: {
+      sys: {
+        id: string,
+        type: string,
+        linkType: string,
+      }
+    },
+    revision: number,
+    contentType: {
+      sys: {
+        type: string,
+        linkType: string,
+        id: string,
+      }
+    },
+    locale: string,
+  },
+  fields: {
+    name: string,
+    text: {
+      nodeType: string,
+      data: {},
+      content: Array<NodeType>,
+    },
+    enableGoogleMap: boolean,
+    imageFirst: boolean,
+    imageSource: string,
+    imageAltText: string,
+    enablePriority: boolean,
+  }
+}
+
 export default function SplitContent({
   imageFirst,
   contentfulData,
 }: {
   imageFirst: boolean,
-  contentfulData: any,
+  contentfulData: ContentfulData,
 }) {
   const {
     imageSource,

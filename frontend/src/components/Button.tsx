@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import Link from 'next/link';
 
 import styles from './button.module.scss';
@@ -7,7 +8,7 @@ export default function Button({
   isLink,
   href,
 }: {
-  children: any,
+  children: ReactNode,
   isLink: boolean,
   href: string,
 }) {

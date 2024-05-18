@@ -11,7 +11,7 @@ export default function Form() {
     message: '',
   });
 
-  async function handleSubmit(e: any) {
+  async function handleSubmit(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     e.preventDefault();
 
     // set loading state in case the post takes a while for some reason

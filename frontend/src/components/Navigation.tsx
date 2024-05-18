@@ -47,7 +47,7 @@ export default function Navigation() {
     navigationClass = styles.menuDesktop;
   }
 
-  function handleClick(e: any) {
+  function handleClick(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
     closeMenu();
   }
 

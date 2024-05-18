@@ -20,20 +20,20 @@ export default function ImageBlock({
   topBorder?: boolean,
 }) {
   const [imageDimensions, setImageDimensions] = useState({
-    height: undefined,
-    width: undefined,
+    height: 0,
+    width: 0,
   });
   
-  const ref: any = useRef(undefined);
+  const ref = useRef<HTMLDivElement>(null);
 
   const { width: windowWidth } = useWindowDimensions();
 
   useEffect(() => {
-    const { current }: any = ref;
+    const { current } = ref;
 
     setImageDimensions({
-      height: current?.clientHeight,
-      width: current?.clientWidth,
+      height: current?.clientHeight || 0,
+      width: current?.clientWidth || 0,
     });
   }, []);
 
