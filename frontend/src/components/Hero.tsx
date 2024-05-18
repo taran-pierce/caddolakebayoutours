@@ -15,18 +15,18 @@ export default function Hero({
   alt: string,
 }) {
   const [heroDimensions, setHeroDimensions] = useState({
-    height: undefined,
-    width: undefined,
+    height: 0,
+    width: 0,
   });
 
-  const ref: any = useRef(undefined);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const { current }: any = ref;
+    const { current } = ref;
 
     setHeroDimensions({
-      height: current?.clientHeight,
-      width: current?.clientWidth,
+      height: current?.clientHeight || 0,
+      width: current?.clientWidth || 0,
     });
   }, []);
 

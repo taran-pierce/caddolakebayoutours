@@ -1,4 +1,6 @@
-export default function Page({ children }: { children: any}) {
+import { ReactNode } from 'react';
+
+export default function Page({ children }: { children: ReactNode }) {
   return (
     <>
       {children}

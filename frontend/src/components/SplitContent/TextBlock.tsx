@@ -7,7 +7,9 @@ import styles from './textBlock.module.scss';
 
 export default function TextBlock({
   data,
-}: any) {
+}: {
+  data: any
+}) {
   const {
     text,
     enableForm,

@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 import styles from './container.module.scss';
 
 export default function Container({
@@ -5,7 +7,7 @@ export default function Container({
   borderBottom,
   borderTop,
 }: {
-  children: any,
+  children: ReactNode,
   borderBottom?: boolean,
   borderTop?: boolean,
 }) {
