@@ -11,7 +11,7 @@ export default function Form() {
     message: '',
   });
 
-  async function handleSubmit(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+  async function handleSubmit(e: React.FormEvent<HTMLElement>) {
     e.preventDefault();
 
     // set loading state in case the post takes a while for some reason
@@ -92,7 +92,7 @@ export default function Form() {
       <h3>Contact via email</h3>
       {!hasSubmitted && (
         <form
-          onSubmit={(e: any) => handleSubmit(e)}
+          onSubmit={(e: React.FormEvent<HTMLElement>) => handleSubmit(e)}
           id="contact"
           className={styles.form}
         >
