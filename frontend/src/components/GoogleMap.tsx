@@ -17,12 +17,14 @@ function buildContent() {
 }
 
 // hide/show for the tooltip
-function toggleHighlight(markerView: any, content: any) {
-  if (markerView.content.classList.contains(styles.hidden)) {
-    markerView.content.classList.remove(styles.hidden);
+function toggleHighlight(markerView: google.maps.marker.AdvancedMarkerElementOptions, content: Node) {
+  const tooltip = markerView?.content;
+
+  if (tooltip instanceof Element && tooltip.classList.contains(styles.hidden)) {
+    tooltip.classList.remove(styles.hidden);
     markerView.zIndex = null;
   } else {
-    markerView.content.classList.add(styles.hidden);
+    tooltip instanceof Element && tooltip?.classList.add(styles.hidden);
     markerView.zIndex = 1;
   }
 }

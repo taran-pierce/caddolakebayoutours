@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { useMenu } from "../utils/menuState";
 import { useWindowDimensions } from '../utils/useWindowDimensions';

@@ -36,7 +36,6 @@ export default function PhotoGallery({ images }: {
   const [currentImage, setCurrentImage] = useState(0);
 
   const {
-    height,
     width,
   } = useWindowDimensions();
 
