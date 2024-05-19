@@ -37,7 +37,6 @@ export default function Navigation() {
   } = useMenu();
 
   const {
-    height,
     width,
   } = useWindowDimensions();
 

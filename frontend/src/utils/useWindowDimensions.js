@@ -5,16 +5,16 @@ import {
 
 export function useWindowDimensions() {
   const [windowDimensions, setWindowDimensions] = useState({
-    height: undefined,
-    width: undefined,
+    height: 0,
+    width: 0,
   });
 
   useEffect(() => {
     // function to set the sizes
     const handleResize = () => {
       setWindowDimensions({
-        width: window.innerWidth,
-        height: window.innerHeight,
+        width: window.innerWidth || 0,
+        height: window.innerHeight || 0,
       });
     };
 
