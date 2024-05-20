@@ -1,4 +1,16 @@
+$pagingationColor: #f8f1934f;
+
 .mainWrapper {
+  img {
+    transition: all .3s ease-out;
+  }
+
+  &.loading {
+    img {
+      opacity: 0;
+    }
+  }
+
   .container {
     background-color: var(--white);
     border-left: 1px solid var(--transparent-black-dark);
@@ -25,16 +37,17 @@
 }
 
 .paginationWrapper {
-  background-color: #f8f1934f;
-  border-left: 1px solid rgba(0,0,0,.2);
-  border-right: 1px solid rgba(0,0,0,.2);
+  background-color: $pagingationColor;
+  box-shadow: inset 0 0 10px 5px var(--transparent-black-light);
+  border-left: 1px solid var(--transparent-black-light);
+  border-right: 1px solid var(--transparent-black-light);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   margin: 0 var(--container-padding);
 }
 
 .pagination {
-  padding: 1rem;
+  padding: .5rem;
   background: var(--primary-color-dark);
   border-radius: 100%;
   border: 2px solid transparent;
@@ -46,7 +59,7 @@
   justify-self: center;
 
   &.active {
-    background-color: #f8f1934f;
+    background-color: $pagingationColor;
     border-color: var(--primary-color-dark);
     box-shadow: 0 2px 6px var(--transparent-black-dark);
     transition: all .3s ease-in;
@@ -54,13 +67,15 @@
 
   &:hover {
     box-shadow: 0 2px 6px var(--transparent-black-dark);
-    border-color: var(--primary-color-dark);
+    background-color: #a49d3a;
+    border-color: #a49d3a;
   }
 }
 
 .slideWrapper {
   overflow: hidden;
   margin: 0 var(--container-padding);
+  background: var(--grey-dark);
 
   img {
     display: block;
@@ -69,6 +84,6 @@
 
 @media(min-width: 992px) {
   .paginationWrapper {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 }
