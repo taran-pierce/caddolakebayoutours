@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [7.1.36] - 2024-05-20
+### Updated
+- Fixes to photo gallery component
+
 ## [7.1.35] - 2024-05-19
 ### Updated
 - Fixing more typescript types

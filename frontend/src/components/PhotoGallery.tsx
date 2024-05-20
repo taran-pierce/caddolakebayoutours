@@ -34,6 +34,7 @@ export default function PhotoGallery({ images }: {
     width: 0,
   });
   const [currentImage, setCurrentImage] = useState(0);
+  const [isImageChanging, setIsImageChanging] = useState(false);
 
   const {
     width,
@@ -106,6 +107,8 @@ export default function PhotoGallery({ images }: {
   }) {
     e.preventDefault();
 
+    setIsImageChanging(true);
+
     const isNext = options.direction === 'next';
     const isPrev = options.direction === 'prev';
 
@@ -116,10 +119,18 @@ export default function PhotoGallery({ images }: {
     if (isPrev) {
       setCurrentImage(currentImage - 1);
     }
+
+    // image is already loading
+    // just giving some time for the animation
+    setTimeout(() => {
+      setIsImageChanging(false);
+    }, 300);
   }
 
   function handleDotNavigationClick(e: React.MouseEvent<HTMLSpanElement, MouseEvent>) {
     e.preventDefault();
+
+    setIsImageChanging(true);
 
     const target = e.target as HTMLElement;
     const slide = target?.dataset.slideNumber;
@@ -127,11 +138,17 @@ export default function PhotoGallery({ images }: {
     // comes back as a string
     // so convert back to a number
     setCurrentImage(Number(slide));
+
+    // image is already loading
+    // just giving some time for the animation
+    setTimeout(() => {
+      setIsImageChanging(false);
+    }, 300);
   }
 
   return (
     <div
-      className={styles.mainWrapper}
+      className={`${styles.mainWrapper} ${isImageChanging ? styles.loading : ''}`}
     >
       <div className={styles.container}>
         <h2>Pictures of Caddo Lake</h2>
