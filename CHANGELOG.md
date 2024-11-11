@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [7.1.38] - 2024-11-11
+### Updated
+- Security updates
+- Remove link from Quick Links and Things to Do
+
 ## [7.1.37] - 2024-07-19
 ### Updated
 - Minor SEO updates
