@@ -1,5 +1,12 @@
 .hero {
   display: none;
+  position: relative; // ensures image positioning works
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media(min-width: 992px) {
