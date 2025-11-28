@@ -19,7 +19,9 @@ const nextConfig = {
   },
   experimental: {
     modern: true, // produce modern JS for supported browsers
+    esmExternals: true
   },
+  swcMinify: true,
 };
 
 export default withAnalyzer(nextConfig);
