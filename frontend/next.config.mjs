@@ -18,7 +18,6 @@ const nextConfig = {
     loaderFile: './src/utils/loader.js',
   },
   experimental: {
-    modern: true, // produce modern JS for supported browsers
     esmExternals: true
   },
   swcMinify: true,

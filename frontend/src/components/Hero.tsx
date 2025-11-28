@@ -1,57 +1,31 @@
-import {
-  useEffect,
-  useState,
-  useRef,
-} from 'react';
 import { CldImage } from 'next-cloudinary';
-
 import styles from './hero.module.scss';
 
 export default function Hero({
   imagePath,
   alt,
 }: {
-  imagePath: string,
-  alt: string,
+  imagePath: string;
+  alt: string;
 }) {
-  const [heroDimensions, setHeroDimensions] = useState({
-    height: 0,
-    width: 0,
-  });
-
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const { current } = ref;
-
-    setHeroDimensions({
-      height: current?.clientHeight || 0,
-      width: current?.clientWidth || 0,
-    });
-  }, []);
+  // Set max expected dimensions for desktop layout
+  const width = 960; // matches your CSS max-width
+  const height = 340; // matches your CSS height
 
   return (
-    <section
-      ref={ref}
-      className={styles.hero}
-      data-testid='hero'
-    >
-      {(heroDimensions && heroDimensions.height && heroDimensions.height > 0) 
-        && (heroDimensions && heroDimensions.width && heroDimensions.width > 0)
-        && (
-          <CldImage
-            width={heroDimensions.width}
-            height={heroDimensions.height}
-            crop='fill'
-            gravity='center'
-            quality="50"
-            src={imagePath}
-            alt={alt}
-            priority={true}
-            format='webp'
-          />
-        )
-      }
+    <section className={styles.hero} data-testid="hero">
+      <CldImage
+        src={imagePath}
+        alt={alt}
+        width={width}
+        height={height}
+        crop="fill"
+        gravity="center"
+        quality="50"
+        format="webp"
+        priority
+        className={styles.heroImage}
+      />
     </section>
   );
-};
+}
