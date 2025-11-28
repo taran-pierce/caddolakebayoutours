@@ -16,7 +16,10 @@ const nextConfig = {
   images: {
     loader: 'custom',
     loaderFile: './src/utils/loader.js',
-  }
+  },
+  experimental: {
+    modern: true, // produce modern JS for supported browsers
+  },
 };
 
 export default withAnalyzer(nextConfig);
