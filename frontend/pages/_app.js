@@ -13,23 +13,30 @@ export default function MyApp({ Component, pageProps }) {
       <Head>
         <meta name="viewport" content="width=device-width" />
       </Head>
+
+      {/* Load GA library AFTER the page is interactive */}
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=UA-107758647-2"
         strategy="afterInteractive"
-        async
-        defer
       />
-      <script dangerouslySetInnerHTML={{ __html:
-        `window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments)};
-        gtag('js', new Date());
-        gtag('config', 'UA-107758647-2');`
-      }} />
+
+      {/* GA initialization AFTER interactive */}
+      <Script id="ga-init" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-107758647-2', {
+            page_path: window.location.pathname,
+          });
+        `}
+      </Script>
+
       <Page>
         <Header />
         <Component {...pageProps} />
         <Footer />
       </Page>
     </MenuStateProvider>
-  )
+  );
 }
