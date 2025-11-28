@@ -1,5 +1,11 @@
 // import Link from 'next/link';
-import GoogleMap from './GoogleMap';
+import dynamic from 'next/dynamic';
+
+const GoogleMap = dynamic(() => import('./GoogleMap'), {
+  ssr: false, // don't server-side render
+  loading: () => <div style={{height: '300px'}}>Loading map…</div>,
+});
+
 import Container from './Container';
 import { links } from './Navigation';
 import FaceBookButton from './FaceBookButton';
