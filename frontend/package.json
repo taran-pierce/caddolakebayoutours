@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "version": "7.2.3",
+  "version": "7.2.4",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -13,6 +13,14 @@
   "engines": {
     "node": ">=18.0.0"
   },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Edge versions",
+    "last 2 Safari versions",
+    "not IE 11",
+    "not dead"
+  ],
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.19.3",
     "@googlemaps/js-api-loader": "^1.16.2",
