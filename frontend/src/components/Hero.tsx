@@ -20,10 +20,11 @@ export default function Hero({
         width={width}
         height={height}
         crop="fill"
-        gravity="center"
+        gravity="auto"
         quality="50"
         format="webp"
         priority
+        sizes="(max-width: 960px) 100vw, 960px"
         className={styles.heroImage}
       />
     </section>
