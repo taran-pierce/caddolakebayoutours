@@ -1,15 +1,53 @@
 .faceBookWrapper {
+  padding: 0 20px;
+
   // force share button width
-  // TODO not accepting documented width settings
   iframe {
     width: 300px !important;
   }
 }
 
-@media(min-width: 992px) {
+@media (min-width: 992px) {
   .faceBookWrapper {
     min-width: 160px;
     padding-left: 2rem;
     padding-top: 2rem;
+    text-align: left;
   }
+}
+
+/* =========================================================
+   Custom Facebook-Like Button Styling (matches FB’s design)
+   ========================================================= */
+
+.fbCustomLikeButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #1877F2; // Facebook blue
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.15s ease-in-out;
+  user-select: none;
+  text-decoration: none;
+}
+
+.fbCustomLikeButton:hover {
+  background-color: #166FE5;
+}
+
+.fbCustomLikeButton:active {
+  background-color: #0E5DB9;
+}
+
+.fbCustomLikeButton svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
 }
