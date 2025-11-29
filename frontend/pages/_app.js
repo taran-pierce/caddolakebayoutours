@@ -16,22 +16,20 @@ export default function MyApp({ Component, pageProps }) {
 
       {/* Load GA library AFTER the page is interactive */}
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=UA-107758647-2"
+        src="https://www.googletagmanager.com/gtag/js?id=G-W5JZ0PXX0N"
         strategy="afterInteractive"
       />
 
       {/* GA initialization AFTER interactive */}
       <Script id="ga-init" strategy="afterInteractive">
         {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'UA-107758647-2', {
-            page_path: window.location.pathname,
-          });
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-W5JZ0PXX0N');
         `}
       </Script>
-
       <Page>
         <Header />
         <Component {...pageProps} />
