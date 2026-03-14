@@ -24,7 +24,6 @@ const nextConfig = {
   experimental: {
     esmExternals: true
   },
-  // swcMinify: true,
 };
 
 export default withAnalyzer(nextConfig);
