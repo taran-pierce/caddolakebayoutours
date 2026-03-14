@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import cloudinary from 'cloudinary';
-import Hero from '../components/Hero';
 import PhotoGallery from '../components/PhotoGallery'
 import SplitContent from '../components/SplitContent';
 import { getContent } from '../utils/contentfulService.js';
