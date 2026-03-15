@@ -22,7 +22,10 @@
         "next-share": "^0.27.0",
         "react": "^18",
         "react-dom": "^18",
-        "sass": "^1.70.0"
+        "react-grid-gallery": "^1.0.1",
+        "react-photo-album": "^3.5.1",
+        "sass": "^1.70.0",
+        "yet-another-react-lightbox": "^3.29.1"
       },
       "devDependencies": {
         "@next/bundle-analyzer": "^14.1.0",
@@ -8059,11 +8062,39 @@
         "react": "^18.2.0"
       }
     },
+    "node_modules/react-grid-gallery": {
+      "version": "1.0.1",
+      "resolved": "https://registry.npmjs.org/react-grid-gallery/-/react-grid-gallery-1.0.1.tgz",
+      "integrity": "sha512-+fVd6fH9tm0W+UMgzRHET/gmzSs2/l2sGOuELLaHXMto6UhuZdscj9ILHOYe7hn0GBRUJiczMllsEs7OJz9uPA==",
+      "peerDependencies": {
+        "react": ">=16.14.0"
+      }
+    },
     "node_modules/react-is": {
       "version": "16.13.1",
       "resolved": "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz",
       "integrity": "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==",
       "dev": true
+    },
+    "node_modules/react-photo-album": {
+      "version": "3.5.1",
+      "resolved": "https://registry.npmjs.org/react-photo-album/-/react-photo-album-3.5.1.tgz",
+      "integrity": "sha512-g1uFG+loxdIb8eIOGnrh/71Ao80+XWV+NLfluY9qDDTbS76m+X1K6dpfNtsx1xKr9aw5N1ornkFTWpfyqOoD5Q==",
+      "engines": {
+        "node": ">=18"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/igordanchenko"
+      },
+      "peerDependencies": {
+        "@types/react": "^18 || ^19",
+        "react": "^18 || ^19"
+      },
+      "peerDependenciesMeta": {
+        "@types/react": {
+          "optional": true
+        }
+      }
     },
     "node_modules/readdirp": {
       "version": "3.6.0",
@@ -9465,6 +9496,31 @@
       },
       "engines": {
         "node": ">=8"
+      }
+    },
+    "node_modules/yet-another-react-lightbox": {
+      "version": "3.29.1",
+      "resolved": "https://registry.npmjs.org/yet-another-react-lightbox/-/yet-another-react-lightbox-3.29.1.tgz",
+      "integrity": "sha512-0cpa+wlleiy2cWNjS9qrcY0+SgZQH/4PDx2uupLMI9Ofip1f7pCgZ95PlVp/EsFsO4ufwOTea51bkLhcEXJJSg==",
+      "engines": {
+        "node": ">=14"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/igordanchenko"
+      },
+      "peerDependencies": {
+        "@types/react": "^16 || ^17 || ^18 || ^19",
+        "@types/react-dom": "^16 || ^17 || ^18 || ^19",
+        "react": "^16.8.0 || ^17 || ^18 || ^19",
+        "react-dom": "^16.8.0 || ^17 || ^18 || ^19"
+      },
+      "peerDependenciesMeta": {
+        "@types/react": {
+          "optional": true
+        },
+        "@types/react-dom": {
+          "optional": true
+        }
       }
     },
     "node_modules/yocto-queue": {
