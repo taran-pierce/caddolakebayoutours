@@ -55,6 +55,8 @@ interface ContentfulData {
     imageFirst: boolean,
     imageSource: string,
     imageAltText: string,
+    imageGravity: string,
+    imageQuality: number,
     enablePriority: boolean,
   }
 }
@@ -69,6 +71,8 @@ export default function SplitContent({
   const {
     imageSource,
     imageAltText,
+    imageGravity,
+    imageQuality,
     enableGoogleMap,
     enablePriority,
   } = contentfulData.fields;
@@ -92,6 +96,8 @@ export default function SplitContent({
                 <ImageBlock
                   imageSource={imageSource}
                   imageAltText={imageAltText}
+                  gravity={imageGravity}
+                  quality={imageQuality}
                   enablePriority={enablePriority}
                   topBorder
                 />
@@ -112,6 +118,8 @@ export default function SplitContent({
                 <ImageBlock
                   imageSource={imageSource}
                   imageAltText={imageAltText}
+                  gravity={imageGravity}
+                  quality={imageQuality}
                   enablePriority={enablePriority}
                 />
               )}
