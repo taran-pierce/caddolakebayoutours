@@ -20,6 +20,7 @@ const nextConfig = {
   images: {
     loader: 'custom',
     loaderFile: './src/utils/loader.js',
+    qualities: [50, 75, 100],
   },
   experimental: {
     esmExternals: true

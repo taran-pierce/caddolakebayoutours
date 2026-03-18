@@ -21,7 +21,7 @@ export default function Hero({
         height={height}
         crop="fill"
         gravity="auto"
-        quality="50"
+        quality={50}
         format="webp"
         priority
         sizes="(max-width: 960px) 100vw, 960px"
