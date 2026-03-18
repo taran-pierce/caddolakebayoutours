@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [8.0.0] - 2026-03-14
 ### Updated
 - Upgraded Next.js and other packages to latest stable verisons
+- Updated content to use all Benton Downs Photography
+- Updated to new media gallery
 
 ## [7.1.39] - 2025-02-25
 ### Updated
