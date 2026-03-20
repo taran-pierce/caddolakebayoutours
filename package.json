@@ -1,6 +1,6 @@
 {
   "name": "caddolakebayoutours",
-  "version": "7.2.8",
+  "version": "8.0.0",
   "description": "Caddo Lake Bayou Tours website",
   "main": "out/index.html",
   "scripts": {
@@ -32,6 +32,9 @@
   "homepage": "https://github.com/taran-pierce/caddolakebayoutours/tree/master#readme",
   "dependencies": {
     "@actions/core": "^1.10.1",
-    "@actions/github": "^6.0.0"
+    "@actions/github": "^9.0.0"
+  },
+  "overrides": {
+    "undici": "^6.23.1"
   }
 }

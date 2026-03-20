@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import cloudinary from 'cloudinary';
-import Hero from '../src/components/Hero';
-import SplitContent from '../src/components/SplitContent';
-import { getContent } from '../src/utils/contentfulService.js';
+import Hero from '../components/Hero';
+import SplitContent from '../components/SplitContent';
+import { getContent } from '../utils/contentfulService.js';
 
 export default function Page({
   content,
@@ -17,7 +17,7 @@ export default function Page({
     <main>
       <Head>
         <title>{content.pageTitle}</title>
-        <link rel="canonical" href="https://www.caddolakebayoutours.com/directions" />
+        <link rel="canonical" href="https://www.caddolakebayoutours.com" />
       </Head>
       {hero && (
         <Hero
@@ -34,8 +34,8 @@ export default function Page({
         />
       ))}
     </main>
-  );
-}
+    );
+};
 
 export async function getStaticProps() {
   cloudinary.config({ 
@@ -45,7 +45,7 @@ export async function getStaticProps() {
   });
 
   // ID for Contentful "Page" entry
-  const page = await getContent("2ECTN9WInkhatSH1g5IFfj");
+  const page = await getContent("76HzwUVnG9QIxWD3lK40Rt");
   const content = page;
 
   // get hero image info so we can preload the image since it is above the fold

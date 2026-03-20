@@ -3,29 +3,38 @@ import {
   useState,
   useEffect,
 } from 'react';
-import { CldImage } from "next-cloudinary";
+import { CldImage } from 'next-cloudinary';
 import { useWindowDimensions } from '../../utils/useWindowDimensions';
 
 import styles from './imageBlock.module.scss';
+
+type CldImageProps = React.ComponentProps<typeof CldImage>;
+
+type ImageBlockProps = {
+  imageSource: string;
+  imageAltText: string;
+  enablePriority?: boolean;
+  topBorder?: boolean;
+  crop?: CldImageProps['crop'];
+  gravity?: CldImageProps['gravity'];
+  quality?: CldImageProps['quality'];
+};
 
 export default function ImageBlock({
   imageSource,
   imageAltText,
   enablePriority,
   topBorder,
-}: {
-  imageSource: string,
-  imageAltText: string,
-  enablePriority?: boolean,
-  topBorder?: boolean,
-}) {
+  crop = 'auto',
+  gravity = 'north',
+  quality = 50,
+}: ImageBlockProps) {
   const [imageDimensions, setImageDimensions] = useState({
     height: 0,
     width: 0,
   });
-  
-  const ref = useRef<HTMLDivElement>(null);
 
+  const ref = useRef<HTMLDivElement>(null);
   const { width: windowWidth } = useWindowDimensions();
 
   useEffect(() => {
@@ -42,15 +51,13 @@ export default function ImageBlock({
       className={`${styles.imageWrapper} ${topBorder ? styles.topBorder : ''}`}
       ref={ref}
     >
-      {imageDimensions.width && imageDimensions.width > 0 && (
+      {imageDimensions.width > 0 && (
         <CldImage
-          // check window width before setting image size
-          // column size becomes locked after it hits desktop
           width={windowWidth && windowWidth >= 992 ? 610 : windowWidth}
           height={windowWidth && windowWidth >= 992 ? imageDimensions.height : 360}
-          crop='fill'
-          gravity='center'
-          quality="50"
+          crop={crop}
+          gravity={gravity}
+          quality={quality}
           priority={enablePriority}
           src={imageSource}
           alt={imageAltText}

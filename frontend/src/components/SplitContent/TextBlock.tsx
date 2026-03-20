@@ -23,6 +23,8 @@ export default function TextBlock({
         // only have one component so do need to check the type for which one to return
         const componentData = node?.data?.target?.fields;
 
+        const isExternalLink = node?.data?.target?.fields?.externalLink;
+
         const {
           buttonText,
           buttonHref,
@@ -32,6 +34,7 @@ export default function TextBlock({
           <Button
             href={buttonHref}
             isLink
+            externalLink={isExternalLink}
           >{buttonText}</Button>
         )
       }

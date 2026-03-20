@@ -1,11 +1,11 @@
 {
   "name": "frontend",
-  "version": "7.2.8",
+  "version": "8.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
+    "start": "npx serve@latest out",
     "lint": "next lint",
     "analyzeBundle": "ANALYZE=true next build",
     "test": "jest"
@@ -30,13 +30,16 @@
     "contentful": "^10.6.19",
     "fs": "^0.0.1-security",
     "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0",
-    "next": "^14.2.3",
-    "next-cloudinary": "^5.20.0",
+    "jest-environment-jsdom": "^30.3.0",
+    "next": "^16.1.6",
+    "next-cloudinary": "^6.17.5",
     "next-share": "^0.27.0",
     "react": "^18",
     "react-dom": "^18",
-    "sass": "^1.70.0"
+    "react-grid-gallery": "^1.0.1",
+    "react-photo-album": "^3.5.1",
+    "sass": "^1.70.0",
+    "yet-another-react-lightbox": "^3.29.1"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^14.1.0",
