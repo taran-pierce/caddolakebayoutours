@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [8.0.1] - 2026-05-26
+### Updated
+- package updates
+- content updates
+
 ## [8.0.0] - 2026-03-14
 ### Updated
 - Upgraded Next.js and other packages to latest stable verisons
